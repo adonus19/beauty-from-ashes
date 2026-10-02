@@ -1,0 +1,298 @@
+// Inner pages without a comp of their own (Stories, About, Contact, Privacy, Accessibility).
+// They reuse the home page's grammar: a plain title and lede, hairline-split sections, the story voice.
+
+.page-head {
+  padding: clamp(2.25rem, 3.1vw, 3rem) var(--gutter) clamp(2.5rem, 4vw, 4rem);
+}
+
+.page-head__title {
+  font-size: clamp(2.5rem, 1.6rem + 3.2vw, 4.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.012em;
+}
+
+.page-head__lede {
+  max-width: 34em;
+  margin-block-start: clamp(0.5rem, 0.8vw, 0.875rem);
+  font-size: var(--fs-lede);
+  line-height: 1.5;
+}
+
+// Stories: the home page's story, given room to tell itself.
+.tale {
+  display: grid;
+  gap: 2rem clamp(2.5rem, 6vw, 7rem);
+  margin-inline: var(--gutter);
+  padding-block: clamp(3rem, 6vw, 6rem);
+  border-block-start: 1px solid rgb(58 31 14 / 0.5);
+
+  @media (min-width: 62em) {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    align-items: start;
+  }
+}
+
+.tale__figure {
+  margin: 0;
+}
+
+.tale__sample {
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  border: 1px dashed var(--iron-soft);
+  border-radius: 3px;
+  color: var(--iron);
+  font-size: 0.875rem;
+  font-weight: 650;
+}
+
+.tale__quote {
+  margin: 1.5rem 0 0;
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 1.3rem + 1.8vw, 3rem);
+  font-style: italic;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.tale__attribution {
+  margin-block-start: 1.25rem;
+  color: var(--iron-soft);
+  font-size: var(--fs-label);
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.tale__body {
+  display: grid;
+  gap: 1rem;
+  max-width: 30em;
+
+  @media (min-width: 62em) {
+    padding-block-start: 3.5rem;
+  }
+}
+
+.tale__condition {
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 1rem + 0.6vw, 1.5rem);
+}
+
+.closing__text {
+  max-width: 34em;
+}
+
+// About: the name beside the jar, then the mission card in full.
+.about-name {
+  @media (min-width: 62em) {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    align-items: center;
+  }
+}
+
+.about-name__jar {
+  margin: 0;
+
+  img {
+    width: min(100%, 30rem);
+    margin-inline: auto;
+  }
+}
+
+.about-name__text {
+  display: grid;
+  justify-items: start;
+  gap: 1.25rem;
+}
+
+.about-name__verse {
+  margin: 0;
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: clamp(1.375rem, 1rem + 1vw, 2rem);
+  font-style: italic;
+  line-height: 1.35;
+
+  blockquote {
+    margin: 0;
+  }
+
+  figcaption {
+    margin-block-start: 0.75rem;
+    color: var(--iron-soft);
+    font-family: var(--font-sans);
+    font-size: var(--fs-label);
+    font-style: normal;
+    font-weight: 650;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+}
+
+.about-name__jar-note {
+  max-width: 30em;
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+.about-card {
+  display: grid;
+  justify-items: center;
+  gap: clamp(3rem, 5vw, 4.5rem);
+  margin-inline: var(--gutter);
+  padding-block: clamp(4rem, 7vw, 7rem);
+  border-block-start: 1px solid rgb(58 31 14 / 0.5);
+  text-align: center;
+}
+
+.about-card__block {
+  display: grid;
+  justify-items: center;
+}
+
+.about-card__label {
+  font-size: clamp(0.875rem, 0.85rem + 0.2vw, 1.0625rem);
+  letter-spacing: 0.33em;
+  margin-inline-end: -0.33em;
+}
+
+.about-card__dash {
+  display: block;
+  width: clamp(4.5rem, 6vw, 6rem);
+  aspect-ratio: 1402 / 181;
+  margin-block-start: 0.6rem;
+  background: image-set(
+      url('../../assets/plates/mission-dash.webp') type('image/webp'),
+      url('../../assets/plates/mission-dash.png') type('image/png')
+    )
+    center / 100% 100% no-repeat;
+}
+
+.about-card__statement {
+  max-width: 30em;
+  margin-block-start: 1rem;
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 1rem + 0.9vw, 2rem);
+  line-height: 1.35;
+}
+
+.about-card__statement--italic {
+  font-style: italic;
+}
+
+.about-card__therefore {
+  margin-block-start: 2rem;
+  letter-spacing: 0.33em;
+  margin-inline-end: -0.33em;
+}
+
+.about-card__values {
+  display: grid;
+  gap: 1rem 2.5rem;
+  max-width: 60rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: start;
+
+  @media (min-width: 40em) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: 62em) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.about-card__value {
+  display: block;
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 1rem + 0.6vw, 1.625rem);
+  font-weight: 400;
+}
+
+.about-card__note {
+  color: var(--iron-soft);
+  font-size: 0.875rem;
+}
+
+.split__lede--wide {
+  max-width: 30em;
+}
+
+.split__link {
+  margin-block-start: 1.5rem;
+}
+
+// Contact: details at left, the message form at right.
+.contact {
+  padding-block-start: clamp(2rem, 3vw, 3rem);
+}
+
+.contact__title {
+  font-size: clamp(1.5rem, 1.2rem + 0.9vw, 2.125rem);
+  line-height: 1.15;
+}
+
+.contact__details {
+  display: grid;
+  gap: 1.25rem;
+  margin: 0.5rem 0 0;
+}
+
+.contact__detail {
+  dt {
+    color: var(--iron-soft);
+    font-size: var(--fs-label);
+    font-weight: 650;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  dd {
+    margin: 0.25rem 0 0;
+    color: var(--iron);
+    font-family: var(--font-serif);
+    font-size: clamp(1.125rem, 1rem + 0.35vw, 1.375rem);
+  }
+}
+
+.contact__health {
+  max-width: 36em;
+  margin-block: 1rem;
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+// Privacy and Accessibility.
+.document__draft {
+  margin-block-start: 1.5rem;
+}
+
+.reference__call--contact {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.reference__lines--marked li {
+  padding-inline-start: 1.25em;
+  text-indent: -1.25em;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 0.75em;
+    height: 0.18em;
+    margin-inline-end: 0.5em;
+    vertical-align: 0.3em;
+    background: var(--cobalt);
+    mask: url('../../assets/plates/link-stroke.webp') center / 100% 100% no-repeat;
+  }
+}

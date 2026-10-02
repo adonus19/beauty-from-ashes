@@ -1,0 +1,507 @@
+@let p = page();
+@let f = p.fields;
+@let t = forms();
+@let r = request;
+
+<div class="form-page">
+  <header class="form-page__head">
+    <h1 class="form-page__title">{{ p.title }}</h1>
+    <p class="form-page__lede">{{ p.lede }}</p>
+  </header>
+
+  <div class="form-page__body">
+    <div class="form-page__main">
+      @if (sent()) {
+        <section class="form-sent" aria-labelledby="sent-title">
+          <h2 id="sent-title" #sentHeading class="form-sent__title" tabindex="-1">
+            {{ p.sent.title }}
+          </h2>
+          <p class="form-sent__demo">{{ p.sent.demo }}</p>
+          <p>
+            {{ p.sent.next }}
+            <bfa-placeholder-tag />
+          </p>
+          <a class="text-link" [routerLink]="locale.link(p.sent.home.path)">{{
+            p.sent.home.label
+          }}</a>
+        </section>
+      } @else {
+        <p class="demo-notice">
+          <strong>{{ t.demoTitle }}.</strong> {{ t.demoNotice }}
+        </p>
+        <p class="form__required">{{ t.requiredNote }}</p>
+
+        @if (attempts() > 0 && r().invalid()) {
+          <bfa-error-summary [form]="r" [attempt]="attempts()" />
+        }
+
+        <form class="form" novalidate (submit)="send($event)">
+          <fieldset class="form__section" id="for-whom" aria-describedby="for-whom-note">
+            <legend class="form__legend">{{ p.sections.who }}</legend>
+            <div class="choices">
+              @for (option of f.forWhom.options; track option.value) {
+                <label class="choice">
+                  <input
+                    type="radio"
+                    [value]="option.value"
+                    [formField]="r.forWhom"
+                    [bfaField]="r.forWhom"
+                    describeId="for-whom"
+                  />
+                  <span>{{ option.label }}</span>
+                </label>
+              }
+            </div>
+            <bfa-field-error [field]="r.forWhom" for="for-whom" />
+            <p class="field__hint" id="for-whom-note">
+              {{ p.referNote }}
+              <a class="text-link text-link--small" [routerLink]="locale.link(p.referLink.path)">{{
+                p.referLink.label
+              }}</a>
+            </p>
+          </fieldset>
+
+          <fieldset class="form__section">
+            <legend class="form__legend">{{ p.sections.patient }}</legend>
+            <div class="field-row">
+              <div class="field">
+                <label class="field__label" for="patient-first">{{ f.patientFirst.label }}</label>
+                <input
+                  class="field__control"
+                  id="patient-first"
+                  type="text"
+                  [attr.autocomplete]="isSelf() ? 'given-name' : 'off'"
+                  [formField]="r.patientFirst"
+                  [bfaField]="r.patientFirst"
+                />
+                <bfa-field-error [field]="r.patientFirst" for="patient-first" />
+              </div>
+              <div class="field">
+                <label class="field__label" for="patient-last">{{ f.patientLast.label }}</label>
+                <input
+                  class="field__control"
+                  id="patient-last"
+                  type="text"
+                  [attr.autocomplete]="isSelf() ? 'family-name' : 'off'"
+                  [formField]="r.patientLast"
+                  [bfaField]="r.patientLast"
+                />
+                <bfa-field-error [field]="r.patientLast" for="patient-last" />
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="patient-birth">{{ f.patientBirth.label }}</label>
+              <p class="field__hint" id="patient-birth-hint">{{ f.patientBirth.hint }}</p>
+              <input
+                class="field__control field__control--short"
+                id="patient-birth"
+                type="text"
+                inputmode="numeric"
+                [attr.autocomplete]="isSelf() ? 'bday' : 'off'"
+                [formField]="r.patientBirth"
+                [bfaField]="r.patientBirth"
+                [hasHint]="true"
+              />
+              <bfa-field-error [field]="r.patientBirth" for="patient-birth" />
+            </div>
+          </fieldset>
+
+          @if (forChild()) {
+            <fieldset class="form__section">
+              <legend class="form__legend">{{ p.sections.guardian }}</legend>
+              <div class="field-row">
+                <div class="field">
+                  <label class="field__label" for="guardian-first">{{
+                    f.guardianFirst.label
+                  }}</label>
+                  <input
+                    class="field__control"
+                    id="guardian-first"
+                    type="text"
+                    autocomplete="given-name"
+                    [formField]="r.guardianFirst"
+                    [bfaField]="r.guardianFirst"
+                  />
+                  <bfa-field-error [field]="r.guardianFirst" for="guardian-first" />
+                </div>
+                <div class="field">
+                  <label class="field__label" for="guardian-last">{{ f.guardianLast.label }}</label>
+                  <input
+                    class="field__control"
+                    id="guardian-last"
+                    type="text"
+                    autocomplete="family-name"
+                    [formField]="r.guardianLast"
+                    [bfaField]="r.guardianLast"
+                  />
+                  <bfa-field-error [field]="r.guardianLast" for="guardian-last" />
+                </div>
+              </div>
+              <div class="field">
+                <label class="field__label" for="guardian-relation">{{
+                  f.guardianRelation.label
+                }}</label>
+                <select
+                  class="field__control field__control--select"
+                  id="guardian-relation"
+                  [formField]="r.guardianRelation"
+                  [bfaField]="r.guardianRelation"
+                >
+                  @for (option of f.guardianRelation.options; track option.value) {
+                    <option [value]="option.value">{{ option.label }}</option>
+                  }
+                </select>
+                <bfa-field-error [field]="r.guardianRelation" for="guardian-relation" />
+              </div>
+            </fieldset>
+          }
+
+          <fieldset class="form__section">
+            <legend class="form__legend">{{ p.sections.contact }}</legend>
+            <div class="field-row">
+              <div class="field">
+                <label class="field__label" for="phone">{{ f.phone.label }}</label>
+                <input
+                  class="field__control"
+                  id="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  [formField]="r.phone"
+                  [bfaField]="r.phone"
+                />
+                <bfa-field-error [field]="r.phone" for="phone" />
+              </div>
+              <div class="field">
+                <label class="field__label" for="email">
+                  {{ f.email.label }}
+                  @if (model().contactMethod !== 'email') {
+                    <span class="field__optional">({{ t.optional }})</span>
+                  }
+                </label>
+                <input
+                  class="field__control"
+                  id="email"
+                  type="email"
+                  autocomplete="email"
+                  [formField]="r.email"
+                  [bfaField]="r.email"
+                />
+                <bfa-field-error [field]="r.email" for="email" />
+              </div>
+            </div>
+
+            <fieldset class="field field--choices" id="contact-method">
+              <legend class="field__label">{{ f.contactMethod.label }}</legend>
+              <div class="choices choices--row">
+                @for (option of f.contactMethod.options; track option.value) {
+                  <label class="choice">
+                    <input
+                      type="radio"
+                      [value]="option.value"
+                      [formField]="r.contactMethod"
+                      [bfaField]="r.contactMethod"
+                      describeId="contact-method"
+                    />
+                    <span>{{ option.label }}</span>
+                  </label>
+                }
+              </div>
+              <bfa-field-error [field]="r.contactMethod" for="contact-method" />
+            </fieldset>
+
+            <fieldset class="field field--choices" id="safe-message">
+              <legend class="field__label">{{ f.safeMessage.label }}</legend>
+              <p class="field__hint" id="safe-message-hint">{{ f.safeMessage.hint }}</p>
+              <div class="choices choices--row">
+                <label class="choice">
+                  <input
+                    type="radio"
+                    value="yes"
+                    [formField]="r.safeMessage"
+                    [bfaField]="r.safeMessage"
+                    describeId="safe-message"
+                    [hasHint]="true"
+                  />
+                  <span>{{ t.yes }}</span>
+                </label>
+                <label class="choice">
+                  <input
+                    type="radio"
+                    value="no"
+                    [formField]="r.safeMessage"
+                    [bfaField]="r.safeMessage"
+                    describeId="safe-message"
+                    [hasHint]="true"
+                  />
+                  <span>{{ t.no }}</span>
+                </label>
+              </div>
+              <bfa-field-error [field]="r.safeMessage" for="safe-message" />
+            </fieldset>
+
+            <div class="field">
+              <label class="field__label" for="language">{{ f.language.label }}</label>
+              <select
+                class="field__control field__control--select"
+                id="language"
+                [formField]="r.language"
+              >
+                @for (option of f.language.options; track option.value) {
+                  <option [value]="option.value">{{ option.label }}</option>
+                }
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset class="form__section">
+            <legend class="form__legend">{{ p.sections.home }}</legend>
+            <div class="field-row field-row--place">
+              <div class="field">
+                <label class="field__label" for="city">{{ f.city.label }}</label>
+                <input
+                  class="field__control"
+                  id="city"
+                  type="text"
+                  autocomplete="address-level2"
+                  [formField]="r.city"
+                  [bfaField]="r.city"
+                />
+                <bfa-field-error [field]="r.city" for="city" />
+              </div>
+              <div class="field">
+                <label class="field__label" for="state">{{ f.state.label }}</label>
+                <select
+                  class="field__control field__control--select"
+                  id="state"
+                  [formField]="r.state"
+                  [bfaField]="r.state"
+                >
+                  @for (option of f.state.options; track option.value) {
+                    <option [value]="option.value">{{ option.label }}</option>
+                  }
+                </select>
+                <bfa-field-error [field]="r.state" for="state" />
+              </div>
+              <div class="field">
+                <label class="field__label" for="zip">
+                  {{ f.zip.label }} <span class="field__optional">({{ t.optional }})</span>
+                </label>
+                <input
+                  class="field__control"
+                  id="zip"
+                  type="text"
+                  inputmode="numeric"
+                  autocomplete="postal-code"
+                  [formField]="r.zip"
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form__section">
+            <legend class="form__legend">{{ p.sections.condition }}</legend>
+            <div class="field">
+              <label class="field__label" for="care-type">{{ f.careType.label }}</label>
+              <select
+                class="field__control field__control--select"
+                id="care-type"
+                [formField]="r.careType"
+                [bfaField]="r.careType"
+              >
+                @for (option of f.careType.options; track option.value) {
+                  <option [value]="option.value">{{ option.label }}</option>
+                }
+              </select>
+              <bfa-field-error [field]="r.careType" for="care-type" />
+            </div>
+            <div class="field">
+              <label class="field__label" for="description">{{ f.description.label }}</label>
+              <p class="field__hint" id="description-hint">{{ f.description.hint }}</p>
+              <textarea
+                class="field__control field__control--area"
+                id="description"
+                rows="5"
+                [formField]="r.description"
+                [bfaField]="r.description"
+                [hasHint]="true"
+              ></textarea>
+              <bfa-field-error [field]="r.description" for="description" />
+            </div>
+            <div class="field">
+              <label class="field__label" for="how-long">
+                {{ f.howLong.label }} <span class="field__optional">({{ t.optional }})</span>
+              </label>
+              <input class="field__control" id="how-long" type="text" [formField]="r.howLong" />
+            </div>
+            <div class="field">
+              <label class="field__label" for="daily-life">{{ f.dailyLife.label }}</label>
+              <p class="field__hint" id="daily-life-hint">{{ f.dailyLife.hint }}</p>
+              <textarea
+                class="field__control field__control--area"
+                id="daily-life"
+                rows="5"
+                [formField]="r.dailyLife"
+                [bfaField]="r.dailyLife"
+                [hasHint]="true"
+              ></textarea>
+              <bfa-field-error [field]="r.dailyLife" for="daily-life" />
+            </div>
+          </fieldset>
+
+          <fieldset class="form__section">
+            <legend class="form__legend">{{ p.sections.photos }}</legend>
+            <div class="field photos">
+              <p class="field__hint" id="photos-hint">{{ f.photos.hint }}</p>
+              <input
+                #photoInput
+                class="photos__input"
+                id="photos"
+                type="file"
+                accept="image/*"
+                multiple
+                [attr.name]="r.photoNames().name()"
+                [attr.aria-invalid]="
+                  r.photoNames().touched() && r.photoNames().invalid() ? 'true' : null
+                "
+                [attr.aria-describedby]="
+                  'photos-hint' +
+                  (r.photoNames().touched() && r.photoNames().invalid() ? ' photos-error' : '')
+                "
+                (change)="addPhotos($event)"
+              />
+              <label class="photos__button btn-line" for="photos">{{ f.photos.button }}</label>
+              <bfa-field-error [field]="r.photoNames" for="photos" />
+              <p class="photos__notice" role="status">{{ photoNotice() }}</p>
+              @if (photos().length) {
+                <p class="photos__count">{{ photos().length }} {{ f.photos.count }}</p>
+                <ul class="photos__list" role="list">
+                  @for (photo of photos(); track photo.url; let i = $index) {
+                    <li class="photo">
+                      <img class="photo__thumb" [src]="photo.url" alt="" width="72" height="72" />
+                      <span class="photo__name">{{ photo.name }}</span>
+                      <span class="photo__size">{{ photo.size }}</span>
+                      <button class="photo__remove" type="button" (click)="removePhoto(i)">
+                        {{ f.photos.remove }} <span class="visually-hidden">{{ photo.name }}</span>
+                      </button>
+                    </li>
+                  }
+                </ul>
+              }
+            </div>
+          </fieldset>
+
+          <fieldset class="form__section">
+            <legend class="form__legend">{{ p.sections.more }}</legend>
+            <div class="field">
+              <label class="field__label" for="insurance">
+                {{ f.insurance.label }} <span class="field__optional">({{ t.optional }})</span>
+              </label>
+              <select
+                class="field__control field__control--select"
+                id="insurance"
+                [formField]="r.insurance"
+              >
+                @for (option of f.insurance.options; track option.value) {
+                  <option [value]="option.value">{{ option.label }}</option>
+                }
+              </select>
+            </div>
+            <div class="field">
+              <label class="field__label" for="heard-from">
+                {{ f.heardFrom.label }} <span class="field__optional">({{ t.optional }})</span>
+              </label>
+              <input class="field__control" id="heard-from" type="text" [formField]="r.heardFrom" />
+            </div>
+            <fieldset class="field field--choices" id="prayer" aria-describedby="prayer-hint">
+              <legend class="field__label">
+                {{ f.prayer.label }} <span class="field__optional">({{ t.optional }})</span>
+              </legend>
+              <p class="field__hint" id="prayer-hint">{{ f.prayer.hint }}</p>
+              <div class="choices choices--row">
+                <label class="choice">
+                  <input type="radio" value="yes" [formField]="r.prayer" />
+                  <span>{{ t.yes }}</span>
+                </label>
+                <label class="choice">
+                  <input type="radio" value="no" [formField]="r.prayer" />
+                  <span>{{ t.no }}</span>
+                </label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label class="field__label" for="notes">
+                {{ f.notes.label }} <span class="field__optional">({{ t.optional }})</span>
+              </label>
+              <textarea
+                class="field__control field__control--area"
+                id="notes"
+                rows="4"
+                [formField]="r.notes"
+              ></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset class="form__section">
+            <legend class="form__legend">{{ p.sections.consent }}</legend>
+            <div class="field">
+              <label class="choice choice--check">
+                <input
+                  id="consent-contact"
+                  type="checkbox"
+                  [formField]="r.consentContact"
+                  [bfaField]="r.consentContact"
+                />
+                <span>{{ f.consentContact.label }}</span>
+              </label>
+              <bfa-field-error [field]="r.consentContact" for="consent-contact" />
+            </div>
+            <div class="field">
+              <label class="choice choice--check">
+                <input
+                  id="consent-authority"
+                  type="checkbox"
+                  [formField]="r.consentAuthority"
+                  [bfaField]="r.consentAuthority"
+                />
+                <span>{{ f.consentAuthority.label }}</span>
+              </label>
+              <bfa-field-error [field]="r.consentAuthority" for="consent-authority" />
+            </div>
+          </fieldset>
+
+          <button class="form__submit btn-brush" type="submit">{{ p.submit }}</button>
+        </form>
+      }
+    </div>
+
+    <aside class="form-page__aside" aria-labelledby="next-title">
+      <h2 id="next-title" class="form-aside__title">{{ p.aside.title }}</h2>
+      <ol class="form-aside__steps" role="list">
+        @for (step of steps(); track step.name; let i = $index) {
+          <li>
+            <span class="form-aside__numeral" aria-hidden="true">{{ i + 1 }}</span>
+            <span>
+              <strong class="form-aside__step">{{ step.name }}</strong>
+              {{ step.text }}
+            </span>
+          </li>
+        }
+      </ol>
+      <p class="form-aside__note">{{ p.aside.note }}</p>
+
+      <h2 class="form-aside__title form-aside__title--small">{{ p.aside.helpTitle }}</h2>
+      <p>
+        {{ p.aside.helpText }}
+        <a class="brush-link" [href]="contact().phoneHref">{{ contact().phone }}</a>
+      </p>
+      <p class="form-aside__privacy">
+        {{ p.aside.privacyText }}
+        <a
+          class="text-link text-link--small"
+          [routerLink]="locale.link(p.aside.privacyLink.path)"
+          >{{ p.aside.privacyLink.label }}</a
+        >
+      </p>
+    </aside>
+  </div>
+</div>

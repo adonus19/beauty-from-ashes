@@ -1,0 +1,305 @@
+:host {
+  display: block;
+}
+
+// First viewport: the glaze photograph, the appeal under it, and the gift right there.
+.appeal {
+  display: grid;
+  justify-items: center;
+  padding-block-end: clamp(3rem, 6vw, 6rem);
+  text-align: center;
+}
+
+.appeal__glaze {
+  justify-self: stretch;
+
+  img {
+    width: 100%;
+    height: clamp(9rem, 20vw, 24rem);
+    object-fit: cover;
+    object-position: center 45%;
+    mask-image: linear-gradient(to bottom, #000 72%, transparent);
+  }
+}
+
+.appeal__title {
+  margin-block-start: clamp(1rem, 2.1vw, 2rem);
+  padding-inline: var(--gutter);
+  font-size: clamp(2.25rem, 3.95vw, 4rem);
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+
+.appeal__lede {
+  width: min(36em, 100% - 2 * var(--gutter));
+  text-wrap: wrap;
+  margin-block-start: clamp(0.75rem, 1.4vw, 1.375rem);
+  font-size: clamp(1.0625rem, 1.66vw, 1.625rem);
+  line-height: 1.57;
+}
+
+// The gift: frequency, amount, then the brushed Give button.
+.gift {
+  display: grid;
+  justify-items: center;
+  padding-inline: var(--gutter);
+}
+
+.gift__frequency,
+.gift__amounts {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.gift__frequency {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem clamp(2rem, 4vw, 4rem);
+  margin-block-start: clamp(1.5rem, 2.6vw, 2.5rem);
+}
+
+// Native radios stay in the page for keyboards and screen readers; the label face shows the choice.
+.gift__radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.frequency {
+  position: relative;
+  cursor: pointer;
+}
+
+.frequency__label {
+  position: relative;
+  display: inline-block;
+  // Room on the right for the stroke's tail, given back so the labels keep their spacing.
+  margin-inline-end: -0.7em;
+  padding-block-end: 0.35em;
+  padding-inline-end: 0.7em;
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: clamp(1.375rem, 1.8vw, 1.75rem);
+  line-height: 1.3;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0.1em 0;
+    inset-block-end: 0.12em;
+    height: 0.42em;
+    background: image-set(
+        url('../../../../assets/plates/toggle-stroke.webp') type('image/webp'),
+        url('../../../../assets/plates/toggle-stroke.png') type('image/png')
+      )
+      center / 100% 100% no-repeat;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 420ms var(--ease-out);
+  }
+
+  .gift__radio:checked + & {
+    color: var(--iron);
+  }
+
+  .gift__radio:checked + &::after {
+    clip-path: inset(0);
+  }
+
+  .gift__radio:focus-visible + & {
+    outline: 2px solid var(--cobalt);
+    outline-offset: 4px;
+  }
+}
+
+.gift__amounts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem clamp(1rem, 1.5vw, 1.5rem);
+  margin-block-start: clamp(1.25rem, 2.2vw, 2.125rem);
+}
+
+.amount {
+  position: relative;
+  cursor: pointer;
+}
+
+// An unchosen amount sits in an inked frame; the chosen one becomes a brushed cobalt swatch.
+.amount__face {
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-items: center;
+  min-width: clamp(5.5rem, 10.4vw, 10rem);
+  min-height: clamp(3.25rem, 4.3vw, 4.25rem);
+  padding: 0 0.6em;
+  border: 13px solid transparent;
+  border-image: image-set(
+      url('../../../../assets/plates/ink-frame.webp') type('image/webp'),
+      url('../../../../assets/plates/ink-frame.png') type('image/png')
+    )
+    46 / 13px / 0 stretch;
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 1.8vw, 1.75rem);
+  line-height: 1;
+
+  .amount:hover & {
+    color: var(--cobalt);
+  }
+
+  .gift__radio:checked + & {
+    border-image: none;
+    color: var(--on-cobalt);
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -13px;
+      z-index: -1;
+      background: image-set(
+          url('../../../../assets/plates/amount-brush.webp') type('image/webp'),
+          url('../../../../assets/plates/amount-brush.png') type('image/png')
+        )
+        center / 100% 100% no-repeat;
+    }
+  }
+
+  .gift__radio:focus-visible + & {
+    outline: 2px solid var(--cobalt);
+    outline-offset: 5px;
+  }
+}
+
+
+
+// The comp sets "Other amount" a size smaller than the figures.
+.amount--other .amount__face {
+  font-size: clamp(1.125rem, 1.45vw, 1.4375rem);
+}
+
+.gift__other {
+  justify-items: center;
+  margin-block-start: 1.25rem;
+}
+
+.gift__submit {
+  margin-block-start: clamp(2rem, 2.75vw, 2.75rem);
+  padding-block: 0.27em;
+  padding-inline: 2.85em;
+  border: 0;
+  background: none;
+  font-size: clamp(1.375rem, 2.1vw, 2.125rem);
+}
+
+.gift__status {
+  width: min(48em, 100%);
+  margin-block-start: clamp(1rem, 1.4vw, 1.5rem);
+  color: var(--text);
+  font-size: clamp(0.875rem, 1.02vw, 1rem);
+}
+
+.gift__demo {
+  width: min(44em, 100%);
+  text-wrap: balance;
+  margin-block-start: 0.5rem;
+  color: var(--iron-soft);
+  font-size: clamp(0.875rem, 1.02vw, 1rem);
+}
+
+.gift__result:empty {
+  display: none;
+}
+
+.gift__result {
+  max-width: 36em;
+  margin-block-start: 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px dashed var(--iron-soft);
+  border-radius: 3px;
+  color: var(--iron);
+}
+
+@media (forced-colors: active) {
+  .amount__face {
+    border: 2px solid ButtonText;
+    border-image: none;
+  }
+
+  .gift__radio:checked + .amount__face {
+    border-color: Highlight;
+    color: HighlightText;
+    background: Highlight;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .frequency__label::after {
+    display: none;
+  }
+
+  .gift__radio:checked + .frequency__label {
+    text-decoration: underline;
+  }
+}
+
+// What a gift pays for: each cost with a guessed example amount.
+.pays__example {
+  margin-block-start: 0.5rem;
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: clamp(1.0625rem, 0.95rem + 0.3vw, 1.25rem);
+  font-style: italic;
+}
+
+// Sponsor a surgery: set on the iron of the clay body, the page's one change of register.
+.sponsor {
+  --involved-ink: #efe6d6;
+  display: grid;
+  gap: clamp(2rem, 4vw, 4rem);
+  padding: clamp(4rem, 7vw, 7rem) var(--gutter);
+  background-color: #2a170c;
+  background-image: image-set(
+    url('../../../../assets/plates/ground.webp') type('image/webp'),
+    url('../../../../assets/plates/ground.png') type('image/png')
+  );
+  background-size: 308px 204px;
+  background-blend-mode: multiply;
+  color: #ddd1bd;
+
+  @media (min-width: 62em) {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    align-items: start;
+  }
+}
+
+.sponsor__title {
+  color: var(--involved-ink);
+}
+
+.sponsor__body {
+  display: grid;
+  justify-items: start;
+  gap: 1.25rem;
+  max-width: 34em;
+  font-size: clamp(1.125rem, 0.9rem + 0.5vw, 1.375rem);
+  line-height: 1.55;
+}
+
+// The band follows directly, so the next section needs no rule of its own.
+.sponsor + .split {
+  border-block-start: 0;
+}
+
+.sponsor__cost {
+  color: var(--involved-ink);
+  font-family: var(--font-serif);
+  font-size: clamp(1.375rem, 1.1rem + 0.8vw, 1.875rem);
+  line-height: 1.3;
+}

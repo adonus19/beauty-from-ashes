@@ -1,0 +1,16 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1440, height: 900 } });
+const errs = []; p.on('pageerror', (e) => errs.push(e.message));
+await p.goto('http://127.0.0.1:4300/refer/', { waitUntil: 'networkidle' });
+await p.click('.reference__aside .reference__action'); await p.waitForTimeout(500);
+console.log('action url:', p.url(), '| form in view:', await p.evaluate(() => Math.round(document.getElementById('make-a-referral').getBoundingClientRect().top)));
+await p.click('button[type=submit]'); await p.waitForTimeout(300);
+console.log('summary items:', await p.$$eval('.error-summary__link', (l) => l.length));
+await p.fill('#your-first', 'Ann'); await p.fill('#your-last', 'Lee'); await p.selectOption('#role', 'pastor'); await p.fill('#your-email', 'ann@example.org');
+await p.fill('#person-first', 'Sam'); await p.fill('#person-last', 'Doe'); await p.check('input[type=radio][value=child]'); await p.fill('#guardian-name', 'Pat Doe');
+await p.fill('#person-phone', '704 555 0100'); await p.fill('#city', 'Fort Mill'); await p.selectOption('#state', 'SC'); await p.selectOption('#care-type', { index: 2 }); await p.fill('#need', 'Cleft lip repair.');
+await p.check('#consent'); await p.click('button[type=submit]'); await p.waitForTimeout(300);
+console.log('sent:', await p.evaluate(() => document.querySelector('.form-sent__title')?.textContent.trim()), '| focus', await p.evaluate(() => document.activeElement?.className));
+await p.click('text=Refer someone else'); await p.waitForTimeout(200);
+console.log('reset first name empty:', await p.inputValue('#your-first') === '', '| summary gone:', (await p.$('.error-summary')) === null, '| errors:', errs);
+await b.close();

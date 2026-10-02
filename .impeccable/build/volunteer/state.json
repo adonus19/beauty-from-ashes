@@ -1,0 +1,302 @@
+{
+  "tool": "build-phase",
+  "version": 2,
+  "startedAt": "2026-10-01T22:44:34.020Z",
+  "comp": ".impeccable/mocks/decision/volunteer-vision.png",
+  "direction": null,
+  "breakpoint": "1536x1024",
+  "artifact": null,
+  "phase": "review",
+  "phases": {
+    "comps": {
+      "status": "skipped",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [
+        {
+          "at": "2026-10-01T22:44:34.020Z",
+          "text": "started with an approved comp; the comp round happened before this state (surface round or manual)"
+        }
+      ],
+      "gate": null,
+      "forced": null
+    },
+    "spec": {
+      "status": "closed",
+      "openedAt": "2026-10-01T22:44:34.020Z",
+      "closedAt": "2026-10-01T22:46:03.137Z",
+      "attempts": 2,
+      "notes": [
+        {
+          "at": "2026-10-01T22:45:42.720Z",
+          "text": "Type: the build keeps Tiro Devanagari Marathi 400 (the established display face, DESIGN.md) whatever font-match ranks; sizes follow the measured cap heights and ink widths."
+        }
+      ],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "27 regions, 6 plates, 13 text regions measured",
+        "at": "2026-10-01T22:46:03.137Z"
+      },
+      "forced": null
+    },
+    "plates": {
+      "status": "closed",
+      "openedAt": "2026-10-01T22:46:03.137Z",
+      "closedAt": "2026-10-01T22:46:30.406Z",
+      "attempts": 2,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "6/6 plates",
+        "at": "2026-10-01T22:46:30.406Z"
+      },
+      "forced": null
+    },
+    "hero": {
+      "status": "closed",
+      "openedAt": "2026-10-01T22:46:30.406Z",
+      "closedAt": "2026-10-01T22:50:29.075Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "hero 92% (match)",
+        "score": 0.922,
+        "verdict": "match",
+        "report": ".impeccable/review/diff/hero/report.json",
+        "sideBySide": "/Users/apple/Documents/dev/beauty-from-ashes-v1/.impeccable/review/diff/hero/side-by-side.png",
+        "worst": [
+          "vision-1 drift 60%",
+          "ink-frame drift 62%",
+          "vision-3 drift 63%"
+        ],
+        "worstIds": [
+          "vision-1",
+          "ink-frame",
+          "vision-3"
+        ],
+        "worstCrops": [
+          {
+            "id": "vision-1",
+            "verdict": "drift",
+            "score": {
+              "overall": 0.5975,
+              "structure": 0.5924,
+              "color": 0.8439,
+              "colorIntersection": 0.6782,
+              "paletteMatch": 0.933,
+              "detail": 0.4564,
+              "detailRaw": 0.5866,
+              "detailAdded": 0.2604,
+              "bands": 0.219
+            },
+            "file": ".impeccable/review/diff/hero/regions/vision-1.png"
+          },
+          {
+            "id": "ink-frame",
+            "verdict": "drift",
+            "score": {
+              "overall": 0.6199,
+              "structure": 0.5059,
+              "color": 0.8927,
+              "colorIntersection": 0.7985,
+              "paletteMatch": 0.9435,
+              "detail": 0.55,
+              "detailRaw": 0.6021,
+              "detailAdded": 0.1042,
+              "bands": 0.7986
+            },
+            "file": ".impeccable/review/diff/hero/regions/ink-frame.png"
+          },
+          {
+            "id": "vision-3",
+            "verdict": "drift",
+            "score": {
+              "overall": 0.6307,
+              "structure": 0.6741,
+              "color": 0.899,
+              "colorIntersection": 0.822,
+              "paletteMatch": 0.9405,
+              "detail": 0.4591,
+              "detailRaw": 0.5736,
+              "detailAdded": 0.2292,
+              "bands": 0
+            },
+            "file": ".impeccable/review/diff/hero/regions/vision-3.png"
+          }
+        ],
+        "advisories": [
+          "(advisory, above the 72% bar) plate mission-dash is placed but not at the comp's box: its ink spans 99x30px at (6,0) in the comp region and 83x9px at (12,17) in the build; size and position the <img> to the spec box (object-fit: cover), not to the surrounding layout"
+        ],
+        "regionVerdicts": {
+          "wordmark": "match",
+          "nav-links": "match",
+          "nav-current": "drift",
+          "lang-switch": "match",
+          "give-brush": "match",
+          "give-button": "match",
+          "nav-rule": "match",
+          "vision-label": "drift",
+          "mission-dash": "drift",
+          "vision-1": "drift",
+          "vision-2": "drift",
+          "vision-3": "drift",
+          "title": "match",
+          "lede": "drift",
+          "ask-brush": "drift",
+          "ask-button": "match",
+          "ink-frame": "drift",
+          "roles-button": "drift",
+          "rule-1": "drift",
+          "where-title": "drift",
+          "where-text": "drift",
+          "role-1": "drift",
+          "role-2": "drift",
+          "rule-roles": "drift",
+          "role-3": "drift",
+          "role-4": "drift",
+          "ground": "drift"
+        },
+        "at": "2026-10-01T22:50:29.075Z"
+      },
+      "forced": null,
+      "records": 4,
+      "readingsSeen": {},
+      "history": [
+        {
+          "at": "2026-10-01T22:50:29.075Z",
+          "score": 0.922,
+          "worstIds": [
+            "vision-1",
+            "ink-frame",
+            "vision-3"
+          ],
+          "regionVerdicts": {
+            "wordmark": "match",
+            "nav-links": "match",
+            "nav-current": "drift",
+            "lang-switch": "match",
+            "give-brush": "match",
+            "give-button": "match",
+            "nav-rule": "match",
+            "vision-label": "drift",
+            "mission-dash": "drift",
+            "vision-1": "drift",
+            "vision-2": "drift",
+            "vision-3": "drift",
+            "title": "match",
+            "lede": "drift",
+            "ask-brush": "drift",
+            "ask-button": "match",
+            "ink-frame": "drift",
+            "roles-button": "drift",
+            "rule-1": "drift",
+            "where-title": "drift",
+            "where-text": "drift",
+            "role-1": "drift",
+            "role-2": "drift",
+            "rule-roles": "drift",
+            "role-3": "drift",
+            "role-4": "drift",
+            "ground": "drift"
+          },
+          "artifactHash": null
+        }
+      ]
+    },
+    "sections": {
+      "status": "closed",
+      "openedAt": "2026-10-01T22:50:29.075Z",
+      "closedAt": "2026-10-01T22:52:30.445Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "no mechanical gate",
+        "at": "2026-10-01T22:52:30.444Z"
+      },
+      "forced": null
+    },
+    "motion": {
+      "status": "closed",
+      "openedAt": "2026-10-01T22:52:30.445Z",
+      "closedAt": "2026-10-01T22:52:30.495Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "no mechanical gate",
+        "at": "2026-10-01T22:52:30.495Z"
+      },
+      "forced": null
+    },
+    "responsive": {
+      "status": "closed",
+      "openedAt": "2026-10-01T22:52:30.495Z",
+      "closedAt": "2026-10-01T22:53:28.810Z",
+      "attempts": 2,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "desktop 91% (match)",
+        "score": 0.9106,
+        "sideBySide": "/Users/apple/Documents/dev/beauty-from-ashes-v1/.impeccable/review/diff/desktop/side-by-side.png",
+        "at": "2026-10-01T22:53:28.810Z"
+      },
+      "forced": null
+    },
+    "review": {
+      "status": "closed",
+      "openedAt": "2026-10-01T22:53:28.810Z",
+      "closedAt": "2026-10-01T23:05:36.750Z",
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    }
+  },
+  "finish": {
+    "disposition": "ship",
+    "at": "2026-10-01T23:05:36.750Z",
+    "phaseAtFinish": "review"
+  },
+  "plates": {
+    "give-brush": {
+      "status": "ok",
+      "score": 0.409,
+      "size": "1297x635"
+    },
+    "nav-rule": {
+      "status": "ok",
+      "score": 0.8266,
+      "size": "3080x42"
+    },
+    "mission-dash": {
+      "status": "ok",
+      "score": 0.4175,
+      "size": "1402x181"
+    },
+    "ask-brush": {
+      "status": "ok",
+      "score": 0.4389,
+      "size": "1517x497"
+    },
+    "ink-frame": {
+      "status": "ok",
+      "score": 0.5127,
+      "size": "1482x436"
+    },
+    "ground": {
+      "status": "ok",
+      "score": 0.8417,
+      "size": "308x204"
+    }
+  }
+}

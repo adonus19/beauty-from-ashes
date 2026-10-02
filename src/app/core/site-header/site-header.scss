@@ -1,0 +1,275 @@
+:host {
+  display: block;
+  position: relative;
+  z-index: 5;
+}
+
+.site-header {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 0 1rem;
+  min-height: calc(clamp(4.25rem, 5.6vw, 5.5rem) + 1.04vw);
+  padding-block: 0.78vw max(10px, 1.04vw);
+  padding-inline: clamp(1.25rem, 4.17vw, 4rem) clamp(1.25rem, 4.3vw, 4.25rem);
+
+  // The hand-brushed cobalt line under the bar draws itself on at first paint.
+  &::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    inset-block-end: 0;
+    height: max(10px, 1.04vw);
+    background: image-set(
+        url('../../../../assets/plates/nav-rule.webp') type('image/webp'),
+        url('../../../../assets/plates/nav-rule.png') type('image/png')
+      )
+      center / 100% 100% no-repeat;
+    pointer-events: none;
+    animation: brush-draw 1100ms var(--ease-out) 150ms both;
+  }
+}
+
+.wordmark {
+  display: grid;
+  justify-items: center;
+  gap: 0.1rem;
+  color: var(--iron);
+  text-decoration: none;
+}
+
+.wordmark__name {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.344vw, 2.375rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.wordmark__descriptor {
+  font-family: var(--font-sans);
+  font-size: clamp(0.6875rem, 0.911vw, 0.875rem);
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  line-height: 1;
+  margin-inline-end: -0.34em;
+  text-transform: uppercase;
+}
+
+.site-nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav__link {
+  position: relative;
+  color: var(--iron);
+  font-family: var(--font-serif);
+  text-decoration: none;
+
+  // The current page is underlined with the cobalt brushstroke, drawn on like the mission dash.
+  &::after {
+    content: '';
+    position: absolute;
+    // The stroke hangs past the label on both sides, as a brushed underline does.
+    inset-inline: -0.5em -0.45em;
+    inset-block-end: -0.85em;
+    height: 0.42em;
+    background-color: var(--cobalt);
+    mask: url('../../../../assets/plates/link-stroke.webp') center / 100% 100% no-repeat;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 520ms var(--ease-out);
+  }
+
+  &:hover::after {
+    clip-path: inset(0);
+  }
+
+  &.is-current::after {
+    clip-path: inset(0);
+    animation: brush-draw 750ms var(--ease-out) both;
+  }
+}
+
+.lang {
+  display: flex;
+  align-items: center;
+  gap: 0.55em;
+  color: var(--iron-soft);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.lang__link {
+  padding: 0.35em 0.1em;
+  text-decoration: none;
+
+  &[aria-current='true'] {
+    color: var(--iron);
+  }
+
+  &:not([aria-current='true']):hover {
+    color: var(--cobalt);
+  }
+}
+
+.lang__divider {
+  opacity: 0.7;
+}
+
+.give {
+  padding: 0.1em 1.15em;
+  font-size: clamp(1.125rem, 1.367vw, 1.3125rem);
+}
+
+.menu-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.75rem;
+  margin-inline-start: 0.5rem;
+  padding: 0.35rem 0.25rem;
+  border: 0;
+  background: none;
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+.menu-button__icon {
+  width: 1.375rem;
+  height: 1.375rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 1.75;
+}
+
+// Wide screens: the menu sits inline, nav centred between the wordmark and the language switch.
+@media (min-width: 68em) {
+  .site-header {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 0;
+  }
+
+  .site-menu {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    margin-inline-end: clamp(1rem, 2.8vw, 2.75rem);
+  }
+
+  .site-nav__list {
+    justify-content: center;
+    gap: clamp(1.5rem, 3.8vw, 3.75rem);
+  }
+
+  .site-nav__link {
+    font-size: clamp(0.9375rem, 1.107vw, 1.0625rem);
+  }
+
+  .menu-button {
+    display: none;
+  }
+}
+
+// Narrow screens: wordmark, Give and a Menu button; the menu opens as a panel under the bar.
+@media (max-width: 67.99em) {
+  .site-header {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    min-height: 4.5rem;
+    padding-block: 0.6rem calc(0.6rem + 10px);
+  }
+
+  .wordmark {
+    justify-self: start;
+  }
+
+  .wordmark__name {
+    font-size: clamp(1.25rem, 1rem + 1.2vw, 1.75rem);
+    white-space: nowrap;
+  }
+
+  .wordmark__descriptor {
+    font-size: 0.6875rem;
+    letter-spacing: 0.22em;
+    margin-inline-end: -0.22em;
+    white-space: nowrap;
+  }
+
+  .site-menu {
+    position: absolute;
+    inset-inline: 0;
+    inset-block-start: 100%;
+    display: none;
+    padding: 1.25rem var(--gutter) 2rem;
+    background-color: var(--ground);
+    background-image: image-set(
+      url('../../../../assets/plates/ground.webp') type('image/webp'),
+      url('../../../../assets/plates/ground.png') type('image/png')
+    );
+    background-size: 308px 204px;
+    box-shadow: 0 18px 30px -18px rgb(58 31 14 / 0.45);
+  }
+
+  .is-open .site-menu {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .site-nav__list {
+    flex-direction: column;
+  }
+
+  .site-nav__list li {
+    border-block-end: 1px solid rgb(58 31 14 / 0.14);
+  }
+
+  .site-nav__link {
+    display: inline-block;
+    padding-block: 0.7rem;
+    font-size: 1.5rem;
+
+    &::after {
+      inset-block-end: 0.35rem;
+      height: 0.32em;
+    }
+
+    &.is-current {
+      color: var(--cobalt);
+    }
+  }
+
+  .lang {
+    font-size: 0.9375rem;
+  }
+
+  .lang__link {
+    padding: 0.6em 0.4em;
+  }
+}
+
+@media (max-width: 26em) {
+  .give {
+    padding-inline: 0.85em;
+  }
+
+  .menu-button {
+    margin-inline-start: 0;
+    padding-inline: 0.5rem;
+  }
+
+  .menu-button span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,867 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-01T23:39:56Z",
+  "title": "Design System: Beauty From Ashes Surgical Ministry",
+  "extensions": {
+    "colorMeta": {
+      "cobalt": {
+        "role": "primary",
+        "displayName": "Cobalt Slip",
+        "canonical": "#0b3d9c",
+        "oklch": "oklch(39.6% 0.163 261.8)",
+        "tonalRamp": [
+          "oklch(15% 0.163 261.8)",
+          "oklch(26% 0.163 261.8)",
+          "oklch(38% 0.163 261.8)",
+          "oklch(49% 0.163 261.8)",
+          "oklch(61% 0.163 261.8)",
+          "oklch(72% 0.163 261.8)",
+          "oklch(84% 0.163 261.8)",
+          "oklch(95% 0.163 261.8)"
+        ]
+      },
+      "on-cobalt": {
+        "role": "primary",
+        "displayName": "Slip White",
+        "canonical": "#fbf8f2",
+        "oklch": "oklch(98.0% 0.009 84.6)",
+        "tonalRamp": [
+          "oklch(15% 0.009 84.6)",
+          "oklch(26% 0.009 84.6)",
+          "oklch(38% 0.009 84.6)",
+          "oklch(49% 0.009 84.6)",
+          "oklch(61% 0.009 84.6)",
+          "oklch(72% 0.009 84.6)",
+          "oklch(84% 0.009 84.6)",
+          "oklch(95% 0.009 84.6)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Salt-Glazed Buff",
+        "canonical": "#d8d1c4",
+        "oklch": "oklch(86.3% 0.019 83.1)",
+        "tonalRamp": [
+          "oklch(15% 0.019 83.1)",
+          "oklch(26% 0.019 83.1)",
+          "oklch(38% 0.019 83.1)",
+          "oklch(49% 0.019 83.1)",
+          "oklch(61% 0.019 83.1)",
+          "oklch(72% 0.019 83.1)",
+          "oklch(84% 0.019 83.1)",
+          "oklch(95% 0.019 83.1)"
+        ]
+      },
+      "ground-shade": {
+        "role": "neutral",
+        "displayName": "Buff Shade",
+        "canonical": "#c9c0b1",
+        "oklch": "oklch(81.1% 0.023 80.7)",
+        "tonalRamp": [
+          "oklch(15% 0.023 80.7)",
+          "oklch(26% 0.023 80.7)",
+          "oklch(38% 0.023 80.7)",
+          "oklch(49% 0.023 80.7)",
+          "oklch(61% 0.023 80.7)",
+          "oklch(72% 0.023 80.7)",
+          "oklch(84% 0.023 80.7)",
+          "oklch(95% 0.023 80.7)"
+        ]
+      },
+      "ground-deep": {
+        "role": "neutral",
+        "displayName": "Buff Deep",
+        "canonical": "#b9ad9b",
+        "oklch": "oklch(75.3% 0.029 78.1)",
+        "tonalRamp": [
+          "oklch(15% 0.029 78.1)",
+          "oklch(26% 0.029 78.1)",
+          "oklch(38% 0.029 78.1)",
+          "oklch(49% 0.029 78.1)",
+          "oklch(61% 0.029 78.1)",
+          "oklch(72% 0.029 78.1)",
+          "oklch(84% 0.029 78.1)",
+          "oklch(95% 0.029 78.1)"
+        ]
+      },
+      "iron": {
+        "role": "neutral",
+        "displayName": "Iron",
+        "canonical": "#3a1f0e",
+        "oklch": "oklch(27.2% 0.050 51.4)",
+        "tonalRamp": [
+          "oklch(15% 0.050 51.4)",
+          "oklch(26% 0.050 51.4)",
+          "oklch(38% 0.050 51.4)",
+          "oklch(49% 0.050 51.4)",
+          "oklch(61% 0.050 51.4)",
+          "oklch(72% 0.050 51.4)",
+          "oklch(84% 0.050 51.4)",
+          "oklch(95% 0.050 51.4)"
+        ]
+      },
+      "iron-soft": {
+        "role": "neutral",
+        "displayName": "Iron Soft",
+        "canonical": "#4f3a2a",
+        "oklch": "oklch(36.7% 0.039 58.4)",
+        "tonalRamp": [
+          "oklch(15% 0.039 58.4)",
+          "oklch(26% 0.039 58.4)",
+          "oklch(38% 0.039 58.4)",
+          "oklch(49% 0.039 58.4)",
+          "oklch(61% 0.039 58.4)",
+          "oklch(72% 0.039 58.4)",
+          "oklch(84% 0.039 58.4)",
+          "oklch(95% 0.039 58.4)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Clay Text",
+        "canonical": "#3c3736",
+        "oklch": "oklch(34.2% 0.007 31.1)",
+        "tonalRamp": [
+          "oklch(15% 0.007 31.1)",
+          "oklch(26% 0.007 31.1)",
+          "oklch(38% 0.007 31.1)",
+          "oklch(49% 0.007 31.1)",
+          "oklch(61% 0.007 31.1)",
+          "oklch(72% 0.007 31.1)",
+          "oklch(84% 0.007 31.1)",
+          "oklch(95% 0.007 31.1)"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Iron Hairline",
+        "canonical": "rgb(58 31 14 / 0.14)",
+        "oklch": "oklch(27.2% 0.050 51.4)",
+        "tonalRamp": [
+          "oklch(15% 0.050 51.4)",
+          "oklch(26% 0.050 51.4)",
+          "oklch(38% 0.050 51.4)",
+          "oklch(49% 0.050 51.4)",
+          "oklch(61% 0.050 51.4)",
+          "oklch(72% 0.050 51.4)",
+          "oklch(84% 0.050 51.4)",
+          "oklch(95% 0.050 51.4)"
+        ]
+      },
+      "hairline-section": {
+        "role": "neutral",
+        "displayName": "Section Hairline",
+        "canonical": "rgb(58 31 14 / 0.5)",
+        "oklch": "oklch(27.2% 0.050 51.4)",
+        "tonalRamp": [
+          "oklch(15% 0.050 51.4)",
+          "oklch(26% 0.050 51.4)",
+          "oklch(38% 0.050 51.4)",
+          "oklch(49% 0.050 51.4)",
+          "oklch(61% 0.050 51.4)",
+          "oklch(72% 0.050 51.4)",
+          "oklch(84% 0.050 51.4)",
+          "oklch(95% 0.050 51.4)"
+        ]
+      },
+      "iron-band": {
+        "role": "neutral",
+        "displayName": "Kiln Iron",
+        "canonical": "#2a170c",
+        "oklch": "oklch(22.8% 0.037 50.2)",
+        "tonalRamp": [
+          "oklch(15% 0.037 50.2)",
+          "oklch(26% 0.037 50.2)",
+          "oklch(38% 0.037 50.2)",
+          "oklch(49% 0.037 50.2)",
+          "oklch(61% 0.037 50.2)",
+          "oklch(72% 0.037 50.2)",
+          "oklch(84% 0.037 50.2)",
+          "oklch(95% 0.037 50.2)"
+        ]
+      },
+      "involved-ink": {
+        "role": "neutral",
+        "displayName": "Band Ink",
+        "canonical": "#efe6d6",
+        "oklch": "oklch(92.8% 0.023 82.1)",
+        "tonalRamp": [
+          "oklch(15% 0.023 82.1)",
+          "oklch(26% 0.023 82.1)",
+          "oklch(38% 0.023 82.1)",
+          "oklch(49% 0.023 82.1)",
+          "oklch(61% 0.023 82.1)",
+          "oklch(72% 0.023 82.1)",
+          "oklch(84% 0.023 82.1)",
+          "oklch(95% 0.023 82.1)"
+        ]
+      },
+      "involved-ink-soft": {
+        "role": "neutral",
+        "displayName": "Band Ink Soft",
+        "canonical": "#ddd1bd",
+        "oklch": "oklch(86.5% 0.030 80.6)",
+        "tonalRamp": [
+          "oklch(15% 0.030 80.6)",
+          "oklch(26% 0.030 80.6)",
+          "oklch(38% 0.030 80.6)",
+          "oklch(49% 0.030 80.6)",
+          "oklch(61% 0.030 80.6)",
+          "oklch(72% 0.030 80.6)",
+          "oklch(84% 0.030 80.6)",
+          "oklch(95% 0.030 80.6)"
+        ]
+      },
+      "involved-label": {
+        "role": "neutral",
+        "displayName": "Band Label",
+        "canonical": "#d4c6ae",
+        "oklch": "oklch(83.2% 0.036 81.2)",
+        "tonalRamp": [
+          "oklch(15% 0.036 81.2)",
+          "oklch(26% 0.036 81.2)",
+          "oklch(38% 0.036 81.2)",
+          "oklch(49% 0.036 81.2)",
+          "oklch(61% 0.036 81.2)",
+          "oklch(72% 0.036 81.2)",
+          "oklch(84% 0.036 81.2)",
+          "oklch(95% 0.036 81.2)"
+        ]
+      },
+      "link-on-dark": {
+        "role": "neutral",
+        "displayName": "Link on Iron",
+        "canonical": "#f6efe3",
+        "oklch": "oklch(95.4% 0.018 81.3)",
+        "tonalRamp": [
+          "oklch(15% 0.018 81.3)",
+          "oklch(26% 0.018 81.3)",
+          "oklch(38% 0.018 81.3)",
+          "oklch(49% 0.018 81.3)",
+          "oklch(61% 0.018 81.3)",
+          "oklch(72% 0.018 81.3)",
+          "oklch(84% 0.018 81.3)",
+          "oklch(95% 0.018 81.3)"
+        ]
+      },
+      "link-rule-on-dark": {
+        "role": "neutral",
+        "displayName": "Cobalt Wash",
+        "canonical": "#8fa8dc",
+        "oklch": "oklch(73.2% 0.081 264.6)",
+        "tonalRamp": [
+          "oklch(15% 0.081 264.6)",
+          "oklch(26% 0.081 264.6)",
+          "oklch(38% 0.081 264.6)",
+          "oklch(49% 0.081 264.6)",
+          "oklch(61% 0.081 264.6)",
+          "oklch(72% 0.081 264.6)",
+          "oklch(84% 0.081 264.6)",
+          "oklch(95% 0.081 264.6)"
+        ],
+        "purpose": "The brushed link stroke on the iron band (the key keeps its first name; it now colors a mask, not a rule)."
+      },
+      "hairline-on-dark": {
+        "role": "neutral",
+        "displayName": "Band Hairline",
+        "canonical": "rgb(239 230 214 / 0.28)",
+        "oklch": "oklch(92.8% 0.023 82.1)",
+        "tonalRamp": [
+          "oklch(15% 0.023 82.1)",
+          "oklch(26% 0.023 82.1)",
+          "oklch(38% 0.023 82.1)",
+          "oklch(49% 0.023 82.1)",
+          "oklch(61% 0.023 82.1)",
+          "oklch(72% 0.023 82.1)",
+          "oklch(84% 0.023 82.1)",
+          "oklch(95% 0.023 82.1)"
+        ]
+      },
+      "field-bg": {
+        "role": "neutral",
+        "displayName": "Clay White",
+        "canonical": "#f4efe6",
+        "oklch": "oklch(95.4% 0.013 82.4)",
+        "tonalRamp": [
+          "oklch(15% 0.013 82.4)",
+          "oklch(26% 0.013 82.4)",
+          "oklch(38% 0.013 82.4)",
+          "oklch(49% 0.013 82.4)",
+          "oklch(61% 0.013 82.4)",
+          "oklch(72% 0.013 82.4)",
+          "oklch(84% 0.013 82.4)",
+          "oklch(95% 0.013 82.4)"
+        ]
+      },
+      "field-edge": {
+        "role": "neutral",
+        "displayName": "Umber Edge",
+        "canonical": "#6e5a4b",
+        "oklch": "oklch(48.3% 0.035 58.7)",
+        "tonalRamp": [
+          "oklch(15% 0.035 58.7)",
+          "oklch(26% 0.035 58.7)",
+          "oklch(38% 0.035 58.7)",
+          "oklch(49% 0.035 58.7)",
+          "oklch(61% 0.035 58.7)",
+          "oklch(72% 0.035 58.7)",
+          "oklch(84% 0.035 58.7)",
+          "oklch(95% 0.035 58.7)"
+        ]
+      },
+      "oxide": {
+        "role": "error",
+        "displayName": "Iron Oxide",
+        "canonical": "#74200e",
+        "oklch": "oklch(43.1% 0.136 34.7)",
+        "tonalRamp": [
+          "oklch(15% 0.136 34.7)",
+          "oklch(26% 0.136 34.7)",
+          "oklch(38% 0.136 34.7)",
+          "oklch(49% 0.136 34.7)",
+          "oklch(61% 0.136 34.7)",
+          "oklch(72% 0.136 34.7)",
+          "oklch(84% 0.136 34.7)",
+          "oklch(95% 0.136 34.7)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The home hero headline only; max 7.6em wide."
+      },
+      "reference-title": {
+        "displayName": "Reference Title",
+        "purpose": "The one-line h1 of Get Help; longer reference titles (Refer, Privacy, Accessibility) at clamp(2.375rem, 4.4vw, 4.5rem), max 16em."
+      },
+      "page-title": {
+        "displayName": "Page Title",
+        "purpose": "The h1 of Stories, About, Contact and Ask for help."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles in sentence case; clamp(2.125rem, 3.3vw, 3.375rem) in audience splits."
+      },
+      "reference-heading": {
+        "displayName": "Reference Heading",
+        "purpose": "Section headings on reference pages."
+      },
+      "legend": {
+        "displayName": "Legend",
+        "purpose": "Form section legends, the What happens next title, Contact titles."
+      },
+      "quote": {
+        "displayName": "Quote",
+        "fontStyle": "italic",
+        "purpose": "The mission quotation; three card lines from 62em, opening mark hung in the margin."
+      },
+      "quote-large": {
+        "displayName": "Quote Large",
+        "fontStyle": "italic",
+        "purpose": "A patient story quotation; Stories and the colleague's letter set it a little smaller."
+      },
+      "vision-statement": {
+        "displayName": "Vision Statement",
+        "purpose": "The roman mission-card statement that opens an audience page; three card lines from 62em."
+      },
+      "statement": {
+        "displayName": "Statement",
+        "purpose": "Centered statements of belief and vision."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Item names in hairline lists (conditions, get-involved paths); roles and costs run smaller."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "fontStyle": "italic",
+        "purpose": "Step numbers; numbered reference lists at 1.75em, the form aside at 1.75rem."
+      },
+      "aside": {
+        "displayName": "Aside",
+        "fontStyle": "italic",
+        "purpose": "Reassurance lines, the hero place line, the Or call line, gift-cost examples."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Labels on the brushed swatch and the ink frame; sentence case, no wrap."
+      },
+      "button-compact": {
+        "displayName": "Button Compact",
+        "purpose": "The header Give swatch."
+      },
+      "link": {
+        "displayName": "Link",
+        "purpose": "Inline serif action links over the brushed link stroke."
+      },
+      "nav": {
+        "displayName": "Nav",
+        "purpose": "Header navigation links on wide screens."
+      },
+      "jump": {
+        "displayName": "Jump",
+        "purpose": "Jump-list links in a reference aside."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "The paragraph under a headline."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text at 16.5em to 36em measures."
+      },
+      "reference-body": {
+        "displayName": "Reference Body",
+        "purpose": "Text in reference sections, 36em measure."
+      },
+      "field-label": {
+        "displayName": "Field Label",
+        "purpose": "The label above a form control; optional marker in Iron Soft 400."
+      },
+      "field-input": {
+        "displayName": "Field Input",
+        "purpose": "Text typed into a field; never below 1rem."
+      },
+      "label": {
+        "displayName": "Label",
+        "textTransform": "uppercase",
+        "purpose": "Footer group headings; attributions and detail terms use it at 0.16em tracking."
+      },
+      "label-section": {
+        "displayName": "Section Label",
+        "textTransform": "uppercase",
+        "purpose": "The heading of a section whose body is a quotation or statement. Never a kicker above another heading."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Notes, the placeholder note, the footer base row."
+      },
+      "small-strong": {
+        "displayName": "Small Strong",
+        "purpose": "The sample tag."
+      },
+      "tag": {
+        "displayName": "Tag",
+        "purpose": "The Placeholder tag."
+      }
+    },
+    "shadows": [
+      {
+        "name": "menu-drape",
+        "value": "0 18px 30px -18px rgb(58 31 14 / 0.45)",
+        "purpose": "The narrow-screen menu panel only. The system is otherwise flat."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The one easing for every animation and transition (--ease-out)."
+      },
+      {
+        "name": "brush-draw",
+        "value": "@keyframes brush-draw { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }",
+        "purpose": "The site's one motion grammar: a cobalt line drawn on left to right like slip trailed from a bulb."
+      },
+      {
+        "name": "rule-draw-header",
+        "value": "brush-draw 1100ms var(--ease-out) 150ms both",
+        "purpose": "The brushed rule under the header, at first paint."
+      },
+      {
+        "name": "dash-draw-mission",
+        "value": "brush-draw 800ms var(--ease-out) 750ms both",
+        "purpose": "The home mission dash, after the header rule."
+      },
+      {
+        "name": "dash-draw-audience",
+        "value": "brush-draw 800ms var(--ease-out) 600ms both",
+        "purpose": "The dash under the label that opens an audience page."
+      },
+      {
+        "name": "nav-stroke-current",
+        "value": "brush-draw 750ms var(--ease-out) both",
+        "purpose": "The current nav link's brushed stroke, drawn on when the page loads."
+      },
+      {
+        "name": "nav-stroke-hover",
+        "value": "clip-path 520ms var(--ease-out)",
+        "purpose": "A nav link's brushed stroke drawn on hover."
+      },
+      {
+        "name": "jump-dab",
+        "value": "brush-draw 650ms var(--ease-out) 300ms both",
+        "purpose": "The dab beside the current jump-list entry, redrawn whenever a new section becomes current."
+      },
+      {
+        "name": "link-stroke-hover",
+        "value": "transform 220ms var(--ease-out); scaleY(1.4) from left bottom",
+        "purpose": "The brushed link stroke thickens on hover."
+      },
+      {
+        "name": "gift-frequency",
+        "value": "clip-path 420ms var(--ease-out)",
+        "purpose": "The toggle stroke under the chosen gift frequency."
+      },
+      {
+        "name": "rule-draw-footer",
+        "value": "clip-path 1200ms var(--ease-out)",
+        "purpose": "The mirrored footer rule, when the footer scrolls into view (BrushReveal)."
+      },
+      {
+        "name": "rule-draw-steps",
+        "value": "clip-path 1000ms var(--ease-out) calc(var(--i) * 140ms)",
+        "purpose": "Brushed rules between steps on Home and Volunteer (BrushReveal)."
+      },
+      {
+        "name": "stroke-draw-values",
+        "value": "clip-path 900ms var(--ease-out) calc(var(--i) * 110ms + 120ms)",
+        "purpose": "Vertical strokes beside every value, drawn top to bottom from inset(0 0 100% 0) (BrushReveal)."
+      },
+      {
+        "name": "interaction",
+        "value": "160ms-220ms var(--ease-out)",
+        "purpose": "Buttons 180ms (transform, filter), link stroke 220ms, skip link 160ms."
+      },
+      {
+        "name": "brush-reveal-arming",
+        "value": "arm when top > 92% of viewport at first render; draw at IntersectionObserver threshold 0.2",
+        "purpose": "Strokes are painted by default; nothing is armed without IntersectionObserver or under prefers-reduced-motion."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation-duration and transition-duration 0.01ms !important",
+        "purpose": "Global prefers-reduced-motion override; every stroke appears already drawn."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact",
+        "value": "26em",
+        "purpose": "Below it the Menu word is visually hidden and Give tightens."
+      },
+      {
+        "name": "two-up",
+        "value": "40em",
+        "purpose": "Values, conditions, roles, costs, field pairs, paths and footer go to two columns."
+      },
+      {
+        "name": "desktop",
+        "value": "62em",
+        "purpose": "Hero splits; values to three; every two-column page layout (5fr/7fr, 5fr/8fr, 8fr/4fr, 7fr/4fr, reference aside) and its sticky column; footer to four."
+      },
+      {
+        "name": "header-inline",
+        "value": "68em",
+        "purpose": "Navigation sits inline in the header; below it the menu collapses behind a button."
+      },
+      {
+        "name": "wide",
+        "value": "75em",
+        "purpose": "Get-involved paths go to four columns; the footer goes to 4.5fr + 4 x 2fr."
+      },
+      {
+        "name": "values-row",
+        "value": "112em",
+        "purpose": "All six values in one row."
+      }
+    ],
+    "rasters": [
+      {
+        "name": "ground",
+        "files": "ground.webp / ground.png",
+        "size": "308x204",
+        "use": "Page ground tile and, multiplied, the iron band."
+      },
+      {
+        "name": "ask-brush",
+        "files": "ask-brush.webp / .png",
+        "use": "Primary button swatch."
+      },
+      {
+        "name": "give-brush",
+        "files": "give-brush.webp / .png",
+        "use": "Compact Give swatch."
+      },
+      {
+        "name": "ink-frame",
+        "files": "ink-frame.webp / .png",
+        "use": "Secondary button frame and unchosen gift amounts, border-image slice 46, 13px."
+      },
+      {
+        "name": "nav-rule",
+        "files": "nav-rule.webp / .png",
+        "use": "Header rule, mirrored footer rule, step dividers, the brushed split opener."
+      },
+      {
+        "name": "mission-dash",
+        "files": "mission-dash.webp / .png",
+        "use": "Dash under a section label (home, audience pages, About card, the letter); one-column value marker."
+      },
+      {
+        "name": "value-stroke",
+        "files": "value-stroke.webp / .png",
+        "use": "Vertical stroke beside every value (the mission dash rotated)."
+      },
+      {
+        "name": "jar",
+        "files": "jar.webp, jar-860.webp, jar.png",
+        "use": "Hero jar cutout below 62em."
+      },
+      {
+        "name": "jar-staged",
+        "files": "jar-staged.webp / .png",
+        "use": "Hero jar still life from 62em, edges masked into the ground."
+      },
+      {
+        "name": "glaze-band",
+        "files": "glaze-band.webp, glaze-band-860.webp, glaze-band.png",
+        "use": "Ash-glaze photograph band above the vision section."
+      },
+      {
+        "name": "link-stroke",
+        "files": "link-stroke.webp / .png",
+        "size": "1281x129",
+        "use": "The mission dash trimmed to its ink. Used as a CSS mask under links and nav links (color from --stroke-color) and as the bullet in Privacy and Accessibility lists."
+      },
+      {
+        "name": "jump-mark",
+        "files": "jump-mark.webp / .png",
+        "size": "840x181",
+        "use": "The mission dash resampled; the dab beside the current jump-list entry."
+      },
+      {
+        "name": "toggle-stroke",
+        "files": "toggle-stroke.webp / .png",
+        "size": "1281x116",
+        "use": "link-stroke resampled onto a wider canvas; the stroke under the chosen gift frequency."
+      },
+      {
+        "name": "amount-brush",
+        "files": "amount-brush.webp / .png",
+        "size": "1297x635",
+        "use": "A copy of give-brush; the swatch behind the chosen gift amount."
+      },
+      {
+        "name": "ink-frame-light",
+        "files": "ink-frame-light.webp / .png",
+        "size": "1482x436",
+        "use": "ink-frame recolored to Band Ink (#efe6d6); the secondary button on the iron band."
+      },
+      {
+        "name": "give-glaze",
+        "files": "give-glaze.webp, give-glaze-1536.webp, give-glaze-860.webp, give-glaze.png",
+        "size": "3072x614 (5:1)",
+        "use": "Generated ash-glaze photograph; the band that opens the Give page."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Brushed Swatch Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The primary action (Ask for help): a hand-brushed cobalt slip raster behind a white serif label.",
+      "html": "<div class=\"ds-stage\"><a class=\"ds-btn-brush\" href=\"#\">Ask for help</a></div>",
+      "css": ".ds-stage { background-color: var(--ground, #d8d1c4); background-image: url('/assets/plates/ground.webp'); background-size: 308px 204px; padding: 32px; } .ds-btn-brush { position: relative; isolation: isolate; display: inline-flex; align-items: center; justify-content: center; padding: 0.47em 2em; font-family: var(--font-serif, 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif); font-size: clamp(1.125rem, 1.5625vw, 1.5rem); line-height: 1.6; color: var(--on-cobalt, #fbf8f2); text-decoration: none; white-space: nowrap; transition: transform 180ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn-brush::before { content: ''; position: absolute; inset: -0.29em -0.29em -0.33em; z-index: -1; background: url('/assets/plates/ask-brush.webp') center / 100% 100% no-repeat; transition: filter 180ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn-brush:hover::before { filter: brightness(1.18) saturate(1.05); } .ds-btn-brush:active { transform: translateY(1px); } .ds-btn-brush:focus-visible { outline: 2px solid var(--cobalt, #0b3d9c); outline-offset: 0.45em; border-radius: 2px; } @media (forced-colors: active) { .ds-btn-brush { border: 2px solid ButtonText; } .ds-btn-brush::before { display: none; } }"
+    },
+    {
+      "name": "Give Swatch",
+      "kind": "button",
+      "refersTo": "button-give",
+      "description": "The compact brushed swatch in the header; the only cobalt there besides the rule.",
+      "html": "<div class=\"ds-stage\"><a class=\"ds-btn-give\" href=\"#\">Give</a></div>",
+      "css": ".ds-stage { background-color: var(--ground, #d8d1c4); background-image: url('/assets/plates/ground.webp'); background-size: 308px 204px; padding: 32px; } .ds-btn-give { position: relative; isolation: isolate; display: inline-flex; align-items: center; padding: 0.1em 1.15em; font-family: var(--font-serif, 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif); font-size: clamp(1.125rem, 1.367vw, 1.3125rem); line-height: 1.6; color: var(--on-cobalt, #fbf8f2); text-decoration: none; white-space: nowrap; transition: transform 180ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn-give::before { content: ''; position: absolute; inset: -0.27em; z-index: -1; background: url('/assets/plates/give-brush.webp') center / 100% 100% no-repeat; transition: filter 180ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn-give:hover::before { filter: brightness(1.18) saturate(1.05); } .ds-btn-give:active { transform: translateY(1px); } .ds-btn-give:focus-visible { outline: 2px solid var(--cobalt, #0b3d9c); outline-offset: 0.45em; border-radius: 2px; } @media (forced-colors: active) { .ds-btn-give { border: 2px solid ButtonText; } .ds-btn-give::before { display: none; } }"
+    },
+    {
+      "name": "Ink Frame Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "The secondary action (Refer someone, See the roles, the photo picker): a nine-sliced hand-inked iron frame; the label turns cobalt on hover.",
+      "html": "<div class=\"ds-stage\"><a class=\"ds-btn-line\" href=\"#\">Refer someone</a></div>",
+      "css": ".ds-stage { background-color: var(--ground, #d8d1c4); background-image: url('/assets/plates/ground.webp'); background-size: 308px 204px; padding: 32px; } .ds-btn-line { display: inline-flex; align-items: center; justify-content: center; padding: 0 0.56em; border: 13px solid transparent; border-image: url('/assets/plates/ink-frame.webp') 46 / 13px / 0 stretch; font-family: var(--font-serif, 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif); font-size: clamp(1.125rem, 1.5625vw, 1.5rem); line-height: 1.45; color: var(--iron, #3a1f0e); text-decoration: none; white-space: nowrap; transition: transform 180ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn-line:hover { color: var(--cobalt, #0b3d9c); } .ds-btn-line:active { transform: translateY(1px); } .ds-btn-line:focus-visible { outline: 2px solid var(--cobalt, #0b3d9c); outline-offset: 3px; border-radius: 2px; } @media (forced-colors: active) { .ds-btn-line { border: 2px solid ButtonText; border-image: none; } }"
+    },
+    {
+      "name": "Brushed Link",
+      "kind": "custom",
+      "refersTo": "text-link",
+      "description": "Every link outside the footer: cobalt text over a brushed stroke, the link-stroke plate used as a CSS mask so its color follows the ground. The stroke thickens on hover.",
+      "html": "<div class=\"ds-stage ds-links\"><a class=\"ds-text-link\" href=\"#\">Read our privacy notice</a><p class=\"ds-call\">Or call <a class=\"ds-brush-link\" href=\"#\">(704) 555-0100</a></p></div>",
+      "css": ".ds-stage { background-color: var(--ground, #d8d1c4); background-image: url('/assets/plates/ground.webp'); background-size: 308px 204px; padding: 32px; } .ds-links { display: grid; justify-items: start; gap: 1.25rem; } .ds-call { margin: 0; color: var(--text, #3c3736); font-family: var(--font-sans, 'Mulish Variable', 'Mulish', 'Segoe UI', system-ui, sans-serif); } .ds-text-link, .ds-brush-link { --stroke-color: var(--cobalt, #0b3d9c); position: relative; display: inline-block; padding-block-end: 0.2em; color: var(--cobalt, #0b3d9c); text-decoration: none; } .ds-text-link::after, .ds-brush-link::after { content: ''; position: absolute; inset-inline: -0.06em -0.12em; inset-block-end: -0.12em; height: 0.34em; background-color: var(--stroke-color); mask: url('/assets/plates/link-stroke.webp') center / 100% 100% no-repeat; transform-origin: left bottom; transition: transform 220ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-text-link:hover::after, .ds-brush-link:hover::after { transform: scaleY(1.4); } .ds-text-link { font-family: var(--font-serif, 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif); font-size: clamp(1.125rem, 1.05rem + 0.3vw, 1.3125rem); } .ds-brush-link { font-weight: 700; } .ds-text-link:focus-visible, .ds-brush-link:focus-visible { outline: 2px solid var(--cobalt, #0b3d9c); outline-offset: 3px; border-radius: 2px; } @media (forced-colors: active) { .ds-text-link::after, .ds-brush-link::after { display: none; } .ds-text-link, .ds-brush-link { text-decoration: underline; } }"
+    },
+    {
+      "name": "On the Iron Band",
+      "kind": "custom",
+      "refersTo": "text-link-on-dark",
+      "description": "Kiln Iron with the ground multiplied in: Band Ink text, a link in light ink over a Cobalt Wash stroke, a placeholder tag in Band Ink, and the ink frame redrawn in Band Ink. Cobalt fails contrast here (1.8:1).",
+      "html": "<div class=\"ds-band\"><h3 class=\"ds-band-title\">Sponsor a surgery</h3><p class=\"ds-band-text\">Cover one patient’s surgery, alone or with your church or business.</p><p class=\"ds-band-cost\">A typical surgery costs the ministry about $5,000. <span class=\"ds-tag\">Placeholder</span></p><a class=\"ds-link-dark\" href=\"#\">Pray with us</a><a class=\"ds-frame-dark\" href=\"#\">Ask about sponsoring</a></div>",
+      "css": ".ds-band { display: grid; justify-items: start; gap: 0.9rem; max-width: 26rem; padding: 32px; background-color: #2a170c; background-image: url('/assets/plates/ground.webp'); background-size: 308px 204px; background-blend-mode: multiply; color: #ddd1bd; border-top: 1px solid rgb(239 230 214 / 0.28); } .ds-band-title { margin: 0; font-family: var(--font-serif, 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif); font-weight: 400; font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.5rem); line-height: 1.1; color: #efe6d6; } .ds-band-text { margin: 0; font-family: var(--font-sans, 'Mulish Variable', 'Mulish', 'Segoe UI', system-ui, sans-serif); line-height: 1.55; } .ds-band-cost { margin: 0; font-family: var(--font-serif, 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif); font-size: 1.375rem; line-height: 1.3; color: #efe6d6; } .ds-tag { display: inline-block; padding: 0.15em 0.6em; border: 1px dashed #ddd1bd; border-radius: 3px; color: #efe6d6; font-family: var(--font-sans, 'Mulish Variable', 'Mulish', 'Segoe UI', system-ui, sans-serif); font-size: 0.8125rem; font-weight: 650; letter-spacing: 0.02em; line-height: 1.4; vertical-align: 0.15em; white-space: nowrap; } .ds-link-dark { --stroke-color: #8fa8dc; position: relative; display: inline-block; padding-block-end: 0.2em; color: #f6efe3; font-family: var(--font-serif, 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif); font-size: clamp(1.125rem, 1.05rem + 0.3vw, 1.3125rem); text-decoration: none; } .ds-link-dark::after { content: ''; position: absolute; inset-inline: -0.06em -0.12em; inset-block-end: -0.12em; height: 0.34em; background-color: var(--stroke-color); mask: url('/assets/plates/link-stroke.webp') center / 100% 100% no-repeat; transform-origin: left bottom; transition: transform 220ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-link-dark:hover::after { transform: scaleY(1.4); } .ds-frame-dark { display: inline-flex; align-items: center; padding: 0 0.56em; border: 13px solid transparent; border-image: url('/assets/plates/ink-frame-light.webp') 46 / 13px / 0 stretch; color: #efe6d6; font-family: var(--font-serif, 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif); font-size: clamp(1.125rem, 1.5625vw, 1.5rem); line-height: 1.45; text-decoration: none; white-space: nowrap; } .ds-frame-dark:hover { color: #ffffff; } .ds-link-dark:focus-visible, .ds-frame-dark:focus-visible { outline: 2px solid #f6efe3; outline-offset: 3px; border-radius: 2px; } @media (forced-colors: active) { .ds-link-dark::after { display: none; } .ds-link-dark { text-decoration: underline; } .ds-frame-dark { border: 2px solid ButtonText; border-image: none; } }"
+    },
+    {
+      "name": "Site Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Text wordmark (placeholder until the logo), five centered serif links, EN | ES switch, Give swatch, and the brushed cobalt rule. Hover draws the brushed link stroke under a link; the current page keeps it.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-wordmark\" href=\"#\"><span class=\"ds-wordmark-name\">Beauty From Ashes</span><span class=\"ds-wordmark-desc\">Surgical Ministry</span></a><ul class=\"ds-nav-list\"><li><a class=\"ds-nav-link is-current\" href=\"#\" aria-current=\"page\">Get Help</a></li><li><a class=\"ds-nav-link\" href=\"#\">Volunteer</a></li><li><a class=\"ds-nav-link\" href=\"#\">Partner</a></li><li><a class=\"ds-nav-link\" href=\"#\">Stories</a></li><li><a class=\"ds-nav-link\" href=\"#\">About</a></li></ul><div class=\"ds-lang\"><a href=\"#\" aria-current=\"true\">EN</a><span aria-hidden=\"true\">|</span><a href=\"#\">ES</a></div><a class=\"ds-give\" href=\"#\">Give</a></header>",
+      "css": ".ds-nav { position: relative; display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; align-items: center; gap: 0 2rem; padding: 14px 32px 26px; background-color: var(--ground, #d8d1c4); background-image: url('/assets/plates/ground.webp'); background-size: 308px 204px; } .ds-nav::after { content: ''; position: absolute; inset-inline: 0; bottom: 0; height: 12px; background: url('/assets/plates/nav-rule.webp') center / 100% 100% no-repeat; animation: ds-brush-draw 1100ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)) 150ms both; } .ds-wordmark { display: grid; justify-items: center; gap: 0.1rem; color: var(--iron, #3a1f0e); text-decoration: none; } .ds-wordmark-name { font-family: var(--font-serif, 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif); font-size: 1.75rem; line-height: 1.05; letter-spacing: -0.01em; } .ds-wordmark-desc { font-family: var(--font-sans, 'Mulish Variable', 'Mulish', 'Segoe UI', system-ui, sans-serif); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.34em; margin-inline-end: -0.34em; line-height: 1; text-transform: uppercase; } .ds-nav-list { display: flex; justify-content: center; gap: clamp(1.5rem, 3.8vw, 3.75rem); margin: 0; padding: 0; list-style: none; } .ds-nav-link { position: relative; color: var(--iron, #3a1f0e); font-family: var(--font-serif, 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif); font-size: 1rem; text-decoration: none; } .ds-nav-link::after { content: ''; position: absolute; inset-inline: -0.5em -0.45em; inset-block-end: -0.85em; height: 0.42em; background-color: var(--cobalt, #0b3d9c); mask: url('/assets/plates/link-stroke.webp') center / 100% 100% no-repeat; clip-path: inset(0 100% 0 0); transition: clip-path 520ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-nav-link:hover::after { clip-path: inset(0); } .ds-nav-link.is-current::after { clip-path: inset(0); animation: ds-brush-draw 750ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)) both; } .ds-nav-link:focus-visible, .ds-lang a:focus-visible, .ds-give:focus-visible { outline: 2px solid var(--cobalt, #0b3d9c); outline-offset: 3px; border-radius: 2px; } .ds-lang { display: flex; align-items: center; gap: 0.55em; color: var(--iron-soft, #4f3a2a); font-family: var(--font-sans, 'Mulish Variable', 'Mulish', 'Segoe UI', system-ui, sans-serif); font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.06em; } .ds-lang a { color: inherit; text-decoration: none; padding: 0.35em 0.1em; } .ds-lang a[aria-current='true'] { color: var(--iron, #3a1f0e); } .ds-lang a:not([aria-current='true']):hover { color: var(--cobalt, #0b3d9c); } .ds-lang span { opacity: 0.7; } .ds-give { position: relative; isolation: isolate; padding: 0.1em 1.15em; font-family: var(--font-serif, 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif); font-size: 1.25rem; line-height: 1.6; color: var(--on-cobalt, #fbf8f2); text-decoration: none; } .ds-give::before { content: ''; position: absolute; inset: -0.27em; z-index: -1; background: url('/assets/plates/give-brush.webp') center / 100% 100% no-repeat; } .ds-give:hover::before { filter: brightness(1.18) saturate(1.05); } @keyframes ds-brush-draw { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } } @media (prefers-reduced-motion: reduce) { .ds-nav::after, .ds-nav-link.is-current::after { animation: none; } .ds-nav-link::after { transition: none; } }"
+    },
+    {
+      "name": "Jump List",
+      "kind": "nav",
+      "refersTo": "jump-link",
+      "description": "The On this page list of a reference page: serif links over iron hairlines; a brushed cobalt dab draws on beside the section being read, and that link turns cobalt.",
+      "html": "<nav class=\"ds-stage\" aria-label=\"On this page\"><ul class=\"ds-jump\" role=\"list\"><li class=\"ds-jump-item is-current\"><a class=\"ds-jump-link\" href=\"#\" aria-current=\"true\">Who can ask</a></li><li class=\"ds-jump-item\"><a class=\"ds-jump-link\" href=\"#\">What it costs</a></li><li class=\"ds-jump-item\"><a class=\"ds-jump-link\" href=\"#\">What to have ready</a></li><li class=\"ds-jump-item\"><a class=\"ds-jump-link\" href=\"#\">Your privacy</a></li></ul></nav>",
+      "css": ".ds-stage { background-color: var(--ground, #d8d1c4); background-image: url('/assets/plates/ground.webp'); background-size: 308px 204px; padding: 32px; } .ds-jump { max-width: 20rem; margin: 0; padding: 0; list-style: none; } .ds-jump-item { --pad: clamp(0.65rem, 1.2vw, 1.1875rem); position: relative; margin-inline-start: clamp(2.5rem, 4.17vw, 4rem); border-block-end: 1px solid rgb(58 31 14 / 0.3); font-size: clamp(1.125rem, 0.6rem + 1vw, 1.625rem); } .ds-jump-item::before { content: ''; position: absolute; inset-inline-end: calc(100% + 0.4rem); inset-block-start: calc(var(--pad) + 0.35em); width: clamp(2.25rem, 3.6vw, 3.5rem); height: 0.42em; background: url('/assets/plates/jump-mark.webp') left center / 100% 100% no-repeat; clip-path: inset(0 100% 0 0); } .ds-jump-item.is-current::before { clip-path: inset(0); animation: ds-brush-draw 650ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)) 300ms both; } .ds-jump-link { display: block; padding-block: var(--pad); color: var(--iron, #3a1f0e); font-family: var(--font-serif, 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif); line-height: 1.3; text-decoration: none; } .ds-jump-link:hover, .ds-jump-link[aria-current='true'] { color: var(--cobalt, #0b3d9c); } .ds-jump-link:focus-visible { outline: 2px solid var(--cobalt, #0b3d9c); outline-offset: 3px; border-radius: 2px; } @keyframes ds-brush-draw { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } } @media (prefers-reduced-motion: reduce) { .ds-jump-item.is-current::before { animation: none; } } @media (forced-colors: active) { .ds-jump-item::before { display: none; } .ds-jump-link[aria-current='true'] { text-decoration: underline; } }"
+    },
+    {
+      "name": "Section Label with Mission Dash",
+      "kind": "custom",
+      "refersTo": "section-label",
+      "description": "A spaced-capital section heading over a short brushed cobalt dash that draws itself on, then the italic quotation. The label is the heading, never a kicker.",
+      "html": "<section class=\"ds-mission\"><h2 class=\"ds-section-label\">Our Mission</h2><span class=\"ds-dash\" aria-hidden=\"true\"></span><blockquote class=\"ds-quote\"><p>&ldquo;To glorify God by serving every patient with Christlike compassion and surgical excellence&hellip;&rdquo;</p></blockquote></section>",
+      "css": ".ds-mission { display: grid; justify-items: center; padding: 40px 32px; text-align: center; background-color: var(--ground, #d8d1c4); background-image: url('/assets/plates/ground.webp'); background-size: 308px 204px; } .ds-section-label { margin: 0; color: var(--iron-soft, #4f3a2a); font-family: var(--font-sans, 'Mulish Variable', 'Mulish', 'Segoe UI', system-ui, sans-serif); font-size: clamp(0.875rem, 0.85rem + 0.2vw, 1.0625rem); font-weight: 650; letter-spacing: 0.33em; margin-inline-end: -0.33em; line-height: 1.4; text-transform: uppercase; } .ds-dash { display: block; width: clamp(5.5rem, 8.07vw, 8rem); aspect-ratio: 1402 / 181; margin-top: 0.55rem; background: url('/assets/plates/mission-dash.webp') center / 100% 100% no-repeat; animation: ds-brush-draw 800ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)) 300ms both; } .ds-quote { margin: 0.75rem 0 0; max-width: 30.4em; color: var(--iron, #3a1f0e); font-family: var(--font-serif, 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif); font-size: clamp(1.4rem, 2.344vw, 2.4rem); font-style: italic; line-height: 1.26; } .ds-quote p { margin: 0; } @keyframes ds-brush-draw { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } } @media (prefers-reduced-motion: reduce) { .ds-dash { animation: none; } }"
+    },
+    {
+      "name": "Values with Brushed Strokes",
+      "kind": "custom",
+      "description": "Serif value names over short body lines, a vertical brushed cobalt stroke at the start of every value, the first in each row included.",
+      "html": "<ul class=\"ds-values\" role=\"list\"><li class=\"ds-value\"><h3>We Listen.</h3><p>We give every patient the time their story deserves.</p></li><li class=\"ds-value\"><h3>We Protect.</h3><p>We hold patient safety as our highest surgical standard.</p></li><li class=\"ds-value\"><h3>We Pray.</h3><p>We pray with every patient who welcomes it.</p></li></ul>",
+      "css": ".ds-values { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; padding: 32px; list-style: none; background-color: var(--ground, #d8d1c4); background-image: url('/assets/plates/ground.webp'); background-size: 308px 204px; } .ds-value { position: relative; padding-inline: clamp(1.25rem, 1.6vw, 1.75rem); } .ds-value::before { content: ''; position: absolute; inset-block: 0.35rem 0.5rem; inset-inline-start: 0; width: 0.6rem; background: url('/assets/plates/value-stroke.webp') center / 100% 100% no-repeat; } .ds-value h3 { margin: 0; color: var(--iron, #3a1f0e); font-family: var(--font-serif, 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif); font-weight: 400; font-size: clamp(1.625rem, 1.4rem + 0.7vw, 2.125rem); line-height: 1.15; } .ds-value p { max-width: 18em; margin: 0.6rem 0 0; color: var(--text, #3c3736); font-family: var(--font-sans, 'Mulish Variable', 'Mulish', 'Segoe UI', system-ui, sans-serif); font-size: clamp(1.0625rem, 1rem + 0.2vw, 1.1875rem); line-height: 1.55; }"
+    },
+    {
+      "name": "Numbered Step",
+      "kind": "custom",
+      "description": "Shared by the home process and Volunteer's joining steps: italic serif numeral beside a step name and text; a 6px brushed cobalt rule separates consecutive steps.",
+      "html": "<ol class=\"ds-steps\" role=\"list\"><li class=\"ds-step\"><span class=\"ds-step-num\" aria-hidden=\"true\">1</span><div><h3>Submit a request</h3><p>Tell us what you are living with and how it affects your daily life.</p></div></li><li class=\"ds-step\"><span class=\"ds-step-num\" aria-hidden=\"true\">2</span><div><h3>Initial review</h3><p>Our team reads every request.</p></div></li></ol>",
+      "css": ".ds-steps { margin: 0; padding: 8px 32px; list-style: none; background-color: var(--ground, #d8d1c4); background-image: url('/assets/plates/ground.webp'); background-size: 308px 204px; } .ds-step { position: relative; display: grid; grid-template-columns: clamp(3rem, 5vw, 4.5rem) minmax(0, 1fr); gap: 0 clamp(1rem, 2vw, 2rem); padding-block: clamp(1.5rem, 2.4vw, 2.25rem); } .ds-step + .ds-step::before { content: ''; position: absolute; inset-inline: 0; top: 0; height: 6px; background: url('/assets/plates/nav-rule.webp') left center / 100% 100% no-repeat; opacity: 0.85; } .ds-step-num { color: var(--iron, #3a1f0e); font-family: var(--font-serif, 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif); font-size: clamp(2.75rem, 2.2rem + 1.8vw, 4rem); font-style: italic; line-height: 0.9; } .ds-step h3 { margin: 0; color: var(--iron, #3a1f0e); font-family: var(--font-serif, 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif); font-weight: 400; font-size: clamp(1.5rem, 1.3rem + 0.6vw, 1.875rem); line-height: 1.2; } .ds-step p { max-width: 34em; margin: 0.5rem 0 0; color: var(--text, #3c3736); font-family: var(--font-sans, 'Mulish Variable', 'Mulish', 'Segoe UI', system-ui, sans-serif); line-height: 1.6; }"
+    },
+    {
+      "name": "Placeholder and Sample Tags",
+      "kind": "chip",
+      "refersTo": "placeholder-tag",
+      "description": "Dashed tags. Placeholder marks every fact the ministry has not confirmed; Sample marks a sample story or letter. One small note explains the Placeholder tags at the end of the page.",
+      "html": "<div class=\"ds-stage ds-tags\"><p class=\"ds-text\">Care is free or offered at a reduced cost you can manage. <span class=\"ds-placeholder-tag\">Placeholder</span></p><p class=\"ds-sample-tag\">Sample story, not a real patient</p><p class=\"ds-note\">Items marked Placeholder are best guesses that the ministry will confirm or replace before launch.</p></div>",
+      "css": ".ds-stage { background-color: var(--ground, #d8d1c4); background-image: url('/assets/plates/ground.webp'); background-size: 308px 204px; padding: 32px; } .ds-tags { display: grid; justify-items: start; gap: 1rem; } .ds-text { margin: 0; max-width: 34em; color: var(--text, #3c3736); font-family: var(--font-sans, 'Mulish Variable', 'Mulish', 'Segoe UI', system-ui, sans-serif); font-size: 1.125rem; line-height: 1.5; } .ds-placeholder-tag { display: inline-block; padding: 0.15em 0.6em; border: 1px dashed var(--iron-soft, #4f3a2a); border-radius: 3px; color: var(--iron, #3a1f0e); font-family: var(--font-sans, 'Mulish Variable', 'Mulish', 'Segoe UI', system-ui, sans-serif); font-size: 0.8125rem; font-style: normal; font-weight: 650; letter-spacing: 0.02em; line-height: 1.4; vertical-align: 0.15em; white-space: nowrap; } .ds-sample-tag { display: inline-block; margin: 0; padding: 0.3em 0.8em; border: 1px dashed var(--iron-soft, #4f3a2a); border-radius: 3px; color: var(--iron, #3a1f0e); font-family: var(--font-sans, 'Mulish Variable', 'Mulish', 'Segoe UI', system-ui, sans-serif); font-size: 0.875rem; font-weight: 650; } .ds-note { margin: 0; max-width: 40em; color: var(--iron-soft, #4f3a2a); font-family: var(--font-sans, 'Mulish Variable', 'Mulish', 'Segoe UI', system-ui, sans-serif); font-size: 0.875rem; }"
+    },
+    {
+      "name": "Form Field and Error Summary",
+      "kind": "input",
+      "refersTo": "field-input",
+      "description": "The dashed demo notice, clay-white wells with an umber edge, cobalt focus, native radios with a cobalt accent, iron oxide red for an answer that needs a change, and the error summary that takes focus after a failed send.",
+      "html": "<div class=\"ds-stage ds-form\"><p class=\"ds-demo\"><strong>Demo form.</strong> Nothing you enter here is sent or saved. Before launch, the ministry will connect a secure, HIPAA-compliant form service.</p><div class=\"ds-summary\" tabindex=\"-1\" role=\"group\" aria-labelledby=\"ds-sum-t\"><h2 id=\"ds-sum-t\" class=\"ds-summary-title\">Please check these answers</h2><p>Some answers are missing or need a change:</p><ul role=\"list\"><li><button class=\"ds-summary-link\" type=\"button\">Enter a phone number we can reach you on.</button></li></ul></div><div class=\"ds-field\"><label class=\"ds-label\" for=\"ds-first\">First name</label><input class=\"ds-input\" id=\"ds-first\" type=\"text\" value=\"Maria\"></div><div class=\"ds-field\"><label class=\"ds-label\" for=\"ds-phone\">Phone number</label><input class=\"ds-input\" id=\"ds-phone\" type=\"tel\" aria-invalid=\"true\" aria-describedby=\"ds-phone-error\"><p class=\"ds-error\" id=\"ds-phone-error\">Enter a phone number we can reach you on.</p></div><fieldset class=\"ds-field ds-choices\"><legend class=\"ds-label\">Who is this request for?</legend><label class=\"ds-choice\"><input type=\"radio\" name=\"ds-who\" checked> <span>Myself</span></label><label class=\"ds-choice\"><input type=\"radio\" name=\"ds-who\"> <span>My child, or a child in my care</span></label></fieldset></div>",
+      "css": ".ds-stage { background-color: var(--ground, #d8d1c4); background-image: url('/assets/plates/ground.webp'); background-size: 308px 204px; padding: 32px; } .ds-form { display: grid; gap: 1.5rem; max-width: 34rem; font-family: var(--font-sans, 'Mulish Variable', 'Mulish', 'Segoe UI', system-ui, sans-serif); color: var(--text, #3c3736); } .ds-demo { margin: 0; padding: 0.85rem 1rem; border: 1px dashed var(--iron-soft, #4f3a2a); border-radius: 3px; color: var(--iron, #3a1f0e); font-size: 0.9375rem; } .ds-demo strong { font-weight: 700; } .ds-summary { padding: 1.25rem 1.5rem; border: 2px solid var(--oxide, #74200e); } .ds-summary:focus { outline: 2px solid var(--cobalt, #0b3d9c); outline-offset: 3px; } .ds-summary p { margin: 0.5rem 0 0; } .ds-summary ul { margin: 0.75rem 0 0; padding: 0; list-style: none; } .ds-summary-title { margin: 0; color: var(--oxide, #74200e); font-family: var(--font-serif, 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif); font-weight: 400; font-size: clamp(1.375rem, 1.2rem + 0.5vw, 1.75rem); } .ds-summary-link { min-height: 2.25rem; padding: 0.2rem 0; border: 0; background: none; color: var(--oxide, #74200e); font: inherit; font-weight: 650; text-align: start; text-decoration: underline; text-underline-offset: 0.2em; cursor: pointer; } .ds-summary-link:focus-visible { outline: 2px solid var(--cobalt, #0b3d9c); outline-offset: 3px; border-radius: 2px; } .ds-field { display: grid; justify-items: start; gap: 0.4rem; min-width: 0; margin: 0; padding: 0; border: 0; } .ds-label { padding: 0; color: var(--iron, #3a1f0e); font-weight: 650; line-height: 1.4; } .ds-input { width: 100%; min-height: 3rem; padding: 0.65rem 0.8rem; border: 1px solid var(--field-edge, #6e5a4b); border-radius: 0; background: var(--field-bg, #f4efe6); color: var(--text, #3c3736); font: inherit; font-size: 1.0625rem; line-height: 1.4; box-sizing: border-box; } .ds-input:focus-visible { border-color: var(--cobalt, #0b3d9c); outline: 2px solid var(--cobalt, #0b3d9c); outline-offset: 1px; } .ds-input[aria-invalid='true'] { border: 2px solid var(--oxide, #74200e); } .ds-error { margin: 0; color: var(--oxide, #74200e); font-size: 0.9375rem; font-weight: 700; } .ds-choices { gap: 0.6rem; } .ds-choice { display: inline-grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 0.65rem; min-height: 2.75rem; padding-block: 0.35rem; cursor: pointer; } .ds-choice input { width: 1.375rem; height: 1.375rem; margin: 0.1rem 0 0; accent-color: var(--cobalt, #0b3d9c); cursor: pointer; } @media (forced-colors: active) { .ds-input[aria-invalid='true'], .ds-summary { border-color: Mark; } }"
+    },
+    {
+      "name": "Gift Choices",
+      "kind": "custom",
+      "refersTo": "amount-choice",
+      "description": "Give's form: the chosen frequency carries the toggle stroke; amounts sit in inked frames, and the chosen one becomes a brushed cobalt swatch. Native radios stay in the page, visually hidden.",
+      "html": "<form class=\"ds-stage ds-gift\"><fieldset class=\"ds-freq\"><legend class=\"ds-vh\">How often</legend><label><input class=\"ds-radio\" type=\"radio\" name=\"ds-f\" checked><span class=\"ds-freq-label\">Give once</span></label><label><input class=\"ds-radio\" type=\"radio\" name=\"ds-f\"><span class=\"ds-freq-label\">Give monthly</span></label></fieldset><fieldset class=\"ds-amounts\"><legend class=\"ds-vh\">Amount</legend><label><input class=\"ds-radio\" type=\"radio\" name=\"ds-a\"><span class=\"ds-amount\">$50</span></label><label><input class=\"ds-radio\" type=\"radio\" name=\"ds-a\" checked><span class=\"ds-amount\">$100</span></label><label><input class=\"ds-radio\" type=\"radio\" name=\"ds-a\"><span class=\"ds-amount\">$250</span></label></fieldset></form>",
+      "css": ".ds-stage { background-color: var(--ground, #d8d1c4); background-image: url('/assets/plates/ground.webp'); background-size: 308px 204px; padding: 32px; } .ds-gift { display: grid; justify-items: center; gap: 1.5rem; } .ds-gift fieldset { display: flex; flex-wrap: wrap; justify-content: center; margin: 0; padding: 0; border: 0; min-width: 0; } .ds-freq { gap: 0.5rem 3rem; } .ds-amounts { gap: 1rem 1.25rem; } .ds-gift label { position: relative; cursor: pointer; } .ds-vh, .ds-radio { position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; } .ds-freq-label { position: relative; display: inline-block; margin-inline-end: -0.7em; padding-block-end: 0.35em; padding-inline-end: 0.7em; color: var(--iron, #3a1f0e); font-family: var(--font-serif, 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif); font-size: clamp(1.375rem, 1.8vw, 1.75rem); line-height: 1.3; } .ds-freq-label::after { content: ''; position: absolute; inset-inline: 0.1em 0; inset-block-end: 0.12em; height: 0.42em; background: url('/assets/plates/toggle-stroke.webp') center / 100% 100% no-repeat; clip-path: inset(0 100% 0 0); transition: clip-path 420ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-radio:checked + .ds-freq-label::after { clip-path: inset(0); } .ds-radio:focus-visible + .ds-freq-label { outline: 2px solid var(--cobalt, #0b3d9c); outline-offset: 4px; } .ds-amount { position: relative; isolation: isolate; display: inline-grid; place-items: center; min-width: clamp(5.5rem, 10.4vw, 10rem); min-height: clamp(3.25rem, 4.3vw, 4.25rem); padding: 0 0.6em; border: 13px solid transparent; border-image: url('/assets/plates/ink-frame.webp') 46 / 13px / 0 stretch; color: var(--iron, #3a1f0e); font-family: var(--font-serif, 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif); font-size: clamp(1.25rem, 1.8vw, 1.75rem); line-height: 1; box-sizing: border-box; } label:hover .ds-amount { color: var(--cobalt, #0b3d9c); } .ds-radio:checked + .ds-amount { border-image: none; color: var(--on-cobalt, #fbf8f2); } .ds-radio:checked + .ds-amount::before { content: ''; position: absolute; inset: -13px; z-index: -1; background: url('/assets/plates/amount-brush.webp') center / 100% 100% no-repeat; } .ds-radio:focus-visible + .ds-amount { outline: 2px solid var(--cobalt, #0b3d9c); outline-offset: 5px; } @media (forced-colors: active) { .ds-amount { border: 2px solid ButtonText; border-image: none; } .ds-radio:checked + .ds-amount { border-color: Highlight; background: Highlight; color: HighlightText; } .ds-radio:checked + .ds-amount::before, .ds-freq-label::after { display: none; } .ds-radio:checked + .ds-freq-label { text-decoration: underline; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Salt-Glazed Page",
+    "overview": "The page is a piece of Carolina stoneware. Its ground is buff salt-glazed clay with an orange-peel surface, tiled from a clean patch of the approved comp. Its ink is iron brown, the color of the clay body under the glaze: a warm book serif for everything the ministry says, a soft humanist sans for everything it explains. One material sits on top, cobalt slip brushed by hand. Cobalt marks what a visitor can do (ask, refer, give, follow a link) and draws the few ornamental lines: the rule under the header, the dash under a section label, the strokes beside the values, the rules between the steps, the dab beside the section being read, and the brushed stroke under every link outside the footer. Nothing else on the page is blue, and nothing else is bright.\n\nThe ash glaze that gives the ministry its name, amber and olive green running down a jar's shoulder, lives only inside photographs of fired pots: the hero jar, the glaze band above the home page's vision section, and the glaze band that opens the Give page. The interface itself stays in clay, iron and cobalt. Density is low and the pace is unhurried. The ministry's own words (mission, values, vision, the closing invitation) are centered and given room; practical content (what happens when you ask, who we help, roles, costs, stories) sits in asymmetric two-column spreads. Eleven inner pages extend the home page through four layout families (the reference page, the audience page, the photograph appeal and the form page) without adding a material. The world refuses the glossy cosmetic-surgery ad, the clip-art church bulletin, the pity appeal and the cold hospital portal.\n\nThe people this site serves may arrive hesitant, on a phone, with a disability, or reading Spanish first, so the world is built to fail gracefully. Every brushed mark is painted by default and animates only as an enhancement. Motion stops for visitors who ask for less of it. Raster-drawn controls fall back to system borders in forced-colors mode. Fonts are self-hosted, so loading the page tells no third party about the visit. The site is honest about what is not settled: every fact the ministry has not confirmed carries a dashed Placeholder tag, and every demo form says plainly that nothing is sent.",
+    "keyCharacteristics": [
+      "A buff stoneware ground under a tiled orange-peel texture; never a flat white page.",
+      "Iron-brown serif (Tiro Devanagari Marathi, 400 roman and italic only) for headings, buttons, links and quotations; Mulish Variable for body copy, form text and spaced capitals.",
+      "Cobalt slip is the only accent: actions, their interaction states, and brushed ornament, including the brushed underline on links.",
+      "Brushed marks are raster plates with recorded provenance, never CSS imitations. A plate can be used as a mask so its color follows the ground.",
+      "One motion: a cobalt line drawing itself on, like slip trailed from a bulb.",
+      "Flat surfaces. Depth comes from photography and the dark iron band, used at most once per page.",
+      "Unconfirmed facts wear a dashed Placeholder tag; samples wear a dashed Sample tag.",
+      "WCAG 2.2 AA (axe reports no violations on any page at 1440 and 390 wide, form error states included), reduced motion respected, forced-colors fallbacks, no overlay widgets."
+    ],
+    "rules": [
+      {
+        "name": "The One Slip Rule",
+        "body": "Cobalt is reserved for things a visitor can act on, their interaction states, and the brushed ornament. It never colors a heading, body copy, an icon or a background panel.",
+        "section": "colors"
+      },
+      {
+        "name": "The Glaze Stays in the Kiln Rule",
+        "body": "Amber and olive ash glaze appear only inside photographs of fired stoneware: the hero jar, the home glaze band and the Give glaze band. They are never sampled into CSS for text, fills, borders or hover states.",
+        "section": "colors"
+      },
+      {
+        "name": "The Darker Label Rule",
+        "body": "Spaced-capital labels use Iron Soft (#4f3a2a), deliberately darker than the comp's measured gray (#927e6f, 2.5:1 on the ground), so the smallest text on the page clears WCAG AA even over the texture's darkest flecks.",
+        "section": "colors"
+      },
+      {
+        "name": "The Oxide Rule",
+        "body": "Iron Oxide marks only an answer that needs a change. It is never decoration, emphasis, or a warning about anything else.",
+        "section": "colors"
+      },
+      {
+        "name": "The No-Kicker Rule",
+        "body": "Spaced capitals never sit above a heading as a kicker or eyebrow. They are the heading itself (a section label over a quotation or statement), a footer group heading, a detail term, or an attribution. The hero has no eyebrow: who and where is said in a sentence-case italic place line under the actions.",
+        "section": "typography"
+      },
+      {
+        "name": "The One-Weight Serif Rule",
+        "body": "Tiro Devanagari Marathi ships one weight. Headings are set at 400 and take their presence from size; never apply bold to the serif.",
+        "section": "typography"
+      },
+      {
+        "name": "The Self-Hosted Type Rule",
+        "body": "Fonts load from the app bundle through @fontsource, never from a font CDN, so a visit is not reported to a third party.",
+        "section": "typography"
+      },
+      {
+        "name": "The Words-First Rule",
+        "body": "On narrow screens, the headline, the lede and both actions always come before the jar or any photograph.",
+        "section": "layout"
+      },
+      {
+        "name": "The Action-in-Reach Rule",
+        "body": "On a reference page the primary action rides in the sticky aside from 62em and repeats inline below it, so the way to ask is never far from the answer that prompted it.",
+        "section": "layout"
+      },
+      {
+        "name": "The Fired Surface Rule",
+        "body": "Content gets no cards, panels or drop shadows. Separation comes from space, a 1px iron hairline, or the iron band. The only filled boxes are form wells; notices are outlines (dashed Iron Soft for demo and draft notices, 2px Iron Oxide for the error summary).",
+        "section": "elevation"
+      },
+      {
+        "name": "The Two Lines Rule",
+        "body": "Brushed cobalt lines are raster plates and carry rhythm and state: the header rule, the mission dash, the value strokes, the step dividers, the link stroke, the jump dab. Separation between sections and list items is a 1px iron hairline. A plate may be used as a mask to recolor it, but its shape always comes from the brush. Never imitate the brush with CSS gradients or SVG filters.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do lay every page on the stoneware ground: Salt-Glazed Buff (#d8d1c4) under the 308 × 204px texture tile.",
+      "Do keep Cobalt Slip (#0b3d9c) for actions, their interaction states (focus ring, selection, caret, hover, current) and brushed ornament.",
+      "Do pair the brushed cobalt swatch for Ask for help with the ink frame for Refer someone, in that order.",
+      "Do underline every link outside the footer with the brushed link stroke, used as a mask so it takes cobalt on the ground and Cobalt Wash (#8fa8dc) on the iron band; keep footer links on plain iron underlines.",
+      "Do draw brushed marks from raster plates, shipped as WebP with a PNG fallback through `image-set()`, and record provenance for every new raster.",
+      "Do set spaced-capital labels in Iron Soft (#4f3a2a) or darker, and check every text color against the texture's darkest buff (#b9ad9b) as well as the ground.",
+      "Do use Link on Iron (#f6efe3) with the Cobalt Wash stroke (#8fa8dc) for links on the iron band, and the Band Ink frame for a secondary action there.",
+      "Do mark every fact the ministry has not confirmed with the Placeholder tag, and end a page that carries tags with one note explaining them.",
+      "Do say on every demo form that nothing is sent: the dashed notice above the request, referral, sign-up and message forms, a tagged line under the Give button. Keep it until the HIPAA-compliant service and Stripe are connected.",
+      "Do move focus to the error summary after every failed send, link each entry to its control, and tie hints and errors to controls with `aria-describedby`.",
+      "Do keep radios and checkboxes native, tinted with a cobalt `accent-color`.",
+      "Do paint every stroke by default and animate it only as an enhancement; honor `prefers-reduced-motion`.",
+      "Do give every raster-drawn control a forced-colors fallback: a 2px `ButtonText` border with the raster hidden, and a system underline where a masked stroke disappears.",
+      "Do label every sample story and letter visibly until real, consented material replaces it.",
+      "Do put the headline, lede and actions before the photograph on narrow screens."
+    ],
+    "donts": [
+      "Don't put a spaced-capital kicker or eyebrow above a heading; say who and where in a sentence-case line instead.",
+      "Don't use amber, olive or any glaze color outside photography.",
+      "Don't set cobalt text or links on the iron band (1.8:1).",
+      "Don't use Iron Oxide (#74200e) for anything but an answer that needs a change.",
+      "Don't lighten labels to the comp's gray (#927e6f); it fails AA on the ground.",
+      "Don't bold the serif or substitute a system display face.",
+      "Don't load fonts from Google Fonts or any other CDN; self-host them through @fontsource.",
+      "Don't give content cards, panels, rounded action shapes or drop shadows; the menu drape is the only cast shadow, and form wells are the only filled boxes.",
+      "Don't imitate the brush with CSS gradients or SVG filters.",
+      "Don't add icon rows or icon glyphs; the inline two-stroke menu icon is the only icon.",
+      "Don't state an unconfirmed fact without its Placeholder tag, or present a sample as real.",
+      "Don't install an accessibility overlay widget; accessibility is built into the markup and styles.",
+      "Don't reach for sunsets, clip-art crosses, before-and-after spectacle or pity imagery."
+    ]
+  }
+}

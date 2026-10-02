@@ -1,0 +1,34 @@
+@let p = page();
+
+<header class="page-head">
+  <h1 class="page-head__title">{{ p.title }}</h1>
+  <p class="page-head__lede">{{ p.lede }}</p>
+</header>
+
+@for (story of p.items; track story.id) {
+  <article class="tale" [id]="story.id" [attr.aria-label]="story.attribution">
+    <figure class="tale__figure">
+      <p class="tale__sample">{{ p.sampleLabel }}</p>
+      <blockquote class="tale__quote">
+        <p>“{{ story.quote }}”</p>
+      </blockquote>
+      <figcaption class="tale__attribution">{{ story.attribution }}</figcaption>
+    </figure>
+    <div class="tale__body">
+      <p class="tale__condition">{{ story.condition }}</p>
+      @for (paragraph of story.body; track $index) {
+        <p>{{ paragraph }}</p>
+      }
+    </div>
+  </article>
+}
+
+<section class="closing" aria-labelledby="share-title">
+  <h2 id="share-title" class="closing__title">{{ p.share.title }}</h2>
+  <p class="closing__text">{{ p.share.text }}</p>
+  <div class="closing__actions">
+    <a class="btn-brush" [routerLink]="locale.link(p.share.action.path)">{{
+      p.share.action.label
+    }}</a>
+  </div>
+</section>

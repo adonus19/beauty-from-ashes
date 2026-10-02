@@ -1,0 +1,62 @@
+@let footer = site().footer;
+@let contact = site().contact;
+
+<footer class="site-footer" bfaBrushReveal>
+  <div class="site-footer__grid">
+    <div class="site-footer__about">
+      <a class="wordmark" [routerLink]="locale.link()" [attr.aria-label]="site().homeLabel">
+        <span class="wordmark__name">{{ site().name }}</span>
+        <span class="wordmark__descriptor">{{ site().descriptor }}</span>
+      </a>
+      <p>{{ footer.about }}</p>
+      <p>{{ footer.status }}</p>
+      <p class="site-footer__jar">{{ footer.jar }}</p>
+    </div>
+
+    @for (group of footer.groups; track group.title) {
+      <nav class="site-footer__group" [attr.aria-label]="group.title">
+        <h2 class="site-footer__heading label">{{ group.title }}</h2>
+        <ul role="list">
+          @for (link of group.links; track link.path) {
+            <li>
+              <a [routerLink]="locale.link(link.path)">{{ link.label }}</a>
+            </li>
+          }
+        </ul>
+      </nav>
+    }
+
+    <div class="site-footer__group">
+      <h2 class="site-footer__heading label">{{ footer.contactTitle }}</h2>
+      <ul role="list">
+        <li>
+          <a [href]="contact.phoneHref">{{ contact.phone }}</a>
+        </li>
+        <li>
+          <a [href]="'mailto:' + contact.email">{{ contact.email }}</a>
+        </li>
+        <li>{{ contact.area }}</li>
+      </ul>
+      <p class="site-footer__note">{{ contact.placeholderNote }}</p>
+    </div>
+  </div>
+
+  <figure class="site-footer__scripture">
+    <blockquote>
+      <p>“{{ footer.scripture }}”</p>
+    </blockquote>
+    <figcaption>{{ footer.scriptureRef }}</figcaption>
+  </figure>
+
+  <div class="site-footer__base">
+    <p>{{ footer.copyright }}</p>
+    <ul class="site-footer__legal" role="list">
+      @for (link of footer.legal; track link.path) {
+        <li>
+          <a [routerLink]="locale.link(link.path)">{{ link.label }}</a>
+        </li>
+      }
+    </ul>
+    <p class="site-footer__closing" lang="la">{{ footer.closing }}</p>
+  </div>
+</footer>

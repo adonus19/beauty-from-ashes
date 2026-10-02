@@ -1,0 +1,70 @@
+:host {
+  display: block;
+}
+
+// A colleague's letter: the italic serif voice of the stories, labeled as a sample.
+.letter {
+  display: grid;
+  gap: 2rem clamp(2.5rem, 6vw, 7rem);
+  margin-inline: var(--gutter);
+  padding-block: clamp(4rem, 7vw, 7rem);
+  border-block-start: 1px solid rgb(58 31 14 / 0.5);
+
+  @media (min-width: 62em) {
+    grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
+    align-items: end;
+  }
+}
+
+.letter__figure {
+  margin: 0;
+}
+
+.letter__sample {
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  border: 1px dashed var(--iron-soft);
+  border-radius: 3px;
+  color: var(--iron);
+  font-size: 0.875rem;
+  font-weight: 650;
+}
+
+.letter__text {
+  max-width: 24em;
+  margin: 1.5rem 0 0;
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 1rem + 1.6vw, 2.5rem);
+  font-style: italic;
+  line-height: 1.32;
+  text-wrap: pretty;
+}
+
+.letter__dash {
+  display: block;
+  width: 4.5rem;
+  aspect-ratio: 1402 / 181;
+  margin-block-start: 1.75rem;
+  background: image-set(
+      url('../../../../assets/plates/mission-dash.webp') type('image/webp'),
+      url('../../../../assets/plates/mission-dash.png') type('image/png')
+    )
+    left center / 100% 100% no-repeat;
+}
+
+.letter__signature {
+  margin-block-start: 1rem;
+  color: var(--iron-soft);
+  font-size: var(--fs-label);
+  font-weight: 650;
+  letter-spacing: 0.33em;
+  text-transform: uppercase;
+}
+
+.letter__aside {
+  display: grid;
+  justify-items: start;
+  gap: 1.5rem;
+  max-width: 22rem;
+}

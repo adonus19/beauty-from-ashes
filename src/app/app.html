@@ -1,0 +1,15 @@
+<a class="skip-link" href="#main" (click)="skipToMain($event)">{{
+  locale.content().site.skipLink
+}}</a>
+
+<bfa-site-header />
+
+@if (locale.translationPending()) {
+  <p class="translation-notice" role="status" lang="es">{{ locale.pendingNotice }}</p>
+}
+
+<main id="main" tabindex="-1">
+  <router-outlet />
+</main>
+
+<bfa-site-footer />

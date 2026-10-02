@@ -1,0 +1,468 @@
+// Forms: requests, referrals and sign-ups. Fields are plain clay-white wells with an iron edge;
+// cobalt marks focus and the send action; iron oxide red marks an answer that needs a change.
+
+:root {
+  --field-bg: #f4efe6;
+  --field-edge: #6e5a4b;
+  --oxide: #74200e;
+}
+
+// A form page: title and lede, then the form beside a sticky "what happens next".
+.form-page {
+  padding: clamp(2.25rem, 3.1vw, 3rem) var(--gutter) clamp(4rem, 8vw, 8rem);
+}
+
+.form-page__title {
+  font-size: clamp(2.5rem, 1.6rem + 3.2vw, 4.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.012em;
+}
+
+.form-page__lede {
+  max-width: 34em;
+  margin-block-start: clamp(0.5rem, 0.8vw, 0.875rem);
+  font-size: var(--fs-lede);
+  line-height: 1.5;
+}
+
+.form-page__body {
+  display: grid;
+  gap: clamp(3rem, 5vw, 5rem);
+  margin-block-start: clamp(2rem, 3.4vw, 3.25rem);
+
+  @media (min-width: 62em) {
+    grid-template-columns: minmax(0, 7fr) minmax(16rem, 4fr);
+    column-gap: clamp(3rem, 6vw, 7rem);
+    align-items: start;
+  }
+}
+
+.form-page__main {
+  max-width: 46rem;
+}
+
+.form-page__aside {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+  padding-block-start: 1.25rem;
+  border-block-start: 1px solid rgb(58 31 14 / 0.3);
+  font-size: 1rem;
+
+  @media (min-width: 62em) {
+    position: sticky;
+    top: 2rem;
+  }
+}
+
+.form-aside__title {
+  font-size: clamp(1.5rem, 1.2rem + 0.9vw, 2.125rem);
+  line-height: 1.15;
+}
+
+.form-aside__title--small {
+  margin-block-start: 1.25rem;
+  font-size: clamp(1.25rem, 1.1rem + 0.45vw, 1.5rem);
+}
+
+.form-aside__steps {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: grid;
+    grid-template-columns: 2.25rem minmax(0, 1fr);
+    align-items: baseline;
+  }
+}
+
+.form-aside__numeral {
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-style: italic;
+  line-height: 1;
+}
+
+.form-aside__step {
+  display: block;
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: 1.1875rem;
+  font-weight: 400;
+}
+
+.form-aside__note,
+.form-aside__privacy {
+  color: var(--iron-soft);
+  font-size: 0.875rem;
+}
+
+// The notice that keeps the demo honest: nothing typed here leaves the browser.
+.demo-notice {
+  max-width: 40em;
+  padding: 0.85rem 1rem;
+  border: 1px dashed var(--iron-soft);
+  border-radius: 3px;
+  color: var(--iron);
+  font-size: 0.9375rem;
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+.form__required {
+  max-width: 40em;
+  margin-block-start: 1.25rem;
+  color: var(--iron-soft);
+  font-size: 0.9375rem;
+}
+
+.form {
+  margin-block-start: 0.5rem;
+}
+
+// Each part of the form is a fieldset opened by an iron hairline; the legend reads as its heading.
+.form__section {
+  min-width: 0;
+  margin: clamp(2rem, 3vw, 2.75rem) 0 0;
+  padding: clamp(1.5rem, 2vw, 2rem) 0 0;
+  border: 0;
+  border-block-start: 1px solid rgb(58 31 14 / 0.3);
+
+  > * + * {
+    margin-block-start: 1.5rem;
+  }
+}
+
+.form__legend {
+  float: inline-start;
+  width: 100%;
+  margin-block-end: 1.25rem;
+  padding: 0;
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 1.2rem + 0.9vw, 2.125rem);
+  line-height: 1.15;
+
+  + * {
+    clear: both;
+    margin-block-start: 0;
+  }
+}
+
+.field {
+  display: grid;
+  justify-items: start;
+  gap: 0.4rem;
+  min-width: 0;
+  margin-inline: 0;
+  padding: 0;
+  border: 0;
+}
+
+.field--choices > legend {
+  float: inline-start;
+  width: 100%;
+  margin-block-end: 0.4rem;
+  padding: 0;
+
+  + * {
+    clear: both;
+  }
+}
+
+.field-row {
+  display: grid;
+  gap: 1.5rem;
+
+  @media (min-width: 40em) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.field-row--place {
+  @media (min-width: 40em) {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr) minmax(0, 1fr);
+  }
+}
+
+.field__label {
+  color: var(--iron);
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.field__optional {
+  color: var(--iron-soft);
+  font-weight: 400;
+}
+
+.field__hint {
+  max-width: 36em;
+  color: var(--iron-soft);
+  font-size: 0.9375rem;
+}
+
+.field__control {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--field-edge);
+  border-radius: 0;
+  background: var(--field-bg);
+  color: var(--text);
+  font: inherit;
+  font-size: max(1rem, 1.0625rem);
+  line-height: 1.4;
+
+  &:focus-visible {
+    border-color: var(--cobalt);
+    outline: 2px solid var(--cobalt);
+    outline-offset: 1px;
+  }
+
+  &[aria-invalid='true'] {
+    border: 2px solid var(--oxide);
+  }
+}
+
+// A field beside one with a hint keeps its control on the same line.
+.field--end {
+  align-content: end;
+}
+
+.field__control--short {
+  max-width: 12rem;
+}
+
+.field__control--select {
+  max-width: 24rem;
+  cursor: pointer;
+}
+
+.field__control--area {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.field__error {
+  max-width: 36em;
+  color: var(--oxide);
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+// Radio buttons and checkboxes: native controls, sized up and tinted cobalt.
+.choices {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.choices--row {
+  @media (min-width: 40em) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 2rem;
+  }
+}
+
+.choices--columns {
+  @media (min-width: 40em) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2rem;
+  }
+}
+
+.choice {
+  display: inline-grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 0.65rem;
+  min-height: 2.75rem;
+  padding-block: 0.35rem;
+  color: var(--text);
+  cursor: pointer;
+
+  input {
+    width: 1.375rem;
+    height: 1.375rem;
+    margin: 0.1rem 0 0;
+    accent-color: var(--cobalt);
+    cursor: pointer;
+  }
+
+  input[aria-invalid='true'] {
+    outline: 2px solid var(--oxide);
+    outline-offset: 2px;
+  }
+}
+
+.choice--check {
+  max-width: 36em;
+}
+
+// Photos: a hidden native file input behind an inked frame, then the chosen photos as a list.
+.photos__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+
+  &:focus-visible + .photos__button {
+    outline: 2px solid var(--cobalt);
+    outline-offset: 4px;
+  }
+}
+
+.photos__button {
+  margin-block-start: 0.4rem;
+  font-size: clamp(1.125rem, 1rem + 0.4vw, 1.3125rem);
+}
+
+.photos__notice:empty {
+  display: none;
+}
+
+.photos__notice {
+  color: var(--oxide);
+  font-weight: 650;
+}
+
+.photos__count {
+  color: var(--iron-soft);
+  font-size: 0.9375rem;
+}
+
+.photos__list {
+  display: grid;
+  gap: 0.75rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.photo {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr) auto;
+  grid-template-areas: 'thumb name remove' 'thumb size remove';
+  align-items: center;
+  gap: 0 1rem;
+  padding-block-end: 0.75rem;
+  border-block-end: 1px solid rgb(58 31 14 / 0.2);
+}
+
+.photo__thumb {
+  grid-area: thumb;
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: cover;
+}
+
+.photo__name {
+  grid-area: name;
+  overflow-wrap: anywhere;
+  color: var(--iron);
+  font-weight: 650;
+}
+
+.photo__size {
+  grid-area: size;
+  color: var(--iron-soft);
+  font-size: 0.875rem;
+}
+
+.photo__remove {
+  grid-area: remove;
+  min-height: 2.75rem;
+  padding: 0.35rem 0.5rem;
+  border: 0;
+  background: none;
+  color: var(--cobalt);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+
+.form__submit {
+  margin-block-start: clamp(2.5rem, 4vw, 3.5rem);
+  border: 0;
+  background: none;
+}
+
+// After a send attempt that fails: every answer that needs a change, each one a way back to it.
+.error-summary {
+  margin-block-start: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 2px solid var(--oxide);
+
+  &:focus {
+    outline: 2px solid var(--cobalt);
+    outline-offset: 3px;
+  }
+}
+
+.error-summary__title {
+  color: var(--oxide);
+  font-size: clamp(1.375rem, 1.2rem + 0.5vw, 1.75rem);
+}
+
+.error-summary__list {
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.error-summary__link {
+  min-height: 2.25rem;
+  padding: 0.2rem 0;
+  border: 0;
+  background: none;
+  color: var(--oxide);
+  font: inherit;
+  font-weight: 650;
+  text-align: start;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+
+.form-sent {
+  display: grid;
+  justify-items: start;
+  gap: 1rem;
+  max-width: 36em;
+}
+
+.form-sent__title {
+  font-size: clamp(1.75rem, 1.3rem + 1.5vw, 2.75rem);
+  line-height: 1.15;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.form-sent__demo {
+  padding: 0.85rem 1rem;
+  border: 1px dashed var(--iron-soft);
+  border-radius: 3px;
+  color: var(--iron);
+}
+
+.text-link--small {
+  font-size: inherit;
+}
+
+@media (forced-colors: active) {
+  .field__control[aria-invalid='true'],
+  .error-summary {
+    border-color: Mark;
+  }
+}

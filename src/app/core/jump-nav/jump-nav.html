@@ -1,0 +1,16 @@
+<nav class="jump" [attr.aria-label]="label()">
+  <ul class="jump__list" role="list">
+    @for (target of targets(); track target.id) {
+      <li class="jump__item" [class.is-current]="current() === target.id">
+        <a
+          class="jump__link"
+          [routerLink]="[]"
+          [fragment]="target.id"
+          [attr.aria-current]="current() === target.id ? 'true' : null"
+          (click)="follow(target.id)"
+          >{{ target.title }}</a
+        >
+      </li>
+    }
+  </ul>
+</nav>

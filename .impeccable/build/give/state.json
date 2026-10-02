@@ -1,0 +1,300 @@
+{
+  "tool": "build-phase",
+  "version": 2,
+  "startedAt": "2026-10-01T23:07:04.927Z",
+  "comp": ".impeccable/mocks/decision/give-photo-appeal.png",
+  "direction": null,
+  "breakpoint": "1536x1024",
+  "artifact": null,
+  "phase": "review",
+  "phases": {
+    "comps": {
+      "status": "skipped",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [
+        {
+          "at": "2026-10-01T23:07:04.927Z",
+          "text": "started with an approved comp; the comp round happened before this state (surface round or manual)"
+        }
+      ],
+      "gate": null,
+      "forced": null
+    },
+    "spec": {
+      "status": "closed",
+      "openedAt": "2026-10-01T23:07:04.926Z",
+      "closedAt": "2026-10-01T23:07:55.754Z",
+      "attempts": 1,
+      "notes": [
+        {
+          "at": "2026-10-01T23:07:55.715Z",
+          "text": "Type: the build keeps Tiro Devanagari Marathi 400 (DESIGN.md) whatever font-match ranks; sizes follow measured cap heights and ink widths."
+        }
+      ],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "18 regions, 8 plates, 4 text regions measured",
+        "at": "2026-10-01T23:07:55.754Z"
+      },
+      "forced": null
+    },
+    "plates": {
+      "status": "closed",
+      "openedAt": "2026-10-01T23:07:55.754Z",
+      "closedAt": "2026-10-01T23:09:52.897Z",
+      "attempts": 4,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "8/8 plates",
+        "at": "2026-10-01T23:09:52.897Z"
+      },
+      "forced": null
+    },
+    "hero": {
+      "status": "closed",
+      "openedAt": "2026-10-01T23:09:52.897Z",
+      "closedAt": "2026-10-01T23:13:59.193Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "hero 88% (match)",
+        "score": 0.8844,
+        "verdict": "match",
+        "report": ".impeccable/review/diff/hero/report.json",
+        "sideBySide": "/Users/apple/Documents/dev/beauty-from-ashes-v1/.impeccable/review/diff/hero/side-by-side.png",
+        "worst": [
+          "ink-frame drift 48%",
+          "amount-brush drift 51%",
+          "toggle-stroke drift 63%"
+        ],
+        "worstIds": [
+          "ink-frame",
+          "amount-brush",
+          "toggle-stroke"
+        ],
+        "worstCrops": [
+          {
+            "id": "ink-frame",
+            "verdict": "drift",
+            "score": {
+              "overall": 0.4814,
+              "structure": 0.6125,
+              "color": 0.843,
+              "colorIntersection": 0.7287,
+              "paletteMatch": 0.9046,
+              "detail": 0.2654,
+              "detailRaw": 0.3696,
+              "detailAdded": 0.2083,
+              "bands": 0.54
+            },
+            "file": ".impeccable/review/diff/hero/regions/ink-frame.png"
+          },
+          {
+            "id": "amount-brush",
+            "verdict": "drift",
+            "score": {
+              "overall": 0.513,
+              "structure": 0.6802,
+              "color": 0.9136,
+              "colorIntersection": 0.8027,
+              "paletteMatch": 0.9733,
+              "detail": 0.2855,
+              "detailRaw": 0.3793,
+              "detailAdded": 0.1875,
+              "bands": 0.35
+            },
+            "file": ".impeccable/review/diff/hero/regions/amount-brush.png"
+          },
+          {
+            "id": "toggle-stroke",
+            "verdict": "drift",
+            "score": {
+              "overall": 0.6298,
+              "structure": 0.6045,
+              "color": 0.7321,
+              "colorIntersection": 0.4686,
+              "paletteMatch": 0.874,
+              "detail": 0.5773,
+              "detailRaw": 0.6866,
+              "detailAdded": 0.2188,
+              "bands": 0.8727
+            },
+            "file": ".impeccable/review/diff/hero/regions/toggle-stroke.png"
+          }
+        ],
+        "advisories": [
+          "(advisory, above the 72% bar; fix in the polish pass before responsive) 2 readings:",
+          "  control frequency: its rule sits 25px into the box in the comp and 31px in the build (+6px), so the strip is taller than the comp's; match the height, not only the position",
+          "  control amounts: its rule sits 5px into the box in the comp and 11px in the build (+6px), so the strip is taller than the comp's; match the height, not only the position"
+        ],
+        "regionVerdicts": {
+          "wordmark": "match",
+          "nav-links": "match",
+          "lang-switch": "match",
+          "give-brush": "match",
+          "give-button": "match",
+          "nav-rule": "match",
+          "give-glaze": "match",
+          "headline": "drift",
+          "lede": "drift",
+          "frequency": "drift",
+          "toggle-stroke": "drift",
+          "ink-frame": "drift",
+          "amount-brush": "drift",
+          "amounts": "drift",
+          "ask-brush": "drift",
+          "give-action": "match",
+          "status": "match",
+          "ground": "drift"
+        },
+        "at": "2026-10-01T23:13:59.193Z"
+      },
+      "forced": null,
+      "readingsSeen": {
+        "text status: cap height 7.8px in the build, 11.1px in the comp (-30%); set font-size so the cap height renders at 11.1px": 1,
+        "control frequency: its rule sits 25px into the box in the comp and 31px in the build (+6px), so the strip is taller than the comp's; match the height, not only the position": 2,
+        "control amounts: its rule sits 5px into the box in the comp and 11px in the build (+6px), so the strip is taller than the comp's; match the height, not only the position": 2
+      },
+      "records": 1,
+      "history": [
+        {
+          "at": "2026-10-01T23:13:59.193Z",
+          "score": 0.8844,
+          "worstIds": [
+            "ink-frame",
+            "amount-brush",
+            "toggle-stroke"
+          ],
+          "regionVerdicts": {
+            "wordmark": "match",
+            "nav-links": "match",
+            "lang-switch": "match",
+            "give-brush": "match",
+            "give-button": "match",
+            "nav-rule": "match",
+            "give-glaze": "match",
+            "headline": "drift",
+            "lede": "drift",
+            "frequency": "drift",
+            "toggle-stroke": "drift",
+            "ink-frame": "drift",
+            "amount-brush": "drift",
+            "amounts": "drift",
+            "ask-brush": "drift",
+            "give-action": "match",
+            "status": "match",
+            "ground": "drift"
+          },
+          "artifactHash": null
+        }
+      ]
+    },
+    "sections": {
+      "status": "closed",
+      "openedAt": "2026-10-01T23:13:59.193Z",
+      "closedAt": "2026-10-01T23:14:39.251Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "no mechanical gate",
+        "at": "2026-10-01T23:14:39.251Z"
+      },
+      "forced": null
+    },
+    "motion": {
+      "status": "closed",
+      "openedAt": "2026-10-01T23:14:39.251Z",
+      "closedAt": "2026-10-01T23:14:39.283Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "no mechanical gate",
+        "at": "2026-10-01T23:14:39.283Z"
+      },
+      "forced": null
+    },
+    "responsive": {
+      "status": "closed",
+      "openedAt": "2026-10-01T23:14:39.283Z",
+      "closedAt": "2026-10-01T23:14:48.804Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "desktop 87% (match)",
+        "score": 0.868,
+        "sideBySide": "/Users/apple/Documents/dev/beauty-from-ashes-v1/.impeccable/review/diff/desktop/side-by-side.png",
+        "at": "2026-10-01T23:14:48.803Z"
+      },
+      "forced": null
+    },
+    "review": {
+      "status": "closed",
+      "openedAt": "2026-10-01T23:14:48.804Z",
+      "closedAt": "2026-10-01T23:26:26.668Z",
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    }
+  },
+  "finish": {
+    "disposition": "ship",
+    "at": "2026-10-01T23:26:26.667Z",
+    "phaseAtFinish": "review"
+  },
+  "plates": {
+    "give-brush": {
+      "status": "ok",
+      "score": 0.4116,
+      "size": "1297x635"
+    },
+    "nav-rule": {
+      "status": "ok",
+      "score": 0.7812,
+      "size": "3080x42"
+    },
+    "give-glaze": {
+      "status": "ok",
+      "score": 0.7813,
+      "size": "3072x614"
+    },
+    "toggle-stroke": {
+      "status": "ok",
+      "score": 0.7041,
+      "size": "1281x116"
+    },
+    "ink-frame": {
+      "status": "ok",
+      "score": 0.8975,
+      "size": "1482x436"
+    },
+    "amount-brush": {
+      "status": "ok",
+      "score": 0.9971,
+      "size": "1297x635"
+    },
+    "ask-brush": {
+      "status": "ok",
+      "score": 0.4473,
+      "size": "1517x497"
+    },
+    "ground": {
+      "status": "ok",
+      "score": 0.8446,
+      "size": "308x204"
+    }
+  }
+}

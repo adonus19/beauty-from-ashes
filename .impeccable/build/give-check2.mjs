@@ -1,0 +1,11 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1440, height: 900 } });
+await p.goto('http://127.0.0.1:4300/give/', { waitUntil: 'networkidle' });
+const label = () => p.evaluate(() => document.querySelector('.gift__submit').textContent.trim());
+const checked = () => p.evaluate(() => [...document.querySelectorAll('.gift__amounts input')].map((i) => i.value + (i.checked ? '*' : '')).join(' '));
+console.log('values:', await checked());
+await p.click('.gift__amounts label:nth-of-type(3)'); await p.waitForTimeout(100);
+console.log('after click 3rd:', await checked(), '|', await label());
+await p.focus('.gift__amounts input[value="250"]'); await p.keyboard.press('ArrowRight'); await p.waitForTimeout(100);
+console.log('after arrow:', await checked(), '|', await label());
+await b.close();

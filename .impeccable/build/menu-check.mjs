@@ -1,0 +1,10 @@
+import { chromium } from 'playwright';
+const [out] = process.argv.slice(2);
+const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
+await p.goto('http://127.0.0.1:4300/', { waitUntil: 'networkidle' }); await p.evaluate(() => document.fonts.ready);
+await p.click('.menu-button'); await p.waitForTimeout(200);
+const expanded = await p.getAttribute('.menu-button', 'aria-expanded');
+await p.screenshot({ path: out });
+await p.keyboard.press('Escape'); await p.waitForTimeout(100);
+console.log('expanded after click:', expanded, '| after Escape:', await p.getAttribute('.menu-button', 'aria-expanded'));
+await b.close();

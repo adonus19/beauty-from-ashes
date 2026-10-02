@@ -1,0 +1,212 @@
+{
+  "regions": [
+    {
+      "id": "wordmark",
+      "kind": "text",
+      "box": {
+        "x": 0.04036,
+        "y": 0.01562,
+        "w": 0.20052,
+        "h": 0.0625
+      },
+      "snap": false,
+      "note": "placeholder wordmark: 'Beauty From Ashes' in iron-brown serif over 'SURGICAL MINISTRY' in small spaced capitals"
+    },
+    {
+      "id": "nav-links",
+      "kind": "control",
+      "box": {
+        "x": 0.35677,
+        "y": 0.03516,
+        "w": 0.36068,
+        "h": 0.02734
+      },
+      "snap": false,
+      "note": "five nav links in iron-brown serif: Get Help, Volunteer, Partner, Stories, About; none marked, the Give page is current"
+    },
+    {
+      "id": "lang-switch",
+      "kind": "control",
+      "box": {
+        "x": 0.82812,
+        "y": 0.03906,
+        "w": 0.04297,
+        "h": 0.01953
+      },
+      "snap": false,
+      "note": "EN | ES language switch in small sans capitals"
+    },
+    {
+      "id": "give-brush",
+      "kind": "plate",
+      "box": {
+        "x": 0.89193,
+        "y": 0.02148,
+        "w": 0.07031,
+        "h": 0.05273
+      },
+      "note": "cobalt-blue hand-brushed swatch with rough dry-brush edges, the ground of the Give button"
+    },
+    {
+      "id": "give-button",
+      "kind": "control",
+      "box": {
+        "x": 0.89844,
+        "y": 0.0293,
+        "w": 0.05729,
+        "h": 0.03711
+      },
+      "snap": false,
+      "note": "Give label in white serif on the cobalt swatch; code draws the label, hit area and focus ring"
+    },
+    {
+      "id": "nav-rule",
+      "kind": "plate",
+      "box": {
+        "x": 0.0,
+        "y": 0.08398,
+        "w": 1.0,
+        "h": 0.01758
+      },
+      "bleed": true,
+      "note": "hand-brushed cobalt-blue line running the full width under the nav bar, dry-brush texture at its edges"
+    },
+    {
+      "id": "give-glaze",
+      "kind": "image",
+      "box": {
+        "x": 0.0,
+        "y": 0.10156,
+        "w": 1.0,
+        "h": 0.30078
+      },
+      "bleed": true,
+      "note": "photograph: close view of a Carolina stoneware jar's shoulder with amber and olive-green wood-ash glaze running down in drips, its lower edge fading into the page ground"
+    },
+    {
+      "id": "headline",
+      "kind": "text",
+      "box": {
+        "x": 0.22005,
+        "y": 0.42773,
+        "w": 0.5625,
+        "h": 0.07617
+      },
+      "snap": false,
+      "note": "h1 centered on one line, large iron-brown serif: Help pay for someone's surgery."
+    },
+    {
+      "id": "lede",
+      "kind": "text",
+      "box": {
+        "x": 0.22917,
+        "y": 0.52539,
+        "w": 0.55339,
+        "h": 0.07422
+      },
+      "snap": false,
+      "note": "two centered sans lines: Volunteers give their skill and time. Your gift covers what they can't give: / operating room time, anesthesia, supplies and care after surgery."
+    },
+    {
+      "id": "frequency",
+      "kind": "control",
+      "box": {
+        "x": 0.3763,
+        "y": 0.63086,
+        "w": 0.24609,
+        "h": 0.03711
+      },
+      "snap": false,
+      "note": "frequency toggle in serif: Give once (selected) and Give monthly"
+    },
+    {
+      "id": "toggle-stroke",
+      "kind": "plate",
+      "box": {
+        "x": 0.37891,
+        "y": 0.66699,
+        "w": 0.10026,
+        "h": 0.0127
+      },
+      "note": "hand-brushed cobalt stroke under the selected Give once"
+    },
+    {
+      "id": "ink-frame",
+      "kind": "plate",
+      "box": {
+        "x": 0.19922,
+        "y": 0.70801,
+        "w": 0.11719,
+        "h": 0.07422
+      },
+      "note": "hand-inked iron-brown outline frame with slightly rough edges, the border of the $50 amount"
+    },
+    {
+      "id": "amount-brush",
+      "kind": "plate",
+      "box": {
+        "x": 0.32682,
+        "y": 0.70703,
+        "w": 0.11458,
+        "h": 0.07617
+      },
+      "note": "cobalt-blue hand-brushed swatch with rough dry-brush edges, the ground of the selected $100 amount"
+    },
+    {
+      "id": "amounts",
+      "kind": "control",
+      "codeDrawn": true,
+      "box": {
+        "x": 0.19922,
+        "y": 0.70703,
+        "w": 0.60286,
+        "h": 0.07617
+      },
+      "snap": false,
+      "note": "five amount choices in iron serif inside inked frames: $50, $100 (selected, white on cobalt), $250, $500, Other amount"
+    },
+    {
+      "id": "ask-brush",
+      "kind": "plate",
+      "box": {
+        "x": 0.39388,
+        "y": 0.81543,
+        "w": 0.21224,
+        "h": 0.07422
+      },
+      "note": "cobalt-blue hand-brushed swatch with rough dry-brush edges, the ground of the Give $100 button"
+    },
+    {
+      "id": "give-action",
+      "kind": "control",
+      "box": {
+        "x": 0.41667,
+        "y": 0.82617,
+        "w": 0.16927,
+        "h": 0.05078
+      },
+      "snap": false,
+      "note": "Give $100 label in white serif on the large cobalt swatch; code draws the label, hit area and focus ring"
+    },
+    {
+      "id": "status",
+      "kind": "text",
+      "box": {
+        "x": 0.26172,
+        "y": 0.91016,
+        "w": 0.47786,
+        "h": 0.02344
+      },
+      "snap": false,
+      "note": "one small centered sans line: Beauty From Ashes Surgical Ministry is a 501(c)(3) nonprofit. Gifts are tax-deductible as allowed by law."
+    },
+    {
+      "id": "ground",
+      "kind": "texture",
+      "grid": "A9:A9",
+      "note": "clean patch of the pale buff salt-glazed stoneware page ground with fine orange-peel texture, no ink"
+    }
+  ],
+  "allowUncovered": true,
+  "uncoveredNote": "Cells crossed by box-defined regions (headline, lede, amounts, status) hold only those regions' ink; verified on the grid."
+}

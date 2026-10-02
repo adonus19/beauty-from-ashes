@@ -1,0 +1,222 @@
+@let p = page();
+@let t = forms();
+@let f = p.fields;
+@let v = partnerForm;
+
+<section class="vision" aria-labelledby="page-title">
+  <figure class="vision__figure">
+    <figcaption class="vision__label label">{{ p.belief.label }}</figcaption>
+    <span class="vision__dash" aria-hidden="true"></span>
+    <blockquote class="vision__statement vision__statement--prose">
+      <p>{{ p.belief.text }}</p>
+    </blockquote>
+  </figure>
+
+  <h1 id="page-title" class="vision__title">{{ p.title }}</h1>
+  <p class="vision__lede">{{ p.lede }}</p>
+  <div class="vision__actions">
+    <a class="btn-brush" [routerLink]="[]" [fragment]="p.primary.fragment">{{ p.primary.label }}</a>
+    <a class="btn-line" [routerLink]="locale.link(p.secondary.path)">{{ p.secondary.label }}</a>
+  </div>
+</section>
+
+@for (group of [p.churches, p.businesses]; track group.id) {
+  <section class="split" [id]="group.id" [attr.aria-labelledby]="group.id + '-title'">
+    <div class="split__intro">
+      <h2 [id]="group.id + '-title'" class="section-title">{{ group.title }}</h2>
+      <p class="split__lede">{{ group.intro }}</p>
+    </div>
+    <ul class="roles__list" role="list">
+      @for (item of group.items; track item.name) {
+        <li class="role">
+          <h3 class="role__name">{{ item.name }}</h3>
+          <p class="role__text">
+            {{ item.text }}
+            @if (item.placeholder) {
+              <bfa-placeholder-tag />
+            }
+          </p>
+        </li>
+      }
+    </ul>
+  </section>
+}
+
+<section class="split" [id]="p.kit.id" aria-labelledby="kit-title">
+  <div class="split__intro">
+    <h2 id="kit-title" class="section-title">{{ p.kit.title }}</h2>
+    <p class="split__lede">{{ p.kit.intro }}</p>
+  </div>
+  <div>
+    <ul class="roles__list" role="list">
+      @for (item of p.kit.items; track item.name) {
+        <li class="role">
+          <h3 class="role__name">{{ item.name }}</h3>
+          <p class="role__text">{{ item.text }}</p>
+        </li>
+      }
+    </ul>
+    <p class="split__note">{{ p.kit.placeholder }} <bfa-placeholder-tag /></p>
+  </div>
+</section>
+
+<section class="split split--form" [id]="p.form.id" aria-labelledby="form-title">
+  <div class="split__intro">
+    <h2 id="form-title" class="section-title">{{ p.form.title }}</h2>
+    <p class="split__lede">{{ p.form.intro }}</p>
+  </div>
+
+  <div class="split__form">
+    @if (sent()) {
+      <div class="form-sent">
+        <h3 #sentHeading class="form-sent__title" tabindex="-1">{{ p.sent.title }}</h3>
+        <p class="form-sent__demo">{{ p.sent.demo }}</p>
+        <button class="btn-line" type="button" (click)="startAgain()">{{ p.sent.again }}</button>
+      </div>
+    } @else {
+      <p class="demo-notice">
+        <strong>{{ t.demoTitle }}.</strong> {{ t.demoNotice }}
+      </p>
+      <p class="form__required">{{ t.requiredNote }}</p>
+
+      @if (attempts() > 0 && v().invalid()) {
+        <bfa-error-summary [form]="v" [attempt]="attempts()" />
+      }
+
+      <form class="form form--plain" novalidate (submit)="send($event)">
+        <div class="field-row">
+          <div class="field">
+            <label class="field__label" for="first">{{ f.first.label }}</label>
+            <input
+              class="field__control"
+              id="first"
+              type="text"
+              autocomplete="given-name"
+              [formField]="v.first"
+              [bfaField]="v.first"
+            />
+            <bfa-field-error [field]="v.first" for="first" />
+          </div>
+          <div class="field">
+            <label class="field__label" for="last">{{ f.last.label }}</label>
+            <input
+              class="field__control"
+              id="last"
+              type="text"
+              autocomplete="family-name"
+              [formField]="v.last"
+              [bfaField]="v.last"
+            />
+            <bfa-field-error [field]="v.last" for="last" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label class="field__label" for="organization">{{ f.organization.label }}</label>
+            <input
+              class="field__control"
+              id="organization"
+              type="text"
+              autocomplete="organization"
+              [formField]="v.organization"
+              [bfaField]="v.organization"
+            />
+            <bfa-field-error [field]="v.organization" for="organization" />
+          </div>
+          <div class="field">
+            <label class="field__label" for="type">{{ f.type.label }}</label>
+            <select
+              class="field__control field__control--select"
+              id="type"
+              [formField]="v.type"
+              [bfaField]="v.type"
+            >
+              @for (option of f.type.options; track option.value) {
+                <option [value]="option.value">{{ option.label }}</option>
+              }
+            </select>
+            <bfa-field-error [field]="v.type" for="type" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label class="field__label" for="email">{{ f.email.label }}</label>
+            <input
+              class="field__control"
+              id="email"
+              type="email"
+              autocomplete="email"
+              [formField]="v.email"
+              [bfaField]="v.email"
+            />
+            <bfa-field-error [field]="v.email" for="email" />
+          </div>
+          <div class="field">
+            <label class="field__label" for="phone">
+              {{ f.phone.label }} <span class="field__optional">({{ t.optional }})</span>
+            </label>
+            <input
+              class="field__control"
+              id="phone"
+              type="tel"
+              autocomplete="tel"
+              [formField]="v.phone"
+              [bfaField]="v.phone"
+            />
+            <bfa-field-error [field]="v.phone" for="phone" />
+          </div>
+        </div>
+        <fieldset class="field field--choices">
+          <legend class="field__label">
+            {{ f.interests.label }} <span class="field__optional">({{ t.optional }})</span>
+          </legend>
+          <div class="choices choices--columns">
+            <label class="choice"
+              ><input type="checkbox" [formField]="v.referring" /><span>{{
+                f.interests.options[0].label
+              }}</span></label
+            >
+            <label class="choice"
+              ><input type="checkbox" [formField]="v.prayer" /><span>{{
+                f.interests.options[1].label
+              }}</span></label
+            >
+            <label class="choice"
+              ><input type="checkbox" [formField]="v.volunteers" /><span>{{
+                f.interests.options[2].label
+              }}</span></label
+            >
+            <label class="choice"
+              ><input type="checkbox" [formField]="v.giving" /><span>{{
+                f.interests.options[3].label
+              }}</span></label
+            >
+            <label class="choice"
+              ><input type="checkbox" [formField]="v.speaking" /><span>{{
+                f.interests.options[4].label
+              }}</span></label
+            >
+            <label class="choice"
+              ><input type="checkbox" [formField]="v.inKind" /><span>{{
+                f.interests.options[5].label
+              }}</span></label
+            >
+          </div>
+        </fieldset>
+        <div class="field">
+          <label class="field__label" for="message">
+            {{ f.message.label }} <span class="field__optional">({{ t.optional }})</span>
+          </label>
+          <textarea
+            class="field__control field__control--area"
+            id="message"
+            rows="4"
+            [formField]="v.message"
+          ></textarea>
+        </div>
+        <button class="form__submit btn-brush" type="submit">{{ p.submit }}</button>
+      </form>
+    }
+    <p class="placeholder-note">{{ placeholderNote() }}</p>
+  </div>
+</section>

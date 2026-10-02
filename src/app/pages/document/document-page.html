@@ -1,0 +1,59 @@
+@let d = doc();
+@let c = contact();
+
+<article class="reference" aria-labelledby="page-title">
+  <header class="reference__head">
+    <h1 id="page-title" class="reference__title reference__title--long">{{ d.title }}</h1>
+    <p class="reference__lede">{{ d.lede }}</p>
+    @if (d.draft) {
+      <p class="demo-notice document__draft">{{ d.draft }} <bfa-placeholder-tag /></p>
+    }
+  </header>
+
+  <div class="reference__body">
+    <aside class="reference__aside">
+      <bfa-jump-nav [label]="d.jumpLabel" [targets]="targets()" />
+      <p class="reference__call reference__call--contact">
+        <a [href]="c.phoneHref">{{ c.phone }}</a
+        ><br />
+        <a [href]="'mailto:' + c.email">{{ c.email }}</a>
+      </p>
+    </aside>
+
+    <div class="reference__sections">
+      @for (section of sections(); track section.id) {
+        <section
+          class="reference__section"
+          [id]="section.id"
+          [attr.aria-labelledby]="section.id + '-title'"
+        >
+          <h2 [id]="section.id + '-title'" class="reference__heading">{{ section.title }}</h2>
+          @for (paragraph of section.paragraphs; track paragraph.text) {
+            <p class="reference__text">
+              {{ paragraph.text }}
+              @if (paragraph.placeholder) {
+                <bfa-placeholder-tag />
+              }
+            </p>
+          }
+          @if (section.items.length) {
+            <ul
+              class="reference__lines reference__lines--spaced reference__lines--marked"
+              role="list"
+            >
+              @for (item of section.items; track item.text) {
+                <li>{{ item.text }}</li>
+              }
+            </ul>
+          }
+        </section>
+      }
+      <p class="placeholder-note">
+        {{ d.updated }}
+        @if (d.updatedPlaceholder) {
+          <bfa-placeholder-tag />
+        }
+      </p>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,120 @@
+@let p = page();
+@let c = contact();
+
+<article class="reference" aria-labelledby="page-title">
+  <header class="reference__head">
+    <h1 id="page-title" class="reference__title">{{ p.title }}</h1>
+    <p class="reference__lede">{{ p.lede }}</p>
+  </header>
+
+  <div class="reference__body">
+    <aside class="reference__aside">
+      <bfa-jump-nav [label]="p.jumpLabel" [targets]="sections()" />
+      <a class="reference__action btn-brush" [routerLink]="locale.link(p.action.path)">{{
+        p.action.label
+      }}</a>
+      <p class="reference__call">
+        {{ p.callPrefix }} <a [href]="c.phoneHref">{{ c.phone }}</a>
+      </p>
+    </aside>
+
+    <div class="reference__sections">
+      <section class="reference__section" [id]="p.who.id" aria-labelledby="who-title">
+        <h2 id="who-title" class="reference__heading">{{ p.who.title }}</h2>
+        <ul class="reference__lines" role="list">
+          @for (item of p.who.items; track item.text) {
+            <li>
+              {{ item.text }}
+              @if (item.placeholder) {
+                <bfa-placeholder-tag />
+              }
+            </li>
+          }
+        </ul>
+      </section>
+
+      <section class="reference__section" [id]="p.cost.id" aria-labelledby="cost-title">
+        <h2 id="cost-title" class="reference__heading">{{ p.cost.title }}</h2>
+        @for (paragraph of p.cost.paragraphs; track paragraph.text) {
+          <p class="reference__text">
+            {{ paragraph.text }}
+            @if (paragraph.placeholder) {
+              <bfa-placeholder-tag />
+            }
+          </p>
+        }
+      </section>
+
+      <section class="reference__section" [id]="p.ready.id" aria-labelledby="ready-title">
+        <h2 id="ready-title" class="reference__heading">{{ p.ready.title }}</h2>
+        <ol class="reference__numbered" role="list">
+          @for (item of p.ready.items; track item.text; let i = $index) {
+            <li>
+              <span class="reference__numeral" aria-hidden="true">{{ i + 1 }}</span>
+              <span>
+                {{ item.text }}
+                @if (item.placeholder) {
+                  <bfa-placeholder-tag />
+                }
+              </span>
+            </li>
+          }
+        </ol>
+        <div class="reference__inline-action">
+          <a class="btn-brush" [routerLink]="locale.link(p.action.path)">{{ p.action.label }}</a>
+          <p class="reference__call">
+            {{ p.callPrefix }} <a [href]="c.phoneHref">{{ c.phone }}</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="reference__section" [id]="p.privacy.id" aria-labelledby="privacy-title">
+        <h2 id="privacy-title" class="reference__heading">{{ p.privacy.title }}</h2>
+        @for (paragraph of p.privacy.paragraphs; track paragraph.text) {
+          <p class="reference__text">
+            {{ paragraph.text }}
+            @if (paragraph.placeholder) {
+              <bfa-placeholder-tag />
+            }
+          </p>
+        }
+        <a class="reference__link text-link" [routerLink]="locale.link(p.privacy.link.path)">{{
+          p.privacy.link.label
+        }}</a>
+      </section>
+
+      <section class="reference__section" [id]="p.questions.id" aria-labelledby="questions-title">
+        <h2 id="questions-title" class="reference__heading">{{ p.questions.title }}</h2>
+        <dl class="reference__questions">
+          @for (item of p.questions.items; track item.q) {
+            <div class="reference__question">
+              <dt>{{ item.q }}</dt>
+              <dd>
+                {{ item.a }}
+                @if (item.placeholder) {
+                  <bfa-placeholder-tag />
+                }
+              </dd>
+            </div>
+          }
+        </dl>
+        <p class="placeholder-note">{{ placeholderNote() }}</p>
+      </section>
+    </div>
+  </div>
+</article>
+
+<section class="closing" aria-labelledby="closing-title">
+  <h2 id="closing-title" class="closing__title">{{ p.closing.title }}</h2>
+  <div class="closing__actions">
+    <a class="btn-brush" [routerLink]="locale.link(p.closing.primary.path)">{{
+      p.closing.primary.label
+    }}</a>
+    <a class="btn-line" [routerLink]="locale.link(p.closing.secondary.path)">{{
+      p.closing.secondary.label
+    }}</a>
+  </div>
+  <p class="closing__call">
+    {{ p.closing.callPrefix }} <a class="brush-link" [href]="c.phoneHref">{{ c.phone }}</a>
+  </p>
+</section>

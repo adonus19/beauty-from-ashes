@@ -1,0 +1,183 @@
+@let hero = home().hero;
+@let mission = home().mission;
+@let values = home().values;
+@let process = home().process;
+@let conditions = home().conditions;
+@let story = home().story;
+@let involved = home().involved;
+@let closing = home().closing;
+@let contact = locale.content().site.contact;
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__text">
+    <h1 id="hero-title" class="hero__title">{{ hero.title }}</h1>
+    <p class="hero__lede">
+      {{ hero.lede }} <span class="hero__open">{{ hero.open }}</span>
+    </p>
+    <div class="hero__actions">
+      <a class="btn-brush" [routerLink]="locale.link(hero.primary.path)">{{
+        hero.primary.label
+      }}</a>
+      <a class="btn-line" [routerLink]="locale.link(hero.secondary.path)">{{
+        hero.secondary.label
+      }}</a>
+    </div>
+    <p class="hero__place">{{ hero.place }}</p>
+  </div>
+
+  <figure class="hero__jar">
+    <picture>
+      <source media="(min-width: 62em)" type="image/webp" srcset="assets/plates/jar-staged.webp" />
+      <source
+        type="image/webp"
+        srcset="assets/plates/jar-860.webp 860w, assets/plates/jar.webp 1536w"
+        sizes="100vw"
+      />
+      <img
+        src="assets/plates/jar.png"
+        width="1536"
+        height="1440"
+        [alt]="hero.imageAlt"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
+  </figure>
+</section>
+
+<section class="mission" aria-labelledby="mission-title">
+  <h2 id="mission-title" class="mission__label label">{{ mission.label }}</h2>
+  <span class="mission__dash brush-dash" aria-hidden="true"></span>
+  <blockquote class="mission__quote">
+    <p>
+      @for (line of mission.lines; track $index; let first = $first, last = $last) {
+        <!-- prettier-ignore -->
+        <span class="mission__line">@if (first) {<span class="mission__open">“</span>}{{ line }}{{ last ? '”' : ' ' }}</span>
+      }
+    </p>
+  </blockquote>
+</section>
+
+<section class="values" aria-labelledby="values-title" bfaBrushReveal>
+  <h2 id="values-title" class="values__label label">{{ values.label }}</h2>
+  <p class="values__belief">{{ values.belief }}</p>
+  <p class="values__therefore label">{{ values.therefore }}</p>
+  <ul class="values__list" role="list">
+    @for (value of values.items; track value.name; let i = $index) {
+      <li class="value" [style.--i]="i">
+        <h3 class="value__name">{{ value.name }}</h3>
+        <p class="value__line">{{ value.line }}</p>
+      </li>
+    }
+  </ul>
+</section>
+
+<section class="process" aria-labelledby="process-title">
+  <div class="process__intro">
+    <h2 id="process-title" class="section-title">{{ process.title }}</h2>
+    <p class="process__lede">{{ process.intro }}</p>
+    <p class="process__assurance">{{ process.assurance }}</p>
+    <a class="btn-brush" [routerLink]="locale.link(process.action.path)">{{
+      process.action.label
+    }}</a>
+  </div>
+  <div class="process__column">
+    <ol class="process__steps" role="list" bfaBrushReveal>
+      @for (step of process.steps; track step.name; let i = $index) {
+        <li class="step" [style.--i]="i">
+          <span class="step__number" aria-hidden="true">{{ i + 1 }}</span>
+          <div class="step__body">
+            <h3 class="step__name">{{ step.name }}</h3>
+            <p class="step__text">{{ step.text }}</p>
+          </div>
+        </li>
+      }
+    </ol>
+    <p class="process__draft">{{ process.draftNote }}</p>
+  </div>
+</section>
+
+<section class="conditions" aria-labelledby="conditions-title">
+  <div class="conditions__intro">
+    <h2 id="conditions-title" class="section-title">{{ conditions.title }}</h2>
+    <p class="conditions__lede">{{ conditions.intro }}</p>
+    <p class="conditions__faith">{{ conditions.faith }}</p>
+    <a class="text-link" [routerLink]="locale.link(conditions.action.path)">{{
+      conditions.action.label
+    }}</a>
+  </div>
+  <ul class="conditions__list" role="list">
+    @for (item of conditions.items; track item.name) {
+      <li class="condition">
+        <h3 class="condition__name">{{ item.name }}</h3>
+        <p class="condition__text">{{ item.text }}</p>
+      </li>
+    }
+  </ul>
+</section>
+
+<section class="story" aria-labelledby="story-title">
+  <h2 id="story-title" class="story__title section-title">{{ story.title }}</h2>
+  <figure class="story__figure">
+    <p class="story__sample">{{ story.sampleLabel }}</p>
+    <blockquote class="story__quote">
+      <p>“{{ story.quote }}”</p>
+    </blockquote>
+    <figcaption class="story__attribution">{{ story.attribution }}</figcaption>
+  </figure>
+  <div class="story__aside">
+    <p>{{ story.note }}</p>
+    <a class="text-link" [routerLink]="locale.link(story.action.path)">{{ story.action.label }}</a>
+  </div>
+</section>
+
+<section class="involved" aria-labelledby="involved-title">
+  <picture class="involved__glaze">
+    <source
+      type="image/webp"
+      srcset="assets/plates/glaze-band-860.webp 860w, assets/plates/glaze-band.webp 1536w"
+      sizes="100vw"
+    />
+    <img
+      src="assets/plates/glaze-band.png"
+      width="1536"
+      height="512"
+      alt=""
+      loading="lazy"
+      decoding="async"
+    />
+  </picture>
+  <div class="involved__inner">
+    <h2 id="involved-title" class="involved__label label">{{ involved.label }}</h2>
+    <p class="involved__vision">{{ involved.vision }}</p>
+    <ul class="involved__paths" role="list">
+      @for (path of involved.paths; track path.name) {
+        <li class="path">
+          <h3 class="path__name">{{ path.name }}</h3>
+          <p class="path__text">{{ path.text }}</p>
+          <a
+            class="text-link text-link--on-dark"
+            [routerLink]="locale.link(path.path)"
+            [fragment]="path.fragment || undefined"
+            >{{ path.label }}</a
+          >
+        </li>
+      }
+    </ul>
+  </div>
+</section>
+
+<section class="closing" aria-labelledby="closing-title">
+  <h2 id="closing-title" class="closing__title">{{ closing.title }}</h2>
+  <div class="closing__actions">
+    <a class="btn-brush" [routerLink]="locale.link(closing.primary.path)">{{
+      closing.primary.label
+    }}</a>
+    <a class="btn-line" [routerLink]="locale.link(closing.secondary.path)">{{
+      closing.secondary.label
+    }}</a>
+  </div>
+  <p class="closing__call">
+    {{ closing.callPrefix }} <a class="brush-link" [href]="contact.phoneHref">{{ contact.phone }}</a>
+  </p>
+</section>

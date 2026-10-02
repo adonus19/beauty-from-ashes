@@ -1,0 +1,71 @@
+<header class="site-header" [class.is-open]="menuOpen()">
+  <a class="wordmark" [routerLink]="locale.link()" [attr.aria-label]="site().homeLabel">
+    <span class="wordmark__name">{{ site().name }}</span>
+    <span class="wordmark__descriptor">{{ site().descriptor }}</span>
+  </a>
+
+  <div class="site-menu" id="site-menu">
+    <nav class="site-nav" [attr.aria-label]="site().navLabel">
+      <ul class="site-nav__list" role="list">
+        @for (item of site().nav; track item.path) {
+          <li>
+            <a
+              class="site-nav__link"
+              [routerLink]="locale.link(item.path)"
+              routerLinkActive="is-current"
+              ariaCurrentWhenActive="page"
+              >{{ item.label }}</a
+            >
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <div class="lang" role="group" [attr.aria-label]="site().language.label">
+      <a
+        class="lang__link"
+        [routerLink]="locale.alternate('en')"
+        lang="en"
+        hreflang="en"
+        [attr.aria-label]="site().language.en.name"
+        [attr.aria-current]="locale.code() === 'en' ? 'true' : null"
+        >{{ site().language.en.short }}</a
+      >
+      <span class="lang__divider" aria-hidden="true">|</span>
+      <a
+        class="lang__link"
+        [routerLink]="locale.alternate('es')"
+        lang="es"
+        hreflang="es"
+        [attr.aria-label]="site().language.es.name"
+        [attr.aria-current]="locale.code() === 'es' ? 'true' : null"
+        >{{ site().language.es.short }}</a
+      >
+    </div>
+  </div>
+
+  <a
+    class="give btn-brush btn-brush--compact"
+    [routerLink]="locale.link(site().give.path)"
+    routerLinkActive
+    ariaCurrentWhenActive="page"
+    >{{ site().give.label }}</a
+  >
+
+  <button
+    class="menu-button"
+    type="button"
+    aria-controls="site-menu"
+    [attr.aria-expanded]="menuOpen()"
+    (click)="toggleMenu()"
+  >
+    <svg class="menu-button__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      @if (menuOpen()) {
+        <path d="M6 6l12 12M18 6L6 18" />
+      } @else {
+        <path d="M4 8h16M4 16h16" />
+      }
+    </svg>
+    <span>{{ menuOpen() ? site().menu.close : site().menu.open }}</span>
+  </button>
+</header>

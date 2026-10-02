@@ -1,0 +1,41 @@
+{
+  "title": "Choose the home page layout",
+  "question": "Three layouts in the Ash & Cobalt world. Pick the one to build, and use the note to say what to carry over from the others or what feels wrong.",
+  "options": [
+    {
+      "id": "comp-1",
+      "label": "The Jar",
+      "lineage": "Your chosen mockup",
+      "thesis": "One monumental stoneware jar beside the headline; the six values run in a row below, divided by cobalt brushstrokes.",
+      "palette": ["#3a2f28", "#1f3a78", "#c7902f", "#e9e0cf", "#7d8f5a"],
+      "materials": ["salt-glazed stoneware ground", "cobalt brushwork", "ash-glaze photography"],
+      "viewport": "Headline, paragraph and Ask for help at left; the jar fills the right half; values row along the bottom.",
+      "risk": "The process (what happens when you ask) waits until further down the page.",
+      "comp": ".impeccable/mocks/home-comp-1.png"
+    },
+    {
+      "id": "comp-2",
+      "label": "The Glaze Run",
+      "lineage": "Help-seekers first",
+      "thesis": "A wide band of ash glaze running down the jar's shoulder, with the five steps of asking for help right beside the headline.",
+      "palette": ["#3a2f28", "#1f3a78", "#c7902f", "#e9e0cf", "#7d8f5a"],
+      "materials": ["salt-glazed stoneware ground", "cobalt brushed numerals", "macro glaze photography"],
+      "viewport": "Glaze band across the top; headline and Ask for help at left with the five-step process at right; the mission statement begins below.",
+      "risk": "The glaze close-up is abstract; without a caption, visitors may not know what they are looking at.",
+      "comp": ".impeccable/mocks/home-comp-2.png"
+    },
+    {
+      "id": "comp-3",
+      "label": "The Shelf",
+      "lineage": "Values made visible",
+      "thesis": "Six different hand-thrown vessels on one shelf, each standing above one of the six values: no two alike.",
+      "palette": ["#3a2f28", "#1f3a78", "#c7902f", "#e9e0cf", "#7d8f5a"],
+      "materials": ["salt-glazed stoneware ground", "cobalt brushwork", "still-life photography"],
+      "viewport": "Centered headline and two buttons; a wide shelf of six vessels below, with each value labeled under its vessel.",
+      "risk": "The most symbolic option; the vessel-per-value idea needs to read as respect, not decoration.",
+      "comp": ".impeccable/mocks/home-comp-3.png"
+    }
+  ],
+  "reroll": false,
+  "steer": true
+}

@@ -1,0 +1,321 @@
+{
+  "regions": [
+    {
+      "id": "wordmark",
+      "kind": "text",
+      "box": {
+        "x": 0.04036,
+        "y": 0.01562,
+        "w": 0.20052,
+        "h": 0.0625
+      },
+      "snap": false,
+      "note": "placeholder wordmark: 'Beauty From Ashes' in iron-brown serif over 'SURGICAL MINISTRY' in small spaced capitals"
+    },
+    {
+      "id": "nav-links",
+      "kind": "control",
+      "box": {
+        "x": 0.36849,
+        "y": 0.03516,
+        "w": 0.34245,
+        "h": 0.02734
+      },
+      "snap": false,
+      "note": "five nav links in iron-brown serif: Get Help, Volunteer (current page), Partner, Stories, About"
+    },
+    {
+      "id": "nav-current",
+      "kind": "control",
+      "codeDrawn": true,
+      "box": {
+        "x": 0.44271,
+        "y": 0.06055,
+        "w": 0.06901,
+        "h": 0.01562
+      },
+      "snap": false,
+      "note": "current-page marker under Volunteer, drawn in code as the link-stroke mask in cobalt"
+    },
+    {
+      "id": "lang-switch",
+      "kind": "control",
+      "box": {
+        "x": 0.82812,
+        "y": 0.03906,
+        "w": 0.04297,
+        "h": 0.01953
+      },
+      "snap": false,
+      "note": "EN | ES language switch in small sans capitals"
+    },
+    {
+      "id": "give-brush",
+      "kind": "plate",
+      "box": {
+        "x": 0.89193,
+        "y": 0.02148,
+        "w": 0.07031,
+        "h": 0.05273
+      },
+      "note": "cobalt-blue hand-brushed swatch with rough dry-brush edges, the ground of the Give button"
+    },
+    {
+      "id": "give-button",
+      "kind": "control",
+      "box": {
+        "x": 0.89844,
+        "y": 0.0293,
+        "w": 0.05729,
+        "h": 0.03711
+      },
+      "snap": false,
+      "note": "Give label in white serif on the cobalt swatch; code draws the label, hit area and focus ring"
+    },
+    {
+      "id": "nav-rule",
+      "kind": "plate",
+      "box": {
+        "x": 0.0,
+        "y": 0.08398,
+        "w": 1.0,
+        "h": 0.01758
+      },
+      "bleed": true,
+      "note": "hand-brushed cobalt-blue line running the full width under the nav bar, dry-brush texture at its edges"
+    },
+    {
+      "id": "vision-label",
+      "kind": "text",
+      "box": {
+        "x": 0.45182,
+        "y": 0.1416,
+        "w": 0.09766,
+        "h": 0.02246
+      },
+      "snap": false,
+      "note": "centered small spaced capitals in soft iron: OUR VISION"
+    },
+    {
+      "id": "mission-dash",
+      "kind": "plate",
+      "box": {
+        "x": 0.46484,
+        "y": 0.1709,
+        "w": 0.06901,
+        "h": 0.02051
+      },
+      "note": "short hand-brushed cobalt dash centered under OUR VISION"
+    },
+    {
+      "id": "vision-1",
+      "kind": "text",
+      "box": {
+        "x": 0.23698,
+        "y": 0.20898,
+        "w": 0.53385,
+        "h": 0.05273
+      },
+      "snap": false,
+      "note": "vision statement line one, large roman iron serif, centered: To inspire a community of gifted professionals"
+    },
+    {
+      "id": "vision-2",
+      "kind": "text",
+      "box": {
+        "x": 0.20182,
+        "y": 0.25977,
+        "w": 0.60677,
+        "h": 0.0459
+      },
+      "snap": false,
+      "note": "vision line two, same serif: to use what God has entrusted to them to serve others,"
+    },
+    {
+      "id": "vision-3",
+      "kind": "text",
+      "box": {
+        "x": 0.20312,
+        "y": 0.30566,
+        "w": 0.61068,
+        "h": 0.05176
+      },
+      "snap": false,
+      "note": "vision line three, same serif: bless those in need, and strengthen their communities."
+    },
+    {
+      "id": "title",
+      "kind": "text",
+      "box": {
+        "x": 0.38802,
+        "y": 0.38867,
+        "w": 0.22396,
+        "h": 0.04883
+      },
+      "snap": false,
+      "note": "h1 centered in iron serif: Serve with your skills."
+    },
+    {
+      "id": "lede",
+      "kind": "text",
+      "box": {
+        "x": 0.25391,
+        "y": 0.43457,
+        "w": 0.49609,
+        "h": 0.06055
+      },
+      "snap": false,
+      "note": "two centered sans lines: Surgeons, anesthesia providers, nurses and surgical teams give their time so patients / who can't afford surgery still receive excellent care."
+    },
+    {
+      "id": "ask-brush",
+      "kind": "plate",
+      "box": {
+        "x": 0.33398,
+        "y": 0.51465,
+        "w": 0.1849,
+        "h": 0.06445
+      },
+      "note": "cobalt-blue hand-brushed swatch with rough dry-brush edges, the ground of the Volunteer your skills button"
+    },
+    {
+      "id": "ask-button",
+      "kind": "control",
+      "box": {
+        "x": 0.34505,
+        "y": 0.52344,
+        "w": 0.16276,
+        "h": 0.04688
+      },
+      "snap": false,
+      "note": "Volunteer your skills label in white serif on the cobalt swatch; code draws the label, hit area and focus ring"
+    },
+    {
+      "id": "ink-frame",
+      "kind": "plate",
+      "box": {
+        "x": 0.53255,
+        "y": 0.50977,
+        "w": 0.13672,
+        "h": 0.07227
+      },
+      "note": "hand-inked iron-brown outline frame with slightly rough edges, the border of the See the roles button"
+    },
+    {
+      "id": "roles-button",
+      "kind": "control",
+      "box": {
+        "x": 0.54688,
+        "y": 0.52734,
+        "w": 0.10807,
+        "h": 0.03906
+      },
+      "snap": false,
+      "note": "See the roles label in iron serif inside the inked frame; code draws the label and hit area"
+    },
+    {
+      "id": "rule-1",
+      "kind": "chrome",
+      "box": {
+        "x": 0.03906,
+        "y": 0.62012,
+        "w": 0.92578,
+        "h": 0.01367
+      },
+      "snap": false,
+      "note": "thin iron hairline across the page between the vision band and the roles"
+    },
+    {
+      "id": "where-title",
+      "kind": "text",
+      "box": {
+        "x": 0.04297,
+        "y": 0.67578,
+        "w": 0.31771,
+        "h": 0.06641
+      },
+      "snap": false,
+      "note": "section heading in large iron serif: Where you're needed"
+    },
+    {
+      "id": "where-text",
+      "kind": "text",
+      "box": {
+        "x": 0.04427,
+        "y": 0.75391,
+        "w": 0.26823,
+        "h": 0.13477
+      },
+      "snap": false,
+      "note": "four-line sans paragraph introducing the roles"
+    },
+    {
+      "id": "role-1",
+      "kind": "text",
+      "box": {
+        "x": 0.42839,
+        "y": 0.68359,
+        "w": 0.22786,
+        "h": 0.08984
+      },
+      "snap": false,
+      "note": "role name in serif over a two-line sans description: Plastic and reconstructive surgeons / Provide surgical care that restores function and confidence."
+    },
+    {
+      "id": "role-2",
+      "kind": "text",
+      "box": {
+        "x": 0.70964,
+        "y": 0.68359,
+        "w": 0.2526,
+        "h": 0.08984
+      },
+      "snap": false,
+      "note": "role name in serif over a two-line sans description: Anesthesiologists and nurse anesthetists / Provide safe, skilled anesthesia and pain management."
+    },
+    {
+      "id": "rule-roles",
+      "kind": "chrome",
+      "box": {
+        "x": 0.42839,
+        "y": 0.78906,
+        "w": 0.52734,
+        "h": 0.0127
+      },
+      "snap": false,
+      "note": "thin iron hairlines under the first row of roles, one under each column"
+    },
+    {
+      "id": "role-3",
+      "kind": "text",
+      "box": {
+        "x": 0.42839,
+        "y": 0.81641,
+        "w": 0.23828,
+        "h": 0.0918
+      },
+      "snap": false,
+      "note": "role name in serif over a two-line sans description: Operating room and recovery nurses / Ensure safe, compassionate care before, during and after surgery."
+    },
+    {
+      "id": "role-4",
+      "kind": "text",
+      "box": {
+        "x": 0.70964,
+        "y": 0.81641,
+        "w": 0.2526,
+        "h": 0.0918
+      },
+      "snap": false,
+      "note": "role name in serif over a two-line sans description: Surgical technologists / Keep the surgical team prepared and focused."
+    },
+    {
+      "id": "ground",
+      "kind": "texture",
+      "grid": "J9:J9",
+      "note": "clean patch of the pale buff salt-glazed stoneware page ground with fine orange-peel texture, no ink"
+    }
+  ],
+  "allowUncovered": true,
+  "uncoveredNote": "Cells crossed by box-defined text regions (vision lines, title, lede, roles) hold only those regions' ink; verified on the grid."
+}

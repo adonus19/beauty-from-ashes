@@ -1,0 +1,29 @@
+// Closing invitation: the centered call that ends a page.
+.closing {
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  padding: clamp(4.5rem, 9vw, 9rem) var(--gutter);
+  text-align: center;
+}
+
+.closing__title {
+  max-width: 18em;
+  font-size: clamp(2rem, 1.5rem + 2.2vw, 3.75rem);
+  line-height: 1.1;
+}
+
+.closing__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem 1.5rem;
+}
+
+.closing__call {
+  color: var(--text);
+
+  a {
+    font-weight: 700;
+  }
+}

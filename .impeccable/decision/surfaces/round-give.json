@@ -1,0 +1,40 @@
+{
+  "title": "Give page: choose a layout",
+  "question": "Three layouts for the Give page, written for donors. Online giving will run through Stripe once the account is set up; until then the form shows what it will look like. Pick one, add a note to steer it, or re-roll.",
+  "options": [
+    {
+      "id": "photo-appeal",
+      "label": "Photograph appeal",
+      "kicker": "THE ROLL",
+      "thesis": "A wide glaze photograph opens the page, a centered appeal sits under it, and the giving form follows directly.",
+      "palette": ["#d8d1c4", "#3a1f0e", "#0b3d9c", "#2a170c"],
+      "materials": ["ash-glaze photograph", "inked amount frames", "brushed swatch"],
+      "viewport": "Full-width glaze photograph under the header; a centered headline and appeal; then the form: once or monthly, amounts, and the Give button.",
+      "risk": "The photograph carries the opening; until real photos arrive it relies on the stoneware images.",
+      "comp": ".impeccable/mocks/decision/give-photo-appeal.png"
+    },
+    {
+      "id": "three-ways",
+      "label": "Three ways",
+      "thesis": "Give once, give monthly and sponsor a surgery stand side by side, each with one plain line and one action.",
+      "palette": ["#d8d1c4", "#3a1f0e", "#0b3d9c", "#4f3a2a"],
+      "materials": ["upright brushed strokes", "brushed swatches", "inked frame"],
+      "viewport": "Title and lede at top; three columns divided by upright cobalt strokes like the values; each with a short line and a button.",
+      "risk": "Clear but expected; the three columns weigh the same even if sponsoring a surgery matters most.",
+      "comp": ".impeccable/mocks/decision/give-three-ways.png"
+    },
+    {
+      "id": "form-beside",
+      "label": "Form beside the case",
+      "thesis": "The giving form sits in the first screen beside the reason to give, so a ready donor can give in seconds.",
+      "palette": ["#d8d1c4", "#3a1f0e", "#0b3d9c", "#4f3a2a"],
+      "materials": ["inked frame form", "amount frames", "hairline list"],
+      "viewport": "Left: headline, lede and the 501(c)(3) line. Right: the giving form in an inked frame. Below: what your gift pays for.",
+      "risk": "It leads with the transaction; donors who need to trust the ministry first have to scroll for that.",
+      "comp": ".impeccable/mocks/decision/give-form-beside.png"
+    }
+  ],
+  "reroll": true,
+  "steer": true,
+  "buildPath": { "value": "comp", "toggle": true }
+}

@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+main:focus {
+  outline: none;
+}
+
+.translation-notice {
+  margin: 0;
+  padding: 0.6rem var(--gutter);
+  border-block-end: 1px solid rgb(58 31 14 / 0.15);
+  color: var(--iron);
+  font-size: 0.9375rem;
+}

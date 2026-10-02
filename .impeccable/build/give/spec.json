@@ -1,0 +1,1052 @@
+{
+  "tool": "comp-spec",
+  "version": 1,
+  "createdAt": "2026-10-01T23:09:00.725Z",
+  "comp": ".impeccable/mocks/decision/give-photo-appeal.png",
+  "warnings": [
+    "region nav-rule: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)",
+    "region give-glaze: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)",
+    "region amounts: \"codeDrawn\": true set in the regions file (the painted-material refusal is overridden: code draws this region)"
+  ],
+  "uncoveredInkCells": [
+    "C0",
+    "D0",
+    "H0"
+  ],
+  "compSize": {
+    "width": 1536,
+    "height": 1024
+  },
+  "aspect": 1.5,
+  "orientation": "landscape",
+  "palette": [
+    {
+      "hex": "#ded6c8",
+      "coverage": 0.8251
+    },
+    {
+      "hex": "#b4a28d",
+      "coverage": 0.0812
+    },
+    {
+      "hex": "#744710",
+      "coverage": 0.0358
+    },
+    {
+      "hex": "#083899",
+      "coverage": 0.0302
+    },
+    {
+      "hex": "#917550",
+      "coverage": 0.0277
+    }
+  ],
+  "bands": [
+    {
+      "y": 0.0235,
+      "strength": 0.2324
+    },
+    {
+      "y": 0.0824,
+      "strength": 0.5939
+    },
+    {
+      "y": 0.1059,
+      "strength": 0.6069
+    },
+    {
+      "y": 0.3882,
+      "strength": 0.2858
+    },
+    {
+      "y": 0.4471,
+      "strength": 0.3021
+    },
+    {
+      "y": 0.4824,
+      "strength": 0.4022
+    },
+    {
+      "y": 0.5529,
+      "strength": 0.2394
+    },
+    {
+      "y": 0.5765,
+      "strength": 0.2937
+    },
+    {
+      "y": 0.7059,
+      "strength": 0.3131
+    },
+    {
+      "y": 0.7765,
+      "strength": 0.396
+    },
+    {
+      "y": 0.8235,
+      "strength": 0.2661
+    },
+    {
+      "y": 0.8824,
+      "strength": 0.2605
+    },
+    {
+      "y": 0.9294,
+      "strength": 0.2274
+    }
+  ],
+  "regions": [
+    {
+      "id": "wordmark",
+      "kind": "text",
+      "note": "placeholder wordmark: 'Beauty From Ashes' in iron-brown serif over 'SURGICAL MINISTRY' in small spaced capitals",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.0404,
+        "y": 0.0156,
+        "w": 0.2005,
+        "h": 0.0625
+      },
+      "px": {
+        "x": 62,
+        "y": 16,
+        "w": 308,
+        "h": 64
+      },
+      "aspect": 4.8125,
+      "palette": [
+        {
+          "hex": "#e1d8cb",
+          "coverage": 0.8407
+        },
+        {
+          "hex": "#371e0d",
+          "coverage": 0.0636
+        },
+        {
+          "hex": "#a39384",
+          "coverage": 0.0481
+        },
+        {
+          "hex": "#624f40",
+          "coverage": 0.0374
+        },
+        {
+          "hex": "#4f371c",
+          "coverage": 0.0102
+        }
+      ],
+      "detail": {
+        "energy": 56.436
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 13,
+          "capHeightPx": 27.2,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6063,
+          "advTall": 0.7349,
+          "advX": 0.5512,
+          "gap": 0.0735,
+          "xRatio": 0.6614,
+          "stemW": 0.1408,
+          "contrast": 1.8914,
+          "serif": null,
+          "densTall": 0.394,
+          "densX": 0.4671,
+          "weight": 0.394
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "nav-links",
+      "kind": "control",
+      "note": "five nav links in iron-brown serif: Get Help, Volunteer, Partner, Stories, About; none marked, the Give page is current",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.3568,
+        "y": 0.0352,
+        "w": 0.3607,
+        "h": 0.0273
+      },
+      "px": {
+        "x": 548,
+        "y": 36,
+        "w": 554,
+        "h": 28
+      },
+      "aspect": 19.7857,
+      "palette": [
+        {
+          "hex": "#e2d8cb",
+          "coverage": 0.904
+        },
+        {
+          "hex": "#a08f7f",
+          "coverage": 0.0336
+        },
+        {
+          "hex": "#695746",
+          "coverage": 0.032
+        },
+        {
+          "hex": "#3b2515",
+          "coverage": 0.0266
+        },
+        {
+          "hex": "#886d6d",
+          "coverage": 0.0038
+        }
+      ],
+      "detail": {
+        "energy": 34.6214
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "lang-switch",
+      "kind": "control",
+      "note": "EN | ES language switch in small sans capitals",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.8281,
+        "y": 0.0391,
+        "w": 0.043,
+        "h": 0.0195
+      },
+      "px": {
+        "x": 1272,
+        "y": 40,
+        "w": 66,
+        "h": 20
+      },
+      "aspect": 3.3,
+      "palette": [
+        {
+          "hex": "#e0d7cc",
+          "coverage": 0.8312
+        },
+        {
+          "hex": "#6d5b4f",
+          "coverage": 0.0974
+        },
+        {
+          "hex": "#b8aca4",
+          "coverage": 0.0584
+        },
+        {
+          "hex": "#403020",
+          "coverage": 0.013
+        }
+      ],
+      "detail": {
+        "energy": 13.9515
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "give-brush",
+      "kind": "plate",
+      "note": "cobalt-blue hand-brushed swatch with rough dry-brush edges, the ground of the Give button",
+      "grid": null,
+      "box": {
+        "x": 0.8919,
+        "y": 0.0215,
+        "w": 0.0703,
+        "h": 0.0527
+      },
+      "px": {
+        "x": 1370,
+        "y": 22,
+        "w": 108,
+        "h": 54
+      },
+      "aspect": 2,
+      "palette": [
+        {
+          "hex": "#08389a",
+          "coverage": 0.7209
+        },
+        {
+          "hex": "#e0d9d0",
+          "coverage": 0.1707
+        },
+        {
+          "hex": "#718dbb",
+          "coverage": 0.0447
+        },
+        {
+          "hex": "#b3bace",
+          "coverage": 0.0399
+        },
+        {
+          "hex": "#496db1",
+          "coverage": 0.0239
+        }
+      ],
+      "detail": {
+        "energy": 16.1079
+      },
+      "medium": "raster",
+      "plate": "assets/plates/give-brush.png",
+      "text": null
+    },
+    {
+      "id": "give-button",
+      "kind": "control",
+      "note": "Give label in white serif on the cobalt swatch; code draws the label, hit area and focus ring",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.8984,
+        "y": 0.0293,
+        "w": 0.0573,
+        "h": 0.0371
+      },
+      "px": {
+        "x": 1380,
+        "y": 30,
+        "w": 88,
+        "h": 38
+      },
+      "aspect": 2.3158,
+      "palette": [
+        {
+          "hex": "#083899",
+          "coverage": 0.9016
+        },
+        {
+          "hex": "#f0f6f8",
+          "coverage": 0.0363
+        },
+        {
+          "hex": "#b8ccea",
+          "coverage": 0.0233
+        },
+        {
+          "hex": "#1f53a6",
+          "coverage": 0.0233
+        },
+        {
+          "hex": "#7da0d3",
+          "coverage": 0.0155
+        }
+      ],
+      "detail": {
+        "energy": 10.6121
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "nav-rule",
+      "kind": "plate",
+      "note": "hand-brushed cobalt-blue line running the full width under the nav bar, dry-brush texture at its edges",
+      "grid": null,
+      "bleed": true,
+      "box": {
+        "x": 0,
+        "y": 0.084,
+        "w": 1,
+        "h": 0.0176
+      },
+      "px": {
+        "x": 0,
+        "y": 86,
+        "w": 1536,
+        "h": 18
+      },
+      "aspect": 85.3333,
+      "palette": [
+        {
+          "hex": "#ded7cc",
+          "coverage": 0.5619
+        },
+        {
+          "hex": "#09399f",
+          "coverage": 0.2297
+        },
+        {
+          "hex": "#5a77ad",
+          "coverage": 0.0811
+        },
+        {
+          "hex": "#254e99",
+          "coverage": 0.0766
+        },
+        {
+          "hex": "#8e9ebd",
+          "coverage": 0.0507
+        }
+      ],
+      "detail": {
+        "energy": 54.3159
+      },
+      "medium": "raster",
+      "plate": "assets/plates/nav-rule.png",
+      "text": null
+    },
+    {
+      "id": "give-glaze",
+      "kind": "image",
+      "note": "photograph: close view of a Carolina stoneware jar's shoulder with amber and olive-green wood-ash glaze running down in drips, its lower edge fading into the page ground",
+      "grid": null,
+      "bleed": true,
+      "box": {
+        "x": 0,
+        "y": 0.1016,
+        "w": 1,
+        "h": 0.3008
+      },
+      "px": {
+        "x": 0,
+        "y": 104,
+        "w": 1536,
+        "h": 308
+      },
+      "aspect": 4.987,
+      "palette": [
+        {
+          "hex": "#bead9a",
+          "coverage": 0.5063
+        },
+        {
+          "hex": "#6e410e",
+          "coverage": 0.1444
+        },
+        {
+          "hex": "#9e7f5b",
+          "coverage": 0.1339
+        },
+        {
+          "hex": "#e6d5bd",
+          "coverage": 0.1271
+        },
+        {
+          "hex": "#9e5f11",
+          "coverage": 0.0883
+        }
+      ],
+      "detail": {
+        "energy": 33.0392
+      },
+      "medium": "raster",
+      "plate": "assets/plates/give-glaze.png",
+      "text": null
+    },
+    {
+      "id": "headline",
+      "kind": "text",
+      "note": "h1 centered on one line, large iron-brown serif: Help pay for someone's surgery.",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.22,
+        "y": 0.4277,
+        "w": 0.5625,
+        "h": 0.0762
+      },
+      "px": {
+        "x": 338,
+        "y": 438,
+        "w": 864,
+        "h": 78
+      },
+      "aspect": 11.0769,
+      "palette": [
+        {
+          "hex": "#e0d8cc",
+          "coverage": 0.8187
+        },
+        {
+          "hex": "#381f0b",
+          "coverage": 0.137
+        },
+        {
+          "hex": "#746150",
+          "coverage": 0.0246
+        },
+        {
+          "hex": "#aa9b8d",
+          "coverage": 0.0157
+        },
+        {
+          "hex": "#250808",
+          "coverage": 0.004
+        }
+      ],
+      "detail": {
+        "energy": 72.1559
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 20,
+          "capHeightPx": 48.1,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.5609,
+          "advTall": 1.0282,
+          "advX": 0.5609,
+          "gap": 0.0623,
+          "xRatio": 0.6439,
+          "stemW": 0.1355,
+          "contrast": 1.9443,
+          "serif": 2.4359,
+          "densTall": 0.3624,
+          "densX": 0.4394,
+          "weight": 0.3624
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular",
+        "chosen": {
+          "family": "Rufina",
+          "weight": 400,
+          "fontSizePx": 63,
+          "source": "index",
+          "fp": {
+            "lines": 1,
+            "glyphs": 24,
+            "capHeightPx": 48.3,
+            "inkIsDark": true,
+            "allCaps": false,
+            "advance": 0.5793,
+            "advTall": 0.5483,
+            "advX": 0.5793,
+            "gap": 0.0828,
+            "xRatio": 0.6419,
+            "stemW": 0.1414,
+            "contrast": 2.199,
+            "serif": 2.3719,
+            "densTall": 0.3798,
+            "densX": 0.4267,
+            "weight": 0.3798
+          },
+          "stamp": "05b01d21148f"
+        }
+      }
+    },
+    {
+      "id": "lede",
+      "kind": "text",
+      "note": "two centered sans lines: Volunteers give their skill and time. Your gift covers what they can't give: / operating room time, anesthesia, supplies and care after surgery.",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.2292,
+        "y": 0.5254,
+        "w": 0.5534,
+        "h": 0.0742
+      },
+      "px": {
+        "x": 352,
+        "y": 538,
+        "w": 850,
+        "h": 76
+      },
+      "aspect": 11.1842,
+      "palette": [
+        {
+          "hex": "#dfd8cd",
+          "coverage": 0.8553
+        },
+        {
+          "hex": "#545151",
+          "coverage": 0.0727
+        },
+        {
+          "hex": "#857f7e",
+          "coverage": 0.0364
+        },
+        {
+          "hex": "#b3aca8",
+          "coverage": 0.032
+        },
+        {
+          "hex": "#4d4252",
+          "coverage": 0.0035
+        }
+      ],
+      "detail": {
+        "energy": 39.0695
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 2,
+          "glyphs": 115,
+          "capHeightPx": 18,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.609,
+          "advTall": 0.4706,
+          "advX": 0.6367,
+          "gap": 0.1386,
+          "xRatio": 0.6943,
+          "stemW": 0.1435,
+          "contrast": 1.0985,
+          "serif": 0.6024,
+          "densTall": 0.4352,
+          "densX": 0.5147,
+          "weight": 0.4352
+        },
+        "widthClass": "normal",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "frequency",
+      "kind": "control",
+      "note": "frequency toggle in serif: Give once (selected) and Give monthly",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.3763,
+        "y": 0.6309,
+        "w": 0.2461,
+        "h": 0.0371
+      },
+      "px": {
+        "x": 578,
+        "y": 646,
+        "w": 378,
+        "h": 38
+      },
+      "aspect": 9.9474,
+      "palette": [
+        {
+          "hex": "#e0d8cc",
+          "coverage": 0.8901
+        },
+        {
+          "hex": "#2e1709",
+          "coverage": 0.0403
+        },
+        {
+          "hex": "#4b3525",
+          "coverage": 0.0366
+        },
+        {
+          "hex": "#7a6757",
+          "coverage": 0.0165
+        },
+        {
+          "hex": "#ac9e90",
+          "coverage": 0.0165
+        }
+      ],
+      "detail": {
+        "energy": 51.8994
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "toggle-stroke",
+      "kind": "plate",
+      "note": "hand-brushed cobalt stroke under the selected Give once",
+      "grid": null,
+      "box": {
+        "x": 0.3789,
+        "y": 0.667,
+        "w": 0.1003,
+        "h": 0.0127
+      },
+      "px": {
+        "x": 582,
+        "y": 683,
+        "w": 154,
+        "h": 13
+      },
+      "aspect": 11.8462,
+      "palette": [
+        {
+          "hex": "#dfd8cb",
+          "coverage": 0.4961
+        },
+        {
+          "hex": "#0c3b96",
+          "coverage": 0.3937
+        },
+        {
+          "hex": "#506fa0",
+          "coverage": 0.0472
+        },
+        {
+          "hex": "#2e5093",
+          "coverage": 0.0394
+        },
+        {
+          "hex": "#7b95b3",
+          "coverage": 0.0236
+        }
+      ],
+      "detail": {
+        "energy": 39.9697
+      },
+      "medium": "raster",
+      "plate": "assets/plates/toggle-stroke.png",
+      "text": null
+    },
+    {
+      "id": "ink-frame",
+      "kind": "plate",
+      "note": "hand-inked iron-brown outline frame with slightly rough edges, the border of the $50 amount",
+      "grid": null,
+      "box": {
+        "x": 0.1992,
+        "y": 0.708,
+        "w": 0.1172,
+        "h": 0.0742
+      },
+      "px": {
+        "x": 306,
+        "y": 725,
+        "w": 180,
+        "h": 76
+      },
+      "aspect": 2.3684,
+      "palette": [
+        {
+          "hex": "#dfd8ca",
+          "coverage": 0.875
+        },
+        {
+          "hex": "#1f0d09",
+          "coverage": 0.0754
+        },
+        {
+          "hex": "#8d7d6d",
+          "coverage": 0.0226
+        },
+        {
+          "hex": "#391c10",
+          "coverage": 0.0168
+        },
+        {
+          "hex": "#5e4d3d",
+          "coverage": 0.0103
+        }
+      ],
+      "detail": {
+        "energy": 29.1474
+      },
+      "medium": "raster",
+      "plate": "assets/plates/ink-frame.png",
+      "text": null
+    },
+    {
+      "id": "amount-brush",
+      "kind": "plate",
+      "note": "cobalt-blue hand-brushed swatch with rough dry-brush edges, the ground of the selected $100 amount",
+      "grid": null,
+      "box": {
+        "x": 0.3268,
+        "y": 0.707,
+        "w": 0.1146,
+        "h": 0.0762
+      },
+      "px": {
+        "x": 502,
+        "y": 724,
+        "w": 176,
+        "h": 78
+      },
+      "aspect": 2.2564,
+      "palette": [
+        {
+          "hex": "#083898",
+          "coverage": 0.7457
+        },
+        {
+          "hex": "#e1d9cc",
+          "coverage": 0.1977
+        },
+        {
+          "hex": "#c1c7dc",
+          "coverage": 0.02
+        },
+        {
+          "hex": "#26569e",
+          "coverage": 0.0193
+        },
+        {
+          "hex": "#5a7fba",
+          "coverage": 0.0173
+        }
+      ],
+      "detail": {
+        "energy": 18.0741
+      },
+      "medium": "raster",
+      "plate": "assets/plates/amount-brush.png",
+      "text": null
+    },
+    {
+      "id": "amounts",
+      "kind": "control",
+      "note": "five amount choices in iron serif inside inked frames: $50, $100 (selected, white on cobalt), $250, $500, Other amount",
+      "grid": null,
+      "codeDrawn": true,
+      "snap": false,
+      "box": {
+        "x": 0.1992,
+        "y": 0.707,
+        "w": 0.6029,
+        "h": 0.0762
+      },
+      "px": {
+        "x": 306,
+        "y": 724,
+        "w": 926,
+        "h": 78
+      },
+      "aspect": 11.8718,
+      "palette": [
+        {
+          "hex": "#ded8ca",
+          "coverage": 0.7697
+        },
+        {
+          "hex": "#083898",
+          "coverage": 0.1449
+        },
+        {
+          "hex": "#2f180e",
+          "coverage": 0.0457
+        },
+        {
+          "hex": "#796858",
+          "coverage": 0.0199
+        },
+        {
+          "hex": "#534032",
+          "coverage": 0.0199
+        }
+      ],
+      "detail": {
+        "energy": 50.9883
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "ask-brush",
+      "kind": "plate",
+      "note": "cobalt-blue hand-brushed swatch with rough dry-brush edges, the ground of the Give $100 button",
+      "grid": null,
+      "box": {
+        "x": 0.3939,
+        "y": 0.8154,
+        "w": 0.2122,
+        "h": 0.0742
+      },
+      "px": {
+        "x": 605,
+        "y": 835,
+        "w": 326,
+        "h": 76
+      },
+      "aspect": 4.2895,
+      "palette": [
+        {
+          "hex": "#083898",
+          "coverage": 0.8568
+        },
+        {
+          "hex": "#e0d8cb",
+          "coverage": 0.0935
+        },
+        {
+          "hex": "#3e65a9",
+          "coverage": 0.019
+        },
+        {
+          "hex": "#f7f8f8",
+          "coverage": 0.0183
+        },
+        {
+          "hex": "#627fac",
+          "coverage": 0.0124
+        }
+      ],
+      "detail": {
+        "energy": 30.0569
+      },
+      "medium": "raster",
+      "plate": "assets/plates/ask-brush.png",
+      "text": null
+    },
+    {
+      "id": "give-action",
+      "kind": "control",
+      "note": "Give $100 label in white serif on the large cobalt swatch; code draws the label, hit area and focus ring",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.4167,
+        "y": 0.8262,
+        "w": 0.1693,
+        "h": 0.0508
+      },
+      "px": {
+        "x": 640,
+        "y": 846,
+        "w": 260,
+        "h": 52
+      },
+      "aspect": 5,
+      "palette": [
+        {
+          "hex": "#083899",
+          "coverage": 0.9006
+        },
+        {
+          "hex": "#eff3f7",
+          "coverage": 0.0458
+        },
+        {
+          "hex": "#1a4a9a",
+          "coverage": 0.0278
+        },
+        {
+          "hex": "#a6bcde",
+          "coverage": 0.0142
+        },
+        {
+          "hex": "#547abc",
+          "coverage": 0.0116
+        }
+      ],
+      "detail": {
+        "energy": 26.1506
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "status",
+      "kind": "text",
+      "note": "one small centered sans line: Beauty From Ashes Surgical Ministry is a 501(c)(3) nonprofit. Gifts are tax-deductible as allowed by law.",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.2617,
+        "y": 0.9102,
+        "w": 0.4779,
+        "h": 0.0234
+      },
+      "px": {
+        "x": 402,
+        "y": 932,
+        "w": 734,
+        "h": 24
+      },
+      "aspect": 30.5833,
+      "palette": [
+        {
+          "hex": "#dcd7c8",
+          "coverage": 0.7969
+        },
+        {
+          "hex": "#58493d",
+          "coverage": 0.1199
+        },
+        {
+          "hex": "#a3978c",
+          "coverage": 0.0398
+        },
+        {
+          "hex": "#7c7064",
+          "coverage": 0.0398
+        },
+        {
+          "hex": "#382821",
+          "coverage": 0.0036
+        }
+      ],
+      "detail": {
+        "energy": 47.8703
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 82,
+          "capHeightPx": 11.1,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6631,
+          "advTall": 0.4672,
+          "advX": 0.6782,
+          "gap": 0.1206,
+          "xRatio": 0.6829,
+          "stemW": 0.1769,
+          "contrast": 1.1632,
+          "serif": 0.363,
+          "densTall": 0.5143,
+          "densX": 0.5715,
+          "weight": 0.5143
+        },
+        "widthClass": "normal",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "ground",
+      "kind": "texture",
+      "note": "clean patch of the pale buff salt-glazed stoneware page ground with fine orange-peel texture, no ink",
+      "grid": "A9:A9",
+      "box": {
+        "x": 0,
+        "y": 0.9,
+        "w": 0.1,
+        "h": 0.1
+      },
+      "px": {
+        "x": 0,
+        "y": 922,
+        "w": 154,
+        "h": 102
+      },
+      "aspect": 1.5098,
+      "palette": [
+        {
+          "hex": "#ded8c9",
+          "coverage": 1
+        }
+      ],
+      "detail": {
+        "energy": 3.5547
+      },
+      "medium": "raster",
+      "plate": "assets/plates/ground.png",
+      "text": null
+    }
+  ]
+}

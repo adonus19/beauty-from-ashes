@@ -1,0 +1,11 @@
+{
+  "prompt": "A single hand-inked rectangular frame outline, the border of a button, drawn with a dip pen and dark iron-brown ink (#33190f) on a fully transparent background. Wide landscape rectangle filling the canvas with a small even margin. The line is about 1% of the canvas height thick, slightly wobbly and uneven like a careful hand drawing, with corners that meet slightly irregularly; a few tiny dry-ink breaks in the stroke. Nothing inside the frame: the interior is fully transparent. No text, no fill, no shadow, no paper.\n",
+  "createdAt": "2026-10-01T19:26:40.191Z",
+  "tool": "impeccable generate-image",
+  "model": "gpt-image-2.5-flare",
+  "background": "transparent",
+  "outputFormat": "png",
+  "refs": [
+    ".impeccable/build/crops/refer-button.png"
+  ]
+}

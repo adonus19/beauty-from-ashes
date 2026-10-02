@@ -1,0 +1,275 @@
+{
+  "regions": [
+    {
+      "id": "wordmark",
+      "kind": "text",
+      "box": {
+        "x": 0.04036,
+        "y": 0.01562,
+        "w": 0.20052,
+        "h": 0.0625
+      },
+      "snap": false,
+      "note": "placeholder wordmark: 'Beauty From Ashes' in iron-brown serif over 'SURGICAL MINISTRY' in small spaced capitals"
+    },
+    {
+      "id": "nav-links",
+      "kind": "control",
+      "box": {
+        "x": 0.33984,
+        "y": 0.03516,
+        "w": 0.38411,
+        "h": 0.02734
+      },
+      "snap": false,
+      "note": "five nav links in iron-brown serif: Get Help (current page), Volunteer, Partner, Stories, About"
+    },
+    {
+      "id": "nav-current",
+      "kind": "control",
+      "codeDrawn": true,
+      "box": {
+        "x": 0.33724,
+        "y": 0.06152,
+        "w": 0.0638,
+        "h": 0.0127
+      },
+      "snap": false,
+      "note": "current-page marker under Get Help, drawn in code as the link-stroke mask in cobalt"
+    },
+    {
+      "id": "lang-switch",
+      "kind": "control",
+      "box": {
+        "x": 0.82812,
+        "y": 0.03906,
+        "w": 0.04297,
+        "h": 0.01953
+      },
+      "snap": false,
+      "note": "EN | ES language switch in small sans capitals"
+    },
+    {
+      "id": "give-brush",
+      "kind": "plate",
+      "box": {
+        "x": 0.89193,
+        "y": 0.02148,
+        "w": 0.07031,
+        "h": 0.05273
+      },
+      "note": "cobalt-blue hand-brushed swatch with rough dry-brush edges, the ground of the Give button"
+    },
+    {
+      "id": "give-button",
+      "kind": "control",
+      "box": {
+        "x": 0.89844,
+        "y": 0.0293,
+        "w": 0.05729,
+        "h": 0.03711
+      },
+      "snap": false,
+      "note": "Give label in white serif on the cobalt swatch; code draws the label, hit area and focus ring"
+    },
+    {
+      "id": "nav-rule",
+      "kind": "plate",
+      "box": {
+        "x": 0.0,
+        "y": 0.08398,
+        "w": 1.0,
+        "h": 0.01758
+      },
+      "bleed": true,
+      "note": "hand-brushed cobalt-blue line running the full width under the nav bar, dry-brush texture at its edges"
+    },
+    {
+      "id": "headline",
+      "kind": "text",
+      "box": {
+        "x": 0.04688,
+        "y": 0.14258,
+        "w": 0.76823,
+        "h": 0.08789
+      },
+      "snap": false,
+      "note": "h1 on one line, large iron-brown serif, sentence case: Help with surgery you can't afford."
+    },
+    {
+      "id": "lede",
+      "kind": "text",
+      "box": {
+        "x": 0.04948,
+        "y": 0.24414,
+        "w": 0.86849,
+        "h": 0.0332
+      },
+      "snap": false,
+      "note": "one-line lede in humanist sans, clay text: Free or reduced-cost reconstructive surgery for children and adults in the Charlotte and Fort Mill area. Open to everyone."
+    },
+    {
+      "id": "jump-mark",
+      "kind": "plate",
+      "box": {
+        "x": 0.04557,
+        "y": 0.33496,
+        "w": 0.03906,
+        "h": 0.0166
+      },
+      "note": "short hand-brushed cobalt dab marking the current item of the jump list"
+    },
+    {
+      "id": "jump-list",
+      "kind": "control",
+      "box": {
+        "x": 0.08724,
+        "y": 0.32812,
+        "w": 0.16146,
+        "h": 0.33398
+      },
+      "snap": false,
+      "note": "jump list: five serif links stacked, iron hairline under each: Who can ask (current, cobalt), What it costs, What to have ready, Your privacy, Questions people ask"
+    },
+    {
+      "id": "ask-brush",
+      "kind": "plate",
+      "box": {
+        "x": 0.04688,
+        "y": 0.69141,
+        "w": 0.17578,
+        "h": 0.07422
+      },
+      "note": "cobalt-blue hand-brushed swatch with rough dry-brush edges, the ground of the Ask for help button"
+    },
+    {
+      "id": "ask-button",
+      "kind": "control",
+      "box": {
+        "x": 0.05859,
+        "y": 0.70508,
+        "w": 0.15365,
+        "h": 0.04688
+      },
+      "snap": false,
+      "note": "Ask for help label in white serif on the cobalt swatch; code draws the label, hit area and focus ring"
+    },
+    {
+      "id": "or-call",
+      "kind": "text",
+      "box": {
+        "x": 0.04948,
+        "y": 0.7793,
+        "w": 0.15365,
+        "h": 0.0332
+      },
+      "snap": false,
+      "note": "italic iron serif line: Or call (704) 555-0100"
+    },
+    {
+      "id": "who-title",
+      "kind": "text",
+      "box": {
+        "x": 0.29818,
+        "y": 0.32617,
+        "w": 0.15495,
+        "h": 0.04688
+      },
+      "snap": false,
+      "note": "section heading in iron serif: Who can ask"
+    },
+    {
+      "id": "who-lines",
+      "kind": "text",
+      "box": {
+        "x": 0.29818,
+        "y": 0.38672,
+        "w": 0.32682,
+        "h": 0.0957
+      },
+      "snap": false,
+      "note": "three sans lines: Adults asking for themselves. / Parents or guardians asking for a child under 18. / People of any faith, or none."
+    },
+    {
+      "id": "rule-1",
+      "kind": "chrome",
+      "box": {
+        "x": 0.29688,
+        "y": 0.50391,
+        "w": 0.65625,
+        "h": 0.00977
+      },
+      "snap": false,
+      "note": "thin iron hairline between sections across the right column"
+    },
+    {
+      "id": "cost-title",
+      "kind": "text",
+      "box": {
+        "x": 0.29818,
+        "y": 0.5332,
+        "w": 0.16016,
+        "h": 0.04688
+      },
+      "snap": false,
+      "note": "section heading in iron serif: What it costs"
+    },
+    {
+      "id": "cost-text",
+      "kind": "text",
+      "box": {
+        "x": 0.29818,
+        "y": 0.5918,
+        "w": 0.54557,
+        "h": 0.0625
+      },
+      "snap": false,
+      "note": "two-line sans paragraph: Care is free or offered at a reduced cost you can manage. We talk through any cost with you before anything is decided."
+    },
+    {
+      "id": "rule-2",
+      "kind": "chrome",
+      "box": {
+        "x": 0.29688,
+        "y": 0.68359,
+        "w": 0.65625,
+        "h": 0.00977
+      },
+      "snap": false,
+      "note": "thin iron hairline between sections across the right column"
+    },
+    {
+      "id": "ready-title",
+      "kind": "text",
+      "box": {
+        "x": 0.29818,
+        "y": 0.71094,
+        "w": 0.23438,
+        "h": 0.04883
+      },
+      "snap": false,
+      "note": "section heading in iron serif: What to have ready"
+    },
+    {
+      "id": "ready-list",
+      "kind": "text",
+      "box": {
+        "x": 0.29818,
+        "y": 0.77148,
+        "w": 0.3138,
+        "h": 0.15234
+      },
+      "snap": false,
+      "note": "numbered list, large italic serif numerals 1 2 3 beside sans items: A few clear photos of the area / A short description of how it affects your life / A safe way to reach you",
+      "codeDrawn": true
+    },
+    {
+      "id": "ground",
+      "kind": "texture",
+      "grid": "J8:J8",
+      "note": "clean patch of the pale buff salt-glazed stoneware page ground with fine orange-peel texture, no ink"
+    }
+  ],
+  "allowUncovered": true,
+  "uncoveredNote": "Cells crossed by box-defined text regions (headline, lede, jump list, section text) hold only those regions' ink; verified on the grid."
+}

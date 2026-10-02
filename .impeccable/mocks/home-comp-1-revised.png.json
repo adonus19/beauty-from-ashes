@@ -1,0 +1,11 @@
+{
+  "prompt": "Edit this website homepage design comp. Keep the navigation bar, the hero (eyebrow, headline, paragraph, both buttons, and the large stoneware jar photograph at right), the textured stoneware page ground, the colors, the typography and every proportion exactly as they are. Change only the bottom band below the hero, which currently holds the \"THEREFORE\" row of six values: replace that band with a centered mission statement set as a quotation. First the small spaced capitals \"OUR MISSION\" centered, with a short hand-brushed cobalt-blue line beneath it. Then a large centered italic serif quotation in deep iron brown, on three lines: \u201cTo glorify God by serving every patient with Christlike compassion and surgical excellence, fostering healing that reaches beyond the physical and opens the way for spiritual transformation.\u201d The six values are no longer visible in this frame; they continue further down the page. The hero may be slightly shorter to give the mission statement room, but the jar stays large on the right and the headline stays at left. Crisp, legible web typography.\n",
+  "createdAt": "2026-10-01T18:38:57.911Z",
+  "tool": "impeccable generate-image",
+  "model": "gpt-image-2.5-flare",
+  "refs": [
+    ".impeccable/mocks/home-comp-1.png"
+  ],
+  "approved": true,
+  "approvalNote": "User chose comp-1 (The Jar) and asked to carry over the Glaze Run's mission statement above the six values so the values have context. This revision implements that request."
+}

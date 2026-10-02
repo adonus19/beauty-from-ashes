@@ -1,0 +1,334 @@
+{
+  "tool": "build-phase",
+  "version": 2,
+  "startedAt": "2026-10-01T20:57:34.251Z",
+  "comp": ".impeccable/mocks/decision/get-help-intake-reference.png",
+  "direction": null,
+  "breakpoint": "1536x1024",
+  "artifact": null,
+  "phase": "review",
+  "phases": {
+    "comps": {
+      "status": "skipped",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [
+        {
+          "at": "2026-10-01T20:57:34.251Z",
+          "text": "started with an approved comp; the comp round happened before this state (surface round or manual)"
+        }
+      ],
+      "gate": null,
+      "forced": null
+    },
+    "spec": {
+      "status": "closed",
+      "openedAt": "2026-10-01T20:57:34.251Z",
+      "closedAt": "2026-10-01T21:02:05.296Z",
+      "attempts": 2,
+      "notes": [
+        {
+          "at": "2026-10-01T21:02:01.752Z",
+          "text": "Type: font-match ranked Rufina for the headline; the build keeps Tiro Devanagari Marathi 400, the established world's display face (DESIGN.md, approved on the home page). The surface round settled composition only; cap heights from the measures drive sizes."
+        }
+      ],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "23 regions, 5 plates, 10 text regions measured",
+        "at": "2026-10-01T21:02:05.296Z"
+      },
+      "forced": null
+    },
+    "plates": {
+      "status": "closed",
+      "openedAt": "2026-10-01T21:02:05.296Z",
+      "closedAt": "2026-10-01T21:02:57.196Z",
+      "attempts": 2,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "5/5 plates",
+        "at": "2026-10-01T21:02:57.196Z"
+      },
+      "forced": null
+    },
+    "hero": {
+      "status": "closed",
+      "openedAt": "2026-10-01T21:02:57.196Z",
+      "closedAt": "2026-10-01T21:10:58.695Z",
+      "attempts": 2,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "hero 92% (match)",
+        "score": 0.9153,
+        "verdict": "match",
+        "report": ".impeccable/review/diff/hero/report.json",
+        "sideBySide": "/Users/apple/Documents/dev/beauty-from-ashes-v1/.impeccable/review/diff/hero/side-by-side.png",
+        "worst": [
+          "ask-brush drift 52%",
+          "ready-title drift 56%",
+          "cost-title drift 56%"
+        ],
+        "worstIds": [
+          "ask-brush",
+          "ready-title",
+          "cost-title"
+        ],
+        "worstCrops": [
+          {
+            "id": "ask-brush",
+            "verdict": "drift",
+            "score": {
+              "overall": 0.5246,
+              "structure": 0.7293,
+              "color": 0.8416,
+              "colorIntersection": 0.7433,
+              "paletteMatch": 0.8945,
+              "detail": 0.312,
+              "detailRaw": 0.4057,
+              "detailAdded": 0.1875,
+              "bands": 0.36
+            },
+            "file": ".impeccable/review/diff/hero/regions/ask-brush.png"
+          },
+          {
+            "id": "ready-title",
+            "verdict": "drift",
+            "score": {
+              "overall": 0.5555,
+              "structure": 0.4024,
+              "color": 0.8908,
+              "colorIntersection": 0.8111,
+              "paletteMatch": 0.9337,
+              "detail": 0.5836,
+              "detailRaw": 0.6878,
+              "detailAdded": 0.2083,
+              "bands": 0.44
+            },
+            "file": ".impeccable/review/diff/hero/regions/ready-title.png"
+          },
+          {
+            "id": "cost-title",
+            "verdict": "drift",
+            "score": {
+              "overall": 0.5643,
+              "structure": 0.4348,
+              "color": 0.903,
+              "colorIntersection": 0.8018,
+              "paletteMatch": 0.9575,
+              "detail": 0.5796,
+              "detailRaw": 0.6368,
+              "detailAdded": 0.1146,
+              "bands": 0.3429
+            },
+            "file": ".impeccable/review/diff/hero/regions/cost-title.png"
+          }
+        ],
+        "advisories": [
+          "(advisory, above the 72% bar; fix in the polish pass before responsive) 1 reading:",
+          "  text ready-list: cap height 25px in the build, 16.3px in the comp (+53%); set font-size so the cap height renders at 16.3px"
+        ],
+        "regionVerdicts": {
+          "wordmark": "match",
+          "nav-links": "match",
+          "nav-current": "drift",
+          "lang-switch": "match",
+          "give-brush": "match",
+          "give-button": "match",
+          "nav-rule": "match",
+          "headline": "drift",
+          "lede": "drift",
+          "jump-mark": "drift",
+          "jump-list": "drift",
+          "ask-brush": "drift",
+          "ask-button": "drift",
+          "or-call": "drift",
+          "who-title": "drift",
+          "who-lines": "match",
+          "rule-1": "drift",
+          "cost-title": "drift",
+          "cost-text": "drift",
+          "rule-2": "drift",
+          "ready-title": "drift",
+          "ready-list": "match",
+          "ground": "drift"
+        },
+        "at": "2026-10-01T21:10:58.695Z"
+      },
+      "forced": null,
+      "readingsSeen": {
+        "text or-call: cap height 13.3px in the build, 19.1px in the comp (-30%); set font-size so the cap height renders at 19.1px": 1,
+        "text ready-list: cap height 28.9px in the build, 16.3px in the comp (+77%); set font-size so the cap height renders at 16.3px": 1,
+        "text who-lines: 2 lines in the build, 3 in the comp; the measure (max-width, font-size, letter-spacing) wraps it differently, so the block is a different shape": 1,
+        "text cost-text: 1 line in the build, 2 in the comp; the measure (max-width, font-size, letter-spacing) wraps it differently, so the block is a different shape": 1,
+        "text ready-list: 2 lines in the build, 3 in the comp; the measure (max-width, font-size, letter-spacing) wraps it differently, so the block is a different shape": 2,
+        "text cost-text: its first line starts 22px lower than in the comp (27px vs 5px into the region box); the spacing above it is too large": 1,
+        "text ready-list: cap height 22.9px in the build, 16.3px in the comp (+40%); set font-size so the cap height renders at 16.3px": 1,
+        "text ready-list: cap height 25px in the build, 16.3px in the comp (+53%); set font-size so the cap height renders at 16.3px": 3
+      },
+      "records": 3,
+      "history": [
+        {
+          "at": "2026-10-01T21:10:31.239Z",
+          "score": 0.9132,
+          "worstIds": [
+            "ask-brush",
+            "ready-title",
+            "cost-title"
+          ],
+          "regionVerdicts": {
+            "wordmark": "match",
+            "nav-links": "drift",
+            "nav-current": "drift",
+            "lang-switch": "match",
+            "give-brush": "match",
+            "give-button": "match",
+            "nav-rule": "match",
+            "headline": "drift",
+            "lede": "drift",
+            "jump-mark": "drift",
+            "jump-list": "drift",
+            "ask-brush": "drift",
+            "ask-button": "drift",
+            "or-call": "drift",
+            "who-title": "drift",
+            "who-lines": "match",
+            "rule-1": "drift",
+            "cost-title": "drift",
+            "cost-text": "drift",
+            "rule-2": "drift",
+            "ready-title": "drift",
+            "ready-list": "match",
+            "ground": "drift"
+          },
+          "artifactHash": null
+        },
+        {
+          "at": "2026-10-01T21:10:58.695Z",
+          "score": 0.9153,
+          "worstIds": [
+            "ask-brush",
+            "ready-title",
+            "cost-title"
+          ],
+          "regionVerdicts": {
+            "wordmark": "match",
+            "nav-links": "match",
+            "nav-current": "drift",
+            "lang-switch": "match",
+            "give-brush": "match",
+            "give-button": "match",
+            "nav-rule": "match",
+            "headline": "drift",
+            "lede": "drift",
+            "jump-mark": "drift",
+            "jump-list": "drift",
+            "ask-brush": "drift",
+            "ask-button": "drift",
+            "or-call": "drift",
+            "who-title": "drift",
+            "who-lines": "match",
+            "rule-1": "drift",
+            "cost-title": "drift",
+            "cost-text": "drift",
+            "rule-2": "drift",
+            "ready-title": "drift",
+            "ready-list": "match",
+            "ground": "drift"
+          },
+          "artifactHash": null
+        }
+      ]
+    },
+    "sections": {
+      "status": "closed",
+      "openedAt": "2026-10-01T21:10:58.695Z",
+      "closedAt": "2026-10-01T22:24:19.471Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "no mechanical gate",
+        "at": "2026-10-01T22:24:19.469Z"
+      },
+      "forced": null
+    },
+    "motion": {
+      "status": "closed",
+      "openedAt": "2026-10-01T22:24:19.471Z",
+      "closedAt": "2026-10-01T22:24:59.899Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "no mechanical gate",
+        "at": "2026-10-01T22:24:59.898Z"
+      },
+      "forced": null
+    },
+    "responsive": {
+      "status": "closed",
+      "openedAt": "2026-10-01T22:24:59.899Z",
+      "closedAt": "2026-10-01T22:26:30.934Z",
+      "attempts": 2,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "desktop 89% (match)",
+        "score": 0.8918,
+        "sideBySide": "/Users/apple/Documents/dev/beauty-from-ashes-v1/.impeccable/review/diff/desktop/side-by-side.png",
+        "at": "2026-10-01T22:26:30.934Z"
+      },
+      "forced": null
+    },
+    "review": {
+      "status": "closed",
+      "openedAt": "2026-10-01T22:26:30.934Z",
+      "closedAt": "2026-10-01T22:42:04.228Z",
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    }
+  },
+  "finish": {
+    "disposition": "ship",
+    "at": "2026-10-01T22:42:04.226Z",
+    "phaseAtFinish": "review"
+  },
+  "plates": {
+    "give-brush": {
+      "status": "ok",
+      "score": 0.4072,
+      "size": "1297x635"
+    },
+    "nav-rule": {
+      "status": "ok",
+      "score": 0.7961,
+      "size": "3080x42"
+    },
+    "jump-mark": {
+      "status": "ok",
+      "score": 0.4866,
+      "size": "840x181"
+    },
+    "ask-brush": {
+      "status": "ok",
+      "score": 0.4308,
+      "size": "1517x497"
+    },
+    "ground": {
+      "status": "ok",
+      "score": 0.8574,
+      "size": "308x204"
+    }
+  }
+}

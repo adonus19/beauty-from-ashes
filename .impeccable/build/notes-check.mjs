@@ -1,0 +1,24 @@
+import { chromium } from 'playwright';
+const out = process.argv[2];
+const b = await chromium.launch();
+const shot = async (p, sel, name, pad = 24) => {
+  const el = await p.$(sel); const box = await el.boundingBox();
+  await p.screenshot({ path: `${out}/${name}.png`, clip: { x: Math.max(0, box.x - pad), y: Math.max(0, box.y - pad), width: Math.min(box.width + pad * 2, 1440), height: box.height + pad * 2 } });
+};
+let p = await b.newPage({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
+await p.goto('http://127.0.0.1:4300/stories', { waitUntil: 'networkidle' }); await p.evaluate(() => document.fonts.ready);
+await shot(p, '.site-header', 'n1-header-current', 0);
+await p.hover('a.site-nav__link >> text=How We Help'); await p.waitForTimeout(700);
+await shot(p, '.site-nav', 'n1-header-hover', 8);
+await p.goto('http://127.0.0.1:4300/', { waitUntil: 'networkidle' }); await p.evaluate(() => document.fonts.ready);
+await p.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 700) { scrollTo(0, y); await new Promise(r => setTimeout(r, 50)); } });
+await shot(p, '.values__list', 'n2-values', 20);
+await shot(p, '.conditions__intro', 'n3-link-light', 12);
+await shot(p, '.involved__paths', 'n3-link-dark', 12);
+await shot(p, '.closing', 'n3-closing', 0);
+await p.close();
+p = await b.newPage({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
+await p.goto('http://127.0.0.1:4300/stories', { waitUntil: 'networkidle' }); await p.evaluate(() => document.fonts.ready);
+await p.click('.menu-button'); await p.waitForTimeout(200);
+await p.screenshot({ path: `${out}/n1-mobile-menu.png` });
+await b.close(); console.log('ok');

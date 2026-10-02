@@ -1,0 +1,275 @@
+@let p = page();
+@let t = forms();
+@let f = p.fields;
+@let v = signup;
+
+<section class="vision" aria-labelledby="page-title">
+  <figure class="vision__figure">
+    <figcaption class="vision__label label">{{ p.vision.label }}</figcaption>
+    <span class="vision__dash" aria-hidden="true"></span>
+    <blockquote class="vision__statement">
+      <p>
+        @for (line of p.vision.lines; track $index; let last = $last) {
+          <span class="vision__line">{{ line }}{{ last ? '' : ' ' }}</span>
+        }
+      </p>
+    </blockquote>
+  </figure>
+
+  <h1 id="page-title" class="vision__title">{{ p.title }}</h1>
+  <p class="vision__lede">{{ p.lede }}</p>
+  <div class="vision__actions">
+    <a class="btn-brush" [routerLink]="[]" [fragment]="p.primary.fragment">{{ p.primary.label }}</a>
+    <a class="btn-line" [routerLink]="[]" [fragment]="p.secondary.fragment">{{
+      p.secondary.label
+    }}</a>
+  </div>
+</section>
+
+<section class="split roles" [id]="p.roles.id" aria-labelledby="roles-title">
+  <div class="split__intro">
+    <h2 id="roles-title" class="section-title">{{ p.roles.title }}</h2>
+    <p class="split__lede">{{ p.roles.intro }}</p>
+  </div>
+  <div>
+    <ul class="roles__list" role="list">
+      @for (role of p.roles.items; track role.name) {
+        <li class="role">
+          <h3 class="role__name">{{ role.name }}</h3>
+          <p class="role__text">{{ role.text }}</p>
+        </li>
+      }
+    </ul>
+    <p class="split__note">{{ p.roles.placeholder }} <bfa-placeholder-tag /></p>
+  </div>
+</section>
+
+<section class="letter" aria-labelledby="letter-sample">
+  <figure class="letter__figure">
+    <p id="letter-sample" class="letter__sample">{{ p.letter.sampleLabel }}</p>
+    <blockquote class="letter__text">
+      <p>“{{ p.letter.text }}”</p>
+    </blockquote>
+    <span class="letter__dash" aria-hidden="true"></span>
+    <figcaption class="letter__signature">{{ p.letter.signature }}</figcaption>
+  </figure>
+  <div class="letter__aside">
+    <p>{{ p.letter.note }}</p>
+    <a class="btn-brush" [routerLink]="[]" [fragment]="p.primary.fragment">{{ p.primary.label }}</a>
+  </div>
+</section>
+
+<section class="split" [id]="p.other.id" aria-labelledby="other-title">
+  <div class="split__intro">
+    <h2 id="other-title" class="section-title">{{ p.other.title }}</h2>
+    <p class="split__lede">{{ p.other.intro }}</p>
+  </div>
+  <div>
+    <ul class="roles__list" role="list">
+      @for (role of p.other.items; track role.id) {
+        <li class="role" [id]="role.id">
+          <h3 class="role__name">{{ role.name }}</h3>
+          <p class="role__text">{{ role.text }}</p>
+        </li>
+      }
+    </ul>
+    <p class="split__note">{{ p.other.placeholder }} <bfa-placeholder-tag /></p>
+  </div>
+</section>
+
+<section class="split" [id]="p.ask.id" aria-labelledby="ask-title">
+  <div class="split__intro">
+    <h2 id="ask-title" class="section-title">{{ p.ask.title }}</h2>
+  </div>
+  <div class="asks">
+    <ul class="asks__list" role="list">
+      @for (item of p.ask.items; track item.text) {
+        <li>
+          {{ item.text }}
+        </li>
+      }
+    </ul>
+    <dl class="asks__terms">
+      @for (term of p.ask.paragraphs; track term.title) {
+        <div class="asks__term">
+          <dt>{{ term.title }}</dt>
+          <dd>
+            {{ term.text }}
+          </dd>
+        </div>
+      }
+    </dl>
+    <p class="split__note">{{ p.ask.placeholder }} <bfa-placeholder-tag /></p>
+  </div>
+</section>
+
+<section class="split" [id]="p.join.id" aria-labelledby="join-title">
+  <div class="split__intro">
+    <h2 id="join-title" class="section-title">{{ p.join.title }}</h2>
+    <p class="split__lede">{{ p.join.intro }}</p>
+  </div>
+  <div>
+    <ol class="steps" role="list" bfaBrushReveal>
+      @for (step of p.join.steps; track step.name; let i = $index) {
+        <li class="step" [style.--i]="i">
+          <span class="step__number" aria-hidden="true">{{ i + 1 }}</span>
+          <div class="step__body">
+            <h3 class="step__name">{{ step.name }}</h3>
+            <p class="step__text">{{ step.text }}</p>
+          </div>
+        </li>
+      }
+    </ol>
+    <p class="steps__note">{{ p.join.note }} <bfa-placeholder-tag /></p>
+  </div>
+</section>
+
+<section class="split split--form" [id]="p.form.id" aria-labelledby="form-title">
+  <div class="split__intro">
+    <h2 id="form-title" class="section-title">{{ p.form.title }}</h2>
+    <p class="split__lede">{{ p.form.intro }}</p>
+  </div>
+
+  <div class="split__form">
+    @if (sent()) {
+      <div class="form-sent">
+        <h3 #sentHeading class="form-sent__title" tabindex="-1">{{ p.sent.title }}</h3>
+        <p class="form-sent__demo">{{ p.sent.demo }}</p>
+        <button class="btn-line" type="button" (click)="startAgain()">{{ p.sent.again }}</button>
+      </div>
+    } @else {
+      <p class="demo-notice">
+        <strong>{{ t.demoTitle }}.</strong> {{ t.demoNotice }}
+      </p>
+      <p class="form__required">{{ t.requiredNote }}</p>
+
+      @if (attempts() > 0 && v().invalid()) {
+        <bfa-error-summary [form]="v" [attempt]="attempts()" />
+      }
+
+      <form class="form form--plain" novalidate (submit)="send($event)">
+        <div class="field-row">
+          <div class="field">
+            <label class="field__label" for="first">{{ f.first.label }}</label>
+            <input
+              class="field__control"
+              id="first"
+              type="text"
+              autocomplete="given-name"
+              [formField]="v.first"
+              [bfaField]="v.first"
+            />
+            <bfa-field-error [field]="v.first" for="first" />
+          </div>
+          <div class="field">
+            <label class="field__label" for="last">{{ f.last.label }}</label>
+            <input
+              class="field__control"
+              id="last"
+              type="text"
+              autocomplete="family-name"
+              [formField]="v.last"
+              [bfaField]="v.last"
+            />
+            <bfa-field-error [field]="v.last" for="last" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label class="field__label" for="email">{{ f.email.label }}</label>
+            <input
+              class="field__control"
+              id="email"
+              type="email"
+              autocomplete="email"
+              [formField]="v.email"
+              [bfaField]="v.email"
+            />
+            <bfa-field-error [field]="v.email" for="email" />
+          </div>
+          <div class="field">
+            <label class="field__label" for="phone">
+              {{ f.phone.label }} <span class="field__optional">({{ t.optional }})</span>
+            </label>
+            <input
+              class="field__control"
+              id="phone"
+              type="tel"
+              autocomplete="tel"
+              [formField]="v.phone"
+              [bfaField]="v.phone"
+            />
+            <bfa-field-error [field]="v.phone" for="phone" />
+          </div>
+        </div>
+        <div class="field">
+          <label class="field__label" for="role">{{ f.role.label }}</label>
+          <select
+            class="field__control field__control--select"
+            id="role"
+            [formField]="v.role"
+            [bfaField]="v.role"
+          >
+            @for (option of f.role.options; track option.value) {
+              <option [value]="option.value">{{ option.label }}</option>
+            }
+          </select>
+          <bfa-field-error [field]="v.role" for="role" />
+        </div>
+        <div class="field">
+          <label class="field__label" for="license">
+            {{ f.license.label }} <span class="field__optional">({{ t.optional }})</span>
+          </label>
+          <p class="field__hint" id="license-hint">{{ f.license.hint }}</p>
+          <input
+            class="field__control"
+            id="license"
+            type="text"
+            aria-describedby="license-hint"
+            [formField]="v.license"
+          />
+        </div>
+        <fieldset class="field field--choices">
+          <legend class="field__label">
+            {{ f.availability.label }} <span class="field__optional">({{ t.optional }})</span>
+          </legend>
+          <div class="choices choices--columns">
+            <label class="choice"
+              ><input type="checkbox" [formField]="v.weekdays" /><span>{{
+                f.availability.options[0].label
+              }}</span></label
+            >
+            <label class="choice"
+              ><input type="checkbox" [formField]="v.weekends" /><span>{{
+                f.availability.options[1].label
+              }}</span></label
+            >
+            <label class="choice"
+              ><input type="checkbox" [formField]="v.fewTimes" /><span>{{
+                f.availability.options[2].label
+              }}</span></label
+            >
+            <label class="choice"
+              ><input type="checkbox" [formField]="v.regular" /><span>{{
+                f.availability.options[3].label
+              }}</span></label
+            >
+          </div>
+        </fieldset>
+        <div class="field">
+          <label class="field__label" for="message">
+            {{ f.message.label }} <span class="field__optional">({{ t.optional }})</span>
+          </label>
+          <textarea
+            class="field__control field__control--area"
+            id="message"
+            rows="4"
+            [formField]="v.message"
+          ></textarea>
+        </div>
+        <button class="form__submit btn-brush" type="submit">{{ p.submit }}</button>
+      </form>
+    }
+    <p class="placeholder-note">{{ placeholderNote() }}</p>
+  </div>
+</section>

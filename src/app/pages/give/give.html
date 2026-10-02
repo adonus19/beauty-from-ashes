@@ -1,0 +1,168 @@
+@let p = page();
+@let t = p.form;
+@let g = gift;
+
+<section class="appeal" aria-labelledby="page-title">
+  <picture class="appeal__glaze">
+    <source
+      type="image/webp"
+      srcset="
+        assets/plates/give-glaze-860.webp   860w,
+        assets/plates/give-glaze-1536.webp 1536w,
+        assets/plates/give-glaze.webp      3072w
+      "
+      sizes="100vw"
+    />
+    <img
+      src="assets/plates/give-glaze.png"
+      width="3072"
+      height="614"
+      alt=""
+      fetchpriority="high"
+      decoding="async"
+    />
+  </picture>
+
+  <h1 id="page-title" class="appeal__title">{{ p.title }}</h1>
+  <p class="appeal__lede">
+    {{ p.lede }}
+    @if (p.ledePlaceholder) {
+      <bfa-placeholder-tag />
+    }
+  </p>
+
+  <form class="gift" novalidate [attr.aria-label]="t.label" (submit)="give($event)">
+    <fieldset class="gift__frequency">
+      <legend class="visually-hidden">{{ t.frequencyLabel }}</legend>
+      @for (option of t.frequencies; track option.value) {
+        <label class="frequency">
+          <input
+            class="gift__radio"
+            type="radio"
+            [value]="option.value"
+            [formField]="g.frequency"
+          />
+          <span class="frequency__label">{{ option.label }}</span>
+        </label>
+      }
+    </fieldset>
+
+    <fieldset class="gift__amounts">
+      <legend class="visually-hidden">{{ t.amountLabel }}</legend>
+      @for (amount of t.amounts; track amount) {
+        <label class="amount">
+          <input class="gift__radio" type="radio" [value]="'' + amount" [formField]="g.amount" />
+          <span class="amount__face">${{ amount }}</span>
+        </label>
+      }
+      <label class="amount amount--other">
+        <input class="gift__radio" type="radio" value="other" [formField]="g.amount" />
+        <span class="amount__face">{{ t.otherLabel }}</span>
+      </label>
+    </fieldset>
+
+    @if (model().amount === 'other') {
+      <div class="field gift__other">
+        <label class="field__label" for="other-amount">{{ t.otherInput }}</label>
+        <input
+          class="field__control field__control--short"
+          id="other-amount"
+          type="text"
+          inputmode="decimal"
+          [formField]="g.other"
+          [bfaField]="g.other"
+        />
+        <bfa-field-error [field]="g.other" for="other-amount" />
+      </div>
+    }
+
+    <button class="gift__submit btn-brush" type="submit">{{ giftLabel() }}</button>
+    <p class="gift__status">{{ t.status }}</p>
+    <p class="gift__demo">
+      {{ t.demo }}
+      <bfa-placeholder-tag />
+    </p>
+    <p class="gift__result" role="status">{{ result() }}</p>
+  </form>
+</section>
+
+<section class="split split--brushed" [id]="p.pays.id" aria-labelledby="pays-title">
+  <div class="split__intro">
+    <h2 id="pays-title" class="section-title">{{ p.pays.title }}</h2>
+    <p class="split__lede">{{ p.pays.intro }}</p>
+  </div>
+  <div>
+    <ul class="roles__list" role="list">
+      @for (item of p.pays.items; track item.name) {
+        <li class="role">
+          <h3 class="role__name">{{ item.name }}</h3>
+          <p class="role__text">{{ item.text }}</p>
+          <p class="pays__example">{{ item.example }}</p>
+        </li>
+      }
+    </ul>
+    <p class="split__note">{{ p.pays.placeholder }} <bfa-placeholder-tag /></p>
+  </div>
+</section>
+
+<section class="sponsor on-dark" [id]="p.sponsor.id" aria-labelledby="sponsor-title">
+  <h2 id="sponsor-title" class="section-title sponsor__title">{{ p.sponsor.title }}</h2>
+  <div class="sponsor__body">
+    <p>
+      {{ p.sponsor.text }}
+      @if (p.sponsor.textPlaceholder) {
+        <bfa-placeholder-tag />
+      }
+    </p>
+    <p class="sponsor__cost">
+      {{ p.sponsor.cost }}
+      @if (p.sponsor.placeholder) {
+        <bfa-placeholder-tag />
+      }
+    </p>
+    <a class="btn-line btn-line--on-dark" [routerLink]="locale.link(p.sponsor.action.path)">{{
+      p.sponsor.action.label
+    }}</a>
+  </div>
+</section>
+
+<section class="split" [id]="p.other.id" aria-labelledby="other-title">
+  <div class="split__intro">
+    <h2 id="other-title" class="section-title">{{ p.other.title }}</h2>
+  </div>
+  <ul class="roles__list" role="list">
+    @for (item of p.other.items; track item.name) {
+      <li class="role">
+        <h3 class="role__name">{{ item.name }}</h3>
+        <p class="role__text">
+          {{ item.text }}
+          @if (item.placeholder) {
+            <bfa-placeholder-tag />
+          }
+        </p>
+      </li>
+    }
+  </ul>
+</section>
+
+<section class="split" [id]="p.trust.id" aria-labelledby="trust-title">
+  <div class="split__intro">
+    <h2 id="trust-title" class="section-title">{{ p.trust.title }}</h2>
+  </div>
+  <div>
+    <ul class="asks__list" role="list">
+      @for (item of p.trust.items; track item.text) {
+        <li>
+          {{ item.text }}
+          @if (item.placeholder) {
+            <bfa-placeholder-tag />
+          }
+        </li>
+      }
+    </ul>
+    <a class="split__link text-link" [routerLink]="locale.link(p.trust.link.path)">{{
+      p.trust.link.label
+    }}</a>
+    <p class="placeholder-note">{{ placeholderNote() }}</p>
+  </div>
+</section>

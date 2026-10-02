@@ -1,0 +1,259 @@
+// Audience pages (Volunteer, Partner, About): a centered statement from the mission card, then
+// two-column sections with a heading at left and hairline lists at right.
+// First viewport: a statement from the mission card, centered, with the page purpose and actions beneath.
+.vision {
+  display: grid;
+  justify-items: center;
+  padding: clamp(2rem, 2.7vw, 2.75rem) var(--gutter) clamp(2.5rem, 3.1vw, 3rem);
+  text-align: center;
+}
+
+.vision__figure {
+  display: grid;
+  justify-items: center;
+  margin: 0;
+}
+
+.vision__label {
+  font-size: clamp(0.875rem, 1.087vw, 1.0625rem);
+  letter-spacing: 0.33em;
+  margin-inline-end: -0.33em;
+}
+
+.vision__dash {
+  display: block;
+  width: clamp(4.5rem, 6.9vw, 6.75rem);
+  aspect-ratio: 5;
+  margin-block-start: 0.6rem;
+  background: image-set(
+      url('../../assets/plates/mission-dash.webp') type('image/webp'),
+      url('../../assets/plates/mission-dash.png') type('image/png')
+    )
+    center / 100% 100% no-repeat;
+  animation: brush-draw 800ms var(--ease-out) 600ms both;
+}
+
+.vision__statement {
+  max-width: 24em;
+  margin: clamp(0.75rem, 1.4vw, 1.375rem) 0 0;
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.6vw, 2.5rem);
+  line-height: 1.21;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+
+  // From desktop up, the statement keeps three lines, as on the card.
+  @media (min-width: 62em) {
+    max-width: none;
+
+    .vision__line {
+      display: block;
+    }
+  }
+}
+
+.vision__title {
+  margin-block-start: clamp(1.75rem, 2.55vw, 2.5rem);
+  font-size: clamp(1.75rem, 2.2vw, 2.125rem);
+  line-height: 1.15;
+}
+
+.vision__lede {
+  max-width: 41em;
+  margin-block-start: 0;
+  font-size: clamp(1.0625rem, 1.33vw, 1.3125rem);
+  line-height: 1.5;
+}
+
+.vision__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.9rem;
+  margin-block-start: clamp(1.5rem, 2vw, 2rem);
+
+  .btn-brush,
+  .btn-line {
+    font-size: clamp(1.125rem, 1.43vw, 1.375rem);
+  }
+
+  .btn-line {
+    padding-inline: 1.05em;
+  }
+}
+
+// The roles: the heading and its introduction beside a hairline grid.
+.split {
+  display: grid;
+  gap: clamp(2rem, 4vw, 4rem);
+  margin-inline: var(--gutter);
+  padding-block: clamp(2.5rem, 3.4vw, 3.25rem) clamp(4rem, 8vw, 8rem);
+  border-block-start: 1px solid rgb(58 31 14 / 0.5);
+
+  @media (min-width: 62em) {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 8fr);
+    column-gap: clamp(2.5rem, 4.9vw, 5rem);
+    align-items: start;
+  }
+}
+
+.split__intro {
+  display: grid;
+  align-content: start;
+
+  .section-title {
+    font-size: clamp(2.125rem, 3.3vw, 3.375rem);
+  }
+
+  justify-items: start;
+  gap: 1.25rem;
+
+  @media (min-width: 62em) {
+    position: sticky;
+    top: 2rem;
+  }
+}
+
+.split__lede {
+  max-width: 17em;
+  font-size: clamp(1.125rem, 1.53vw, 1.5rem);
+  line-height: 1.45;
+}
+
+.roles__list {
+  display: grid;
+  gap: 0 clamp(2rem, 3.2vw, 3.25rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: 40em) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.role {
+  padding-block: clamp(0.25rem, 0.4vw, 0.5rem) clamp(1.25rem, 1.8vw, 1.75rem);
+
+  // One column: a hairline between roles. Two columns: between rows.
+  @media (max-width: 39.99em) {
+    & + & {
+      border-block-start: 1px solid rgb(58 31 14 / 0.4);
+      padding-block-start: 1.25rem;
+    }
+  }
+
+  @media (min-width: 40em) {
+    &:nth-child(n + 3) {
+      border-block-start: 1px solid rgb(58 31 14 / 0.4);
+      padding-block-start: clamp(1.25rem, 1.8vw, 1.75rem);
+    }
+  }
+}
+
+.role__name {
+  font-size: 1.25rem;
+  line-height: 1.25;
+
+  @media (min-width: 62em) {
+    font-size: min(1.3vw, 1.375rem);
+  }
+}
+
+.role__text {
+  max-width: 16.5em;
+  margin-block-start: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+
+  @media (min-width: 62em) {
+    font-size: min(1.1vw, 1.125rem);
+  }
+}
+
+.split__note {
+  max-width: 40em;
+  margin-block-start: 1.5rem;
+  color: var(--iron-soft);
+  font-size: 0.875rem;
+}
+
+// What's asked of clinical volunteers: the requirements, then time, place and faith.
+.asks__list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: clamp(1.0625rem, 0.75rem + 0.6vw, 1.375rem);
+
+  li {
+    padding-block-end: 0.75rem;
+    border-block-end: 1px solid rgb(58 31 14 / 0.25);
+  }
+}
+
+.asks__terms {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 36em;
+  margin: 2.5rem 0 0;
+}
+
+.asks__term {
+  dt {
+    color: var(--iron);
+    font-family: var(--font-serif);
+    font-size: clamp(1.25rem, 1rem + 0.6vw, 1.625rem);
+  }
+
+  dd {
+    margin: 0.35rem 0 0;
+  }
+}
+
+.split--form .split__form {
+  max-width: 44rem;
+}
+
+.form--plain {
+  display: grid;
+  gap: 1.5rem;
+  margin-block-start: 1.5rem;
+}
+
+// A prose statement (not the card's three-line Vision) keeps a reading measure at every width.
+.vision__statement--prose {
+  max-width: 30em;
+  font-size: clamp(1.375rem, 2.2vw, 2.125rem);
+  line-height: 1.32;
+}
+
+.page-block {
+  display: block;
+}
+
+// A section that opens with the brushed cobalt rule instead of a hairline.
+.split--brushed {
+  position: relative;
+  border-block-start: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    inset-block-start: 0;
+    height: 6px;
+    background: image-set(
+        url('../../assets/plates/nav-rule.webp') type('image/webp'),
+        url('../../assets/plates/nav-rule.png') type('image/png')
+      )
+      left center / 100% 100% no-repeat;
+    opacity: 0.85;
+  }
+}
+
+.split__link + .placeholder-note {
+  margin-block-start: 1.5rem;
+}

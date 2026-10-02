@@ -1,0 +1,1282 @@
+{
+  "tool": "comp-spec",
+  "version": 1,
+  "createdAt": "2026-10-01T18:46:30.857Z",
+  "comp": ".impeccable/mocks/home-comp-1-revised.png",
+  "warnings": [
+    "region nav-rule: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)",
+    "region refer-button: \"codeDrawn\": true set in the regions file (the painted-material refusal is overridden: code draws this region)",
+    "region jar: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+  ],
+  "uncoveredInkCells": [
+    "C0",
+    "H0",
+    "E3",
+    "E7"
+  ],
+  "compSize": {
+    "width": 1536,
+    "height": 1024
+  },
+  "aspect": 1.5,
+  "orientation": "landscape",
+  "palette": [
+    {
+      "hex": "#d8d1c4",
+      "coverage": 0.7128
+    },
+    {
+      "hex": "#ae9d8a",
+      "coverage": 0.141
+    },
+    {
+      "hex": "#766046",
+      "coverage": 0.0991
+    },
+    {
+      "hex": "#371d0e",
+      "coverage": 0.0279
+    },
+    {
+      "hex": "#4a3317",
+      "coverage": 0.0192
+    }
+  ],
+  "bands": [
+    {
+      "y": 0.0824,
+      "strength": 0.5709
+    },
+    {
+      "y": 0.1059,
+      "strength": 0.2192
+    },
+    {
+      "y": 0.1412,
+      "strength": 0.2063
+    },
+    {
+      "y": 0.2,
+      "strength": 0.2457
+    },
+    {
+      "y": 0.2471,
+      "strength": 0.2511
+    },
+    {
+      "y": 0.2941,
+      "strength": 0.2778
+    },
+    {
+      "y": 0.3294,
+      "strength": 0.2795
+    },
+    {
+      "y": 0.3765,
+      "strength": 0.2839
+    },
+    {
+      "y": 0.4941,
+      "strength": 0.215
+    },
+    {
+      "y": 0.6118,
+      "strength": 0.2655
+    },
+    {
+      "y": 0.6706,
+      "strength": 0.3238
+    },
+    {
+      "y": 0.7529,
+      "strength": 0.2762
+    },
+    {
+      "y": 0.8235,
+      "strength": 0.319
+    },
+    {
+      "y": 0.8471,
+      "strength": 0.5003
+    },
+    {
+      "y": 0.8706,
+      "strength": 0.2643
+    },
+    {
+      "y": 0.8941,
+      "strength": 0.4395
+    },
+    {
+      "y": 0.9412,
+      "strength": 0.3457
+    }
+  ],
+  "regions": [
+    {
+      "id": "wordmark",
+      "kind": "text",
+      "note": "placeholder wordmark: 'Beauty From Ashes' in iron-brown serif over 'SURGICAL MINISTRY' in small spaced capitals",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.0404,
+        "y": 0.0156,
+        "w": 0.1992,
+        "h": 0.0664
+      },
+      "px": {
+        "x": 62,
+        "y": 16,
+        "w": 306,
+        "h": 68
+      },
+      "aspect": 4.5,
+      "palette": [
+        {
+          "hex": "#d8d2c7",
+          "coverage": 0.8505
+        },
+        {
+          "hex": "#34180c",
+          "coverage": 0.0796
+        },
+        {
+          "hex": "#a3978e",
+          "coverage": 0.0332
+        },
+        {
+          "hex": "#726253",
+          "coverage": 0.028
+        },
+        {
+          "hex": "#423e3e",
+          "coverage": 0.0087
+        }
+      ],
+      "detail": {
+        "energy": 50.5932
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 12,
+          "capHeightPx": 27.7,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6847,
+          "advTall": 0.7929,
+          "advX": 0.5766,
+          "gap": 0.0721,
+          "xRatio": 0.6298,
+          "stemW": 0.1491,
+          "contrast": 1.9259,
+          "serif": 1.7215,
+          "densTall": 0.4034,
+          "densX": 0.4964,
+          "weight": 0.4034
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "nav-links",
+      "kind": "control",
+      "note": "five nav links in small iron-brown serif: Our Mission, How We Help, Stories, Get Involved, Contact",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.3333,
+        "y": 0.0352,
+        "w": 0.4037,
+        "h": 0.0254
+      },
+      "px": {
+        "x": 512,
+        "y": 36,
+        "w": 620,
+        "h": 26
+      },
+      "aspect": 23.8462,
+      "palette": [
+        {
+          "hex": "#d7cec6",
+          "coverage": 0.8933
+        },
+        {
+          "hex": "#88796c",
+          "coverage": 0.0517
+        },
+        {
+          "hex": "#afa194",
+          "coverage": 0.0189
+        },
+        {
+          "hex": "#534233",
+          "coverage": 0.0189
+        },
+        {
+          "hex": "#321f11",
+          "coverage": 0.0172
+        }
+      ],
+      "detail": {
+        "energy": 34.0239
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 43,
+          "capHeightPx": 12.1,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6903,
+          "advTall": 0.6351,
+          "advX": 0.6903,
+          "gap": 0.0552,
+          "xRatio": 0.7043,
+          "stemW": 0.183,
+          "contrast": 1.5969,
+          "serif": 0.3233,
+          "densTall": 0.4898,
+          "densX": 0.5283,
+          "weight": 0.4898
+        },
+        "widthClass": "normal",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "lang-switch",
+      "kind": "control",
+      "note": "EN | ES language switch in tiny spaced capitals",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.8268,
+        "y": 0.0391,
+        "w": 0.0456,
+        "h": 0.0176
+      },
+      "px": {
+        "x": 1270,
+        "y": 40,
+        "w": 70,
+        "h": 18
+      },
+      "aspect": 3.8889,
+      "palette": [
+        {
+          "hex": "#d5c9c1",
+          "coverage": 0.875
+        },
+        {
+          "hex": "#aaa89a",
+          "coverage": 0.0625
+        },
+        {
+          "hex": "#4f4d48",
+          "coverage": 0.0486
+        },
+        {
+          "hex": "#887878",
+          "coverage": 0.0139
+        }
+      ],
+      "detail": {
+        "energy": 13.2804
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "give-brush",
+      "kind": "plate",
+      "note": "cobalt-blue hand-brushed swatch with rough dry-brush edges, the ground of the Give button",
+      "grid": null,
+      "box": {
+        "x": 0.8919,
+        "y": 0.0195,
+        "w": 0.0729,
+        "h": 0.0547
+      },
+      "px": {
+        "x": 1370,
+        "y": 20,
+        "w": 112,
+        "h": 56
+      },
+      "aspect": 2,
+      "palette": [
+        {
+          "hex": "#093899",
+          "coverage": 0.594
+        },
+        {
+          "hex": "#d3c8bd",
+          "coverage": 0.2821
+        },
+        {
+          "hex": "#144a96",
+          "coverage": 0.0826
+        },
+        {
+          "hex": "#4d6ea8",
+          "coverage": 0.0214
+        },
+        {
+          "hex": "#7e90b6",
+          "coverage": 0.0199
+        }
+      ],
+      "detail": {
+        "energy": 13.3227
+      },
+      "medium": "raster",
+      "plate": "assets/plates/give-brush.png",
+      "text": null
+    },
+    {
+      "id": "give-button",
+      "kind": "control",
+      "note": "Give label in white serif, centered on the cobalt brush swatch; code draws the label, hit area and focus ring",
+      "grid": null,
+      "box": {
+        "x": 0.8958,
+        "y": 0.0254,
+        "w": 0.0651,
+        "h": 0.044
+      },
+      "px": {
+        "x": 1376,
+        "y": 26,
+        "w": 100,
+        "h": 45
+      },
+      "aspect": 2.2222,
+      "palette": [
+        {
+          "hex": "#093899",
+          "coverage": 0.834
+        },
+        {
+          "hex": "#144a96",
+          "coverage": 0.112
+        },
+        {
+          "hex": "#5175ac",
+          "coverage": 0.024
+        },
+        {
+          "hex": "#8da1bc",
+          "coverage": 0.018
+        },
+        {
+          "hex": "#d3c8c0",
+          "coverage": 0.012
+        }
+      ],
+      "detail": {
+        "energy": 9.1967
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "nav-rule",
+      "kind": "plate",
+      "note": "hand-brushed cobalt-blue line running the full width under the nav bar, dry-brush texture at its edges",
+      "grid": null,
+      "bleed": true,
+      "box": {
+        "x": 0,
+        "y": 0.084,
+        "w": 1,
+        "h": 0.0156
+      },
+      "px": {
+        "x": 0,
+        "y": 86,
+        "w": 1536,
+        "h": 16
+      },
+      "aspect": 96,
+      "palette": [
+        {
+          "hex": "#cfc5bc",
+          "coverage": 0.6564
+        },
+        {
+          "hex": "#1d4f99",
+          "coverage": 0.1343
+        },
+        {
+          "hex": "#a0a7bb",
+          "coverage": 0.0891
+        },
+        {
+          "hex": "#4f6fa6",
+          "coverage": 0.0628
+        },
+        {
+          "hex": "#0a3b9a",
+          "coverage": 0.0573
+        }
+      ],
+      "detail": {
+        "energy": 42.7378
+      },
+      "medium": "raster",
+      "plate": "assets/plates/nav-rule.png",
+      "text": null
+    },
+    {
+      "id": "eyebrow",
+      "kind": "text",
+      "note": "eyebrow in small spaced capitals: A CHRISTIAN SURGICAL MINISTRY · CHARLOTTE & FORT MILL",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.0469,
+        "y": 0.1855,
+        "w": 0.3581,
+        "h": 0.0176
+      },
+      "px": {
+        "x": 72,
+        "y": 190,
+        "w": 550,
+        "h": 18
+      },
+      "aspect": 30.5556,
+      "palette": [
+        {
+          "hex": "#d9d5c8",
+          "coverage": 0.7944
+        },
+        {
+          "hex": "#736254",
+          "coverage": 0.0855
+        },
+        {
+          "hex": "#a7988b",
+          "coverage": 0.0582
+        },
+        {
+          "hex": "#4b3123",
+          "coverage": 0.0428
+        },
+        {
+          "hex": "#614441",
+          "coverage": 0.0191
+        }
+      ],
+      "detail": {
+        "energy": 68.5532
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 46,
+          "capHeightPx": 10.1,
+          "inkIsDark": true,
+          "allCaps": true,
+          "advance": 0.6965,
+          "advTall": 0.6965,
+          "advX": null,
+          "gap": 0.4312,
+          "xRatio": null,
+          "stemW": 0.195,
+          "contrast": 1.0128,
+          "serif": null,
+          "densTall": 0.5694,
+          "densX": null,
+          "weight": 0.5694
+        },
+        "widthClass": "normal",
+        "weightClass": "bold"
+      }
+    },
+    {
+      "id": "headline-1",
+      "kind": "text",
+      "note": "h1 line one, large iron-brown serif, mixed case: Restoring more",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.0443,
+        "y": 0.2266,
+        "w": 0.3463,
+        "h": 0.082
+      },
+      "px": {
+        "x": 68,
+        "y": 232,
+        "w": 532,
+        "h": 84
+      },
+      "aspect": 6.3333,
+      "palette": [
+        {
+          "hex": "#dbd6c9",
+          "coverage": 0.7796
+        },
+        {
+          "hex": "#391e0d",
+          "coverage": 0.1808
+        },
+        {
+          "hex": "#a19183",
+          "coverage": 0.0183
+        },
+        {
+          "hex": "#675444",
+          "coverage": 0.0117
+        },
+        {
+          "hex": "#2b0d0d",
+          "coverage": 0.0095
+        }
+      ],
+      "detail": {
+        "energy": 58.5576
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 12,
+          "capHeightPx": 57,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.5965,
+          "advTall": 0.4211,
+          "advX": 0.6404,
+          "gap": 0.0351,
+          "xRatio": 0.6904,
+          "stemW": 0.1531,
+          "contrast": 2.1051,
+          "serif": 2.1548,
+          "densTall": 0.4015,
+          "densX": 0.4455,
+          "weight": 0.4015
+        },
+        "widthClass": "normal",
+        "weightClass": "regular",
+        "chosen": {
+          "family": "Tiro Devanagari Marathi",
+          "weight": 400,
+          "fontSizePx": 80,
+          "source": "index",
+          "fp": {
+            "lines": 1,
+            "glyphs": 12,
+            "capHeightPx": 57,
+            "inkIsDark": true,
+            "allCaps": false,
+            "advance": 0.5965,
+            "advTall": 0.9649,
+            "advX": 0.6404,
+            "gap": 0.0877,
+            "xRatio": 0.6842,
+            "stemW": 0.1546,
+            "contrast": 1.8062,
+            "serif": 2.3708,
+            "densTall": 0.4006,
+            "densX": 0.4686,
+            "weight": 0.4006
+          },
+          "stamp": "2925a0d6dcef"
+        }
+      }
+    },
+    {
+      "id": "headline-2",
+      "kind": "text",
+      "note": "h1 line two, same serif: than what can be",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.0443,
+        "y": 0.3066,
+        "w": 0.3854,
+        "h": 0.0723
+      },
+      "px": {
+        "x": 68,
+        "y": 314,
+        "w": 592,
+        "h": 74
+      },
+      "aspect": 8,
+      "palette": [
+        {
+          "hex": "#dbd5c9",
+          "coverage": 0.767
+        },
+        {
+          "hex": "#391e0d",
+          "coverage": 0.1871
+        },
+        {
+          "hex": "#604b3c",
+          "coverage": 0.0189
+        },
+        {
+          "hex": "#a39485",
+          "coverage": 0.0185
+        },
+        {
+          "hex": "#2e0e0e",
+          "coverage": 0.0085
+        }
+      ],
+      "detail": {
+        "energy": 67.0871
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 11,
+          "capHeightPx": 66,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.5606,
+          "advTall": 0.7955,
+          "advX": 0.5606,
+          "gap": 0.0455,
+          "xRatio": 0.6061,
+          "stemW": 0.1303,
+          "contrast": 2.2928,
+          "serif": 1.7007,
+          "densTall": 0.3367,
+          "densX": 0.4554,
+          "weight": 0.3367
+        },
+        "widthClass": "condensed",
+        "weightClass": "light",
+        "chosen": {
+          "family": "Unna",
+          "weight": 400,
+          "fontSizePx": 89,
+          "source": "index",
+          "fp": {
+            "lines": 1,
+            "glyphs": 13,
+            "capHeightPx": 66,
+            "inkIsDark": true,
+            "allCaps": false,
+            "advance": 0.5455,
+            "advTall": 0.6364,
+            "advX": 0.553,
+            "gap": 0.0682,
+            "xRatio": 0.5758,
+            "stemW": 0.1253,
+            "contrast": 2.3087,
+            "serif": 1.8217,
+            "densTall": 0.3541,
+            "densX": 0.4568,
+            "weight": 0.3541
+          },
+          "stamp": "32660d8dab1e"
+        }
+      }
+    },
+    {
+      "id": "headline-3",
+      "kind": "text",
+      "note": "h1 line three, same serif: seen.",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.0443,
+        "y": 0.3906,
+        "w": 0.1237,
+        "h": 0.0644
+      },
+      "px": {
+        "x": 68,
+        "y": 400,
+        "w": 190,
+        "h": 66
+      },
+      "aspect": 2.8788,
+      "palette": [
+        {
+          "hex": "#dcd7ca",
+          "coverage": 0.7721
+        },
+        {
+          "hex": "#391f0e",
+          "coverage": 0.1816
+        },
+        {
+          "hex": "#726050",
+          "coverage": 0.0207
+        },
+        {
+          "hex": "#a7978b",
+          "coverage": 0.0135
+        },
+        {
+          "hex": "#321313",
+          "coverage": 0.0121
+        }
+      ],
+      "detail": {
+        "energy": 27.4125
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 5,
+          "capHeightPx": 39.7,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6797,
+          "advTall": 0.6797,
+          "advX": null,
+          "gap": 0.0881,
+          "xRatio": 0.8205,
+          "stemW": 0.2213,
+          "contrast": 2.1103,
+          "serif": null,
+          "densTall": 0.4668,
+          "densX": null,
+          "weight": 0.4668
+        },
+        "widthClass": "normal",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "subhead",
+      "kind": "text",
+      "note": "paragraph in humanist sans, three lines: Reconstructive plastic surgery, free or at reduced cost, for children and adults whose need exceeds their means. Open to everyone.",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.0469,
+        "y": 0.4824,
+        "w": 0.362,
+        "h": 0.0938
+      },
+      "px": {
+        "x": 72,
+        "y": 494,
+        "w": 556,
+        "h": 96
+      },
+      "aspect": 5.7917,
+      "palette": [
+        {
+          "hex": "#d8d2c7",
+          "coverage": 0.8756
+        },
+        {
+          "hex": "#403b3a",
+          "coverage": 0.0531
+        },
+        {
+          "hex": "#7f7a76",
+          "coverage": 0.0344
+        },
+        {
+          "hex": "#a7a29d",
+          "coverage": 0.0234
+        },
+        {
+          "hex": "#605150",
+          "coverage": 0.0135
+        }
+      ],
+      "detail": {
+        "energy": 37.2291
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 3,
+          "glyphs": 107,
+          "capHeightPx": 15.8,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.591,
+          "advTall": 0.591,
+          "advX": 0.591,
+          "gap": 0.125,
+          "xRatio": 0.7003,
+          "stemW": 0.1492,
+          "contrast": 1.0926,
+          "serif": 0.4367,
+          "densTall": 0.4682,
+          "densX": 0.5479,
+          "weight": 0.4682
+        },
+        "widthClass": "normal",
+        "weightClass": "regular",
+        "chosen": {
+          "family": "Mulish",
+          "weight": 400,
+          "fontSizePx": 22,
+          "source": "index",
+          "fp": {
+            "lines": 1,
+            "glyphs": 28,
+            "capHeightPx": 16.1,
+            "inkIsDark": true,
+            "allCaps": false,
+            "advance": 0.5588,
+            "advTall": 0.4346,
+            "advX": 0.6053,
+            "gap": 0.1242,
+            "xRatio": 0.7105,
+            "stemW": 0.1524,
+            "contrast": 1.1239,
+            "serif": 0.8418,
+            "densTall": 0.5003,
+            "densX": 0.5402,
+            "weight": 0.5003
+          },
+          "stamp": "4f4336275e2f"
+        }
+      }
+    },
+    {
+      "id": "ask-brush",
+      "kind": "plate",
+      "note": "cobalt-blue hand-brushed swatch with rough dry-brush edges, the ground of the Ask for help button",
+      "grid": null,
+      "box": {
+        "x": 0.043,
+        "y": 0.6016,
+        "w": 0.155,
+        "h": 0.0762
+      },
+      "px": {
+        "x": 66,
+        "y": 616,
+        "w": 238,
+        "h": 78
+      },
+      "aspect": 3.0513,
+      "palette": [
+        {
+          "hex": "#083899",
+          "coverage": 0.6399
+        },
+        {
+          "hex": "#dbd7cb",
+          "coverage": 0.2672
+        },
+        {
+          "hex": "#0e4594",
+          "coverage": 0.0467
+        },
+        {
+          "hex": "#c8d0e3",
+          "coverage": 0.0261
+        },
+        {
+          "hex": "#4265a0",
+          "coverage": 0.0201
+        }
+      ],
+      "detail": {
+        "energy": 23.1037
+      },
+      "medium": "raster",
+      "plate": "assets/plates/ask-brush.png",
+      "text": null
+    },
+    {
+      "id": "ask-button",
+      "kind": "control",
+      "note": "Ask for help label in white serif, centered on the cobalt brush swatch; code draws the label, hit area and focus ring",
+      "grid": null,
+      "box": {
+        "x": 0.0475,
+        "y": 0.6084,
+        "w": 0.1458,
+        "h": 0.0615
+      },
+      "px": {
+        "x": 73,
+        "y": 623,
+        "w": 224,
+        "h": 63
+      },
+      "aspect": 3.5556,
+      "palette": [
+        {
+          "hex": "#083999",
+          "coverage": 0.8319
+        },
+        {
+          "hex": "#154999",
+          "coverage": 0.0814
+        },
+        {
+          "hex": "#4468aa",
+          "coverage": 0.0324
+        },
+        {
+          "hex": "#9dafce",
+          "coverage": 0.0298
+        },
+        {
+          "hex": "#d6d2c9",
+          "coverage": 0.0245
+        }
+      ],
+      "detail": {
+        "energy": 21.5373
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "refer-button",
+      "kind": "control",
+      "note": "secondary action: Refer someone, thin iron-brown outline with slightly uneven corners and an iron-brown serif label",
+      "grid": "C6:D6",
+      "codeDrawn": true,
+      "coverBox": {
+        "x": 0.2,
+        "y": 0.6,
+        "w": 0.2,
+        "h": 0.1
+      },
+      "box": {
+        "x": 0.2038,
+        "y": 0.5996,
+        "w": 0.1484,
+        "h": 0.0762
+      },
+      "px": {
+        "x": 313,
+        "y": 614,
+        "w": 228,
+        "h": 78
+      },
+      "aspect": 2.9231,
+      "palette": [
+        {
+          "hex": "#d9d3c9",
+          "coverage": 0.8669
+        },
+        {
+          "hex": "#33190f",
+          "coverage": 0.0542
+        },
+        {
+          "hex": "#b6a89b",
+          "coverage": 0.0358
+        },
+        {
+          "hex": "#615142",
+          "coverage": 0.0271
+        },
+        {
+          "hex": "#8b7a71",
+          "coverage": 0.0159
+        }
+      ],
+      "detail": {
+        "energy": 33.0626
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "jar",
+      "kind": "plate",
+      "note": "photograph: large hand-thrown Carolina stoneware jar with amber and olive-green wood-ash glaze drips from the shoulder and a loose cobalt brushstroke on its belly, soft side light, on a warm stone surface against a plain buff wall, soft shadow to the right",
+      "grid": "F1:J7",
+      "bleed": true,
+      "box": {
+        "x": 0.5,
+        "y": 0.1,
+        "w": 0.5,
+        "h": 0.7
+      },
+      "px": {
+        "x": 768,
+        "y": 102,
+        "w": 768,
+        "h": 717
+      },
+      "aspect": 1.0711,
+      "palette": [
+        {
+          "hex": "#b9a996",
+          "coverage": 0.5335
+        },
+        {
+          "hex": "#745e43",
+          "coverage": 0.26
+        },
+        {
+          "hex": "#dbcfc4",
+          "coverage": 0.0806
+        },
+        {
+          "hex": "#a18564",
+          "coverage": 0.0734
+        },
+        {
+          "hex": "#4a3416",
+          "coverage": 0.0524
+        }
+      ],
+      "detail": {
+        "energy": 16.335
+      },
+      "medium": "raster",
+      "plate": "assets/plates/jar.png",
+      "text": null
+    },
+    {
+      "id": "mission-eyebrow",
+      "kind": "text",
+      "note": "OUR MISSION in small spaced capitals, centered",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.444,
+        "y": 0.7559,
+        "w": 0.1146,
+        "h": 0.0195
+      },
+      "px": {
+        "x": 682,
+        "y": 774,
+        "w": 176,
+        "h": 20
+      },
+      "aspect": 8.8,
+      "palette": [
+        {
+          "hex": "#d8d0c6",
+          "coverage": 0.8439
+        },
+        {
+          "hex": "#927e6f",
+          "coverage": 0.0659
+        },
+        {
+          "hex": "#4c3726",
+          "coverage": 0.0463
+        },
+        {
+          "hex": "#3c1d0f",
+          "coverage": 0.0293
+        },
+        {
+          "hex": "#655048",
+          "coverage": 0.0146
+        }
+      ],
+      "detail": {
+        "energy": 40.5935
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 10,
+          "capHeightPx": 12.2,
+          "inkIsDark": true,
+          "allCaps": true,
+          "advance": 0.7498,
+          "advTall": 0.7498,
+          "advX": null,
+          "gap": 0.5862,
+          "xRatio": null,
+          "stemW": 0.1883,
+          "contrast": 1.0178,
+          "serif": 0.7105,
+          "densTall": 0.5479,
+          "densX": null,
+          "weight": 0.5479
+        },
+        "widthClass": "normal",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "mission-dash",
+      "kind": "plate",
+      "note": "short hand-brushed cobalt dash centered under OUR MISSION",
+      "grid": null,
+      "box": {
+        "x": 0.4596,
+        "y": 0.7832,
+        "w": 0.0807,
+        "h": 0.0156
+      },
+      "px": {
+        "x": 706,
+        "y": 802,
+        "w": 124,
+        "h": 16
+      },
+      "aspect": 7.75,
+      "palette": [
+        {
+          "hex": "#dad6c9",
+          "coverage": 0.5817
+        },
+        {
+          "hex": "#0b409e",
+          "coverage": 0.2311
+        },
+        {
+          "hex": "#6b81aa",
+          "coverage": 0.1394
+        },
+        {
+          "hex": "#9babc0",
+          "coverage": 0.0239
+        },
+        {
+          "hex": "#3b5ba0",
+          "coverage": 0.0239
+        }
+      ],
+      "detail": {
+        "energy": 24.5016
+      },
+      "medium": "raster",
+      "plate": "assets/plates/mission-dash.png",
+      "text": null
+    },
+    {
+      "id": "mission-quote",
+      "kind": "text",
+      "note": "mission statement as a centered italic iron-brown serif quotation on three lines, verbatim from the mission card",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.1797,
+        "y": 0.8125,
+        "w": 0.6589,
+        "h": 0.1426
+      },
+      "px": {
+        "x": 276,
+        "y": 832,
+        "w": 1012,
+        "h": 146
+      },
+      "aspect": 6.9315,
+      "palette": [
+        {
+          "hex": "#dad6c9",
+          "coverage": 0.8332
+        },
+        {
+          "hex": "#381c0d",
+          "coverage": 0.0887
+        },
+        {
+          "hex": "#a19184",
+          "coverage": 0.0407
+        },
+        {
+          "hex": "#624d3e",
+          "coverage": 0.0361
+        },
+        {
+          "hex": "#180808",
+          "coverage": 0.0013
+        }
+      ],
+      "detail": {
+        "energy": 58.2213
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 3,
+          "glyphs": 137,
+          "capHeightPx": 27.8,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.5737,
+          "advTall": 0.4662,
+          "advX": 0.5737,
+          "gap": 0.0718,
+          "xRatio": 0.6455,
+          "stemW": 0.1279,
+          "contrast": 1.5437,
+          "serif": 0.7272,
+          "densTall": 0.413,
+          "densX": 0.4531,
+          "weight": 0.413
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "ground",
+      "kind": "texture",
+      "note": "clean patch of the pale buff salt-glazed stoneware page ground with fine orange-peel texture, no ink",
+      "grid": "A8:A8",
+      "box": {
+        "x": 0,
+        "y": 0.8,
+        "w": 0.1,
+        "h": 0.1
+      },
+      "px": {
+        "x": 0,
+        "y": 819,
+        "w": 154,
+        "h": 102
+      },
+      "aspect": 1.5098,
+      "palette": [
+        {
+          "hex": "#dcd7cb",
+          "coverage": 1
+        }
+      ],
+      "detail": {
+        "energy": 4.0917
+      },
+      "medium": "raster",
+      "plate": "assets/plates/ground.png",
+      "text": null
+    }
+  ]
+}

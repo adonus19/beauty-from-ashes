@@ -1,0 +1,41 @@
+{
+  "title": "Volunteer page: choose a layout",
+  "question": "Three layouts for the Volunteer page, written for surgeons, anesthesia providers, nurses and other clinicians first, with non-medical roles after. Pick one, add a note to steer it, or re-roll.",
+  "options": [
+    {
+      "id": "colleague-letter",
+      "label": "A colleague's letter",
+      "kicker": "THE ROLL",
+      "thesis": "A volunteer clinician writes to colleagues about serving, with the roles listed beside the letter.",
+      "palette": ["#d8d1c4", "#3a1f0e", "#0b3d9c", "#4f3a2a"],
+      "materials": ["italic serif letter", "sample tag", "hairline roster"],
+      "viewport": "Title and lede across the top; the letter in large italic serif at left with its sample tag and signature; the roles and the Volunteer button in a column at right.",
+      "risk": "Until a real volunteer writes the letter, the centerpiece is a labeled sample.",
+      "comp": ".impeccable/mocks/decision/volunteer-letter.png"
+    },
+    {
+      "id": "vision-first",
+      "label": "Vision first",
+      "thesis": "The mission card's Vision opens the page, so clinicians read why before what.",
+      "palette": ["#d8d1c4", "#3a1f0e", "#0b3d9c", "#4f3a2a"],
+      "materials": ["section label", "brushed cobalt dash", "hairline roster"],
+      "viewport": "Centered: Our Vision, the cobalt dash and the vision statement; under it the page title, a short lede and two buttons; the roles begin below.",
+      "risk": "The first screen is the ministry's words; the practical details start lower down.",
+      "comp": ".impeccable/mocks/decision/volunteer-vision.png"
+    },
+    {
+      "id": "way-in",
+      "label": "The way in",
+      "thesis": "Joining is five numbered steps, so a clinician sees exactly what's involved before they reach out.",
+      "palette": ["#d8d1c4", "#3a1f0e", "#0b3d9c", "#4f3a2a"],
+      "materials": ["italic numerals", "brushed cobalt rules", "sticky intro"],
+      "viewport": "Title, lede and button at left; at right five numbered steps with brushed rules: tell us about you, a conversation, credentialing, orientation, your first surgery day.",
+      "risk": "Close to the home page's process section, so it can read as a repeat.",
+      "comp": ".impeccable/mocks/decision/volunteer-way-in.png"
+    }
+  ],
+  "reroll": true,
+  "steer": true,
+  "followup": true,
+  "buildPath": { "value": "comp", "toggle": true }
+}

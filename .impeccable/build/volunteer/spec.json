@@ -1,0 +1,1683 @@
+{
+  "tool": "comp-spec",
+  "version": 1,
+  "createdAt": "2026-10-01T22:46:12.376Z",
+  "comp": ".impeccable/mocks/decision/volunteer-vision.png",
+  "warnings": [
+    "region nav-current: \"codeDrawn\": true set in the regions file (the painted-material refusal is overridden: code draws this region)",
+    "region nav-rule: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+  ],
+  "uncoveredInkCells": [
+    "C0",
+    "D0",
+    "H0",
+    "A6",
+    "A7",
+    "B7",
+    "C7",
+    "D7"
+  ],
+  "compSize": {
+    "width": 1536,
+    "height": 1024
+  },
+  "aspect": 1.5,
+  "orientation": "landscape",
+  "palette": [
+    {
+      "hex": "#dcd8c9",
+      "coverage": 0.9458
+    },
+    {
+      "hex": "#3a2312",
+      "coverage": 0.017
+    },
+    {
+      "hex": "#08389c",
+      "coverage": 0.0165
+    },
+    {
+      "hex": "#8b7e70",
+      "coverage": 0.0126
+    },
+    {
+      "hex": "#574c45",
+      "coverage": 0.0081
+    }
+  ],
+  "bands": [
+    {
+      "y": 0.0235,
+      "strength": 0.2402
+    },
+    {
+      "y": 0.0824,
+      "strength": 0.7125
+    },
+    {
+      "y": 0.1059,
+      "strength": 0.536
+    },
+    {
+      "y": 0.2235,
+      "strength": 0.3117
+    },
+    {
+      "y": 0.2471,
+      "strength": 0.4436
+    },
+    {
+      "y": 0.2706,
+      "strength": 0.3936
+    },
+    {
+      "y": 0.2941,
+      "strength": 0.5248
+    },
+    {
+      "y": 0.3176,
+      "strength": 0.3638
+    },
+    {
+      "y": 0.3412,
+      "strength": 0.522
+    },
+    {
+      "y": 0.4588,
+      "strength": 0.2758
+    },
+    {
+      "y": 0.5176,
+      "strength": 0.4562
+    },
+    {
+      "y": 0.5765,
+      "strength": 0.4606
+    },
+    {
+      "y": 0.6941,
+      "strength": 0.4783
+    },
+    {
+      "y": 0.8235,
+      "strength": 0.2285
+    },
+    {
+      "y": 0.8471,
+      "strength": 0.2516
+    }
+  ],
+  "regions": [
+    {
+      "id": "wordmark",
+      "kind": "text",
+      "note": "placeholder wordmark: 'Beauty From Ashes' in iron-brown serif over 'SURGICAL MINISTRY' in small spaced capitals",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.0404,
+        "y": 0.0156,
+        "w": 0.2005,
+        "h": 0.0625
+      },
+      "px": {
+        "x": 62,
+        "y": 16,
+        "w": 308,
+        "h": 64
+      },
+      "aspect": 4.8125,
+      "palette": [
+        {
+          "hex": "#e0d8cc",
+          "coverage": 0.8317
+        },
+        {
+          "hex": "#381e0e",
+          "coverage": 0.065
+        },
+        {
+          "hex": "#604f3f",
+          "coverage": 0.0445
+        },
+        {
+          "hex": "#b7a99a",
+          "coverage": 0.0387
+        },
+        {
+          "hex": "#8e7b69",
+          "coverage": 0.02
+        }
+      ],
+      "detail": {
+        "energy": 56.1924
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 13,
+          "capHeightPx": 26.9,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6331,
+          "advTall": 0.7635,
+          "advX": 0.5586,
+          "gap": 0.0745,
+          "xRatio": 0.6704,
+          "stemW": 0.1453,
+          "contrast": 1.8483,
+          "serif": null,
+          "densTall": 0.4039,
+          "densX": 0.4766,
+          "weight": 0.4039
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "nav-links",
+      "kind": "control",
+      "note": "five nav links in iron-brown serif: Get Help, Volunteer (current page), Partner, Stories, About",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.3685,
+        "y": 0.0352,
+        "w": 0.3424,
+        "h": 0.0273
+      },
+      "px": {
+        "x": 566,
+        "y": 36,
+        "w": 526,
+        "h": 28
+      },
+      "aspect": 18.7857,
+      "palette": [
+        {
+          "hex": "#ded8ca",
+          "coverage": 0.8957
+        },
+        {
+          "hex": "#9e8f7f",
+          "coverage": 0.0439
+        },
+        {
+          "hex": "#392313",
+          "coverage": 0.0291
+        },
+        {
+          "hex": "#6c5a4a",
+          "coverage": 0.0262
+        },
+        {
+          "hex": "#1c0808",
+          "coverage": 0.0051
+        }
+      ],
+      "detail": {
+        "energy": 35.4423
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "nav-current",
+      "kind": "control",
+      "note": "current-page marker under Volunteer, drawn in code as the link-stroke mask in cobalt",
+      "grid": null,
+      "codeDrawn": true,
+      "snap": false,
+      "box": {
+        "x": 0.4427,
+        "y": 0.0605,
+        "w": 0.069,
+        "h": 0.0156
+      },
+      "px": {
+        "x": 680,
+        "y": 62,
+        "w": 106,
+        "h": 16
+      },
+      "aspect": 6.625,
+      "palette": [
+        {
+          "hex": "#e0d8ca",
+          "coverage": 0.5885
+        },
+        {
+          "hex": "#093ca1",
+          "coverage": 0.2201
+        },
+        {
+          "hex": "#7f95b4",
+          "coverage": 0.1005
+        },
+        {
+          "hex": "#5272a7",
+          "coverage": 0.0526
+        },
+        {
+          "hex": "#1e529e",
+          "coverage": 0.0383
+        }
+      ],
+      "detail": {
+        "energy": 20.8821
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "lang-switch",
+      "kind": "control",
+      "note": "EN | ES language switch in small sans capitals",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.8281,
+        "y": 0.0391,
+        "w": 0.043,
+        "h": 0.0195
+      },
+      "px": {
+        "x": 1272,
+        "y": 40,
+        "w": 66,
+        "h": 20
+      },
+      "aspect": 3.3,
+      "palette": [
+        {
+          "hex": "#ded7cb",
+          "coverage": 0.8497
+        },
+        {
+          "hex": "#5d4a3c",
+          "coverage": 0.098
+        },
+        {
+          "hex": "#948474",
+          "coverage": 0.0261
+        },
+        {
+          "hex": "#786850",
+          "coverage": 0.0131
+        },
+        {
+          "hex": "#b0a898",
+          "coverage": 0.0131
+        }
+      ],
+      "detail": {
+        "energy": 14.2801
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "give-brush",
+      "kind": "plate",
+      "note": "cobalt-blue hand-brushed swatch with rough dry-brush edges, the ground of the Give button",
+      "grid": null,
+      "box": {
+        "x": 0.8919,
+        "y": 0.0215,
+        "w": 0.0703,
+        "h": 0.0527
+      },
+      "px": {
+        "x": 1370,
+        "y": 22,
+        "w": 108,
+        "h": 54
+      },
+      "aspect": 2,
+      "palette": [
+        {
+          "hex": "#08389b",
+          "coverage": 0.7357
+        },
+        {
+          "hex": "#e0d9d0",
+          "coverage": 0.1831
+        },
+        {
+          "hex": "#3864ab",
+          "coverage": 0.0462
+        },
+        {
+          "hex": "#698bb8",
+          "coverage": 0.0175
+        },
+        {
+          "hex": "#9ba9c2",
+          "coverage": 0.0175
+        }
+      ],
+      "detail": {
+        "energy": 16.1267
+      },
+      "medium": "raster",
+      "plate": "assets/plates/give-brush.png",
+      "text": null
+    },
+    {
+      "id": "give-button",
+      "kind": "control",
+      "note": "Give label in white serif on the cobalt swatch; code draws the label, hit area and focus ring",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.8984,
+        "y": 0.0293,
+        "w": 0.0573,
+        "h": 0.0371
+      },
+      "px": {
+        "x": 1380,
+        "y": 30,
+        "w": 88,
+        "h": 38
+      },
+      "aspect": 2.3158,
+      "palette": [
+        {
+          "hex": "#08389a",
+          "coverage": 0.9041
+        },
+        {
+          "hex": "#f2f3f7",
+          "coverage": 0.0389
+        },
+        {
+          "hex": "#adc3e3",
+          "coverage": 0.0259
+        },
+        {
+          "hex": "#7b98cd",
+          "coverage": 0.0155
+        },
+        {
+          "hex": "#134b9b",
+          "coverage": 0.0155
+        }
+      ],
+      "detail": {
+        "energy": 10.1898
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "nav-rule",
+      "kind": "plate",
+      "note": "hand-brushed cobalt-blue line running the full width under the nav bar, dry-brush texture at its edges",
+      "grid": null,
+      "bleed": true,
+      "box": {
+        "x": 0,
+        "y": 0.084,
+        "w": 1,
+        "h": 0.0176
+      },
+      "px": {
+        "x": 0,
+        "y": 86,
+        "w": 1536,
+        "h": 18
+      },
+      "aspect": 85.3333,
+      "palette": [
+        {
+          "hex": "#dbd7ca",
+          "coverage": 0.5314
+        },
+        {
+          "hex": "#09389d",
+          "coverage": 0.2762
+        },
+        {
+          "hex": "#1f4a99",
+          "coverage": 0.0778
+        },
+        {
+          "hex": "#4669a6",
+          "coverage": 0.0723
+        },
+        {
+          "hex": "#7b8fb6",
+          "coverage": 0.0423
+        }
+      ],
+      "detail": {
+        "energy": 61.8797
+      },
+      "medium": "raster",
+      "plate": "assets/plates/nav-rule.png",
+      "text": null
+    },
+    {
+      "id": "vision-label",
+      "kind": "text",
+      "note": "centered small spaced capitals in soft iron: OUR VISION",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.4518,
+        "y": 0.1416,
+        "w": 0.0977,
+        "h": 0.0225
+      },
+      "px": {
+        "x": 694,
+        "y": 145,
+        "w": 150,
+        "h": 23
+      },
+      "aspect": 6.5217,
+      "palette": [
+        {
+          "hex": "#dfd8cb",
+          "coverage": 0.85
+        },
+        {
+          "hex": "#7d6d5f",
+          "coverage": 0.075
+        },
+        {
+          "hex": "#b8aba3",
+          "coverage": 0.0425
+        },
+        {
+          "hex": "#412f21",
+          "coverage": 0.03
+        },
+        {
+          "hex": "#584848",
+          "coverage": 0.0025
+        }
+      ],
+      "detail": {
+        "energy": 25.6984
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 10,
+          "capHeightPx": 11.2,
+          "inkIsDark": true,
+          "allCaps": true,
+          "advance": 0.6875,
+          "advTall": 0.6875,
+          "advX": null,
+          "gap": 0.5679,
+          "xRatio": null,
+          "stemW": 0.1996,
+          "contrast": 1.0742,
+          "serif": 0.5082,
+          "densTall": 0.4976,
+          "densX": null,
+          "weight": 0.4976
+        },
+        "widthClass": "normal",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "mission-dash",
+      "kind": "plate",
+      "note": "short hand-brushed cobalt dash centered under OUR VISION",
+      "grid": null,
+      "box": {
+        "x": 0.4648,
+        "y": 0.1709,
+        "w": 0.069,
+        "h": 0.0205
+      },
+      "px": {
+        "x": 714,
+        "y": 175,
+        "w": 106,
+        "h": 21
+      },
+      "aspect": 5.0476,
+      "palette": [
+        {
+          "hex": "#e0d9cc",
+          "coverage": 0.5857
+        },
+        {
+          "hex": "#0a4ba9",
+          "coverage": 0.247
+        },
+        {
+          "hex": "#6485af",
+          "coverage": 0.0757
+        },
+        {
+          "hex": "#aab6c4",
+          "coverage": 0.0637
+        },
+        {
+          "hex": "#285fa3",
+          "coverage": 0.0279
+        }
+      ],
+      "detail": {
+        "energy": 15.2588
+      },
+      "medium": "raster",
+      "plate": "assets/plates/mission-dash.png",
+      "text": null
+    },
+    {
+      "id": "vision-1",
+      "kind": "text",
+      "note": "vision statement line one, large roman iron serif, centered: To inspire a community of gifted professionals",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.237,
+        "y": 0.209,
+        "w": 0.5339,
+        "h": 0.0527
+      },
+      "px": {
+        "x": 364,
+        "y": 214,
+        "w": 820,
+        "h": 54
+      },
+      "aspect": 15.1852,
+      "palette": [
+        {
+          "hex": "#ded8cb",
+          "coverage": 0.8386
+        },
+        {
+          "hex": "#38200e",
+          "coverage": 0.091
+        },
+        {
+          "hex": "#584433",
+          "coverage": 0.025
+        },
+        {
+          "hex": "#897868",
+          "coverage": 0.0239
+        },
+        {
+          "hex": "#b1a496",
+          "coverage": 0.0215
+        }
+      ],
+      "detail": {
+        "energy": 71.4858
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 38,
+          "capHeightPx": 29.8,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.5373,
+          "advTall": 0.403,
+          "advX": 0.6213,
+          "gap": 0.0672,
+          "xRatio": 0.6717,
+          "stemW": 0.1384,
+          "contrast": 1.8587,
+          "serif": 0.7895,
+          "densTall": 0.3968,
+          "densX": 0.4591,
+          "weight": 0.3968
+        },
+        "widthClass": "normal",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "vision-2",
+      "kind": "text",
+      "note": "vision line two, same serif: to use what God has entrusted to them to serve others,",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.2018,
+        "y": 0.2598,
+        "w": 0.6068,
+        "h": 0.0459
+      },
+      "px": {
+        "x": 310,
+        "y": 266,
+        "w": 932,
+        "h": 47
+      },
+      "aspect": 19.8298,
+      "palette": [
+        {
+          "hex": "#dcd8ca",
+          "coverage": 0.8062
+        },
+        {
+          "hex": "#392110",
+          "coverage": 0.1258
+        },
+        {
+          "hex": "#806f60",
+          "coverage": 0.0341
+        },
+        {
+          "hex": "#5b4431",
+          "coverage": 0.0183
+        },
+        {
+          "hex": "#b1a495",
+          "coverage": 0.0156
+        }
+      ],
+      "detail": {
+        "energy": 77.9649
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 33,
+          "capHeightPx": 29.9,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6357,
+          "advTall": 0.7361,
+          "advX": 0.5688,
+          "gap": 0.0669,
+          "xRatio": 0.6727,
+          "stemW": 0.1376,
+          "contrast": 1.8518,
+          "serif": 1.1932,
+          "densTall": 0.3556,
+          "densX": 0.4618,
+          "weight": 0.3556
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "vision-3",
+      "kind": "text",
+      "note": "vision line three, same serif: bless those in need, and strengthen their communities.",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.2031,
+        "y": 0.3057,
+        "w": 0.6107,
+        "h": 0.0518
+      },
+      "px": {
+        "x": 312,
+        "y": 313,
+        "w": 938,
+        "h": 53
+      },
+      "aspect": 17.6981,
+      "palette": [
+        {
+          "hex": "#dcd8ca",
+          "coverage": 0.8194
+        },
+        {
+          "hex": "#3a2211",
+          "coverage": 0.1018
+        },
+        {
+          "hex": "#8e7f70",
+          "coverage": 0.0317
+        },
+        {
+          "hex": "#695745",
+          "coverage": 0.0287
+        },
+        {
+          "hex": "#b2a698",
+          "coverage": 0.0185
+        }
+      ],
+      "detail": {
+        "energy": 68.5526
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 39,
+          "capHeightPx": 29.8,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.5869,
+          "advTall": 0.7043,
+          "advX": 0.5701,
+          "gap": 0.0671,
+          "xRatio": 0.6708,
+          "stemW": 0.1379,
+          "contrast": 1.8303,
+          "serif": 1.1923,
+          "densTall": 0.3757,
+          "densX": 0.4588,
+          "weight": 0.3757
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "title",
+      "kind": "text",
+      "note": "h1 centered in iron serif: Serve with your skills.",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.388,
+        "y": 0.3887,
+        "w": 0.224,
+        "h": 0.0488
+      },
+      "px": {
+        "x": 596,
+        "y": 398,
+        "w": 344,
+        "h": 50
+      },
+      "aspect": 6.88,
+      "palette": [
+        {
+          "hex": "#dcd8ca",
+          "coverage": 0.8315
+        },
+        {
+          "hex": "#3a210f",
+          "coverage": 0.0774
+        },
+        {
+          "hex": "#b1a394",
+          "coverage": 0.0543
+        },
+        {
+          "hex": "#7e705e",
+          "coverage": 0.0225
+        },
+        {
+          "hex": "#5d4532",
+          "coverage": 0.0143
+        }
+      ],
+      "detail": {
+        "energy": 55.0436
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 15,
+          "capHeightPx": 25.7,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.5836,
+          "advTall": 0.4863,
+          "advX": 0.5836,
+          "gap": 0.0584,
+          "xRatio": 0.6614,
+          "stemW": 0.1404,
+          "contrast": 1.7074,
+          "serif": 0.6444,
+          "densTall": 0.4072,
+          "densX": 0.4371,
+          "weight": 0.4072
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "lede",
+      "kind": "text",
+      "note": "two centered sans lines: Surgeons, anesthesia providers, nurses and surgical teams give their time so patients / who can't afford surgery still receive excellent care.",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.2539,
+        "y": 0.4346,
+        "w": 0.4961,
+        "h": 0.0605
+      },
+      "px": {
+        "x": 390,
+        "y": 445,
+        "w": 762,
+        "h": 62
+      },
+      "aspect": 12.2903,
+      "palette": [
+        {
+          "hex": "#dcd8ca",
+          "coverage": 0.8668
+        },
+        {
+          "hex": "#4c4541",
+          "coverage": 0.0479
+        },
+        {
+          "hex": "#aca49d",
+          "coverage": 0.0455
+        },
+        {
+          "hex": "#757168",
+          "coverage": 0.0382
+        },
+        {
+          "hex": "#282828",
+          "coverage": 0.0017
+        }
+      ],
+      "detail": {
+        "energy": 34.121
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 2,
+          "glyphs": 115,
+          "capHeightPx": 14.3,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6016,
+          "advTall": 0.4247,
+          "advX": 0.6255,
+          "gap": 0.1062,
+          "xRatio": 0.7043,
+          "stemW": 0.1549,
+          "contrast": 1.1336,
+          "serif": 0.5756,
+          "densTall": 0.4869,
+          "densX": 0.5389,
+          "weight": 0.4869
+        },
+        "widthClass": "normal",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "ask-brush",
+      "kind": "plate",
+      "note": "cobalt-blue hand-brushed swatch with rough dry-brush edges, the ground of the Volunteer your skills button",
+      "grid": null,
+      "box": {
+        "x": 0.334,
+        "y": 0.5147,
+        "w": 0.1849,
+        "h": 0.0644
+      },
+      "px": {
+        "x": 513,
+        "y": 527,
+        "w": 284,
+        "h": 66
+      },
+      "aspect": 4.303,
+      "palette": [
+        {
+          "hex": "#08389b",
+          "coverage": 0.8109
+        },
+        {
+          "hex": "#dcd8cd",
+          "coverage": 0.0973
+        },
+        {
+          "hex": "#ebf2f7",
+          "coverage": 0.0411
+        },
+        {
+          "hex": "#134696",
+          "coverage": 0.0276
+        },
+        {
+          "hex": "#aabdd6",
+          "coverage": 0.0231
+        }
+      ],
+      "detail": {
+        "energy": 41.2819
+      },
+      "medium": "raster",
+      "plate": "assets/plates/ask-brush.png",
+      "text": null
+    },
+    {
+      "id": "ask-button",
+      "kind": "control",
+      "note": "Volunteer your skills label in white serif on the cobalt swatch; code draws the label, hit area and focus ring",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.3451,
+        "y": 0.5234,
+        "w": 0.1628,
+        "h": 0.0469
+      },
+      "px": {
+        "x": 530,
+        "y": 536,
+        "w": 250,
+        "h": 48
+      },
+      "aspect": 5.2083,
+      "palette": [
+        {
+          "hex": "#08389a",
+          "coverage": 0.8679
+        },
+        {
+          "hex": "#eff4f8",
+          "coverage": 0.0494
+        },
+        {
+          "hex": "#184c9b",
+          "coverage": 0.0395
+        },
+        {
+          "hex": "#90abd5",
+          "coverage": 0.0235
+        },
+        {
+          "hex": "#bfd1ec",
+          "coverage": 0.0197
+        }
+      ],
+      "detail": {
+        "energy": 31.1383
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "ink-frame",
+      "kind": "plate",
+      "note": "hand-inked iron-brown outline frame with slightly rough edges, the border of the See the roles button",
+      "grid": null,
+      "box": {
+        "x": 0.5325,
+        "y": 0.5098,
+        "w": 0.1367,
+        "h": 0.0723
+      },
+      "px": {
+        "x": 818,
+        "y": 522,
+        "w": 210,
+        "h": 74
+      },
+      "aspect": 2.8378,
+      "palette": [
+        {
+          "hex": "#dbd8c9",
+          "coverage": 0.8432
+        },
+        {
+          "hex": "#b3a395",
+          "coverage": 0.0487
+        },
+        {
+          "hex": "#2f150a",
+          "coverage": 0.0424
+        },
+        {
+          "hex": "#705e4e",
+          "coverage": 0.0401
+        },
+        {
+          "hex": "#463121",
+          "coverage": 0.0258
+        }
+      ],
+      "detail": {
+        "energy": 34.8825
+      },
+      "medium": "raster",
+      "plate": "assets/plates/ink-frame.png",
+      "text": null
+    },
+    {
+      "id": "roles-button",
+      "kind": "control",
+      "note": "See the roles label in iron serif inside the inked frame; code draws the label and hit area",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.5469,
+        "y": 0.5273,
+        "w": 0.1081,
+        "h": 0.0391
+      },
+      "px": {
+        "x": 840,
+        "y": 540,
+        "w": 166,
+        "h": 40
+      },
+      "aspect": 4.15,
+      "palette": [
+        {
+          "hex": "#dbd8c9",
+          "coverage": 0.8849
+        },
+        {
+          "hex": "#b6a698",
+          "coverage": 0.0358
+        },
+        {
+          "hex": "#604d3d",
+          "coverage": 0.0345
+        },
+        {
+          "hex": "#381f0f",
+          "coverage": 0.0281
+        },
+        {
+          "hex": "#897c6e",
+          "coverage": 0.0166
+        }
+      ],
+      "detail": {
+        "energy": 23.3832
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "rule-1",
+      "kind": "chrome",
+      "note": "thin iron hairline across the page between the vision band and the roles",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.0391,
+        "y": 0.6201,
+        "w": 0.9258,
+        "h": 0.0137
+      },
+      "px": {
+        "x": 60,
+        "y": 635,
+        "w": 1422,
+        "h": 14
+      },
+      "aspect": 101.5714,
+      "palette": [
+        {
+          "hex": "#d9d7c8",
+          "coverage": 0.8153
+        },
+        {
+          "hex": "#9d8e7f",
+          "coverage": 0.1597
+        },
+        {
+          "hex": "#7d6c62",
+          "coverage": 0.025
+        }
+      ],
+      "detail": {
+        "energy": 13.6684
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "where-title",
+      "kind": "text",
+      "note": "section heading in large iron serif: Where you're needed",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.043,
+        "y": 0.6758,
+        "w": 0.3177,
+        "h": 0.0664
+      },
+      "px": {
+        "x": 66,
+        "y": 692,
+        "w": 488,
+        "h": 68
+      },
+      "aspect": 7.1765,
+      "palette": [
+        {
+          "hex": "#dcd8c9",
+          "coverage": 0.828
+        },
+        {
+          "hex": "#3b2310",
+          "coverage": 0.1075
+        },
+        {
+          "hex": "#736151",
+          "coverage": 0.0332
+        },
+        {
+          "hex": "#ad9f8f",
+          "coverage": 0.0276
+        },
+        {
+          "hex": "#301010",
+          "coverage": 0.0037
+        }
+      ],
+      "detail": {
+        "energy": 55.1112
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 15,
+          "capHeightPx": 38,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.5796,
+          "advTall": 0.7113,
+          "advX": 0.5532,
+          "gap": 0.0922,
+          "xRatio": 0.6707,
+          "stemW": 0.1396,
+          "contrast": 1.7978,
+          "serif": 2.1673,
+          "densTall": 0.3834,
+          "densX": 0.4537,
+          "weight": 0.3834
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular",
+        "chosen": {
+          "family": "Inria Serif",
+          "weight": 400,
+          "fontSizePx": 50,
+          "source": "index",
+          "fp": {
+            "lines": 1,
+            "glyphs": 17,
+            "capHeightPx": 38.2,
+            "inkIsDark": true,
+            "allCaps": false,
+            "advance": 0.5491,
+            "advTall": 0.6536,
+            "advX": 0.5491,
+            "gap": 0.1046,
+            "xRatio": 0.6732,
+            "stemW": 0.1256,
+            "contrast": 1.7656,
+            "serif": 2.5939,
+            "densTall": 0.3789,
+            "densX": 0.4586,
+            "weight": 0.3789
+          },
+          "stamp": "851b2ba59d63"
+        }
+      }
+    },
+    {
+      "id": "where-text",
+      "kind": "text",
+      "note": "four-line sans paragraph introducing the roles",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.0443,
+        "y": 0.7539,
+        "w": 0.2682,
+        "h": 0.1348
+      },
+      "px": {
+        "x": 68,
+        "y": 772,
+        "w": 412,
+        "h": 138
+      },
+      "aspect": 2.9855,
+      "palette": [
+        {
+          "hex": "#dbd7c9",
+          "coverage": 0.8669
+        },
+        {
+          "hex": "#504b48",
+          "coverage": 0.0675
+        },
+        {
+          "hex": "#a09a94",
+          "coverage": 0.0385
+        },
+        {
+          "hex": "#76716a",
+          "coverage": 0.0255
+        },
+        {
+          "hex": "#382828",
+          "coverage": 0.0016
+        }
+      ],
+      "detail": {
+        "energy": 43.2762
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 4,
+          "glyphs": 121,
+          "capHeightPx": 16.6,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6192,
+          "advTall": 0.4128,
+          "advX": 0.6307,
+          "gap": 0.1474,
+          "xRatio": 0.6997,
+          "stemW": 0.1433,
+          "contrast": 1.138,
+          "serif": 0.5352,
+          "densTall": 0.4703,
+          "densX": 0.5042,
+          "weight": 0.4703
+        },
+        "widthClass": "normal",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "role-1",
+      "kind": "text",
+      "note": "role name in serif over a two-line sans description: Plastic and reconstructive surgeons / Provide surgical care that restores function and confidence.",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.4284,
+        "y": 0.6836,
+        "w": 0.2279,
+        "h": 0.0898
+      },
+      "px": {
+        "x": 658,
+        "y": 700,
+        "w": 350,
+        "h": 92
+      },
+      "aspect": 3.8043,
+      "palette": [
+        {
+          "hex": "#dbd7c9",
+          "coverage": 0.9074
+        },
+        {
+          "hex": "#686059",
+          "coverage": 0.0453
+        },
+        {
+          "hex": "#978e83",
+          "coverage": 0.0207
+        },
+        {
+          "hex": "#503b2d",
+          "coverage": 0.0143
+        },
+        {
+          "hex": "#b5aea1",
+          "coverage": 0.0123
+        }
+      ],
+      "detail": {
+        "energy": 42.806
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 3,
+          "glyphs": 80,
+          "capHeightPx": 14.3,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.5788,
+          "advTall": 0.3722,
+          "advX": 0.5956,
+          "gap": 0.1117,
+          "xRatio": 0.6785,
+          "stemW": 0.1539,
+          "contrast": 1.2744,
+          "serif": 0.7311,
+          "densTall": 0.4621,
+          "densX": 0.5034,
+          "weight": 0.4621
+        },
+        "widthClass": "normal",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "role-2",
+      "kind": "text",
+      "note": "role name in serif over a two-line sans description: Anesthesiologists and nurse anesthetists / Provide safe, skilled anesthesia and pain management.",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.7096,
+        "y": 0.6836,
+        "w": 0.2526,
+        "h": 0.0898
+      },
+      "px": {
+        "x": 1090,
+        "y": 700,
+        "w": 388,
+        "h": 92
+      },
+      "aspect": 4.2174,
+      "palette": [
+        {
+          "hex": "#dbd8c9",
+          "coverage": 0.8977
+        },
+        {
+          "hex": "#b1a99f",
+          "coverage": 0.0353
+        },
+        {
+          "hex": "#84796e",
+          "coverage": 0.0283
+        },
+        {
+          "hex": "#5c514b",
+          "coverage": 0.0218
+        },
+        {
+          "hex": "#3b2515",
+          "coverage": 0.017
+        }
+      ],
+      "detail": {
+        "energy": 38.118
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 2,
+          "glyphs": 63,
+          "capHeightPx": 15,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.5601,
+          "advTall": 0.615,
+          "advX": 0.5875,
+          "gap": 0.0884,
+          "xRatio": 0.6871,
+          "stemW": 0.1568,
+          "contrast": 1.2819,
+          "serif": 1.0697,
+          "densTall": 0.4412,
+          "densX": 0.5267,
+          "weight": 0.4412
+        },
+        "widthClass": "normal",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "rule-roles",
+      "kind": "chrome",
+      "note": "thin iron hairlines under the first row of roles, one under each column",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.4284,
+        "y": 0.7891,
+        "w": 0.5273,
+        "h": 0.0127
+      },
+      "px": {
+        "x": 658,
+        "y": 808,
+        "w": 810,
+        "h": 13
+      },
+      "aspect": 62.3077,
+      "palette": [
+        {
+          "hex": "#d9d7c8",
+          "coverage": 0.8193
+        },
+        {
+          "hex": "#6c5a4c",
+          "coverage": 0.1793
+        },
+        {
+          "hex": "#908068",
+          "coverage": 0.0015
+        }
+      ],
+      "detail": {
+        "energy": 12.7721
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "role-3",
+      "kind": "text",
+      "note": "role name in serif over a two-line sans description: Operating room and recovery nurses / Ensure safe, compassionate care before, during and after surgery.",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.4284,
+        "y": 0.8164,
+        "w": 0.2383,
+        "h": 0.0918
+      },
+      "px": {
+        "x": 658,
+        "y": 836,
+        "w": 366,
+        "h": 94
+      },
+      "aspect": 3.8936,
+      "palette": [
+        {
+          "hex": "#dbd7c9",
+          "coverage": 0.9038
+        },
+        {
+          "hex": "#b6ada4",
+          "coverage": 0.0336
+        },
+        {
+          "hex": "#534b46",
+          "coverage": 0.0233
+        },
+        {
+          "hex": "#948f84",
+          "coverage": 0.0223
+        },
+        {
+          "hex": "#7b7067",
+          "coverage": 0.017
+        }
+      ],
+      "detail": {
+        "energy": 41.4229
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 3,
+          "glyphs": 76,
+          "capHeightPx": 14.5,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6136,
+          "advTall": 0.6518,
+          "advX": 0.6136,
+          "gap": 0.115,
+          "xRatio": 0.6795,
+          "stemW": 0.1517,
+          "contrast": 1.2337,
+          "serif": 0.5264,
+          "densTall": 0.4446,
+          "densX": 0.5233,
+          "weight": 0.4446
+        },
+        "widthClass": "normal",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "role-4",
+      "kind": "text",
+      "note": "role name in serif over a two-line sans description: Surgical technologists / Keep the surgical team prepared and focused.",
+      "grid": null,
+      "snap": false,
+      "box": {
+        "x": 0.7096,
+        "y": 0.8164,
+        "w": 0.2526,
+        "h": 0.0918
+      },
+      "px": {
+        "x": 1090,
+        "y": 836,
+        "w": 388,
+        "h": 94
+      },
+      "aspect": 4.1277,
+      "palette": [
+        {
+          "hex": "#dcd8c9",
+          "coverage": 0.9284
+        },
+        {
+          "hex": "#afa79c",
+          "coverage": 0.0264
+        },
+        {
+          "hex": "#5c544e",
+          "coverage": 0.0189
+        },
+        {
+          "hex": "#837c71",
+          "coverage": 0.0155
+        },
+        {
+          "hex": "#372414",
+          "coverage": 0.0107
+        }
+      ],
+      "detail": {
+        "energy": 28.747
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 3,
+          "glyphs": 57,
+          "capHeightPx": 14.3,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6179,
+          "advTall": 0.5211,
+          "advX": 0.6179,
+          "gap": 0.0882,
+          "xRatio": 0.6858,
+          "stemW": 0.1567,
+          "contrast": 1.2696,
+          "serif": 0.7219,
+          "densTall": 0.4657,
+          "densX": 0.5265,
+          "weight": 0.4657
+        },
+        "widthClass": "normal",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "ground",
+      "kind": "texture",
+      "note": "clean patch of the pale buff salt-glazed stoneware page ground with fine orange-peel texture, no ink",
+      "grid": "J9:J9",
+      "box": {
+        "x": 0.9,
+        "y": 0.9,
+        "w": 0.1,
+        "h": 0.1
+      },
+      "px": {
+        "x": 1382,
+        "y": 922,
+        "w": 154,
+        "h": 102
+      },
+      "aspect": 1.5098,
+      "palette": [
+        {
+          "hex": "#dbd8c9",
+          "coverage": 1
+        }
+      ],
+      "detail": {
+        "energy": 3.875
+      },
+      "medium": "raster",
+      "plate": "assets/plates/ground.png",
+      "text": null
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Get Help page: choose a layout",
+  "question": "Three layouts for the Get Help page, the page for people asking for themselves or their child. All three use the home page's look. Pick one, add a note to steer it, or re-roll for three different layouts. Volunteer and Give follow on this same page.",
+  "options": [
+    {
+      "id": "promise-band",
+      "label": "Promise band",
+      "kicker": "THE ROLL",
+      "thesis": "Open on three plain promises set like the mission band, then answer the practical questions in the home page's two-column layout.",
+      "palette": ["#d8d1c4", "#3a1f0e", "#0b3d9c", "#4f3a2a"],
+      "materials": ["stoneware ground", "brushed cobalt dash", "hairline splits"],
+      "viewport": "Title, lede and Ask for help at left; below them a centered band of three promises: free or reduced cost, open to everyone, kept private.",
+      "risk": "The most familiar of the three; it borrows the home page's rhythm instead of giving this page a shape of its own.",
+      "comp": ".impeccable/mocks/decision/get-help-promise-band.png"
+    },
+    {
+      "id": "letter",
+      "label": "The letter",
+      "thesis": "The page is a letter to someone unsure about asking, with the practical facts beside it as margin notes.",
+      "palette": ["#d8d1c4", "#3a1f0e", "#0b3d9c", "#4f3a2a"],
+      "materials": ["serif letter", "margin notes", "brushed cobalt dash"],
+      "viewport": "A centered letter in the serif voice; margin notes for cost, privacy and what to have ready; Ask for help closes the letter.",
+      "risk": "Prose asks for patience; someone scanning for cost has to find it in the margin.",
+      "comp": ".impeccable/mocks/decision/get-help-letter.png"
+    },
+    {
+      "id": "intake-reference",
+      "label": "Intake reference",
+      "thesis": "Everything an applicant needs in one scannable reference, with a jump list and the action always in reach.",
+      "palette": ["#d8d1c4", "#3a1f0e", "#0b3d9c", "#4f3a2a"],
+      "materials": ["sticky jump list", "hairline sections", "brushed swatch"],
+      "viewport": "Title across the top; a sticky jump list at left (Who can ask, Cost, What to have ready, Privacy, Questions) with Ask for help under it; the answers run in the wide right column.",
+      "risk": "Efficient but plain; it can feel more like a help center than a ministry.",
+      "comp": ".impeccable/mocks/decision/get-help-intake-reference.png"
+    }
+  ],
+  "reroll": true,
+  "steer": true,
+  "followup": true,
+  "buildPath": { "value": "comp", "toggle": true }
+}

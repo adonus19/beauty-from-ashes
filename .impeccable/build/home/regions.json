@@ -1,0 +1,213 @@
+{
+  "regions": [
+    {
+      "id": "wordmark",
+      "kind": "text",
+      "note": "placeholder wordmark: 'Beauty From Ashes' in iron-brown serif over 'SURGICAL MINISTRY' in small spaced capitals",
+      "box": {
+        "x": 0.04036,
+        "y": 0.01562,
+        "w": 0.19922,
+        "h": 0.06641
+      },
+      "snap": false
+    },
+    {
+      "id": "nav-links",
+      "kind": "control",
+      "note": "five nav links in small iron-brown serif: Our Mission, How We Help, Stories, Get Involved, Contact",
+      "box": {
+        "x": 0.33333,
+        "y": 0.03516,
+        "w": 0.40365,
+        "h": 0.02539
+      },
+      "snap": false
+    },
+    {
+      "id": "lang-switch",
+      "kind": "control",
+      "note": "EN | ES language switch in tiny spaced capitals",
+      "box": {
+        "x": 0.82682,
+        "y": 0.03906,
+        "w": 0.04557,
+        "h": 0.01758
+      },
+      "snap": false
+    },
+    {
+      "id": "give-brush",
+      "kind": "plate",
+      "box": {
+        "x": 0.89193,
+        "y": 0.01953,
+        "w": 0.07292,
+        "h": 0.05469
+      },
+      "note": "cobalt-blue hand-brushed swatch with rough dry-brush edges, the ground of the Give button"
+    },
+    {
+      "id": "give-button",
+      "kind": "control",
+      "box": {
+        "x": 0.89583,
+        "y": 0.02539,
+        "w": 0.0651,
+        "h": 0.04395
+      },
+      "note": "Give label in white serif, centered on the cobalt brush swatch; code draws the label, hit area and focus ring"
+    },
+    {
+      "id": "nav-rule",
+      "kind": "plate",
+      "box": {
+        "x": 0.0,
+        "y": 0.08398,
+        "w": 1.0,
+        "h": 0.01562
+      },
+      "bleed": true,
+      "note": "hand-brushed cobalt-blue line running the full width under the nav bar, dry-brush texture at its edges"
+    },
+    {
+      "id": "eyebrow",
+      "kind": "text",
+      "note": "eyebrow in small spaced capitals: A CHRISTIAN SURGICAL MINISTRY \u00b7 CHARLOTTE & FORT MILL",
+      "box": {
+        "x": 0.04688,
+        "y": 0.18555,
+        "w": 0.35807,
+        "h": 0.01758
+      },
+      "snap": false
+    },
+    {
+      "id": "headline-1",
+      "kind": "text",
+      "box": {
+        "x": 0.04427,
+        "y": 0.22656,
+        "w": 0.34635,
+        "h": 0.08203
+      },
+      "snap": false,
+      "note": "h1 line one, large iron-brown serif, mixed case: Restoring more"
+    },
+    {
+      "id": "headline-2",
+      "kind": "text",
+      "box": {
+        "x": 0.04427,
+        "y": 0.30664,
+        "w": 0.38542,
+        "h": 0.07227
+      },
+      "snap": false,
+      "note": "h1 line two, same serif: than what can be"
+    },
+    {
+      "id": "headline-3",
+      "kind": "text",
+      "box": {
+        "x": 0.04427,
+        "y": 0.39062,
+        "w": 0.1237,
+        "h": 0.06445
+      },
+      "snap": false,
+      "note": "h1 line three, same serif: seen."
+    },
+    {
+      "id": "subhead",
+      "kind": "text",
+      "note": "paragraph in humanist sans, three lines: Reconstructive plastic surgery, free or at reduced cost, for children and adults whose need exceeds their means. Open to everyone.",
+      "box": {
+        "x": 0.04688,
+        "y": 0.48242,
+        "w": 0.36198,
+        "h": 0.09375
+      },
+      "snap": false
+    },
+    {
+      "id": "ask-brush",
+      "kind": "plate",
+      "box": {
+        "x": 0.04297,
+        "y": 0.60156,
+        "w": 0.15495,
+        "h": 0.07617
+      },
+      "note": "cobalt-blue hand-brushed swatch with rough dry-brush edges, the ground of the Ask for help button"
+    },
+    {
+      "id": "ask-button",
+      "kind": "control",
+      "box": {
+        "x": 0.04753,
+        "y": 0.6084,
+        "w": 0.14583,
+        "h": 0.06152
+      },
+      "note": "Ask for help label in white serif, centered on the cobalt brush swatch; code draws the label, hit area and focus ring"
+    },
+    {
+      "id": "refer-button",
+      "kind": "control",
+      "grid": "C6:D6",
+      "note": "secondary action: Refer someone, thin iron-brown outline with slightly uneven corners and an iron-brown serif label",
+      "codeDrawn": true
+    },
+    {
+      "id": "jar",
+      "kind": "plate",
+      "grid": "F1:J7",
+      "bleed": true,
+      "note": "photograph: large hand-thrown Carolina stoneware jar with amber and olive-green wood-ash glaze drips from the shoulder and a loose cobalt brushstroke on its belly, soft side light, on a warm stone surface against a plain buff wall, soft shadow to the right"
+    },
+    {
+      "id": "mission-eyebrow",
+      "kind": "text",
+      "note": "OUR MISSION in small spaced capitals, centered",
+      "box": {
+        "x": 0.44401,
+        "y": 0.75586,
+        "w": 0.11458,
+        "h": 0.01953
+      },
+      "snap": false
+    },
+    {
+      "id": "mission-dash",
+      "kind": "plate",
+      "box": {
+        "x": 0.45964,
+        "y": 0.7832,
+        "w": 0.08073,
+        "h": 0.01562
+      },
+      "note": "short hand-brushed cobalt dash centered under OUR MISSION"
+    },
+    {
+      "id": "mission-quote",
+      "kind": "text",
+      "note": "mission statement as a centered italic iron-brown serif quotation on three lines, verbatim from the mission card",
+      "box": {
+        "x": 0.17969,
+        "y": 0.8125,
+        "w": 0.65885,
+        "h": 0.14258
+      },
+      "snap": false
+    },
+    {
+      "id": "ground",
+      "kind": "texture",
+      "grid": "A8:A8",
+      "note": "clean patch of the pale buff salt-glazed stoneware page ground with fine orange-peel texture, no ink"
+    }
+  ],
+  "allowUncovered": true,
+  "uncoveredNote": "C0, H0, E3, E7 hold ink of box-defined regions (wordmark, nav-links, headline, mission-eyebrow/mission-dash); verified by crop."
+}

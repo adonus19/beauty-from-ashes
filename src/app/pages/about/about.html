@@ -1,0 +1,141 @@
+@let p = page();
+@let h = home();
+@let s = site();
+
+<header class="page-head">
+  <h1 class="page-head__title">{{ p.title }}</h1>
+  <p class="page-head__lede">{{ p.lede }}</p>
+</header>
+
+<section class="split about-name" aria-labelledby="name-title">
+  <figure class="about-name__jar">
+    <img
+      src="assets/plates/jar-860.webp"
+      width="860"
+      height="806"
+      [alt]="p.name.jarAlt"
+      loading="lazy"
+      decoding="async"
+    />
+  </figure>
+  <div class="about-name__text">
+    <h2 id="name-title" class="section-title">{{ p.name.title }}</h2>
+    <figure class="about-name__verse">
+      <blockquote>
+        <p>“{{ s.footer.scripture }}”</p>
+      </blockquote>
+      <figcaption>{{ s.footer.scriptureRef }}</figcaption>
+    </figure>
+    <p class="split__lede">{{ p.name.text }}</p>
+    <p class="about-name__jar-note">{{ p.name.jar }}</p>
+  </div>
+</section>
+
+<section class="about-card" aria-labelledby="card-title">
+  <h2 id="card-title" class="section-title about-card__title">{{ p.card.title }}</h2>
+
+  <div class="about-card__block">
+    <h3 class="about-card__label label">{{ h.mission.label }}</h3>
+    <span class="about-card__dash" aria-hidden="true"></span>
+    <p class="about-card__statement about-card__statement--italic">“{{ h.mission.text }}”</p>
+  </div>
+
+  <div class="about-card__block">
+    <h3 class="about-card__label label">{{ h.involved.label }}</h3>
+    <span class="about-card__dash" aria-hidden="true"></span>
+    <p class="about-card__statement">{{ h.involved.vision }}</p>
+  </div>
+
+  <div class="about-card__block">
+    <h3 class="about-card__label label">{{ h.values.label }}</h3>
+    <span class="about-card__dash" aria-hidden="true"></span>
+    <p class="about-card__statement">{{ h.values.belief }}</p>
+    <p class="about-card__therefore label">{{ h.values.therefore }}</p>
+    <ul class="about-card__values" role="list">
+      @for (value of h.values.items; track value.name) {
+        <li>
+          <strong class="about-card__value">{{ value.name }}</strong>
+          {{ value.line }}
+        </li>
+      }
+    </ul>
+  </div>
+  <p class="about-card__note">{{ p.card.note }}</p>
+</section>
+
+<section class="split" aria-labelledby="faith-title">
+  <div class="split__intro">
+    <h2 id="faith-title" class="section-title">{{ p.faith.title }}</h2>
+  </div>
+  <p class="split__lede split__lede--wide">
+    {{ p.faith.text }}
+    @if (p.faith.placeholder) {
+      <bfa-placeholder-tag />
+    }
+  </p>
+</section>
+
+<section class="split" aria-labelledby="leaders-title">
+  <div class="split__intro">
+    <h2 id="leaders-title" class="section-title">{{ p.leaders.title }}</h2>
+    <p class="split__lede">{{ p.leaders.intro }}</p>
+  </div>
+  <div>
+    <ul class="roles__list" role="list">
+      @for (person of p.leaders.people; track person.role) {
+        <li class="role">
+          <h3 class="role__name">{{ person.name }}</h3>
+          <p class="role__text">{{ person.role }}</p>
+        </li>
+      }
+    </ul>
+    <p class="split__note">{{ p.leaders.placeholder }} <bfa-placeholder-tag /></p>
+  </div>
+</section>
+
+<section class="split" aria-labelledby="board-title">
+  <div class="split__intro">
+    <h2 id="board-title" class="section-title">{{ p.board.title }}</h2>
+  </div>
+  <p class="split__lede split__lede--wide">
+    {{ p.board.text }}
+    @if (p.board.placeholder) {
+      <bfa-placeholder-tag />
+    }
+  </p>
+</section>
+
+<section class="split" aria-labelledby="accountability-title">
+  <div class="split__intro">
+    <h2 id="accountability-title" class="section-title">{{ p.accountability.title }}</h2>
+  </div>
+  <div>
+    <ul class="asks__list" role="list">
+      @for (item of p.accountability.items; track item.text) {
+        <li>
+          {{ item.text }}
+          @if (item.placeholder) {
+            <bfa-placeholder-tag />
+          }
+        </li>
+      }
+    </ul>
+    <a class="split__link text-link" [routerLink]="locale.link(p.accountability.link.path)">{{
+      p.accountability.link.label
+    }}</a>
+    <p class="placeholder-note">{{ s.placeholder.note }}</p>
+  </div>
+</section>
+
+<section class="closing" aria-labelledby="closing-title">
+  <h2 id="closing-title" class="closing__title">{{ p.closing.title }}</h2>
+  <div class="closing__actions">
+    <a class="btn-brush" [routerLink]="locale.link(p.closing.primary.path)">{{
+      p.closing.primary.label
+    }}</a>
+  </div>
+  <p class="closing__call">
+    {{ p.closing.callPrefix }}
+    <a class="brush-link" [href]="s.contact.phoneHref">{{ s.contact.phone }}</a>
+  </p>
+</section>

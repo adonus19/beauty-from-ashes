@@ -1,0 +1,1987 @@
+{
+  "site": {
+    "name": "Beauty From Ashes",
+    "descriptor": "Surgical Ministry",
+    "homeLabel": "Beauty From Ashes Surgical Ministry, home",
+    "skipLink": "Skip to main content",
+    "navLabel": "Main",
+    "menu": {
+      "open": "Menu",
+      "close": "Close"
+    },
+    "nav": [
+      {
+        "label": "Get Help",
+        "path": "get-help"
+      },
+      {
+        "label": "Volunteer",
+        "path": "volunteer"
+      },
+      {
+        "label": "Partner",
+        "path": "partner"
+      },
+      {
+        "label": "Stories",
+        "path": "stories"
+      },
+      {
+        "label": "About",
+        "path": "about"
+      }
+    ],
+    "give": {
+      "label": "Give",
+      "path": "give"
+    },
+    "language": {
+      "label": "Language",
+      "en": {
+        "short": "EN",
+        "name": "English"
+      },
+      "es": {
+        "short": "ES",
+        "name": "Español"
+      }
+    },
+    "contact": {
+      "phone": "(704) 555-0100",
+      "phoneHref": "tel:+17045550100",
+      "email": "info@example.org",
+      "area": "Serving the Charlotte, NC and Fort Mill, SC area",
+      "placeholderNote": "Phone and email shown are placeholders until the ministry's details are ready."
+    },
+    "footer": {
+      "about": "A Christian surgical ministry offering reconstructive plastic surgery, free or at reduced cost, to children and adults whose need exceeds their means.",
+      "status": "Beauty From Ashes Surgical Ministry is a 501(c)(3) nonprofit organization.",
+      "jar": "Beauty for ashes: Carolina potters glaze stoneware with wood ash. In the heat of the kiln, the ash turns to glass.",
+      "groups": [
+        {
+          "title": "Get help",
+          "links": [
+            {
+              "label": "Get help",
+              "path": "get-help"
+            },
+            {
+              "label": "Ask for help",
+              "path": "ask-for-help"
+            },
+            {
+              "label": "Refer someone",
+              "path": "refer"
+            }
+          ]
+        },
+        {
+          "title": "Take part",
+          "links": [
+            {
+              "label": "Volunteer",
+              "path": "volunteer"
+            },
+            {
+              "label": "Partner",
+              "path": "partner"
+            },
+            {
+              "label": "Give",
+              "path": "give"
+            }
+          ]
+        },
+        {
+          "title": "The ministry",
+          "links": [
+            {
+              "label": "About",
+              "path": "about"
+            },
+            {
+              "label": "Stories",
+              "path": "stories"
+            },
+            {
+              "label": "Contact",
+              "path": "contact"
+            }
+          ]
+        }
+      ],
+      "contactTitle": "Contact",
+      "scripture": "To give them beauty for ashes, the oil of joy for mourning, the garment of praise for the spirit of heaviness.",
+      "scriptureRef": "Isaiah 61:3, NKJV",
+      "copyright": "© 2026 Beauty From Ashes Surgical Ministry",
+      "legal": [
+        {
+          "label": "Privacy",
+          "path": "privacy"
+        },
+        {
+          "label": "Accessibility",
+          "path": "accessibility"
+        }
+      ],
+      "closing": "Soli Deo Gloria"
+    },
+    "placeholder": {
+      "label": "Placeholder",
+      "note": "Items marked Placeholder are best guesses that the ministry will confirm or replace before launch."
+    },
+    "forms": {
+      "requiredNote": "Every question is required unless it says optional.",
+      "optional": "optional",
+      "demoTitle": "Demo form",
+      "demoNotice": "Nothing you enter here is sent or saved. Before launch, the ministry will connect a secure, HIPAA-compliant form service.",
+      "summaryTitle": "Please check these answers",
+      "summaryIntro": "Some answers are missing or need a change:",
+      "yes": "Yes",
+      "no": "No",
+      "errorPrefix": "Error:"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Restoring more than what can be seen.",
+      "lede": "Reconstructive plastic surgery, free or at reduced cost, for children and adults whose need exceeds their means.",
+      "open": "Open to everyone.",
+      "primary": {
+        "label": "Ask for help",
+        "path": "ask-for-help"
+      },
+      "secondary": {
+        "label": "Refer someone",
+        "path": "refer"
+      },
+      "place": "A Christian surgical ministry serving Charlotte and Fort Mill.",
+      "imageAlt": "A hand-thrown Carolina stoneware jar, its shoulder streaked with amber and green wood-ash glaze and its belly marked with one stroke of cobalt blue."
+    },
+    "mission": {
+      "label": "Our Mission",
+      "text": "To glorify God by serving every patient with Christlike compassion and surgical excellence, fostering healing that reaches beyond the physical and opens the way for spiritual transformation.",
+      "lines": [
+        "To glorify God by serving every patient with Christlike compassion",
+        "and surgical excellence, fostering healing that reaches beyond",
+        "the physical and opens the way for spiritual transformation."
+      ]
+    },
+    "values": {
+      "label": "Our Core Values",
+      "belief": "We believe every person is created in the image of God, and that faithful stewardship, compassionate service, and excellence honor Him and inspire those around us.",
+      "therefore": "Therefore",
+      "items": [
+        {
+          "name": "We Listen.",
+          "line": "We give every patient the time their story deserves."
+        },
+        {
+          "name": "We Protect.",
+          "line": "We hold patient safety as our highest surgical standard."
+        },
+        {
+          "name": "We Pray.",
+          "line": "We pray with every patient who welcomes it."
+        },
+        {
+          "name": "We Accompany.",
+          "line": "We walk with every patient long after surgery ends."
+        },
+        {
+          "name": "We Honor.",
+          "line": "We honor the sacrifice behind every patient's decision."
+        },
+        {
+          "name": "We Serve.",
+          "line": "We extend surgical care where need exceeds means."
+        }
+      ]
+    },
+    "process": {
+      "title": "What happens when you ask",
+      "intro": "You can ask for yourself, for your child, or for someone you care about. Here is what happens after you reach out.",
+      "steps": [
+        {
+          "name": "Submit a request",
+          "text": "Tell us what you are living with and how it affects your daily life. You can add photos if you like."
+        },
+        {
+          "name": "Initial review",
+          "text": "Our team reads every request and considers whether surgery could help and whether it fits what our ministry can do."
+        },
+        {
+          "name": "Conversation",
+          "text": "If we may be able to help, we will contact you to learn more and answer your questions."
+        },
+        {
+          "name": "Decision",
+          "text": "We consider each request prayerfully, weighing medical need against the resources we have."
+        },
+        {
+          "name": "Care and support",
+          "text": "If we move forward together, we stay with you through surgery and recovery, and long after it ends."
+        }
+      ],
+      "assurance": "You will never be pressured, and what you share stays confidential. You can ask us questions at any point.",
+      "action": {
+        "label": "Ask for help",
+        "path": "ask-for-help"
+      },
+      "draftNote": "These steps are a draft from the ministry's founding notes and will be confirmed before launch."
+    },
+    "conditions": {
+      "title": "Who we help",
+      "intro": "Children and adults in the Charlotte and Fort Mill area who need reconstructive surgery they cannot afford. Care is free or offered at reduced cost.",
+      "faith": "You do not need to share our faith to receive care. The ministry is open to everyone.",
+      "items": [
+        {
+          "name": "Injuries from accidents",
+          "text": "Reconstruction after an accident or injury, to restore function and appearance."
+        },
+        {
+          "name": "Conditions present from birth",
+          "text": "Surgery for differences a person was born with, to improve function and quality of life."
+        },
+        {
+          "name": "Scars and burns",
+          "text": "Treatment for scarring or burn injuries that limit movement or change how you look."
+        },
+        {
+          "name": "Reconstruction after cancer",
+          "text": "Restoring form after cancer surgery or related treatment."
+        },
+        {
+          "name": "Restorative care",
+          "text": "Correcting physical differences that make daily life harder."
+        },
+        {
+          "name": "Something else",
+          "text": "If your need is not listed here, ask anyway. We consider each request on its own."
+        }
+      ],
+      "action": {
+        "label": "Who can ask for help",
+        "path": "get-help"
+      }
+    },
+    "story": {
+      "title": "Stories",
+      "sampleLabel": "Sample story, not a real patient",
+      "quote": "I hadn't worn short sleeves in eleven years. The summer after my last appointment, I wore them to church.",
+      "attribution": "Sample patient, Rock Hill",
+      "note": "Real stories will appear here, each one shared with the patient's written permission.",
+      "action": {
+        "label": "Read stories",
+        "path": "stories"
+      }
+    },
+    "involved": {
+      "label": "Our Vision",
+      "vision": "To inspire a community of gifted professionals to use what God has entrusted to them to serve others, bless those in need, and strengthen their communities.",
+      "glazeAlt": "",
+      "paths": [
+        {
+          "name": "Medical professionals",
+          "text": "Surgeons, anesthesiologists, nurses and other clinicians can give their skills to patients who could not otherwise get care.",
+          "label": "Volunteer your skills",
+          "path": "volunteer",
+          "fragment": ""
+        },
+        {
+          "name": "Churches and partners",
+          "text": "Churches, businesses and organizations can partner with us, refer people who need help, and share the cost of care.",
+          "label": "Partner with us",
+          "path": "partner",
+          "fragment": ""
+        },
+        {
+          "name": "Prayer",
+          "text": "Pray for patients and their families, and for the people who care for them.",
+          "label": "Pray with us",
+          "path": "volunteer",
+          "fragment": "prayer"
+        },
+        {
+          "name": "Giving",
+          "text": "Give once or every month, or help pay for a specific surgery.",
+          "label": "Give",
+          "path": "give",
+          "fragment": ""
+        }
+      ]
+    },
+    "closing": {
+      "title": "Ask for help, or tell us about someone who needs it.",
+      "primary": {
+        "label": "Ask for help",
+        "path": "ask-for-help"
+      },
+      "secondary": {
+        "label": "Refer someone",
+        "path": "refer"
+      },
+      "callPrefix": "Questions first? Call"
+    }
+  },
+  "getHelp": {
+    "title": "Help with surgery you can’t afford.",
+    "lede": "Free or reduced-cost reconstructive surgery for children and adults in the Charlotte and Fort Mill area. Open to everyone.",
+    "jumpLabel": "On this page",
+    "action": {
+      "label": "Ask for help",
+      "path": "ask-for-help"
+    },
+    "callPrefix": "Or call",
+    "who": {
+      "id": "who-can-ask",
+      "title": "Who can ask",
+      "items": [
+        {
+          "text": "Adults asking for themselves.",
+          "placeholder": false
+        },
+        {
+          "text": "Parents or guardians asking for a child under 18.",
+          "placeholder": false
+        },
+        {
+          "text": "People of any faith, or none.",
+          "placeholder": false
+        }
+      ]
+    },
+    "cost": {
+      "id": "what-it-costs",
+      "title": "What it costs",
+      "paragraphs": [
+        {
+          "text": "Care is free or offered at a reduced cost you can manage. We talk through any cost with you before anything is decided.",
+          "placeholder": true
+        }
+      ]
+    },
+    "ready": {
+      "id": "what-to-have-ready",
+      "title": "What to have ready",
+      "items": [
+        {
+          "text": "A few clear photos of the area",
+          "placeholder": false
+        },
+        {
+          "text": "A short description of how it affects your life",
+          "placeholder": false
+        },
+        {
+          "text": "A safe way to reach you",
+          "placeholder": false
+        }
+      ]
+    },
+    "privacy": {
+      "id": "your-privacy",
+      "title": "Your privacy",
+      "paragraphs": [
+        {
+          "text": "What you send us is health information, and we protect it that way. Only the ministry’s care team reads requests and sees photos. We never sell your information, and we use your photos only to review your request.",
+          "placeholder": true
+        },
+        {
+          "text": "There are no advertising or tracking tools on the pages where you ask for help.",
+          "placeholder": false
+        }
+      ],
+      "link": {
+        "label": "Read our privacy notice",
+        "path": "privacy"
+      }
+    },
+    "questions": {
+      "id": "questions",
+      "title": "Questions people ask",
+      "items": [
+        {
+          "q": "What conditions do you treat?",
+          "a": "Injuries from accidents, conditions present from birth, scars and burns, reconstruction after cancer, and other restorative needs. The ministry’s care is reconstructive and restorative, so we don’t offer cosmetic procedures. If you aren’t sure your need fits, ask anyway.",
+          "placeholder": false
+        },
+        {
+          "q": "Do I need insurance, a referral or medical records?",
+          "a": "No. If you have insurance, tell us, because it may help us plan your care. Records are optional, and the names of doctors you’ve seen help too.",
+          "placeholder": true
+        },
+        {
+          "q": "Will you pray with me?",
+          "a": "Only if you’d like. We offer prayer to every patient, and saying no never affects your care.",
+          "placeholder": false
+        },
+        {
+          "q": "Who decides whether I can receive care?",
+          "a": "Our team considers each request prayerfully, weighing medical need, the resources we have, and what our volunteer surgeons are able to do. If you live outside the Charlotte and Fort Mill area, ask anyway.",
+          "placeholder": true
+        },
+        {
+          "q": "How long until I hear back?",
+          "a": "We let you know we’ve received your request, and we aim to reply within 10 business days.",
+          "placeholder": true
+        },
+        {
+          "q": "What if you can’t help?",
+          "a": "We’ll tell you plainly, and where we can, we’ll point you toward other care.",
+          "placeholder": true
+        },
+        {
+          "q": "Can I ask by phone, or in Spanish?",
+          "a": "Yes to both. Call us and we’ll go through the request with you, in English or Spanish. A Spanish version of this site is on the way.",
+          "placeholder": true
+        }
+      ]
+    },
+    "closing": {
+      "title": "You can start your request now.",
+      "primary": {
+        "label": "Ask for help",
+        "path": "ask-for-help"
+      },
+      "secondary": {
+        "label": "Refer someone",
+        "path": "refer"
+      },
+      "callPrefix": "Rather talk first? Call"
+    }
+  },
+  "askForHelp": {
+    "title": "Ask for help",
+    "lede": "Tell us about the person who needs care. It costs nothing to ask, and it doesn’t commit you to anything.",
+    "referNote": "Asking for another adult?",
+    "referLink": {
+      "label": "Refer them instead",
+      "path": "refer"
+    },
+    "sections": {
+      "who": "Who is this request for?",
+      "patient": "About the patient",
+      "guardian": "About you",
+      "contact": "How can we reach you?",
+      "home": "Where do you live?",
+      "condition": "About the condition",
+      "photos": "Photos",
+      "more": "A little more",
+      "consent": "Before you send"
+    },
+    "fields": {
+      "forWhom": {
+        "label": "Who is this request for?",
+        "options": [
+          {
+            "value": "self",
+            "label": "Myself"
+          },
+          {
+            "value": "child",
+            "label": "My child, or a child in my care"
+          }
+        ]
+      },
+      "patientFirst": {
+        "label": "First name"
+      },
+      "patientLast": {
+        "label": "Last name"
+      },
+      "patientBirth": {
+        "label": "Date of birth",
+        "hint": "For example, 04/17/1986"
+      },
+      "guardianFirst": {
+        "label": "Your first name"
+      },
+      "guardianLast": {
+        "label": "Your last name"
+      },
+      "guardianRelation": {
+        "label": "Your relationship to the child",
+        "options": [
+          {
+            "value": "",
+            "label": "Choose one"
+          },
+          {
+            "value": "parent",
+            "label": "Parent"
+          },
+          {
+            "value": "guardian",
+            "label": "Legal guardian"
+          },
+          {
+            "value": "other",
+            "label": "Other caregiver"
+          }
+        ]
+      },
+      "phone": {
+        "label": "Phone number"
+      },
+      "email": {
+        "label": "Email"
+      },
+      "contactMethod": {
+        "label": "Best way to reach you",
+        "options": [
+          {
+            "value": "call",
+            "label": "Phone call"
+          },
+          {
+            "value": "text",
+            "label": "Text message"
+          },
+          {
+            "value": "email",
+            "label": "Email"
+          }
+        ]
+      },
+      "safeMessage": {
+        "label": "Is it safe for us to leave a message?",
+        "hint": "If it isn’t, we won’t leave voicemail or send texts that mention the ministry."
+      },
+      "language": {
+        "label": "Language you’d like us to use",
+        "options": [
+          {
+            "value": "en",
+            "label": "English"
+          },
+          {
+            "value": "es",
+            "label": "Spanish"
+          },
+          {
+            "value": "other",
+            "label": "Another language"
+          }
+        ]
+      },
+      "city": {
+        "label": "City"
+      },
+      "state": {
+        "label": "State",
+        "options": [
+          {
+            "value": "",
+            "label": "Choose one"
+          },
+          {
+            "value": "NC",
+            "label": "North Carolina"
+          },
+          {
+            "value": "SC",
+            "label": "South Carolina"
+          },
+          {
+            "value": "other",
+            "label": "Another state"
+          }
+        ]
+      },
+      "zip": {
+        "label": "ZIP code"
+      },
+      "careType": {
+        "label": "What kind of care are you asking about?",
+        "options": [
+          {
+            "value": "",
+            "label": "Choose one"
+          },
+          {
+            "value": "Injuries from accidents",
+            "label": "Injuries from accidents"
+          },
+          {
+            "value": "Conditions present from birth",
+            "label": "Conditions present from birth"
+          },
+          {
+            "value": "Scars and burns",
+            "label": "Scars and burns"
+          },
+          {
+            "value": "Reconstruction after cancer",
+            "label": "Reconstruction after cancer"
+          },
+          {
+            "value": "Restorative care",
+            "label": "Restorative care"
+          },
+          {
+            "value": "Something else",
+            "label": "Something else"
+          }
+        ]
+      },
+      "description": {
+        "label": "Describe the condition",
+        "hint": "What it is, where it is, and anything doctors have told you."
+      },
+      "howLong": {
+        "label": "How long has the patient had it?"
+      },
+      "dailyLife": {
+        "label": "How does it affect daily life?",
+        "hint": "Work, school, movement, pain, or how it feels to be seen."
+      },
+      "photos": {
+        "label": "Add photos",
+        "button": "Choose photos",
+        "hint": "Add at least one clear photo of the area, up to 6. Take them in daylight, without filters. Only our care team will see them.",
+        "remove": "Remove",
+        "count": "photos added",
+        "tooBig": "is larger than 10 MB, so it wasn’t added.",
+        "notImage": "isn’t a photo, so it wasn’t added.",
+        "tooMany": "You can add up to 6 photos."
+      },
+      "insurance": {
+        "label": "Insurance",
+        "options": [
+          {
+            "value": "",
+            "label": "Choose one"
+          },
+          {
+            "value": "none",
+            "label": "No insurance"
+          },
+          {
+            "value": "medicaid",
+            "label": "Medicaid"
+          },
+          {
+            "value": "medicare",
+            "label": "Medicare"
+          },
+          {
+            "value": "private",
+            "label": "Private insurance"
+          },
+          {
+            "value": "unsure",
+            "label": "Not sure"
+          }
+        ]
+      },
+      "heardFrom": {
+        "label": "How did you hear about us?"
+      },
+      "prayer": {
+        "label": "Would you like us to pray for you?",
+        "hint": "Prayer is offered, never required, and your answer doesn’t affect your request."
+      },
+      "notes": {
+        "label": "Anything else you’d like us to know?"
+      },
+      "consentContact": {
+        "label": "I understand that asking doesn’t guarantee care, and I agree that Beauty From Ashes Surgical Ministry may contact me about this request."
+      },
+      "consentAuthority": {
+        "label": "I am the patient, or the patient’s parent or legal guardian."
+      }
+    },
+    "errors": {
+      "forWhom": "Choose who this request is for.",
+      "patientFirst": "Enter the patient’s first name.",
+      "patientLast": "Enter the patient’s last name.",
+      "patientBirth": "Enter the date of birth as MM/DD/YYYY.",
+      "guardianFirst": "Enter your first name.",
+      "guardianLast": "Enter your last name.",
+      "guardianRelation": "Choose your relationship to the child.",
+      "phone": "Enter a phone number with area code, like (704) 555-0100.",
+      "email": "Enter an email address like name@example.com, or leave it blank.",
+      "emailNeeded": "Enter an email address, or choose another way to reach you.",
+      "contactMethod": "Choose the best way to reach you.",
+      "safeMessage": "Tell us whether it’s safe to leave a message.",
+      "city": "Enter your city.",
+      "state": "Choose your state.",
+      "careType": "Choose the kind of care you’re asking about.",
+      "description": "Describe the condition.",
+      "dailyLife": "Tell us how it affects daily life.",
+      "photos": "Add at least one photo.",
+      "consentContact": "Check this box so we can contact you.",
+      "consentAuthority": "Check this box to confirm you can ask for this patient."
+    },
+    "submit": "Send my request",
+    "aside": {
+      "title": "What happens next",
+      "note": "These steps are a draft from the ministry’s founding notes and will be confirmed before launch.",
+      "helpTitle": "Need help with this form?",
+      "helpText": "Call us and we’ll go through it with you.",
+      "privacyText": "What you send is protected health information. Only the ministry’s care team will see it.",
+      "privacyLink": {
+        "label": "Our privacy notice",
+        "path": "privacy"
+      }
+    },
+    "sent": {
+      "title": "Thank you. Your request is ready.",
+      "demo": "This is a demo, so nothing was sent or saved. When the site launches, your request will go securely to the ministry’s care team.",
+      "next": "After a real request, we let you know we’ve received it and aim to reply within 10 business days.",
+      "home": {
+        "label": "Back to the home page",
+        "path": ""
+      }
+    }
+  },
+  "refer": {
+    "title": "Refer someone who needs help.",
+    "lede": "Pastors, doctors, social workers, family and friends can tell us about someone who needs surgery they can’t afford.",
+    "jumpLabel": "On this page",
+    "action": {
+      "label": "Make a referral"
+    },
+    "callPrefix": "Or call",
+    "when": {
+      "id": "when-to-refer",
+      "title": "When to refer",
+      "items": [
+        {
+          "text": "They live with a condition that affects their daily life, such as an injury, a condition present from birth, a scar or burn, or changes after cancer.",
+          "placeholder": false
+        },
+        {
+          "text": "They can’t afford the surgery they need.",
+          "placeholder": false
+        },
+        {
+          "text": "They live in or near Charlotte, NC or Fort Mill, SC.",
+          "placeholder": true
+        },
+        {
+          "text": "They can be a child or an adult, of any faith or none.",
+          "placeholder": false
+        }
+      ]
+    },
+    "ask": {
+      "id": "ask-them-first",
+      "title": "Ask them first",
+      "paragraphs": [
+        {
+          "text": "Please talk with the person before you refer them, and refer them only if they agree. For a child, ask a parent or guardian.",
+          "placeholder": false
+        },
+        {
+          "text": "Share only what they’re comfortable with. They can add the details and photos themselves when we reach them.",
+          "placeholder": true
+        }
+      ]
+    },
+    "next": {
+      "id": "what-happens-next",
+      "title": "What happens next",
+      "items": [
+        {
+          "text": "We contact the person you referred, usually within 10 business days.",
+          "placeholder": true
+        },
+        {
+          "text": "They tell us their story and send photos, the same way anyone asking for help does.",
+          "placeholder": false
+        },
+        {
+          "text": "To protect their privacy, we don’t share updates with you unless they tell us we may.",
+          "placeholder": true
+        }
+      ]
+    },
+    "partners": {
+      "id": "churches-and-clinics",
+      "title": "For churches and clinics",
+      "paragraphs": [
+        {
+          "text": "If you refer people often, we can send printed cards and a one-page summary to share with your congregation or patients.",
+          "placeholder": true
+        }
+      ],
+      "link": {
+        "label": "Partner with us",
+        "path": "partner"
+      }
+    },
+    "form": {
+      "id": "make-a-referral",
+      "title": "Make a referral"
+    },
+    "sections": {
+      "you": "About you",
+      "person": "About the person",
+      "need": "Their need",
+      "consent": "Before you send"
+    },
+    "fields": {
+      "yourFirst": {
+        "label": "Your first name"
+      },
+      "yourLast": {
+        "label": "Your last name"
+      },
+      "role": {
+        "label": "How do you know them?",
+        "options": [
+          {
+            "value": "",
+            "label": "Choose one"
+          },
+          {
+            "value": "pastor",
+            "label": "Pastor or church staff"
+          },
+          {
+            "value": "clinician",
+            "label": "Doctor, nurse or other clinician"
+          },
+          {
+            "value": "social",
+            "label": "Social worker or counselor"
+          },
+          {
+            "value": "school",
+            "label": "Teacher or school staff"
+          },
+          {
+            "value": "family",
+            "label": "Family member"
+          },
+          {
+            "value": "friend",
+            "label": "Friend"
+          },
+          {
+            "value": "other",
+            "label": "Other"
+          }
+        ]
+      },
+      "organization": {
+        "label": "Church, practice or organization"
+      },
+      "yourEmail": {
+        "label": "Your email"
+      },
+      "yourPhone": {
+        "label": "Your phone number"
+      },
+      "personFirst": {
+        "label": "Their first name"
+      },
+      "personLast": {
+        "label": "Their last name"
+      },
+      "age": {
+        "label": "Are they a child or an adult?",
+        "options": [
+          {
+            "value": "child",
+            "label": "A child under 18"
+          },
+          {
+            "value": "adult",
+            "label": "An adult"
+          }
+        ]
+      },
+      "guardianName": {
+        "label": "Parent or guardian’s full name"
+      },
+      "personPhone": {
+        "label": "Best phone number to reach them",
+        "hint": "For a child, the parent or guardian’s number."
+      },
+      "personEmail": {
+        "label": "Their email"
+      },
+      "city": {
+        "label": "City"
+      },
+      "state": {
+        "label": "State",
+        "options": [
+          {
+            "value": "",
+            "label": "Choose one"
+          },
+          {
+            "value": "NC",
+            "label": "North Carolina"
+          },
+          {
+            "value": "SC",
+            "label": "South Carolina"
+          },
+          {
+            "value": "other",
+            "label": "Another state"
+          }
+        ]
+      },
+      "careType": {
+        "label": "What kind of care might they need?",
+        "options": [
+          {
+            "value": "",
+            "label": "Choose one"
+          },
+          {
+            "value": "Injuries from accidents",
+            "label": "Injuries from accidents"
+          },
+          {
+            "value": "Conditions present from birth",
+            "label": "Conditions present from birth"
+          },
+          {
+            "value": "Scars and burns",
+            "label": "Scars and burns"
+          },
+          {
+            "value": "Reconstruction after cancer",
+            "label": "Reconstruction after cancer"
+          },
+          {
+            "value": "Restorative care",
+            "label": "Restorative care"
+          },
+          {
+            "value": "Something else",
+            "label": "Something else"
+          }
+        ]
+      },
+      "need": {
+        "label": "What can you tell us about their need?",
+        "hint": "Share only what they’ve agreed to share."
+      },
+      "consent": {
+        "label": "The person, or their parent or guardian, knows I’m referring them and agreed to be contacted by Beauty From Ashes Surgical Ministry."
+      }
+    },
+    "errors": {
+      "yourFirst": "Enter your first name.",
+      "yourLast": "Enter your last name.",
+      "role": "Choose how you know them.",
+      "yourEmail": "Enter your email address, like name@example.com.",
+      "yourPhone": "Enter a phone number with area code, or leave it blank.",
+      "personFirst": "Enter their first name.",
+      "personLast": "Enter their last name.",
+      "age": "Choose whether they’re a child or an adult.",
+      "guardianName": "Enter the parent or guardian’s name.",
+      "personPhone": "Enter a phone number with area code, like (704) 555-0100.",
+      "personEmail": "Enter an email address like name@example.com, or leave it blank.",
+      "city": "Enter their city.",
+      "state": "Choose their state.",
+      "careType": "Choose the kind of care they might need.",
+      "need": "Tell us a little about their need.",
+      "consent": "Check this box to confirm they agreed to be contacted."
+    },
+    "submit": "Send referral",
+    "sent": {
+      "title": "Thank you for thinking of them.",
+      "demo": "This is a demo, so nothing was sent or saved. When the site launches, your referral will go securely to the ministry’s care team.",
+      "next": "After a real referral, we contact the person directly. To protect their privacy, we share updates with you only if they say we may.",
+      "again": "Refer someone else"
+    }
+  },
+  "volunteer": {
+    "vision": {
+      "label": "Our Vision",
+      "lines": [
+        "To inspire a community of gifted professionals",
+        "to use what God has entrusted to them to serve others,",
+        "bless those in need, and strengthen their communities."
+      ]
+    },
+    "title": "Serve with your skills.",
+    "lede": "Surgeons, anesthesia providers, nurses and surgical teams give their time so patients who can’t afford surgery still receive excellent care.",
+    "primary": {
+      "label": "Volunteer your skills",
+      "fragment": "volunteer-form"
+    },
+    "secondary": {
+      "label": "See the roles",
+      "fragment": "roles"
+    },
+    "roles": {
+      "id": "roles",
+      "title": "Where you’re needed",
+      "intro": "Surgery takes a whole team. These are the clinical roles a surgery day depends on, and there’s a place for people outside medicine too.",
+      "items": [
+        {
+          "name": "Plastic and reconstructive surgeons",
+          "text": "Provide surgical care that restores function and confidence."
+        },
+        {
+          "name": "Anesthesiologists and nurse anesthetists",
+          "text": "Provide safe, skilled anesthesia and pain management."
+        },
+        {
+          "name": "Operating room and recovery nurses",
+          "text": "Ensure safe, compassionate care before, during and after surgery."
+        },
+        {
+          "name": "Surgical technologists",
+          "text": "Keep the surgical team prepared and focused."
+        },
+        {
+          "name": "Follow-up clinicians",
+          "text": "Physicians, nurse practitioners and wound care nurses who see patients as they heal."
+        },
+        {
+          "name": "Counselors",
+          "text": "Licensed counselors who support patients and families through recovery."
+        }
+      ],
+      "placeholder": "The roles listed here are our best guess at what the ministry needs."
+    },
+    "letter": {
+      "sampleLabel": "Sample letter, not a real volunteer",
+      "text": "To my colleagues, most of us trained for years to do one thing well. Here, that skill goes to a child born with a cleft lip whose family has no insurance, or to a woman who has hidden a burn scar for ten years. We pray with the patients who want it, and we stay with them long after the stitches come out. Come serve with us.",
+      "signature": "A volunteer surgeon",
+      "note": "A real volunteer’s letter will replace this sample, shared with their permission."
+    },
+    "other": {
+      "id": "other-ways",
+      "title": "Other ways to serve",
+      "intro": "You don’t need a medical license to help a patient through surgery.",
+      "items": [
+        {
+          "id": "interpreters",
+          "name": "Interpreters",
+          "text": "Help Spanish-speaking patients and families through every conversation."
+        },
+        {
+          "id": "drivers",
+          "name": "Drivers",
+          "text": "Bring patients to appointments and home again after surgery."
+        },
+        {
+          "id": "meals",
+          "name": "Meals",
+          "text": "Bring meals to families while a patient recovers."
+        },
+        {
+          "id": "office",
+          "name": "Office help",
+          "text": "Help with scheduling, records and mailings."
+        },
+        {
+          "id": "prayer",
+          "name": "Prayer team",
+          "text": "Pray for patients and their families, and for the people who care for them."
+        }
+      ],
+      "placeholder": "These roles are our best guess at what the ministry needs."
+    },
+    "ask": {
+      "id": "what-we-ask",
+      "title": "What we ask of clinical volunteers",
+      "items": [
+        {
+          "text": "An active, unrestricted license to practice in North Carolina or South Carolina.",
+          "placeholder": true
+        },
+        {
+          "text": "Board certification or eligibility for surgeons and anesthesiologists.",
+          "placeholder": true
+        },
+        {
+          "text": "Proof of malpractice coverage, or coverage arranged through the ministry.",
+          "placeholder": true
+        },
+        {
+          "text": "A background check and HIPAA training before your first surgery day.",
+          "placeholder": true
+        }
+      ],
+      "paragraphs": [
+        {
+          "title": "Time",
+          "text": "Serve when you can: a single surgery day, a few days a year, or on a regular schedule.",
+          "placeholder": true
+        },
+        {
+          "title": "Place",
+          "text": "Surgeries take place at accredited surgical facilities in the Charlotte area.",
+          "placeholder": true
+        },
+        {
+          "title": "Faith",
+          "text": "Beauty From Ashes is a Christian ministry, and the team prays with every patient who welcomes it. Volunteers don’t need to share our faith, but they should be comfortable serving where prayer is part of care.",
+          "placeholder": true
+        }
+      ],
+      "placeholder": "Everything in this section is our best guess and will be confirmed by the ministry."
+    },
+    "join": {
+      "id": "how-to-join",
+      "title": "How to join",
+      "intro": "Here is what happens after you reach out.",
+      "steps": [
+        {
+          "name": "Tell us about you",
+          "text": "Share your role, your license and when you could serve."
+        },
+        {
+          "name": "A conversation",
+          "text": "We talk about where your skills fit and answer your questions."
+        },
+        {
+          "name": "Credentialing",
+          "text": "We verify your license and run a background check."
+        },
+        {
+          "name": "Orientation",
+          "text": "Learn how a surgery day runs and how we care for patients."
+        },
+        {
+          "name": "Your first surgery day",
+          "text": "Serve alongside the team, then decide how often you’d like to return."
+        }
+      ],
+      "note": "These steps are our best guess at the ministry’s process and will be confirmed before launch."
+    },
+    "form": {
+      "id": "volunteer-form",
+      "title": "Volunteer your skills",
+      "intro": "Tell us a little about yourself. Someone from the ministry will be in touch."
+    },
+    "fields": {
+      "first": {
+        "label": "First name"
+      },
+      "last": {
+        "label": "Last name"
+      },
+      "email": {
+        "label": "Email"
+      },
+      "phone": {
+        "label": "Phone number"
+      },
+      "role": {
+        "label": "How would you like to serve?",
+        "options": [
+          {
+            "value": "",
+            "label": "Choose one"
+          },
+          {
+            "value": "surgeon",
+            "label": "Surgeon"
+          },
+          {
+            "value": "anesthesia",
+            "label": "Anesthesiologist or nurse anesthetist"
+          },
+          {
+            "value": "nurse",
+            "label": "Operating room or recovery nurse"
+          },
+          {
+            "value": "tech",
+            "label": "Surgical technologist"
+          },
+          {
+            "value": "followup",
+            "label": "Follow-up clinician"
+          },
+          {
+            "value": "counselor",
+            "label": "Counselor"
+          },
+          {
+            "value": "interpreter",
+            "label": "Interpreter"
+          },
+          {
+            "value": "driver",
+            "label": "Driver"
+          },
+          {
+            "value": "meals",
+            "label": "Meals"
+          },
+          {
+            "value": "office",
+            "label": "Office help"
+          },
+          {
+            "value": "prayer",
+            "label": "Prayer team"
+          },
+          {
+            "value": "other",
+            "label": "Something else"
+          }
+        ]
+      },
+      "license": {
+        "label": "License type and state",
+        "hint": "For example, MD, North Carolina."
+      },
+      "availability": {
+        "label": "When could you serve?",
+        "options": [
+          {
+            "key": "weekdays",
+            "label": "Weekdays"
+          },
+          {
+            "key": "weekends",
+            "label": "Weekends"
+          },
+          {
+            "key": "fewTimes",
+            "label": "A few times a year"
+          },
+          {
+            "key": "regular",
+            "label": "On a regular schedule"
+          }
+        ]
+      },
+      "message": {
+        "label": "Anything else you’d like us to know?"
+      }
+    },
+    "errors": {
+      "first": "Enter your first name.",
+      "last": "Enter your last name.",
+      "email": "Enter your email address, like name@example.com.",
+      "phone": "Enter a phone number with area code, or leave it blank.",
+      "role": "Choose how you’d like to serve."
+    },
+    "submit": "Send",
+    "sent": {
+      "title": "Thank you for offering your skills.",
+      "demo": "This is a demo, so nothing was sent or saved. When the site launches, your note will go to the ministry’s volunteer coordinator.",
+      "again": "Start over"
+    }
+  },
+  "partner": {
+    "belief": {
+      "label": "Our Core Values",
+      "text": "We believe every person is created in the image of God, and that faithful stewardship, compassionate service, and excellence honor Him and inspire those around us."
+    },
+    "title": "Partner with us.",
+    "lede": "Churches, businesses and organizations help the ministry reach people who need care and share the cost of providing it.",
+    "primary": {
+      "label": "Become a partner",
+      "fragment": "partner-form"
+    },
+    "secondary": {
+      "label": "Refer someone",
+      "path": "refer"
+    },
+    "churches": {
+      "id": "churches",
+      "title": "For churches",
+      "intro": "Your congregation can help someone take the first step toward care.",
+      "items": [
+        {
+          "name": "Refer people who need help",
+          "text": "Pastors and care teams can refer people in the congregation and the wider community.",
+          "placeholder": false
+        },
+        {
+          "name": "Pray",
+          "text": "Add patients and surgical teams to your prayer list. With patients’ permission, we’ll send requests.",
+          "placeholder": true
+        },
+        {
+          "name": "Serve",
+          "text": "Members can drive patients, bring meals, interpret or join the prayer team.",
+          "placeholder": false
+        },
+        {
+          "name": "Share the cost",
+          "text": "Take up an offering, or sponsor a surgery as a congregation.",
+          "placeholder": false
+        },
+        {
+          "name": "Invite us",
+          "text": "Ask the ministry to speak at a service, class or missions event.",
+          "placeholder": true
+        }
+      ]
+    },
+    "businesses": {
+      "id": "businesses",
+      "title": "For businesses and organizations",
+      "intro": "Companies, foundations and civic groups can carry part of the cost of care.",
+      "items": [
+        {
+          "name": "Sponsor a surgery",
+          "text": "Cover one patient’s surgery as a company, foundation or civic group.",
+          "placeholder": false
+        },
+        {
+          "name": "Give in kind",
+          "text": "Lodging for families who travel, transportation, printing or medical supplies.",
+          "placeholder": true
+        },
+        {
+          "name": "Match employee gifts",
+          "text": "Double what your team gives to the ministry.",
+          "placeholder": false
+        },
+        {
+          "name": "Medical partners",
+          "text": "Surgery centers, anesthesia groups, imaging centers and labs can donate or discount services.",
+          "placeholder": true
+        }
+      ]
+    },
+    "kit": {
+      "id": "church-kit",
+      "title": "A kit for churches",
+      "intro": "Everything a church needs to share the ministry with its members.",
+      "items": [
+        {
+          "name": "Bulletin insert",
+          "text": "A half-page insert that explains who the ministry serves and how to ask for help."
+        },
+        {
+          "name": "Referral handout",
+          "text": "A one-page guide pastors and care teams can give to someone who needs care."
+        },
+        {
+          "name": "Announcement slides",
+          "text": "Slides for a Sunday announcement or a missions update."
+        }
+      ],
+      "placeholder": "The kit is being prepared and will be available to download here."
+    },
+    "form": {
+      "id": "partner-form",
+      "title": "Become a partner",
+      "intro": "Tell us about your church or organization and how you’d like to help."
+    },
+    "fields": {
+      "first": {
+        "label": "First name"
+      },
+      "last": {
+        "label": "Last name"
+      },
+      "organization": {
+        "label": "Church or organization"
+      },
+      "type": {
+        "label": "Type of organization",
+        "options": [
+          {
+            "value": "",
+            "label": "Choose one"
+          },
+          {
+            "value": "church",
+            "label": "Church"
+          },
+          {
+            "value": "business",
+            "label": "Business"
+          },
+          {
+            "value": "foundation",
+            "label": "Foundation or civic group"
+          },
+          {
+            "value": "medical",
+            "label": "Medical organization"
+          },
+          {
+            "value": "other",
+            "label": "Other"
+          }
+        ]
+      },
+      "email": {
+        "label": "Email"
+      },
+      "phone": {
+        "label": "Phone number"
+      },
+      "interests": {
+        "label": "How would you like to partner?",
+        "options": [
+          {
+            "key": "referring",
+            "label": "Referring people"
+          },
+          {
+            "key": "prayer",
+            "label": "Prayer"
+          },
+          {
+            "key": "volunteers",
+            "label": "Sending volunteers"
+          },
+          {
+            "key": "giving",
+            "label": "Giving or sponsoring a surgery"
+          },
+          {
+            "key": "speaking",
+            "label": "Inviting the ministry to speak"
+          },
+          {
+            "key": "inKind",
+            "label": "Gifts in kind"
+          }
+        ]
+      },
+      "message": {
+        "label": "Anything else you’d like us to know?"
+      }
+    },
+    "errors": {
+      "first": "Enter your first name.",
+      "last": "Enter your last name.",
+      "organization": "Enter your church or organization.",
+      "type": "Choose the type of organization.",
+      "email": "Enter your email address, like name@example.com.",
+      "phone": "Enter a phone number with area code, or leave it blank."
+    },
+    "submit": "Send",
+    "sent": {
+      "title": "Thank you for wanting to partner with us.",
+      "demo": "This is a demo, so nothing was sent or saved. When the site launches, your note will go to the ministry’s partnerships contact.",
+      "again": "Start over"
+    }
+  },
+  "stories": {
+    "title": "Stories",
+    "lede": "Real stories will appear here, each one shared with the patient’s written permission. Until then, these samples show how a story will look.",
+    "sampleLabel": "Sample story, not a real patient",
+    "items": [
+      {
+        "id": "short-sleeves",
+        "quote": "I hadn’t worn short sleeves in eleven years. The summer after my last appointment, I wore them to church.",
+        "attribution": "Sample patient, Rock Hill",
+        "condition": "Scars and burns",
+        "body": [
+          "A kitchen fire left scars across her forearm and the inside of her elbow. Over the years the skin tightened until she couldn’t fully straighten her arm.",
+          "A friend from her Bible study sent us her name. After two surgeries to release the scar tissue, she has her full reach back. She still has scars, and she says she doesn’t mind them now."
+        ]
+      },
+      {
+        "id": "photos",
+        "quote": "She used to cover her mouth in every photo. Now she’s the one asking to take them.",
+        "attribution": "Sample parent, Fort Mill",
+        "condition": "Conditions present from birth",
+        "body": [
+          "Their daughter was born with a cleft lip. It was repaired when she was a baby, but the repair left a scar that pulled at her lip as she grew, and the family’s insurance called a revision cosmetic.",
+          "The ministry’s surgeon revised the repair the summer before she started middle school, and the team checked in with the family all through her recovery."
+        ]
+      },
+      {
+        "id": "hammer",
+        "quote": "I thought I’d never hold a hammer again. Last month I helped frame a wall at my church.",
+        "attribution": "Sample patient, Charlotte",
+        "condition": "Injuries from accidents",
+        "body": [
+          "A saw accident at work damaged two fingers and left his hand stiff and painful. He lost his job, and his insurance with it.",
+          "A social worker referred him to the ministry. Reconstructive surgery and months of hand therapy brought back most of his grip."
+        ]
+      }
+    ],
+    "share": {
+      "title": "Share your story",
+      "text": "If the ministry has cared for you and you’d like to share your story, we’d be glad to hear it. We publish a story only with your written permission, and you decide what it includes.",
+      "action": {
+        "label": "Tell us",
+        "path": "contact"
+      }
+    }
+  },
+  "about": {
+    "title": "About the ministry",
+    "lede": "Beauty From Ashes Surgical Ministry is a Christian nonprofit that provides restorative and reconstructive plastic surgery, free or at reduced cost, to children and adults whose need exceeds their means.",
+    "name": {
+      "title": "Our name",
+      "text": "The ministry takes its name from Isaiah 61:3. Its mission is healing that reaches beyond the physical, the exchange of beauty for ashes that the verse describes.",
+      "jar": "Carolina potters glaze stoneware with wood ash. In the heat of the kiln, the ash turns to glass. The jar on these pages is a picture of that.",
+      "jarAlt": "A hand-thrown Carolina stoneware jar, its shoulder streaked with amber and green wood-ash glaze and its belly marked with one stroke of cobalt blue."
+    },
+    "card": {
+      "title": "Our mission, vision and values",
+      "note": "These are the words of the ministry’s mission card, as written."
+    },
+    "faith": {
+      "title": "What we believe",
+      "text": "The ministry’s statement of faith will appear here.",
+      "placeholder": true
+    },
+    "leaders": {
+      "title": "Leadership",
+      "intro": "The people who lead the ministry will be introduced here, with photos and short biographies.",
+      "people": [
+        {
+          "role": "Executive director",
+          "name": "Name to come"
+        },
+        {
+          "role": "Medical director",
+          "name": "Name to come"
+        },
+        {
+          "role": "Patient care coordinator",
+          "name": "Name to come"
+        }
+      ],
+      "placeholder": "These roles are our best guess at how the ministry is led."
+    },
+    "board": {
+      "title": "Board of directors",
+      "text": "The members of the board will be listed here.",
+      "placeholder": true
+    },
+    "accountability": {
+      "title": "Accountability",
+      "items": [
+        {
+          "text": "Beauty From Ashes Surgical Ministry is a 501(c)(3) nonprofit organization.",
+          "placeholder": false
+        },
+        {
+          "text": "EIN: to come.",
+          "placeholder": true
+        },
+        {
+          "text": "Gifts pay for patient care and the ministry’s operations.",
+          "placeholder": true
+        },
+        {
+          "text": "Annual reports and financial statements will be posted here each year.",
+          "placeholder": true
+        }
+      ],
+      "link": {
+        "label": "Ways to give",
+        "path": "give"
+      }
+    },
+    "closing": {
+      "title": "Questions about the ministry?",
+      "primary": {
+        "label": "Contact us",
+        "path": "contact"
+      },
+      "callPrefix": "Or call"
+    }
+  },
+  "contact": {
+    "title": "Contact us",
+    "lede": "Questions about asking for help, volunteering, partnering or giving? We’re glad to hear from you.",
+    "detailsTitle": "Reach the ministry",
+    "details": [
+      {
+        "label": "Phone",
+        "kind": "phone"
+      },
+      {
+        "label": "Email",
+        "kind": "email"
+      },
+      {
+        "label": "Mail",
+        "kind": "text",
+        "text": "Mailing address to come",
+        "placeholder": true
+      },
+      {
+        "label": "Office hours",
+        "kind": "text",
+        "text": "Monday to Friday, 9 a.m. to 5 p.m.",
+        "placeholder": true
+      },
+      {
+        "label": "Area served",
+        "kind": "text",
+        "text": "Charlotte, NC and Fort Mill, SC",
+        "placeholder": false
+      }
+    ],
+    "health": {
+      "text": "Please don’t include health details in this form. To ask for help with surgery, use the secure request form.",
+      "link": {
+        "label": "Ask for help",
+        "path": "ask-for-help"
+      }
+    },
+    "formTitle": "Send a message",
+    "fields": {
+      "name": {
+        "label": "Your name"
+      },
+      "email": {
+        "label": "Email"
+      },
+      "phone": {
+        "label": "Phone number"
+      },
+      "topic": {
+        "label": "What is this about?",
+        "options": [
+          {
+            "value": "",
+            "label": "Choose one"
+          },
+          {
+            "value": "help",
+            "label": "Asking for help"
+          },
+          {
+            "value": "refer",
+            "label": "Referring someone"
+          },
+          {
+            "value": "volunteer",
+            "label": "Volunteering"
+          },
+          {
+            "value": "partner",
+            "label": "Partnering"
+          },
+          {
+            "value": "give",
+            "label": "Giving"
+          },
+          {
+            "value": "story",
+            "label": "Sharing a story"
+          },
+          {
+            "value": "media",
+            "label": "Media"
+          },
+          {
+            "value": "other",
+            "label": "Something else"
+          }
+        ]
+      },
+      "message": {
+        "label": "Message"
+      }
+    },
+    "errors": {
+      "name": "Enter your name.",
+      "email": "Enter your email address, like name@example.com.",
+      "phone": "Enter a phone number with area code, or leave it blank.",
+      "topic": "Choose what your message is about.",
+      "message": "Write your message."
+    },
+    "submit": "Send message",
+    "sent": {
+      "title": "Thank you for your message.",
+      "demo": "This is a demo, so nothing was sent or saved. When the site launches, messages will go to the ministry’s inbox.",
+      "again": "Send another message"
+    }
+  },
+  "privacy": {
+    "title": "Privacy notice",
+    "lede": "How Beauty From Ashes Surgical Ministry collects, uses and protects the information you share through this website.",
+    "draft": "This notice is a draft. The ministry will publish its final privacy notice, including a HIPAA Notice of Privacy Practices, after legal review.",
+    "jumpLabel": "On this page",
+    "sections": [
+      {
+        "id": "what-we-collect",
+        "title": "What we collect",
+        "paragraphs": [
+          {
+            "text": "We collect what you choose to send through the forms on this site: requests for care, referrals, volunteer and partner forms, and messages. Requests and referrals can include health information and photos.",
+            "placeholder": false
+          },
+          {
+            "text": "Like most websites, our host keeps basic server records, such as the date of a visit and the type of browser used.",
+            "placeholder": true
+          }
+        ]
+      },
+      {
+        "id": "how-we-use-it",
+        "title": "How we use it",
+        "paragraphs": [
+          {
+            "text": "We use your information to review requests for care, to contact you, and to coordinate volunteers and partners. We never sell your information, and we never use it for advertising.",
+            "placeholder": false
+          }
+        ]
+      },
+      {
+        "id": "health-information",
+        "title": "Health information",
+        "paragraphs": [
+          {
+            "text": "Requests for care and referrals are protected health information under HIPAA. They are sent through a HIPAA-compliant service that has signed a Business Associate Agreement with the ministry, and only the ministry’s care team can see them.",
+            "placeholder": true
+          }
+        ]
+      },
+      {
+        "id": "cookies-and-tracking",
+        "title": "Cookies and tracking",
+        "paragraphs": [
+          {
+            "text": "This site uses no advertising or tracking cookies. Its fonts load from this site, so visiting does not report you to a font service.",
+            "placeholder": false
+          },
+          {
+            "text": "If the ministry adds visitor statistics in the future, they will never run on the pages where you ask for help or refer someone.",
+            "placeholder": false
+          }
+        ]
+      },
+      {
+        "id": "your-choices",
+        "title": "Your choices",
+        "paragraphs": [
+          {
+            "text": "You can ask to see, correct or delete the information you’ve sent us. Contact us by phone or email and we’ll respond within 30 days.",
+            "placeholder": true
+          }
+        ]
+      },
+      {
+        "id": "children",
+        "title": "Children",
+        "paragraphs": [
+          {
+            "text": "A parent or legal guardian sends requests for care for anyone under 18.",
+            "placeholder": false
+          }
+        ]
+      },
+      {
+        "id": "questions",
+        "title": "Questions",
+        "paragraphs": [
+          {
+            "text": "Questions about this notice? Contact the ministry by phone or email.",
+            "placeholder": false
+          }
+        ]
+      }
+    ],
+    "updated": "Last updated: draft, not yet in effect."
+  },
+  "accessibility": {
+    "title": "Accessibility",
+    "lede": "Everyone should be able to learn about the ministry and ask for help, including people who use screen readers, keyboards, magnification or voice control.",
+    "jumpLabel": "On this page",
+    "sections": [
+      {
+        "id": "our-standard",
+        "title": "Our standard",
+        "paragraphs": [
+          {
+            "text": "We build and test this site against the Web Content Accessibility Guidelines (WCAG) 2.2 at level AA. Accessibility is built into the site itself. We don’t use overlay widgets.",
+            "placeholder": false
+          }
+        ],
+        "items": []
+      },
+      {
+        "id": "what-you-can-expect",
+        "title": "What you can expect",
+        "paragraphs": [],
+        "items": [
+          {
+            "text": "Every page works with a keyboard alone, with visible focus.",
+            "placeholder": false
+          },
+          {
+            "text": "Form fields have labels, and errors say what to fix.",
+            "placeholder": false
+          },
+          {
+            "text": "Forms have no time limits.",
+            "placeholder": false
+          },
+          {
+            "text": "Text can be enlarged to 200%, and pages reflow at 400% zoom.",
+            "placeholder": false
+          },
+          {
+            "text": "Animation stops when your device asks for reduced motion.",
+            "placeholder": false
+          },
+          {
+            "text": "Pages work in high-contrast modes.",
+            "placeholder": false
+          }
+        ]
+      },
+      {
+        "id": "known-gaps",
+        "title": "Known gaps",
+        "paragraphs": [
+          {
+            "text": "The Spanish translation is in progress, so some pages show English until it’s complete.",
+            "placeholder": false
+          },
+          {
+            "text": "Sample stories and placeholder details on this demo will be replaced before launch.",
+            "placeholder": false
+          }
+        ],
+        "items": []
+      },
+      {
+        "id": "get-help",
+        "title": "Found a barrier?",
+        "paragraphs": [
+          {
+            "text": "Call or email us and we’ll help you another way, including taking a request for care over the phone. Please tell us what got in your way so we can fix it.",
+            "placeholder": false
+          }
+        ],
+        "items": []
+      }
+    ],
+    "updated": "Last reviewed: before launch.",
+    "updatedPlaceholder": true
+  },
+  "give": {
+    "title": "Help pay for someone’s surgery.",
+    "lede": "Volunteers give their skill and time. Your gift covers what they can’t give: operating room time, anesthesia, supplies and care after surgery.",
+    "ledePlaceholder": true,
+    "form": {
+      "label": "Make a gift",
+      "frequencyLabel": "How often",
+      "frequencies": [
+        {
+          "value": "once",
+          "label": "Give once"
+        },
+        {
+          "value": "monthly",
+          "label": "Give monthly"
+        }
+      ],
+      "amountLabel": "Amount",
+      "amounts": [
+        50,
+        100,
+        250,
+        500
+      ],
+      "otherLabel": "Other amount",
+      "otherInput": "Amount in dollars",
+      "otherError": "Enter an amount of at least $5.",
+      "giveOnce": "Give ${amount}",
+      "giveMonthly": "Give ${amount} a month",
+      "status": "Beauty From Ashes Surgical Ministry is a 501(c)(3) nonprofit. Gifts are tax-deductible as allowed by law.",
+      "demo": "Online giving opens once the ministry’s Stripe account is set up. Nothing is charged on this demo.",
+      "result": "On the live site, this button opens a secure Stripe checkout for {gift}. Nothing was charged."
+    },
+    "pays": {
+      "id": "what-your-gift-pays-for",
+      "title": "What your gift pays for",
+      "intro": "Volunteers don’t charge for their time. These are the costs that remain.",
+      "items": [
+        {
+          "name": "Operating room time",
+          "text": "Surgical facilities charge for every hour a patient spends in the operating room.",
+          "example": "About $1,500 an hour"
+        },
+        {
+          "name": "Anesthesia and medication",
+          "text": "Anesthesia, pain relief and antibiotics before and after surgery.",
+          "example": "About $800 for one surgery"
+        },
+        {
+          "name": "Supplies and implants",
+          "text": "Sutures, dressings, skin grafts and implants.",
+          "example": "$200 to $2,000 for one surgery"
+        },
+        {
+          "name": "Care after surgery",
+          "text": "Follow-up visits, therapy, and help for families during recovery.",
+          "example": "About $50 a visit"
+        }
+      ],
+      "placeholder": "These costs and amounts are our best guesses. The ministry will replace them with its real figures."
+    },
+    "sponsor": {
+      "id": "sponsor",
+      "title": "Sponsor a surgery",
+      "text": "Cover one patient’s surgery, alone or with your family, small group, church or business. With the patient’s permission, we’ll tell you about them and how their recovery goes, so you can pray for them by name.",
+      "cost": "A typical surgery costs the ministry about $5,000.",
+      "placeholder": true,
+      "action": {
+        "label": "Ask about sponsoring",
+        "path": "contact"
+      },
+      "textPlaceholder": true
+    },
+    "other": {
+      "id": "other-ways",
+      "title": "Other ways to give",
+      "items": [
+        {
+          "name": "By check",
+          "text": "Make checks payable to Beauty From Ashes Surgical Ministry and mail them to the ministry’s address, which will be listed here.",
+          "placeholder": true
+        },
+        {
+          "name": "Donor-advised funds",
+          "text": "Recommend a grant using the ministry’s legal name and EIN, which will be listed here.",
+          "placeholder": true
+        },
+        {
+          "name": "Stock",
+          "text": "Contact us for transfer instructions.",
+          "placeholder": true
+        },
+        {
+          "name": "Employer matching",
+          "text": "Many employers match gifts to nonprofits. Ask your human resources team.",
+          "placeholder": false
+        },
+        {
+          "name": "In honor or memory",
+          "text": "Give in someone’s name, and we’ll send a card to the person or family you choose.",
+          "placeholder": true
+        }
+      ]
+    },
+    "trust": {
+      "id": "accountability",
+      "title": "Accountability",
+      "items": [
+        {
+          "text": "Beauty From Ashes Surgical Ministry is a 501(c)(3) nonprofit organization. Gifts are tax-deductible as allowed by law.",
+          "placeholder": false
+        },
+        {
+          "text": "EIN: to come.",
+          "placeholder": true
+        },
+        {
+          "text": "North Carolina and South Carolina may require a charitable solicitation disclosure on this page. The wording will be confirmed with the ministry’s counsel.",
+          "placeholder": true
+        }
+      ],
+      "link": {
+        "label": "About the ministry",
+        "path": "about"
+      }
+    }
+  }
+}

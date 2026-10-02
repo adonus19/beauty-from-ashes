@@ -1,0 +1,66 @@
+// Numbered steps: italic serif numerals, with a brushed cobalt rule between steps that draws on in sequence.
+.process__steps,
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  position: relative;
+  display: grid;
+  grid-template-columns: clamp(3rem, 5vw, 4.5rem) minmax(0, 1fr);
+  gap: 0 clamp(1rem, 2vw, 2rem);
+  padding-block: clamp(1.5rem, 2.4vw, 2.25rem);
+
+  & + &::before {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    inset-block-start: 0;
+    height: 6px;
+    background: image-set(
+        url('../../assets/plates/nav-rule.webp') type('image/webp'),
+        url('../../assets/plates/nav-rule.png') type('image/png')
+      )
+      left center / 100% 100% no-repeat;
+    opacity: 0.85;
+  }
+
+  .is-armed & + &::before {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  .is-armed.is-drawn & + &::before {
+    clip-path: inset(0);
+    transition: clip-path 1000ms var(--ease-out) calc(var(--i, 0) * 140ms);
+  }
+}
+
+.step__number {
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: clamp(2.75rem, 2.2rem + 1.8vw, 4rem);
+  font-style: italic;
+  line-height: 0.9;
+}
+
+.step__name {
+  font-size: clamp(1.5rem, 1.3rem + 0.6vw, 1.875rem);
+  line-height: 1.2;
+}
+
+.step__text {
+  max-width: 34em;
+  margin-block-start: 0.5rem;
+}
+
+// A note after the steps lines up with the step text.
+.steps__note {
+  max-width: 40em;
+  margin-block-start: 1.25rem;
+  padding-inline-start: calc(clamp(3rem, 5vw, 4.5rem) + clamp(1rem, 2vw, 2rem));
+  color: var(--iron-soft);
+  font-size: 0.875rem;
+}
+

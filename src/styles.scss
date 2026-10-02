@@ -1,0 +1,375 @@
+// Beauty From Ashes: global tokens, base elements and the shared button language.
+@use 'sass:meta';
+// The world: buff salt-glazed stoneware ground, iron-brown serif ink, cobalt slip for every action.
+
+:root {
+  color-scheme: light;
+
+  // Stoneware
+  --ground: #d8d1c4;
+  --ground-shade: #c9c0b1;
+  --ground-deep: #b9ad9b;
+
+  // Iron-brown ink
+  --iron: #3a1f0e;
+  --iron-soft: #4f3a2a;
+  --text: #3c3736;
+
+  // Cobalt slip: actions only
+  --cobalt: #0b3d9c;
+  --on-cobalt: #fbf8f2;
+
+  --font-serif: 'Tiro Devanagari Marathi', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --font-sans: 'Mulish Variable', 'Mulish', 'Segoe UI', system-ui, sans-serif;
+
+  // Fluid scale, tuned so the 1536px frame matches the approved comp.
+  --gutter: clamp(1.25rem, 4.69vw, 4.5rem);
+  --fs-body: clamp(1.0625rem, 1rem + 0.2vw, 1.1875rem);
+  --fs-lede: clamp(1.125rem, 1.432vw, 1.375rem);
+  --fs-label: clamp(0.8125rem, 0.75rem + 0.17vw, 0.9375rem);
+  --fs-button: clamp(1.125rem, 1.5625vw, 1.5rem);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scrollbar-color: var(--ground-deep) var(--ground-shade);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--ground);
+  background-image: image-set(
+    url('../assets/plates/ground.webp') type('image/webp'),
+    url('../assets/plates/ground.png') type('image/png')
+  );
+  background-size: 308px 204px;
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  caret-color: var(--cobalt);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-weight: 400;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+::selection {
+  background: var(--cobalt);
+  color: var(--on-cobalt);
+}
+
+:focus-visible {
+  outline: 2px solid var(--cobalt);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  inset-inline-start: var(--gutter);
+  inset-block-start: 0.75rem;
+  z-index: 10;
+  padding: 0.6rem 1.1rem;
+  background: var(--cobalt);
+  color: var(--on-cobalt);
+  font-weight: 700;
+  text-decoration: none;
+  transform: translateY(-200%);
+  transition: transform 160ms var(--ease-out);
+
+  &:focus-visible {
+    transform: translateY(0);
+  }
+}
+
+// Small spaced capitals: the mission card's section labels.
+.label {
+  margin: 0;
+  color: var(--iron-soft);
+  font-family: var(--font-sans);
+  font-size: var(--fs-label);
+  font-weight: 650;
+  letter-spacing: 0.2em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+// Section headings in the iron serif.
+.section-title {
+  font-size: clamp(2.125rem, 1.6rem + 2vw, 3.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+
+// A dashed tag on any fact the ministry hasn't confirmed yet (and on sample stories).
+.placeholder-tag-host {
+  display: inline;
+}
+
+.placeholder-tag {
+  display: inline-block;
+  padding: 0.15em 0.6em;
+  border: 1px dashed var(--iron-soft);
+  border-radius: 3px;
+  color: var(--iron);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  vertical-align: 0.15em;
+  white-space: nowrap;
+}
+
+// On the iron band the tag takes the band's light ink.
+.on-dark .placeholder-tag {
+  border-color: #ddd1bd;
+  color: #efe6d6;
+}
+
+// The note that explains the tags, set small under a page's last section.
+.placeholder-note {
+  max-width: 40em;
+  color: var(--iron-soft);
+  font-size: 0.875rem;
+}
+
+// Links outside the footer are underlined with the same slip-trailed brushstroke that marks the values.
+// The stroke is a mask, so its colour follows the ground it sits on.
+.brush-link,
+.text-link {
+  --stroke-color: var(--cobalt);
+  position: relative;
+  display: inline-block;
+  padding-block-end: 0.2em;
+  color: var(--cobalt);
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset-inline: -0.06em -0.12em;
+    inset-block-end: -0.12em;
+    height: 0.34em;
+    background-color: var(--stroke-color);
+    mask: url('../assets/plates/link-stroke.webp') center / 100% 100% no-repeat;
+    transform-origin: left bottom;
+    transition: transform 220ms var(--ease-out);
+  }
+
+  &:hover::after {
+    transform: scaleY(1.4);
+  }
+}
+
+// Inline actions set in the serif.
+.text-link {
+  font-family: var(--font-serif);
+  font-size: clamp(1.125rem, 1.05rem + 0.3vw, 1.3125rem);
+}
+
+// On the iron band cobalt loses contrast, so links take the light ink and a lighter cobalt stroke.
+.text-link--on-dark {
+  --stroke-color: #8fa8dc;
+  color: #f6efe3;
+
+  &:focus-visible {
+    outline-color: #f6efe3;
+  }
+}
+
+// On the iron band the inked frame and its label take the band's light ink.
+.btn-line.btn-line--on-dark {
+  border-image-source: image-set(
+    url('../assets/plates/ink-frame-light.webp') type('image/webp'),
+    url('../assets/plates/ink-frame-light.png') type('image/png')
+  );
+  color: #efe6d6;
+
+  &:hover {
+    color: #ffffff;
+  }
+
+  &:focus-visible {
+    outline-color: #f6efe3;
+  }
+}
+
+// Primary action: a cobalt slip swatch with hand-brushed edges, label in white serif.
+.btn-brush,
+.btn-line {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: var(--fs-button);
+  line-height: 1.6;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    transform 180ms var(--ease-out),
+    filter 180ms var(--ease-out),
+    background-color 180ms var(--ease-out);
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.btn-brush {
+  isolation: isolate;
+  padding: 0.47em 2em;
+  color: var(--on-cobalt);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -0.29em -0.29em -0.33em;
+    z-index: -1;
+    background: image-set(
+        url('../assets/plates/ask-brush.webp') type('image/webp'),
+        url('../assets/plates/ask-brush.png') type('image/png')
+      )
+      center / 100% 100% no-repeat;
+    transition: filter 180ms var(--ease-out);
+  }
+
+  &:hover::before {
+    filter: brightness(1.18) saturate(1.05);
+  }
+
+  &:focus-visible {
+    outline-offset: 0.45em;
+  }
+}
+
+// The small brushed swatch used in the header.
+.btn-brush--compact {
+  padding: 0.3em 1.36em;
+
+  &::before {
+    inset: -0.27em;
+    background-image: image-set(
+      url('../assets/plates/give-brush.webp') type('image/webp'),
+      url('../assets/plates/give-brush.png') type('image/png')
+    );
+  }
+}
+
+// Secondary action: a hand-inked iron frame, nine-sliced so its corners keep their scale at any width.
+.btn-line {
+  padding: 0 0.56em;
+  border: 13px solid transparent;
+  border-image: image-set(
+      url('../assets/plates/ink-frame.webp') type('image/webp'),
+      url('../assets/plates/ink-frame.png') type('image/png')
+    )
+    46 / 13px / 0 stretch;
+  color: var(--iron);
+  line-height: 1.45;
+
+  &:hover {
+    color: var(--cobalt);
+  }
+}
+
+// The site's one motion grammar: a cobalt line drawn on like slip trailed from a bulb.
+@keyframes brush-draw {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (forced-colors: active) {
+  .btn-brush,
+  .btn-line {
+    border: 2px solid ButtonText;
+    border-image: none;
+  }
+
+  .btn-brush::before,
+  .brush-link::after,
+  .text-link::after {
+    display: none;
+  }
+
+  .brush-link,
+  .text-link {
+    text-decoration: underline;
+  }
+}
+
+// Shared page patterns load last, so they refine the base rules above the way component styles do.
+@include meta.load-css('styles/reference');
+@include meta.load-css('styles/closing');
+@include meta.load-css('styles/forms');
+@include meta.load-css('styles/steps');
+@include meta.load-css('styles/audience');
+@include meta.load-css('styles/pages');

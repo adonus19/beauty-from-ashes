@@ -1,0 +1,482 @@
+:host {
+  display: block;
+}
+
+// First viewport: words at left, the jar filling the right half.
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 50%;
+  align-items: start;
+
+  // Phones and tablets: the words and both actions come first, the jar follows.
+  @media (max-width: 61.99em) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.hero__text {
+  padding-block-start: clamp(2rem, 8.9vw, 9.5rem);
+  padding-inline-start: calc(var(--gutter) + 0.2vw);
+
+  @media (max-width: 61.99em) {
+    padding-inline: var(--gutter);
+  }
+}
+
+// Who and where, said plainly under the actions.
+.hero__place {
+  margin-block-start: clamp(1.25rem, 1.6vw, 1.75rem);
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: clamp(1.0625rem, 1.17vw, 1.25rem);
+  font-style: italic;
+}
+
+.hero__title {
+  max-width: 7.6em;
+  margin-block-start: 0;
+  font-size: clamp(3rem, 5.11vw, 5.375rem);
+  line-height: 1.03;
+  letter-spacing: -0.012em;
+  text-wrap: wrap;
+}
+
+.hero__lede {
+  // Between the comp's second line (26.12em) and its first line plus the next word (26.35em).
+  max-width: 26.22em;
+  text-wrap: wrap;
+  margin-block-start: clamp(0.5rem, 0.74vw, 1rem);
+  font-size: var(--fs-lede);
+  line-height: 1.52;
+}
+
+// The promise to everyone keeps a line of its own.
+.hero__open {
+  display: block;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.05em;
+  margin-block-start: clamp(1.75rem, 2.1vw, 2.25rem);
+  font-size: var(--fs-button);
+}
+
+.hero__jar {
+  margin: 0;
+  // The jar's lower edge is its own soft shadow; the mission band rises into it.
+  margin-block-end: -3.27vw;
+
+  @media (max-width: 61.99em) {
+    justify-self: center;
+    width: min(86%, 34rem);
+    margin-block: 1.5rem 0.75rem;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  // Desktop shows the jar in its lit still-life; the photograph's edges dissolve into the ground.
+  @media (min-width: 62em) {
+    img {
+      mask-image: linear-gradient(to right, transparent, #000 14%),
+        linear-gradient(to bottom, transparent, #000 7%, #000 96%, transparent);
+      mask-composite: intersect;
+    }
+  }
+}
+
+// The mission statement gives the values their meaning, so it comes first.
+.mission {
+  display: grid;
+  justify-items: center;
+  padding-inline: var(--gutter);
+  padding-block-end: clamp(3rem, 6vw, 6rem);
+  text-align: center;
+}
+
+.mission__label {
+  position: relative;
+  font-size: clamp(0.875rem, 1.087vw, 1.0625rem);
+  letter-spacing: 0.33em;
+  margin-inline-end: -0.33em;
+}
+
+.mission__dash {
+  display: block;
+  width: clamp(5.5rem, 8.07vw, 8rem);
+  aspect-ratio: 1402 / 181;
+  margin-block-start: 0.55rem;
+  background: image-set(
+      url('../../../../assets/plates/mission-dash.webp') type('image/webp'),
+      url('../../../../assets/plates/mission-dash.png') type('image/png')
+    )
+    center / 100% 100% no-repeat;
+  animation: brush-draw 800ms var(--ease-out) 750ms both;
+}
+
+.mission__quote {
+  max-width: 30.4em;
+  margin: clamp(0.5rem, 1vw, 1.25rem) 0 0;
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.344vw, 2.4rem);
+  font-style: italic;
+  line-height: 1.26;
+  text-wrap: pretty;
+
+  // From desktop up, the statement keeps the card's three lines, the opening mark hung in the margin.
+  @media (min-width: 62em) {
+    max-width: none;
+
+    .mission__line {
+      display: block;
+
+      &:first-child {
+        position: relative;
+      }
+    }
+
+    .mission__open {
+      position: absolute;
+      inset-inline-end: 100%;
+    }
+  }
+}
+
+// Core values: the belief, then the six commitments it leads to.
+.values {
+  display: grid;
+  justify-items: center;
+  padding: clamp(1rem, 2vw, 2rem) var(--gutter) clamp(4.5rem, 9vw, 9rem);
+  text-align: center;
+}
+
+.values__label {
+  font-size: clamp(0.875rem, 0.85rem + 0.2vw, 1.0625rem);
+  letter-spacing: 0.33em;
+  margin-inline-end: -0.33em;
+}
+
+.values__belief {
+  max-width: 34em;
+  margin-block-start: clamp(1rem, 1.5vw, 1.5rem);
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 1.1rem + 0.7vw, 1.875rem);
+  line-height: 1.4;
+}
+
+.values__therefore {
+  margin-block-start: clamp(2.5rem, 4vw, 4rem);
+  letter-spacing: 0.33em;
+  margin-inline-end: -0.33em;
+}
+
+.values__list {
+  display: grid;
+  grid-template-columns: repeat(var(--value-cols, 1), minmax(0, 1fr));
+  gap: clamp(2.5rem, 3.5vw, 3.5rem) 0;
+  width: 100%;
+  max-width: 72rem;
+  margin: clamp(1.75rem, 2.6vw, 2.75rem) 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: start;
+
+  @media (min-width: 40em) {
+    --value-cols: 2;
+  }
+
+  @media (min-width: 62em) {
+    --value-cols: 3;
+  }
+
+  @media (min-width: 112em) {
+    --value-cols: 6;
+  }
+}
+
+.value {
+  position: relative;
+  padding-inline: clamp(1.25rem, 1.6vw, 1.75rem);
+
+  // A cobalt brushstroke stands beside every value.
+  &::before {
+    content: '';
+    position: absolute;
+    inset-block: 0.35rem 0.5rem;
+    inset-inline-start: 0;
+    width: 0.6rem;
+    background: image-set(
+        url('../../../../assets/plates/value-stroke.webp') type('image/webp'),
+        url('../../../../assets/plates/value-stroke.png') type('image/png')
+      )
+      center / 100% 100% no-repeat;
+  }
+
+  .is-armed &::before {
+    clip-path: inset(0 0 100% 0);
+  }
+
+  .is-armed.is-drawn &::before {
+    clip-path: inset(0);
+    transition: clip-path 900ms var(--ease-out) calc(var(--i, 0) * 110ms + 120ms);
+  }
+
+  // Single column: the cobalt mark sits above each value instead of between them.
+  @media (max-width: 39.99em) {
+    padding-inline: 0;
+
+    &::before {
+      position: static;
+      display: block;
+      width: 4.5rem;
+      height: 0.6rem;
+      margin-block-end: 0.75rem;
+      background-image: image-set(
+        url('../../../../assets/plates/mission-dash.webp') type('image/webp'),
+        url('../../../../assets/plates/mission-dash.png') type('image/png')
+      );
+    }
+  }
+
+}
+
+.value__name {
+  font-size: clamp(1.625rem, 1.4rem + 0.7vw, 2.125rem);
+  line-height: 1.15;
+}
+
+.value__line {
+  max-width: 18em;
+  margin-block-start: 0.6rem;
+  font-size: var(--fs-body);
+  line-height: 1.55;
+}
+
+// What happens when you ask: the five steps, set beside the reassurance.
+.process,
+.conditions {
+  display: grid;
+  gap: clamp(2.5rem, 5vw, 6rem);
+  padding: clamp(4rem, 8vw, 8rem) var(--gutter);
+
+  @media (min-width: 62em) {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    align-items: start;
+  }
+}
+
+.process {
+  padding-block-end: clamp(2.5rem, 5vw, 5rem);
+  border-block-start: 1px solid rgb(58 31 14 / 0.14);
+}
+
+.process__intro,
+.conditions__intro {
+  display: grid;
+  justify-items: start;
+  gap: 1.25rem;
+  max-width: 30rem;
+
+  @media (min-width: 62em) {
+    position: sticky;
+    top: 2rem;
+  }
+}
+
+.process__lede,
+.conditions__lede {
+  font-size: var(--fs-lede);
+  line-height: 1.5;
+}
+
+.process__assurance,
+.conditions__faith {
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: clamp(1.125rem, 1.05rem + 0.3vw, 1.3125rem);
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.process__intro .btn-brush {
+  margin-block-start: 0.75rem;
+}
+
+.process__draft {
+  margin-block-start: 1.25rem;
+  padding-inline-start: calc(clamp(3rem, 5vw, 4.5rem) + clamp(1rem, 2vw, 2rem));
+  color: var(--iron-soft);
+  font-size: 0.875rem;
+}
+
+// Who we help.
+.conditions__list {
+  display: grid;
+  gap: 0 clamp(2rem, 4vw, 4rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: 40em) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.condition {
+  padding-block: 1.5rem 1.75rem;
+  border-block-start: 1px solid rgb(58 31 14 / 0.22);
+}
+
+.condition__name {
+  font-size: clamp(1.375rem, 1.25rem + 0.45vw, 1.75rem);
+  line-height: 1.2;
+}
+
+.condition__text {
+  margin-block-start: 0.5rem;
+}
+
+// A patient story. Samples are labelled until real, consented stories exist.
+.story {
+  display: grid;
+  gap: 2rem clamp(2.5rem, 6vw, 7rem);
+  padding: clamp(4rem, 8vw, 8rem) var(--gutter);
+  border-block-start: 1px solid rgb(58 31 14 / 0.14);
+
+  @media (min-width: 62em) {
+    grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
+    align-items: end;
+  }
+}
+
+.story__title {
+  grid-column: 1 / -1;
+}
+
+.story__figure {
+  margin: 0;
+}
+
+.story__sample {
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  border: 1px dashed var(--iron-soft);
+  border-radius: 3px;
+  color: var(--iron);
+  font-size: 0.875rem;
+  font-weight: 650;
+}
+
+.story__quote {
+  margin: 1.5rem 0 0;
+  color: var(--iron);
+  font-family: var(--font-serif);
+  font-size: clamp(1.875rem, 1.4rem + 2vw, 3.25rem);
+  font-style: italic;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.story__attribution {
+  margin-block-start: 1.25rem;
+  color: var(--iron-soft);
+  font-size: var(--fs-label);
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.story__aside {
+  display: grid;
+  justify-items: start;
+  gap: 1rem;
+  max-width: 24rem;
+}
+
+// Get involved: the vision, set on the iron of the clay body under its glaze.
+.involved {
+  --involved-ink: #efe6d6;
+  background-color: #2a170c;
+  background-image: image-set(
+    url('../../../../assets/plates/ground.webp') type('image/webp'),
+    url('../../../../assets/plates/ground.png') type('image/png')
+  );
+  background-size: 308px 204px;
+  background-blend-mode: multiply;
+  color: var(--involved-ink);
+}
+
+.involved__glaze img {
+  width: 100%;
+  height: clamp(11rem, 26vw, 25rem);
+  object-fit: cover;
+  object-position: center 30%;
+  mask-image: linear-gradient(to bottom, #000 62%, transparent);
+}
+
+.involved__inner {
+  display: grid;
+  justify-items: center;
+  padding: clamp(1rem, 2vw, 2rem) var(--gutter) clamp(4.5rem, 8vw, 8rem);
+  text-align: center;
+}
+
+.involved__label {
+  color: #d4c6ae;
+  font-size: clamp(0.875rem, 0.85rem + 0.2vw, 1.0625rem);
+  letter-spacing: 0.33em;
+  margin-inline-end: -0.33em;
+}
+
+.involved__vision {
+  max-width: 30em;
+  margin-block-start: clamp(1rem, 1.5vw, 1.5rem);
+  color: var(--involved-ink);
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 1.2rem + 1.3vw, 2.5rem);
+  line-height: 1.3;
+}
+
+.involved__paths {
+  display: grid;
+  gap: 2.5rem clamp(2rem, 3vw, 3.5rem);
+  width: 100%;
+  max-width: 96rem;
+  margin: clamp(3rem, 5vw, 5rem) 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: start;
+
+  @media (min-width: 40em) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: 75em) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.path {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 0.6rem;
+  padding-block-start: 1.25rem;
+  border-block-start: 1px solid rgb(239 230 214 / 0.28);
+}
+
+.path__name {
+  color: var(--involved-ink);
+  font-size: clamp(1.375rem, 1.25rem + 0.45vw, 1.75rem);
+  line-height: 1.2;
+}
+
+.path__text {
+  color: #ddd1bd;
+}

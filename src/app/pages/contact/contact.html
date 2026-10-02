@@ -1,0 +1,135 @@
+@let p = page();
+@let s = site();
+@let t = s.forms;
+@let f = p.fields;
+@let v = messageForm;
+
+<header class="page-head">
+  <h1 class="page-head__title">{{ p.title }}</h1>
+  <p class="page-head__lede">{{ p.lede }}</p>
+</header>
+
+<div class="split split--form contact">
+  <section class="split__intro" aria-labelledby="details-title">
+    <h2 id="details-title" class="contact__title">{{ p.detailsTitle }}</h2>
+    <dl class="contact__details">
+      @for (detail of p.details; track detail.label) {
+        <div class="contact__detail">
+          <dt>{{ detail.label }}</dt>
+          <dd>
+            @switch (detail.kind) {
+              @case ('phone') {
+                <a class="brush-link" [href]="s.contact.phoneHref">{{ s.contact.phone }}</a>
+              }
+              @case ('email') {
+                <a class="brush-link" [href]="'mailto:' + s.contact.email">{{ s.contact.email }}</a>
+              }
+              @default {
+                {{ detail.text }}
+                @if (detail.placeholder) {
+                  <bfa-placeholder-tag />
+                }
+              }
+            }
+          </dd>
+        </div>
+      }
+    </dl>
+    <p class="split__note">{{ s.contact.placeholderNote }}</p>
+  </section>
+
+  <section class="split__form" aria-labelledby="form-title">
+    <h2 id="form-title" class="contact__title">{{ p.formTitle }}</h2>
+    @if (sent()) {
+      <div class="form-sent">
+        <h3 #sentHeading class="form-sent__title" tabindex="-1">{{ p.sent.title }}</h3>
+        <p class="form-sent__demo">{{ p.sent.demo }}</p>
+        <button class="btn-line" type="button" (click)="startAgain()">{{ p.sent.again }}</button>
+      </div>
+    } @else {
+      <p class="contact__health">
+        {{ p.health.text }}
+        <a class="text-link text-link--small" [routerLink]="locale.link(p.health.link.path)">{{
+          p.health.link.label
+        }}</a>
+      </p>
+      <p class="demo-notice">
+        <strong>{{ t.demoTitle }}.</strong> {{ t.demoNotice }}
+      </p>
+      <p class="form__required">{{ t.requiredNote }}</p>
+
+      @if (attempts() > 0 && v().invalid()) {
+        <bfa-error-summary [form]="v" [attempt]="attempts()" />
+      }
+
+      <form class="form form--plain" novalidate (submit)="send($event)">
+        <div class="field">
+          <label class="field__label" for="name">{{ f.name.label }}</label>
+          <input
+            class="field__control"
+            id="name"
+            type="text"
+            autocomplete="name"
+            [formField]="v.name"
+            [bfaField]="v.name"
+          />
+          <bfa-field-error [field]="v.name" for="name" />
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label class="field__label" for="email">{{ f.email.label }}</label>
+            <input
+              class="field__control"
+              id="email"
+              type="email"
+              autocomplete="email"
+              [formField]="v.email"
+              [bfaField]="v.email"
+            />
+            <bfa-field-error [field]="v.email" for="email" />
+          </div>
+          <div class="field">
+            <label class="field__label" for="phone">
+              {{ f.phone.label }} <span class="field__optional">({{ t.optional }})</span>
+            </label>
+            <input
+              class="field__control"
+              id="phone"
+              type="tel"
+              autocomplete="tel"
+              [formField]="v.phone"
+              [bfaField]="v.phone"
+            />
+            <bfa-field-error [field]="v.phone" for="phone" />
+          </div>
+        </div>
+        <div class="field">
+          <label class="field__label" for="topic">{{ f.topic.label }}</label>
+          <select
+            class="field__control field__control--select"
+            id="topic"
+            [formField]="v.topic"
+            [bfaField]="v.topic"
+          >
+            @for (option of f.topic.options; track option.value) {
+              <option [value]="option.value">{{ option.label }}</option>
+            }
+          </select>
+          <bfa-field-error [field]="v.topic" for="topic" />
+        </div>
+        <div class="field">
+          <label class="field__label" for="message">{{ f.message.label }}</label>
+          <textarea
+            class="field__control field__control--area"
+            id="message"
+            rows="6"
+            [formField]="v.message"
+            [bfaField]="v.message"
+          ></textarea>
+          <bfa-field-error [field]="v.message" for="message" />
+        </div>
+        <button class="form__submit btn-brush" type="submit">{{ p.submit }}</button>
+      </form>
+    }
+  </section>
+</div>
