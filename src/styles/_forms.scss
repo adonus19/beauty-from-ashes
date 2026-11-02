@@ -313,7 +313,9 @@
 }
 
 .form__submit {
-  margin-block-start: clamp(2.5rem, 4vw, 3.5rem);
+  // In a grid form the button would stretch across the column; it keeps its own width, flush with the labels.
+  justify-self: start;
+  margin-block: clamp(2.5rem, 4vw, 3.5rem) 1.25rem;
   border: 0;
   background: none;
 }

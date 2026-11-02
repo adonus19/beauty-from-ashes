@@ -274,7 +274,7 @@
   color: #ddd1bd;
 
   @media (min-width: 62em) {
-    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
     align-items: start;
   }
 }
@@ -290,6 +290,22 @@
   max-width: 34em;
   font-size: clamp(1.125rem, 0.9rem + 0.5vw, 1.375rem);
   line-height: 1.55;
+
+  // Wide: the appeal at left, the cost and the action beside it, so the band is one short row.
+  @media (min-width: 62em) {
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 1.25rem clamp(2.5rem, 4.9vw, 5rem);
+    max-width: none;
+
+    > :first-child {
+      grid-row: 1 / span 2;
+    }
+
+    > :not(:first-child) {
+      grid-column: 2;
+    }
+  }
 }
 
 // The band follows directly, so the next section needs no rule of its own.

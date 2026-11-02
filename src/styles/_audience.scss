@@ -73,6 +73,14 @@
   gap: 1rem 1.9rem;
   margin-block-start: clamp(1.5rem, 2vw, 2rem);
 
+  // On a phone the two actions stack at one width, so they read as a pair.
+  @media (max-width: 39.99em) {
+    flex-direction: column;
+    align-items: stretch;
+    width: min(100%, 17rem);
+    margin-inline: auto;
+  }
+
   .btn-brush,
   .btn-line {
     font-size: clamp(1.125rem, 1.43vw, 1.375rem);
@@ -127,29 +135,85 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  // Every role carries a hairline above it; the first row's is clipped, so the section's own rule
+  // is the only one at the top and a short last row is ruled only where it has content.
+  clip-path: inset(1px 0 0);
 
   @media (min-width: 40em) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  // Beside the title, the first role lines up with the heading rather than sitting a row lower.
+  @media (min-width: 62em) {
+    margin-block-start: calc(-1 * clamp(1rem, 1.5vw, 1.5rem));
+  }
 }
 
 .role {
-  padding-block: clamp(0.25rem, 0.4vw, 0.5rem) clamp(1.25rem, 1.8vw, 1.75rem);
+  padding-block: clamp(1.25rem, 1.8vw, 1.75rem);
+  border-block-start: 1px solid rgb(58 31 14 / 0.4);
+}
 
-  // One column: a hairline between roles. Two columns: between rows.
-  @media (max-width: 39.99em) {
-    & + & {
-      border-block-start: 1px solid rgb(58 31 14 / 0.4);
-      padding-block-start: 1.25rem;
+// A section whose list is long: the title and introduction take one row, and the list uses the full width.
+.split--wide {
+  @media (min-width: 62em) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(1.5rem, 2.4vw, 2.25rem);
+
+    .split__intro {
+      position: static;
+      grid-template-columns: minmax(0, 5fr) minmax(0, 8fr);
+      column-gap: clamp(2.5rem, 4.9vw, 5rem);
+      align-items: start;
+    }
+
+    .roles__list {
+      grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
+      margin-block-start: calc(-1 * clamp(0.5rem, 1vw, 1rem));
+    }
+
+    .asks {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 clamp(2.5rem, 4.9vw, 5rem);
+      align-items: start;
+    }
+
+    .asks__terms {
+      margin-block-start: 0;
+    }
+
+    .asks .split__note {
+      grid-column: 1 / -1;
     }
   }
+}
 
-  @media (min-width: 40em) {
-    &:nth-child(n + 3) {
-      border-block-start: 1px solid rgb(58 31 14 / 0.4);
-      padding-block-start: clamp(1.25rem, 1.8vw, 1.75rem);
+// Short sections (one paragraph) do not need the full section's empty runway.
+.split--brief {
+  padding-block-end: clamp(2.5rem, 4vw, 4rem);
+}
+
+// The board: three names, one reading line each, the same hairline under every one.
+.board__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding-block: clamp(0.9rem, 1.4vw, 1.25rem);
+    border-block-end: 1px solid rgb(58 31 14 / 0.25);
+
+    &:first-child {
+      padding-block-start: 0;
     }
   }
+}
+
+.board__name {
+  font-size: clamp(1.5rem, 1.1rem + 1.2vw, 2rem);
+  line-height: 1.2;
 }
 
 .role__name {

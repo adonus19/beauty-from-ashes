@@ -276,6 +276,13 @@
   border-block-start: 1px solid rgb(58 31 14 / 0.14);
 }
 
+// Twelve conditions: the title and introduction take a row, and the list runs three across below.
+.conditions {
+  @media (min-width: 62em) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .process__intro,
 .conditions__intro {
   display: grid;
@@ -286,6 +293,25 @@
   @media (min-width: 62em) {
     position: sticky;
     top: 2rem;
+  }
+}
+
+.conditions__intro {
+  @media (min-width: 62em) {
+    position: static;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 8fr);
+    column-gap: clamp(2.5rem, 4.9vw, 5rem);
+    align-items: start;
+    max-width: none;
+
+    .section-title {
+      grid-column: 1;
+      grid-row: 1 / span 3;
+    }
+
+    > :not(.section-title) {
+      grid-column: 2;
+    }
   }
 }
 
@@ -325,6 +351,10 @@
 
   @media (min-width: 40em) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: 62em) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

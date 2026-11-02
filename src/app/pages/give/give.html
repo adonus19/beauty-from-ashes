@@ -86,13 +86,13 @@
   </form>
 </section>
 
-<section class="split split--brushed" [id]="p.pays.id" aria-labelledby="pays-title">
+<section class="split split--wide split--brushed" [id]="p.pays.id" aria-labelledby="pays-title">
   <div class="split__intro">
     <h2 id="pays-title" class="section-title">{{ p.pays.title }}</h2>
     <p class="split__lede">{{ p.pays.intro }}</p>
   </div>
   <div>
-    <ul class="roles__list" role="list">
+    <ul class="roles__list" role="list" [style.--cols]="4">
       @for (item of p.pays.items; track item.name) {
         <li class="role">
           <h3 class="role__name">{{ item.name }}</h3>
@@ -126,11 +126,11 @@
   </div>
 </section>
 
-<section class="split" [id]="p.other.id" aria-labelledby="other-title">
+<section class="split split--wide" [id]="p.other.id" aria-labelledby="other-title">
   <div class="split__intro">
     <h2 id="other-title" class="section-title">{{ p.other.title }}</h2>
   </div>
-  <ul class="roles__list" role="list">
+  <ul class="roles__list" role="list" [style.--cols]="3">
     @for (item of p.other.items; track item.name) {
       <li class="role">
         <h3 class="role__name">{{ item.name }}</h3>

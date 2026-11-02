@@ -21,12 +21,12 @@
 </section>
 
 @for (group of [p.churches, p.businesses]; track group.id) {
-  <section class="split" [id]="group.id" [attr.aria-labelledby]="group.id + '-title'">
+  <section class="split split--wide" [id]="group.id" [attr.aria-labelledby]="group.id + '-title'">
     <div class="split__intro">
       <h2 [id]="group.id + '-title'" class="section-title">{{ group.title }}</h2>
       <p class="split__lede">{{ group.intro }}</p>
     </div>
-    <ul class="roles__list" role="list">
+    <ul class="roles__list" role="list" [style.--cols]="group.items.length > 4 ? 3 : group.items.length">
       @for (item of group.items; track item.name) {
         <li class="role">
           <h3 class="role__name">{{ item.name }}</h3>
@@ -42,13 +42,13 @@
   </section>
 }
 
-<section class="split" [id]="p.kit.id" aria-labelledby="kit-title">
+<section class="split split--wide" [id]="p.kit.id" aria-labelledby="kit-title">
   <div class="split__intro">
     <h2 id="kit-title" class="section-title">{{ p.kit.title }}</h2>
     <p class="split__lede">{{ p.kit.intro }}</p>
   </div>
   <div>
-    <ul class="roles__list" role="list">
+    <ul class="roles__list" role="list" [style.--cols]="3">
       @for (item of p.kit.items; track item.name) {
         <li class="role">
           <h3 class="role__name">{{ item.name }}</h3>

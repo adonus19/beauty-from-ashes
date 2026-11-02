@@ -2,6 +2,13 @@
 
 Read this first, then README.md and the ticket you pick up. Do not assume facts; ask the user.
 
+## Layout polish pass (impeccable) DONE, uncommitted (85 tests, build, axe/overflow/menu/motion clean)
+- About board underline bug: cause was the shared `.role:nth-child(n+3)` row hairline; Jay wrapped to row 2 column 1 so his top border sat under Dr. Franks. Board is now a stacked list (`.board__list`, `.board__name` in src/styles/_audience.scss), same hairline under each name. Volunteers/faith sections tightened (`split--brief`). Values list has hairlines at 375.
+- New `split--wide` layout (title + lede on one row, list full width in 3-4 columns) on volunteer roles/other-ways/ask, partner kit/churches/businesses, give pays-for/other-ways; home conditions list is 3 across; Sponsor band is one short row; Send button no longer stretches; Accessibility "Known gaps" uses text-wrap: balance; footer about block takes its own row.
+- Left as is: Get Help FAQ/privacy left column (sticky jump nav + CTA), volunteer "How to join" steps (empty left column at 1280), 5-item lists leave one empty cell in row 2 at 1280.
+- Board shows names only. "Founder and Medical Director" for Dr. Franks is NOT displayed: it is not in en.json, owner confirmation pending (owner email item 6). Ask the user whether to add it.
+- Look at es routes again after ticket 08.
+
 ## Latest (uncommitted; 85 tests pass, build passes, axe 0 violations on 14 routes)
 User decisions: volunteer bare button removed (HTML comment in volunteer.html marks where volunteer testimony goes once written permission exists); footer/contact address is now a Google Maps link (`site.contact.addressMapHref`; web pages cannot open the OS default map app everywhere); other forms (Volunteer, Partner, Contact, Give) wait; remaining placeholders are fine for now.
 Fixed during verification: (1) GitHub Pages base-path build 404'd on /media/*.webp because of critical-CSS inlining; fixed with `inlineCritical: false` in angular.json production config (check page speed later; unmeasured). (2) Escape in the mobile menu dropped focus to body. (3) Mobile menu now cycles Tab/Shift+Tab inside itself; after navigation focus moves to `#main` (App) when it was on body. (4) Footer columns rebalanced; address 4 lines; headings align at 1280.

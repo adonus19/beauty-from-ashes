@@ -26,13 +26,13 @@
   </div>
 </section>
 
-<section class="split roles" [id]="p.roles.id" aria-labelledby="roles-title">
+<section class="split split--wide roles" [id]="p.roles.id" aria-labelledby="roles-title">
   <div class="split__intro">
     <h2 id="roles-title" class="section-title">{{ p.roles.title }}</h2>
     <p class="split__lede">{{ p.roles.intro }}</p>
   </div>
   <div>
-    <ul class="roles__list" role="list">
+    <ul class="roles__list" role="list" [style.--cols]="3">
       @for (role of p.roles.items; track role.name) {
         <li class="role">
           <h3 class="role__name">{{ role.name }}</h3>
@@ -46,13 +46,13 @@
 
 <!-- Volunteer testimony goes here once consented stories exist (written permission required). -->
 
-<section class="split" [id]="p.other.id" aria-labelledby="other-title">
+<section class="split split--wide" [id]="p.other.id" aria-labelledby="other-title">
   <div class="split__intro">
     <h2 id="other-title" class="section-title">{{ p.other.title }}</h2>
     <p class="split__lede">{{ p.other.intro }}</p>
   </div>
   <div>
-    <ul class="roles__list" role="list">
+    <ul class="roles__list" role="list" [style.--cols]="3">
       @for (role of p.other.items; track role.id) {
         <li class="role" [id]="role.id">
           <h3 class="role__name">{{ role.name }}</h3>
@@ -64,7 +64,7 @@
   </div>
 </section>
 
-<section class="split" [id]="p.ask.id" aria-labelledby="ask-title">
+<section class="split split--wide" [id]="p.ask.id" aria-labelledby="ask-title">
   <div class="split__intro">
     <h2 id="ask-title" class="section-title">{{ p.ask.title }}</h2>
   </div>

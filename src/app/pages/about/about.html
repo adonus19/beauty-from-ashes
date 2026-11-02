@@ -63,7 +63,7 @@
   <p class="about-card__note">{{ p.card.note }}</p>
 </section>
 
-<section class="split" aria-labelledby="faith-title">
+<section class="split split--brief" aria-labelledby="faith-title">
   <div class="split__intro">
     <h2 id="faith-title" class="section-title">{{ p.faith.title }}</h2>
   </div>
@@ -81,16 +81,16 @@
     <h2 id="board-title" class="section-title">{{ p.board.title }}</h2>
     <p class="split__lede">{{ p.board.intro }}</p>
   </div>
-  <ul class="roles__list" role="list">
+  <ul class="board__list" role="list">
     @for (member of p.board.members; track member) {
-      <li class="role">
-        <h3 class="role__name board__name">{{ member }}</h3>
+      <li>
+        <h3 class="board__name">{{ member }}</h3>
       </li>
     }
   </ul>
 </section>
 
-<section class="split" aria-labelledby="volunteers-title">
+<section class="split split--brief" aria-labelledby="volunteers-title">
   <div class="split__intro">
     <h2 id="volunteers-title" class="section-title">{{ p.volunteers.title }}</h2>
   </div>

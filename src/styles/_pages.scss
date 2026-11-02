@@ -205,6 +205,16 @@
   list-style: none;
   text-align: start;
 
+  // One column: a hairline between values so six short lines read as a list.
+  @media (max-width: 39.99em) {
+    gap: 0;
+
+    li {
+      padding-block: 0.9rem 1rem;
+      border-block-start: 1px solid rgb(58 31 14 / 0.3);
+    }
+  }
+
   @media (min-width: 40em) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

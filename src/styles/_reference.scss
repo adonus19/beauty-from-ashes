@@ -113,6 +113,8 @@
   margin-block-start: clamp(0.25rem, 0.25vw, 0.375rem);
   font-size: clamp(1.0625rem, 0.75rem + 0.75vw, 1.5rem);
   line-height: 1.5;
+  // Short paragraphs break evenly instead of leaving a last line of one or two words.
+  text-wrap: balance;
 }
 
 .reference__lines {
