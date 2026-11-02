@@ -144,7 +144,11 @@
       "summaryIntro": "Some answers are missing or need a change:",
       "yes": "Yes",
       "no": "No",
-      "errorPrefix": "Error:"
+      "errorPrefix": "Error:",
+      "sending": "Sending. Please wait a moment.",
+      "failed": "We could not send this. Your answers are still on this page.",
+      "failedHelp": "Try again in a moment. If it keeps happening, call us at",
+      "retry": "Try again"
     }
   },
   "home": {
@@ -685,6 +689,9 @@
       "title": "Thank you. Your request is ready.",
       "demo": "This is a demo, so nothing was sent or saved. When the site launches, your request will go securely to the ministry’s care team.",
       "next": "After a real request, we let you know we’ve received it. We generally respond to initial requests within 5–7 business days.",
+      "titleLive": "Thank you. We received your request.",
+      "nextLive": "We let you know we’ve received your request. We generally respond to initial requests within 5–7 business days.",
+      "announce": "Your request was sent.",
       "home": {
         "label": "Back to the home page",
         "path": ""
@@ -920,6 +927,9 @@
       "title": "Thank you for thinking of them.",
       "demo": "This is a demo, so nothing was sent or saved. When the site launches, your referral will go securely to the ministry’s care team.",
       "next": "After a real referral, we contact the person directly. To protect their privacy, we share updates with you only if they say we may.",
+      "titleLive": "Thank you for thinking of them. We received your referral.",
+      "nextLive": "We contact the person directly. To protect their privacy, we share updates with you only if they say we may.",
+      "announce": "Your referral was sent.",
       "again": "Refer someone else"
     }
   },

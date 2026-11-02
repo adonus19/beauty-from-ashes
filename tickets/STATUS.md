@@ -1,6 +1,17 @@
-# Status handoff (updated 2026-11-02, after tickets 01 and 04)
+# Status handoff (updated 2026-11-02, after 01, 04, 05A and interim 09)
 
 Read this first, then README.md and the ticket you pick up. Do not assume facts; ask the user.
+
+## Done since last update (uncommitted; commit after review)
+- 05 PART A (vendor-neutral submission layer): done. src/app/core/submission/ (service, http impl, payload-format.ts field map, form-submission state machine, submit-status). Ask for Help and Refer use it. Endpoint is `SUBMISSION_ENDPOINT` in app.config.ts, empty = demo mode (demo notice stays, nothing is sent); must be https. Lead check: 76 tests pass, build passes.
+  - TO CONNECT PAUBOX (part B, blocked on signed BAA + vendor answers): set the endpoint; edit only payload-format.ts (Paubox POST shape is UNVERIFIED; check docs.paubox.com/forms); confirm CORS from the production origin. GitHub Pages cannot host a proxy; if CORS is unsupported, hosting or a proxy decision is needed (raise with the user).
+  - Possible double screen-reader announcement on "sent" (heading focus + live region). One-line fix: drop the live message for "sent". Decide during ticket 09 with a screen reader test.
+  - Volunteer, Partner, Contact and Give forms are still demo-only and do not use this layer. They need a destination decision (they are not PHI, but still personal data). ASK THE USER.
+  - .impeccable/build/submit-states.mjs needs a build with a fake https endpoint and an intercepting server; it crashes against the normal demo build (expected).
+- Interim 09 (English only): ng test/build pass; axe 0 violations on 14 routes at 1440 and 390; forms/overflow/menu/motion checks clean; 200% zoom and 400% reflow no overflow on home and ask-for-help; no "Sample", "to come", "example.org", "555", "10 business" left. Not done: keyboard walkthrough, base-href build test, rendered check that empty-email mailto links are hidden, review of get-help/refer/contact/give/stories/privacy screenshots (scratchpad has m-<page>.png at 375 and d-<page>.png at 1280).
+- Visual problems found (not fixed; use impeccable): (1) volunteer: bare "Volunteer your skills" button alone in a 2-column grid between rules, duplicate of hero and form buttons: drop it or fix it; (2) volunteer: three Placeholder tags in a row; (3) about: Board names look orphaned in a 2-col grid, Volunteers is one line, "What we believe" is just "will appear here" + tag; (4) home: story section sparse; (5) footer: address column ~130px wide, wraps to 5 lines; (6) home 12-item conditions list: uneven row heights, "Something else" makes 13 cells; (7) ask-for-help is ~6,500px tall at 320px.
+- 35 `placeholder: true` remain in en.json: getHelp cost.paragraphs[0], privacy.paragraphs[0], questions.items[1,5,6,7,8]; refer when.items[2], ask.paragraphs[1], next.items[0,2], partners.paragraphs[0]; volunteer ask.items[0-3], ask.paragraphs[0-2]; partner churches.items[1,4], businesses.items[1,3]; about faith, accountability.items[1,2]; privacy sections[0].p[1], [2].p[0], [4].p[0]; give sponsor, other.items[0,1,2,4], trust.items[1]. Owner decides which to keep (owner email item 9).
+- Draft email to the owner: tickets/EMAIL-TO-OWNER.md (includes the Paubox question list). OWNER-OPEN-ITEMS.md is the same list in checklist form.
 
 ## Done, verified by the lead session
 (Earlier tickets 02, 03, 06, 07 are committed. Tickets 01 and 04 below are in the working tree, NOT committed. Review `git diff`, then commit.)

@@ -26,14 +26,25 @@ import { FieldError } from '../../core/forms/field-error';
 import { FormFieldA11y } from '../../core/forms/form-field-a11y';
 import { Locale } from '../../core/locale';
 import { PlaceholderTag } from '../../core/placeholder-tag/placeholder-tag';
+import { formSubmission } from '../../core/submission/form-submission';
+import { SubmitStatusView } from '../../core/submission/submit-status';
 
 /**
- * The request for care. On the demo nothing leaves the browser: a valid request shows the
- * confirmation and is discarded. The secure, HIPAA-compliant service is connected before launch.
+ * The request for care. Sending goes through `SubmissionService`. Until a secure, HIPAA-compliant
+ * service is connected it stays a demo: a valid request shows the confirmation and nothing leaves
+ * the browser.
  */
 @Component({
   selector: 'bfa-ask-for-help',
-  imports: [RouterLink, FormField, FormFieldA11y, FieldError, ErrorSummary, PlaceholderTag],
+  imports: [
+    RouterLink,
+    FormField,
+    FormFieldA11y,
+    FieldError,
+    ErrorSummary,
+    PlaceholderTag,
+    SubmitStatusView,
+  ],
   templateUrl: './ask-for-help.html',
   styleUrl: './ask-for-help.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -124,7 +135,8 @@ export class AskForHelp {
   protected readonly forChild = computed(() => this.model().forWhom === 'child');
 
   protected readonly attempts = signal(0);
-  protected readonly sent = signal(false);
+  protected readonly submission = formSubmission('request');
+  protected readonly sent = this.submission.sent;
 
   private readonly sentHeading = viewChild<ElementRef<HTMLElement>>('sentHeading');
 
@@ -136,15 +148,15 @@ export class AskForHelp {
     });
   }
 
-  protected async send(event: Event): Promise<void> {
-    event.preventDefault();
+  protected async send(event?: Event): Promise<void> {
+    event?.preventDefault();
+    if (this.submission.sending()) return;
     await submit(this.request, {
       action: async () => {
-        this.sent.set(true);
+        await this.submission.send(this.model());
         return undefined;
       },
       onInvalid: () => this.attempts.update((count) => count + 1),
     });
   }
-
 }

@@ -355,6 +355,35 @@
   cursor: pointer;
 }
 
+// While the answers are on their way, and when they could not be sent.
+.form__submit[aria-disabled='true'] {
+  opacity: 0.65;
+  cursor: progress;
+}
+
+.submit-status {
+  max-width: 40em;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.submit-status__text {
+  margin-block-start: 1rem;
+  color: var(--iron);
+}
+
+.submit-status__text--failed {
+  padding-inline-start: 1rem;
+  border-inline-start: 4px solid var(--oxide);
+  font-weight: 650;
+}
+
+.submit-status__retry {
+  margin-block-start: 1rem;
+}
+
 .form-sent {
   display: grid;
   justify-items: start;

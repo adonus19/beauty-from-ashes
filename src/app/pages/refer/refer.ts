@@ -27,6 +27,8 @@ import { FormFieldA11y } from '../../core/forms/form-field-a11y';
 import { JumpNav, JumpTarget } from '../../core/jump-nav/jump-nav';
 import { Locale } from '../../core/locale';
 import { PlaceholderTag } from '../../core/placeholder-tag/placeholder-tag';
+import { formSubmission } from '../../core/submission/form-submission';
+import { SubmitStatusView } from '../../core/submission/submit-status';
 
 const PHONE = /^\D*(\d\D*){10,11}$/;
 
@@ -41,6 +43,7 @@ const PHONE = /^\D*(\d\D*){10,11}$/;
     ErrorSummary,
     JumpNav,
     PlaceholderTag,
+    SubmitStatusView,
   ],
   templateUrl: './refer.html',
   styleUrl: './refer.scss',
@@ -120,7 +123,8 @@ export class Refer {
 
   protected readonly forChild = computed(() => this.model().age === 'child');
   protected readonly attempts = signal(0);
-  protected readonly sent = signal(false);
+  protected readonly submission = formSubmission('referral');
+  protected readonly sent = this.submission.sent;
 
   private readonly sentHeading = viewChild<ElementRef<HTMLElement>>('sentHeading');
 
@@ -132,11 +136,12 @@ export class Refer {
     });
   }
 
-  protected async send(event: Event): Promise<void> {
-    event.preventDefault();
+  protected async send(event?: Event): Promise<void> {
+    event?.preventDefault();
+    if (this.submission.sending()) return;
     await submit(this.referral, {
       action: async () => {
-        this.sent.set(true);
+        await this.submission.send(this.model());
         return undefined;
       },
       onInvalid: () => this.attempts.update((count) => count + 1),
@@ -147,6 +152,6 @@ export class Refer {
     this.model.set({ ...this.blank });
     this.referral().reset();
     this.attempts.set(0);
-    this.sent.set(false);
+    this.submission.reset();
   }
 }

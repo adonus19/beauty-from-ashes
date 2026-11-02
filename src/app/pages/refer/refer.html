@@ -85,10 +85,14 @@
 
         @if (sent()) {
           <div class="form-sent">
-            <h3 #sentHeading class="form-sent__title" tabindex="-1">{{ p.sent.title }}</h3>
-            <p class="form-sent__demo">{{ p.sent.demo }}</p>
+            <h3 #sentHeading class="form-sent__title" tabindex="-1">
+              {{ submission.live ? p.sent.titleLive : p.sent.title }}
+            </h3>
+            @if (!submission.live) {
+              <p class="form-sent__demo">{{ p.sent.demo }}</p>
+            }
             <p>
-              {{ p.sent.next }}
+              {{ submission.live ? p.sent.nextLive : p.sent.next }}
               <bfa-placeholder-tag />
             </p>
             <button class="btn-line" type="button" (click)="startAgain()">
@@ -96,9 +100,11 @@
             </button>
           </div>
         } @else {
-          <p class="demo-notice">
-            <strong>{{ t.demoTitle }}.</strong> {{ t.demoNotice }}
-          </p>
+          @if (!submission.live) {
+            <p class="demo-notice">
+              <strong>{{ t.demoTitle }}.</strong> {{ t.demoNotice }}
+            </p>
+          }
           <p class="form__required">{{ t.requiredNote }}</p>
 
           @if (attempts() > 0 && r().invalid()) {
@@ -359,9 +365,20 @@
               </div>
             </fieldset>
 
-            <button class="form__submit btn-brush" type="submit">{{ p.submit }}</button>
+            <button
+              class="form__submit btn-brush"
+              type="submit"
+              [attr.aria-disabled]="submission.sending() ? 'true' : null"
+            >
+              {{ p.submit }}
+            </button>
           </form>
         }
+        <bfa-submit-status
+          [status]="submission.status()"
+          [sentMessage]="p.sent.announce"
+          (retry)="send()"
+        />
         <p class="placeholder-note">{{ placeholderNote() }}</p>
       </section>
     </div>
