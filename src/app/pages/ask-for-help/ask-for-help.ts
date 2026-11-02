@@ -1,7 +1,6 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  DestroyRef,
   ElementRef,
   afterRenderEffect,
   computed,
@@ -22,19 +21,11 @@ import {
 import { RouterLink } from '@angular/router';
 
 import { ErrorSummary } from '../../core/forms/error-summary';
+import { careTypeOptions } from '../../core/forms/care-type-options';
 import { FieldError } from '../../core/forms/field-error';
 import { FormFieldA11y } from '../../core/forms/form-field-a11y';
 import { Locale } from '../../core/locale';
 import { PlaceholderTag } from '../../core/placeholder-tag/placeholder-tag';
-
-interface Photo {
-  readonly name: string;
-  readonly size: string;
-  readonly url: string;
-}
-
-const MAX_PHOTOS = 6;
-const MAX_PHOTO_BYTES = 10 * 1024 * 1024;
 
 /**
  * The request for care. On the demo nothing leaves the browser: a valid request shows the
@@ -52,13 +43,15 @@ export class AskForHelp {
   protected readonly page = computed(() => this.locale.content().askForHelp);
   protected readonly forms = computed(() => this.locale.content().site.forms);
   protected readonly contact = computed(() => this.locale.content().site.contact);
+  protected readonly careTypes = computed(() =>
+    careTypeOptions(this.locale.content(), this.page().fields.careType),
+  );
   protected readonly steps = computed(() => this.locale.content().home.process.steps);
 
   protected readonly model = signal({
     forWhom: '',
     patientFirst: '',
     patientLast: '',
-    patientBirth: '',
     guardianFirst: '',
     guardianLast: '',
     guardianRelation: '',
@@ -72,13 +65,7 @@ export class AskForHelp {
     zip: '',
     careType: '',
     description: '',
-    howLong: '',
-    dailyLife: '',
-    photoNames: [] as string[],
-    insurance: '',
-    heardFrom: '',
     prayer: '',
-    notes: '',
     consentContact: false,
     consentAuthority: false,
   });
@@ -91,10 +78,6 @@ export class AskForHelp {
     required(s.forWhom, { message: e.forWhom });
     required(s.patientFirst, { message: e.patientFirst });
     required(s.patientLast, { message: e.patientLast });
-    required(s.patientBirth, { message: e.patientBirth });
-    pattern(s.patientBirth, /^(0?[1-9]|1[0-2])\/(0?[1-9]|[12]\d|3[01])\/(19|20)\d{2}$/, {
-      message: e.patientBirth,
-    });
 
     // A parent or guardian answers for a child, so their own details are asked only then.
     for (const path of [s.guardianFirst, s.guardianLast, s.guardianRelation]) {
@@ -128,10 +111,6 @@ export class AskForHelp {
 
     required(s.careType, { message: e.careType });
     required(s.description, { message: e.description });
-    required(s.dailyLife, { message: e.dailyLife });
-    validate(s.photoNames, ({ value }) =>
-      value().length ? undefined : { kind: 'required', message: e.photos },
-    );
 
     validate(s.consentContact, ({ value }) =>
       value() ? undefined : { kind: 'required', message: e.consentContact },
@@ -144,60 +123,17 @@ export class AskForHelp {
   protected readonly isSelf = computed(() => this.model().forWhom === 'self');
   protected readonly forChild = computed(() => this.model().forWhom === 'child');
 
-  protected readonly photos = signal<readonly Photo[]>([]);
-  protected readonly photoNotice = signal('');
   protected readonly attempts = signal(0);
   protected readonly sent = signal(false);
 
-  private readonly photoInput = viewChild<ElementRef<HTMLInputElement>>('photoInput');
   private readonly sentHeading = viewChild<ElementRef<HTMLElement>>('sentHeading');
 
   constructor() {
-    inject(DestroyRef).onDestroy(() =>
-      this.photos().forEach((photo) => URL.revokeObjectURL(photo.url)),
-    );
-
     afterRenderEffect(() => {
       if (this.sent()) {
         this.sentHeading()?.nativeElement.focus();
       }
     });
-  }
-
-  protected addPhotos(event: Event): void {
-    const input = event.target as HTMLInputElement;
-    const text = this.page().fields.photos;
-    const added = [...this.photos()];
-    const notes: string[] = [];
-
-    for (const file of Array.from(input.files ?? [])) {
-      if (!file.type.startsWith('image/')) {
-        notes.push(`${file.name} ${text.notImage}`);
-      } else if (file.size > MAX_PHOTO_BYTES) {
-        notes.push(`${file.name} ${text.tooBig}`);
-      } else if (added.length >= MAX_PHOTOS) {
-        notes.push(text.tooMany);
-        break;
-      } else {
-        added.push({
-          name: file.name,
-          size: formatSize(file.size),
-          url: URL.createObjectURL(file),
-        });
-      }
-    }
-
-    input.value = '';
-    this.photoNotice.set(notes.join(' '));
-    this.setPhotos(added);
-  }
-
-  protected removePhoto(index: number): void {
-    const photo = this.photos()[index];
-    URL.revokeObjectURL(photo.url);
-    this.photoNotice.set('');
-    this.setPhotos(this.photos().filter((_, i) => i !== index));
-    this.photoInput()?.nativeElement.focus();
   }
 
   protected async send(event: Event): Promise<void> {
@@ -211,15 +147,4 @@ export class AskForHelp {
     });
   }
 
-  private setPhotos(photos: readonly Photo[]): void {
-    this.photos.set(photos);
-    this.model.update((model) => ({ ...model, photoNames: photos.map((photo) => photo.name) }));
-    this.request.photoNames().markAsTouched();
-  }
-}
-
-function formatSize(bytes: number): string {
-  return bytes >= 1024 * 1024
-    ? `${(bytes / (1024 * 1024)).toFixed(1)} MB`
-    : `${Math.max(1, Math.round(bytes / 1024))} KB`;
 }

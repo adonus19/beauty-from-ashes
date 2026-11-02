@@ -208,6 +208,12 @@
   font-size: 0.9375rem;
 }
 
+.form__later {
+  max-width: 36em;
+  color: var(--iron-soft);
+  font-size: 0.9375rem;
+}
+
 .field__control {
   width: 100%;
   min-height: 3rem;
@@ -304,90 +310,6 @@
 
 .choice--check {
   max-width: 36em;
-}
-
-// Photos: a hidden native file input behind an inked frame, then the chosen photos as a list.
-.photos__input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-
-  &:focus-visible + .photos__button {
-    outline: 2px solid var(--cobalt);
-    outline-offset: 4px;
-  }
-}
-
-.photos__button {
-  margin-block-start: 0.4rem;
-  font-size: clamp(1.125rem, 1rem + 0.4vw, 1.3125rem);
-}
-
-.photos__notice:empty {
-  display: none;
-}
-
-.photos__notice {
-  color: var(--oxide);
-  font-weight: 650;
-}
-
-.photos__count {
-  color: var(--iron-soft);
-  font-size: 0.9375rem;
-}
-
-.photos__list {
-  display: grid;
-  gap: 0.75rem;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.photo {
-  display: grid;
-  grid-template-columns: 4.5rem minmax(0, 1fr) auto;
-  grid-template-areas: 'thumb name remove' 'thumb size remove';
-  align-items: center;
-  gap: 0 1rem;
-  padding-block-end: 0.75rem;
-  border-block-end: 1px solid rgb(58 31 14 / 0.2);
-}
-
-.photo__thumb {
-  grid-area: thumb;
-  width: 4.5rem;
-  height: 4.5rem;
-  object-fit: cover;
-}
-
-.photo__name {
-  grid-area: name;
-  overflow-wrap: anywhere;
-  color: var(--iron);
-  font-weight: 650;
-}
-
-.photo__size {
-  grid-area: size;
-  color: var(--iron-soft);
-  font-size: 0.875rem;
-}
-
-.photo__remove {
-  grid-area: remove;
-  min-height: 2.75rem;
-  padding: 0.35rem 0.5rem;
-  border: 0;
-  background: none;
-  color: var(--cobalt);
-  font: inherit;
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-  cursor: pointer;
 }
 
 .form__submit {

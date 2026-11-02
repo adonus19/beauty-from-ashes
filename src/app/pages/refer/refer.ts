@@ -20,6 +20,7 @@ import {
 } from '@angular/forms/signals';
 import { RouterLink } from '@angular/router';
 
+import { careTypeOptions } from '../../core/forms/care-type-options';
 import { ErrorSummary } from '../../core/forms/error-summary';
 import { FieldError } from '../../core/forms/field-error';
 import { FormFieldA11y } from '../../core/forms/form-field-a11y';
@@ -50,6 +51,9 @@ export class Refer {
   protected readonly page = computed(() => this.locale.content().refer);
   protected readonly forms = computed(() => this.locale.content().site.forms);
   protected readonly contact = computed(() => this.locale.content().site.contact);
+  protected readonly careTypes = computed(() =>
+    careTypeOptions(this.locale.content(), this.page().fields.careType),
+  );
   protected readonly placeholderNote = computed(() => this.locale.content().site.placeholder.note);
 
   protected readonly sections = computed<JumpTarget[]>(() => {

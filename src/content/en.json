@@ -209,7 +209,7 @@
       "steps": [
         {
           "name": "Submit a request",
-          "text": "Tell us what you are living with and how it affects your daily life. You can add photos if you like."
+          "text": "Tell us a little about you and what you are living with. If we move forward, we will ask for photos and records later, through a secure system."
         },
         {
           "name": "Initial review",
@@ -398,15 +398,15 @@
       "title": "What to have ready",
       "items": [
         {
-          "text": "A few clear photos of the area",
-          "placeholder": false
-        },
-        {
-          "text": "A short description of how it affects your life",
+          "text": "A few words about what you are living with",
           "placeholder": false
         },
         {
           "text": "A safe way to reach you",
+          "placeholder": false
+        },
+        {
+          "text": "That is all for now. You do not need to send photos or records yet. If we move forward, we will ask for them later, through a secure system. Records help if you have them, but you do not need any to ask.",
           "placeholder": false
         }
       ]
@@ -416,7 +416,7 @@
       "title": "Your privacy",
       "paragraphs": [
         {
-          "text": "What you send us is health information, and we protect it that way. Only the ministry’s care team reads requests and sees photos. We never sell your information, and we use your photos only to review your request.",
+          "text": "What you send us is health information, and we protect it that way. Only the ministry’s care team reads requests. We never sell your information. If we move forward, we ask for photos and records through a secure system, and we use them only to review your care.",
           "placeholder": true
         },
         {
@@ -450,7 +450,7 @@
         },
         {
           "q": "Do I need insurance, a referral or medical records?",
-          "a": "No. Your insurance may be considered, so tell us if you have any. Each person is evaluated individually, based on medical need, financial circumstances, available resources, and our ability to safely provide care. Records are optional, and the names of doctors you’ve seen help too.",
+          "a": "No. Your insurance may be considered, so tell us if you have any. Each person is evaluated individually, based on medical need, financial circumstances, available resources, and our ability to safely provide care. Records are optional. If you have them, we will ask for them later, through a secure system, because they help us. You never need them to ask, and the names of doctors you’ve seen help too.",
           "placeholder": false
         },
         {
@@ -501,6 +501,7 @@
       "label": "Refer them instead",
       "path": "refer"
     },
+    "later": "You do not need to send photos or medical records now. If we move forward, we will ask for them later, through a secure system. Records help if you have them, but they are never required.",
     "sections": {
       "who": "Who is this request for?",
       "patient": "About the patient",
@@ -508,8 +509,7 @@
       "contact": "How can we reach you?",
       "home": "Where do you live?",
       "condition": "About the condition",
-      "photos": "Photos",
-      "more": "A little more",
+      "more": "Prayer",
       "consent": "Before you send"
     },
     "fields": {
@@ -531,10 +531,6 @@
       },
       "patientLast": {
         "label": "Last name"
-      },
-      "patientBirth": {
-        "label": "Date of birth",
-        "hint": "For example, 04/17/1986"
       },
       "guardianFirst": {
         "label": "Your first name"
@@ -636,96 +632,16 @@
       },
       "careType": {
         "label": "What kind of care are you asking about?",
-        "options": [
-          {
-            "value": "",
-            "label": "Choose one"
-          },
-          {
-            "value": "Injuries from accidents",
-            "label": "Injuries from accidents"
-          },
-          {
-            "value": "Conditions present from birth",
-            "label": "Conditions present from birth"
-          },
-          {
-            "value": "Scars and burns",
-            "label": "Scars and burns"
-          },
-          {
-            "value": "Reconstruction after cancer",
-            "label": "Reconstruction after cancer"
-          },
-          {
-            "value": "Restorative care",
-            "label": "Restorative care"
-          },
-          {
-            "value": "Something else",
-            "label": "Something else"
-          }
-        ]
+        "placeholder": "Choose one",
+        "other": "Other / not sure"
       },
       "description": {
         "label": "Describe the condition",
         "hint": "What it is, where it is, and anything doctors have told you."
       },
-      "howLong": {
-        "label": "How long has the patient had it?"
-      },
-      "dailyLife": {
-        "label": "How does it affect daily life?",
-        "hint": "Work, school, movement, pain, or how it feels to be seen."
-      },
-      "photos": {
-        "label": "Add photos",
-        "button": "Choose photos",
-        "hint": "Add at least one clear photo of the area, up to 6. Take them in daylight, without filters. Only our care team will see them.",
-        "remove": "Remove",
-        "count": "photos added",
-        "tooBig": "is larger than 10 MB, so it wasn’t added.",
-        "notImage": "isn’t a photo, so it wasn’t added.",
-        "tooMany": "You can add up to 6 photos."
-      },
-      "insurance": {
-        "label": "Insurance",
-        "options": [
-          {
-            "value": "",
-            "label": "Choose one"
-          },
-          {
-            "value": "none",
-            "label": "No insurance"
-          },
-          {
-            "value": "medicaid",
-            "label": "Medicaid"
-          },
-          {
-            "value": "medicare",
-            "label": "Medicare"
-          },
-          {
-            "value": "private",
-            "label": "Private insurance"
-          },
-          {
-            "value": "unsure",
-            "label": "Not sure"
-          }
-        ]
-      },
-      "heardFrom": {
-        "label": "How did you hear about us?"
-      },
       "prayer": {
         "label": "Would you like us to pray for you?",
         "hint": "Prayer is offered, never required, and your answer doesn’t affect your request."
-      },
-      "notes": {
-        "label": "Anything else you’d like us to know?"
       },
       "consentContact": {
         "label": "I understand that asking doesn’t guarantee care, and I agree that Beauty From Ashes Surgical Ministry may contact me about this request."
@@ -738,7 +654,6 @@
       "forWhom": "Choose who this request is for.",
       "patientFirst": "Enter the patient’s first name.",
       "patientLast": "Enter the patient’s last name.",
-      "patientBirth": "Enter the date of birth as MM/DD/YYYY.",
       "guardianFirst": "Enter your first name.",
       "guardianLast": "Enter your last name.",
       "guardianRelation": "Choose your relationship to the child.",
@@ -751,8 +666,6 @@
       "state": "Choose your state.",
       "careType": "Choose the kind of care you’re asking about.",
       "description": "Describe the condition.",
-      "dailyLife": "Tell us how it affects daily life.",
-      "photos": "Add at least one photo.",
       "consentContact": "Check this box so we can contact you.",
       "consentAuthority": "Check this box to confirm you can ask for this patient."
     },
@@ -817,7 +730,7 @@
           "placeholder": false
         },
         {
-          "text": "Share only what they’re comfortable with. They can add the details and photos themselves when we reach them.",
+          "text": "Share only what they’re comfortable with. They can add the details themselves when we reach them.",
           "placeholder": true
         }
       ]
@@ -831,7 +744,7 @@
           "placeholder": true
         },
         {
-          "text": "They tell us their story and send photos, the same way anyone asking for help does.",
+          "text": "They tell us their story, the same way anyone asking for help does. If we move forward, we ask for photos and records then, through a secure system.",
           "placeholder": false
         },
         {
@@ -858,6 +771,7 @@
       "id": "make-a-referral",
       "title": "Make a referral"
     },
+    "later": "Please do not send photos or medical records for them. If we move forward, we will ask them directly, later, through a secure system.",
     "sections": {
       "you": "About you",
       "person": "About the person",
@@ -972,36 +886,8 @@
       },
       "careType": {
         "label": "What kind of care might they need?",
-        "options": [
-          {
-            "value": "",
-            "label": "Choose one"
-          },
-          {
-            "value": "Injuries from accidents",
-            "label": "Injuries from accidents"
-          },
-          {
-            "value": "Conditions present from birth",
-            "label": "Conditions present from birth"
-          },
-          {
-            "value": "Scars and burns",
-            "label": "Scars and burns"
-          },
-          {
-            "value": "Reconstruction after cancer",
-            "label": "Reconstruction after cancer"
-          },
-          {
-            "value": "Restorative care",
-            "label": "Restorative care"
-          },
-          {
-            "value": "Something else",
-            "label": "Something else"
-          }
-        ]
+        "placeholder": "Choose one",
+        "other": "Other / not sure"
       },
       "need": {
         "label": "What can you tell us about their need?",
@@ -1682,7 +1568,7 @@
         "title": "What we collect",
         "paragraphs": [
           {
-            "text": "We collect what you choose to send through the forms on this site: requests for care, referrals, volunteer and partner forms, and messages. Requests and referrals can include health information and photos.",
+            "text": "We collect what you choose to send through the forms on this site: requests for care, referrals, volunteer and partner forms, and messages. Requests and referrals can include health information. If we move forward, we ask for photos and records separately, through a secure system.",
             "placeholder": false
           },
           {

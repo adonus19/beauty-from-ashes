@@ -89,21 +89,6 @@
                 <bfa-field-error [field]="r.patientLast" for="patient-last" />
               </div>
             </div>
-            <div class="field">
-              <label class="field__label" for="patient-birth">{{ f.patientBirth.label }}</label>
-              <p class="field__hint" id="patient-birth-hint">{{ f.patientBirth.hint }}</p>
-              <input
-                class="field__control field__control--short"
-                id="patient-birth"
-                type="text"
-                inputmode="numeric"
-                [attr.autocomplete]="isSelf() ? 'bday' : 'off'"
-                [formField]="r.patientBirth"
-                [bfaField]="r.patientBirth"
-                [hasHint]="true"
-              />
-              <bfa-field-error [field]="r.patientBirth" for="patient-birth" />
-            </div>
           </fieldset>
 
           @if (forChild()) {
@@ -308,7 +293,7 @@
                 [formField]="r.careType"
                 [bfaField]="r.careType"
               >
-                @for (option of f.careType.options; track option.value) {
+                @for (option of careTypes(); track option.value) {
                   <option [value]="option.value">{{ option.label }}</option>
                 }
               </select>
@@ -327,91 +312,11 @@
               ></textarea>
               <bfa-field-error [field]="r.description" for="description" />
             </div>
-            <div class="field">
-              <label class="field__label" for="how-long">
-                {{ f.howLong.label }} <span class="field__optional">({{ t.optional }})</span>
-              </label>
-              <input class="field__control" id="how-long" type="text" [formField]="r.howLong" />
-            </div>
-            <div class="field">
-              <label class="field__label" for="daily-life">{{ f.dailyLife.label }}</label>
-              <p class="field__hint" id="daily-life-hint">{{ f.dailyLife.hint }}</p>
-              <textarea
-                class="field__control field__control--area"
-                id="daily-life"
-                rows="5"
-                [formField]="r.dailyLife"
-                [bfaField]="r.dailyLife"
-                [hasHint]="true"
-              ></textarea>
-              <bfa-field-error [field]="r.dailyLife" for="daily-life" />
-            </div>
-          </fieldset>
-
-          <fieldset class="form__section">
-            <legend class="form__legend">{{ p.sections.photos }}</legend>
-            <div class="field photos">
-              <p class="field__hint" id="photos-hint">{{ f.photos.hint }}</p>
-              <input
-                #photoInput
-                class="photos__input"
-                id="photos"
-                type="file"
-                accept="image/*"
-                multiple
-                [attr.name]="r.photoNames().name()"
-                [attr.aria-invalid]="
-                  r.photoNames().touched() && r.photoNames().invalid() ? 'true' : null
-                "
-                [attr.aria-describedby]="
-                  'photos-hint' +
-                  (r.photoNames().touched() && r.photoNames().invalid() ? ' photos-error' : '')
-                "
-                (change)="addPhotos($event)"
-              />
-              <label class="photos__button btn-line" for="photos">{{ f.photos.button }}</label>
-              <bfa-field-error [field]="r.photoNames" for="photos" />
-              <p class="photos__notice" role="status">{{ photoNotice() }}</p>
-              @if (photos().length) {
-                <p class="photos__count">{{ photos().length }} {{ f.photos.count }}</p>
-                <ul class="photos__list" role="list">
-                  @for (photo of photos(); track photo.url; let i = $index) {
-                    <li class="photo">
-                      <img class="photo__thumb" [src]="photo.url" alt="" width="72" height="72" />
-                      <span class="photo__name">{{ photo.name }}</span>
-                      <span class="photo__size">{{ photo.size }}</span>
-                      <button class="photo__remove" type="button" (click)="removePhoto(i)">
-                        {{ f.photos.remove }} <span class="visually-hidden">{{ photo.name }}</span>
-                      </button>
-                    </li>
-                  }
-                </ul>
-              }
-            </div>
+            <p class="form__later">{{ p.later }}</p>
           </fieldset>
 
           <fieldset class="form__section">
             <legend class="form__legend">{{ p.sections.more }}</legend>
-            <div class="field">
-              <label class="field__label" for="insurance">
-                {{ f.insurance.label }} <span class="field__optional">({{ t.optional }})</span>
-              </label>
-              <select
-                class="field__control field__control--select"
-                id="insurance"
-                [formField]="r.insurance"
-              >
-                @for (option of f.insurance.options; track option.value) {
-                  <option [value]="option.value">{{ option.label }}</option>
-                }
-              </select>
-            </div>
-            <div class="field">
-              <label class="field__label" for="heard-from">
-                {{ f.heardFrom.label }} <span class="field__optional">({{ t.optional }})</span>
-              </label>
-              <input class="field__control" id="heard-from" type="text" [formField]="r.heardFrom" />
-            </div>
             <fieldset class="field field--choices" id="prayer" aria-describedby="prayer-hint">
               <legend class="field__label">
                 {{ f.prayer.label }} <span class="field__optional">({{ t.optional }})</span>
@@ -428,17 +333,6 @@
                 </label>
               </div>
             </fieldset>
-            <div class="field">
-              <label class="field__label" for="notes">
-                {{ f.notes.label }} <span class="field__optional">({{ t.optional }})</span>
-              </label>
-              <textarea
-                class="field__control field__control--area"
-                id="notes"
-                rows="4"
-                [formField]="r.notes"
-              ></textarea>
-            </div>
           </fieldset>
 
           <fieldset class="form__section">

@@ -321,7 +321,7 @@
                   [formField]="r.careType"
                   [bfaField]="r.careType"
                 >
-                  @for (option of f.careType.options; track option.value) {
+                  @for (option of careTypes(); track option.value) {
                     <option [value]="option.value">{{ option.label }}</option>
                   }
                 </select>
@@ -340,6 +340,7 @@
                 ></textarea>
                 <bfa-field-error [field]="r.need" for="need" />
               </div>
+              <p class="form__later">{{ p.later }}</p>
             </fieldset>
 
             <fieldset class="form__section">

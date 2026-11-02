@@ -9,13 +9,12 @@ console.log('aria-invalid on first name:', await p.getAttribute('#patient-first'
 await p.click('.error-summary__link >> nth=1'); console.log('summary link focuses:', await p.evaluate(() => document.activeElement?.id || document.activeElement?.name));
 await p.check('input[type=radio][value=child]'); await p.waitForTimeout(100);
 console.log('guardian fields shown:', await p.$('#guardian-first') !== null);
-await p.fill('#patient-first', 'Sam'); await p.fill('#patient-last', 'Doe'); await p.fill('#patient-birth', '04/17/2015');
+await p.fill('#patient-first', 'Sam'); await p.fill('#patient-last', 'Doe');
 await p.fill('#guardian-first', 'Pat'); await p.fill('#guardian-last', 'Doe'); await p.selectOption('#guardian-relation', 'parent');
 await p.fill('#phone', '(704) 555-0100'); await p.check('input[type=radio][value=call]'); await p.check('#safe-message input[value=yes], input[type=radio][value=yes] >> nth=0');
 await p.fill('#city', 'Rock Hill'); await p.selectOption('#state', 'SC');
-await p.selectOption('#care-type', { index: 3 }); await p.fill('#description', 'Burn scar on the left arm.'); await p.fill('#daily-life', 'Hard to lift things.');
-await p.setInputFiles('#photos', '.impeccable/build/test-photo.jpg'); await p.waitForTimeout(100);
-console.log('photos listed:', await p.$$eval('.photo', (l) => l.length));
+await p.selectOption('#care-type', { index: 3 }); await p.fill('#description', 'Burn scar on the left arm.');
+console.log('file inputs:', await p.$$eval('input[type=file]', (l) => l.length));
 await p.check('#consent-contact'); await p.check('#consent-authority');
 await p.click('button[type=submit]'); await p.waitForTimeout(400);
 console.log('remaining errors:', await p.$$eval('.error-summary__link', (l) => l.map((x) => x.textContent.trim())));
