@@ -38,6 +38,21 @@ describe('SiteFooter', () => {
     expect(footer.querySelector('.site-footer__note')).toBeNull();
   });
 
+  it('links the address to a map without opening a new tab', async () => {
+    const fixture = TestBed.createComponent(SiteFooter);
+    await fixture.whenStable();
+    const link = (fixture.nativeElement as HTMLElement).querySelector(
+      'address a',
+    ) as HTMLAnchorElement;
+
+    expect(link.getAttribute('href')).toBe(
+      'https://www.google.com/maps/search/?api=1&query=1366%20Broadcloth%20Street%2C%20Suite%20101%2C%20Fort%20Mill%2C%20SC%2029715',
+    );
+    expect(link.textContent).toContain('1366 Broadcloth Street, Suite 101');
+    expect(link.getAttribute('target')).toBeNull();
+    expect(link.hasAttribute('aria-label')).toBe(false);
+  });
+
   it('shows the email once one is set', async () => {
     TestBed.resetTestingModule();
     await TestBed.configureTestingModule({

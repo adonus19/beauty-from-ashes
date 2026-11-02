@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { provideRouter } from '@angular/router';
+import { Router, provideRouter } from '@angular/router';
 
 import { App } from './app';
 
@@ -7,7 +7,7 @@ describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [App],
-      providers: [provideRouter([])],
+      providers: [provideRouter([{ path: '**', children: [] }])],
     }).compileComponents();
   });
 
@@ -26,5 +26,36 @@ describe('App', () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
     expect((fixture.nativeElement as HTMLElement).querySelector('.translation-notice')).toBeNull();
+  });
+
+  it('moves focus to main after a page change that left it on the body, but not on first load', async () => {
+    const fixture = TestBed.createComponent(App);
+    const router = TestBed.inject(Router);
+    document.body.appendChild(fixture.nativeElement);
+    const main = (fixture.nativeElement as HTMLElement).querySelector<HTMLElement>('main#main')!;
+
+    await router.navigateByUrl('/one');
+    await fixture.whenStable();
+    expect(document.activeElement).not.toBe(main);
+
+    (document.activeElement as HTMLElement | null)?.blur();
+    await router.navigateByUrl('/two');
+    await fixture.whenStable();
+    expect(document.activeElement).toBe(main);
+    fixture.nativeElement.remove();
+  });
+
+  it('leaves focus alone when it is already on a control after a page change', async () => {
+    const fixture = TestBed.createComponent(App);
+    const router = TestBed.inject(Router);
+    document.body.appendChild(fixture.nativeElement);
+    await router.navigateByUrl('/one');
+    await fixture.whenStable();
+    const link = (fixture.nativeElement as HTMLElement).querySelector<HTMLElement>('a.skip-link')!;
+    link.focus();
+    await router.navigateByUrl('/two');
+    await fixture.whenStable();
+    expect(document.activeElement).toBe(link);
+    fixture.nativeElement.remove();
   });
 });

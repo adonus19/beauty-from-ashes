@@ -38,7 +38,9 @@
           </li>
         }
         <li>
-          <address class="site-footer__address">{{ contact.address }}</address>
+          <address class="site-footer__address">
+            <a [href]="contact.addressMapHref">{{ contact.address }}</a>
+          </address>
         </li>
         <li>{{ contact.area }}</li>
       </ul>

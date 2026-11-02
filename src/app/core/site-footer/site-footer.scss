@@ -41,11 +41,12 @@
   }
 
   @media (min-width: 62em) {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(0, 2fr);
   }
 
   @media (min-width: 75em) {
-    grid-template-columns: minmax(0, 4.5fr) repeat(4, minmax(0, 2fr));
+    column-gap: 2.5rem;
+    grid-template-columns: minmax(17rem, 1.3fr) repeat(3, max-content) minmax(15rem, 1.3fr);
   }
 }
 

@@ -28,7 +28,11 @@
                   }}</a>
                 }
                 @case ('address') {
-                  {{ s.contact.address }}
+                  <address class="contact__address">
+                    <a class="brush-link" [href]="s.contact.addressMapHref">{{
+                      s.contact.address
+                    }}</a>
+                  </address>
                 }
                 @default {
                   {{ detail.text }}

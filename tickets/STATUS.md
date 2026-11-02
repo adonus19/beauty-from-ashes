@@ -1,6 +1,13 @@
-# Status handoff (updated 2026-11-02, after 01, 04, 05A and interim 09)
+# Status handoff (updated 2026-11-02, after 01, 04, 05A and full English verification)
 
 Read this first, then README.md and the ticket you pick up. Do not assume facts; ask the user.
+
+## Latest (uncommitted; 85 tests pass, build passes, axe 0 violations on 14 routes)
+User decisions: volunteer bare button removed (HTML comment in volunteer.html marks where volunteer testimony goes once written permission exists); footer/contact address is now a Google Maps link (`site.contact.addressMapHref`; web pages cannot open the OS default map app everywhere); other forms (Volunteer, Partner, Contact, Give) wait; remaining placeholders are fine for now.
+Fixed during verification: (1) GitHub Pages base-path build 404'd on /media/*.webp because of critical-CSS inlining; fixed with `inlineCritical: false` in angular.json production config (check page speed later; unmeasured). (2) Escape in the mobile menu dropped focus to body. (3) Mobile menu now cycles Tab/Shift+Tab inside itself; after navigation focus moves to `#main` (App) when it was on body. (4) Footer columns rebalanced; address 4 lines; headings align at 1280.
+English verification is COMPLETE: keyboard-only walkthrough, base-path build served under /beauty-from-ashes/ (14 routes 200, no broken assets), rendered pages have no mailto/EIN when empty and show them when set, screenshots of all 14 routes at 375 and 1280 reviewed (es routes show English + notice, review again after ticket 08). Not testable here: the map link on real phones.
+Visual notes, NOT fixed, for a later impeccable pass if the user wants: home and get-help have an empty left half beside long lists at 1280; volunteer has sparse left columns at 1280 and its hero stacks two buttons with odd spacing at 375; partner/give: "A kit for churches" and the dark "Sponsor a surgery" band have large empty areas, Send button wider than the form column with brush edge offset; about: board names are three loose items with "Jay Kennedy" orphaned on a second row at 1280, "Volunteers" is one line, values list has no structure at 375; accessibility "Known gaps" has an orphan line; footer About column has tall empty area at 1280.
+Still to do: tickets 05B (connect Paubox, blocked), 08 (Spanish, on hold until all English copy is final), then re-run ticket 09 for /es.
 
 ## Done since last update (uncommitted; commit after review)
 - 05 PART A (vendor-neutral submission layer): done. src/app/core/submission/ (service, http impl, payload-format.ts field map, form-submission state machine, submit-status). Ask for Help and Refer use it. Endpoint is `SUBMISSION_ENDPOINT` in app.config.ts, empty = demo mode (demo notice stays, nothing is sent); must be https. Lead check: 76 tests pass, build passes.
