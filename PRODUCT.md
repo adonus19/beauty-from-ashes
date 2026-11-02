@@ -48,7 +48,7 @@ Surgical skill offered as ministry. Care is restorative, not cosmetic; it is fre
 - **Accessibility.** Full ADA compliance; people with disabilities will use this site (see Accessibility & Inclusion).
 - **Staff-editable content.** A content system staff can use without a developer.
 - **Hosting.** GitHub Pages for demo; production host and domain to be chosen (no domain owned yet).
-- **Undecided or pending facts:** inbox address; response-time promise; income requirements (unknown); board and staff; EIN and legal name for the donate page; Stripe account; real contact details (use placeholders); production host and domain; HIPAA form vendor.
+- **Undecided or pending facts:** inbox address; board and staff; EIN and legal name for the donate page; Stripe account; real contact details (use placeholders); production host and domain; HIPAA form vendor.
 
 ## Brand Commitments
 

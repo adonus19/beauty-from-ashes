@@ -14,28 +14,34 @@
     <h2 id="details-title" class="contact__title">{{ p.detailsTitle }}</h2>
     <dl class="contact__details">
       @for (detail of p.details; track detail.label) {
-        <div class="contact__detail">
-          <dt>{{ detail.label }}</dt>
-          <dd>
-            @switch (detail.kind) {
-              @case ('phone') {
-                <a class="brush-link" [href]="s.contact.phoneHref">{{ s.contact.phone }}</a>
-              }
-              @case ('email') {
-                <a class="brush-link" [href]="'mailto:' + s.contact.email">{{ s.contact.email }}</a>
-              }
-              @default {
-                {{ detail.text }}
-                @if (detail.placeholder) {
-                  <bfa-placeholder-tag />
+        @if (detail.kind !== 'email' || s.contact.email) {
+          <div class="contact__detail">
+            <dt>{{ detail.label }}</dt>
+            <dd>
+              @switch (detail.kind) {
+                @case ('phone') {
+                  <a class="brush-link" [href]="s.contact.phoneHref">{{ s.contact.phone }}</a>
+                }
+                @case ('email') {
+                  <a class="brush-link" [href]="'mailto:' + s.contact.email">{{
+                    s.contact.email
+                  }}</a>
+                }
+                @case ('address') {
+                  {{ s.contact.address }}
+                }
+                @default {
+                  {{ detail.text }}
+                  @if (detail.placeholder) {
+                    <bfa-placeholder-tag />
+                  }
                 }
               }
-            }
-          </dd>
-        </div>
+            </dd>
+          </div>
+        }
       }
     </dl>
-    <p class="split__note">{{ s.contact.placeholderNote }}</p>
   </section>
 
   <section class="split__form" aria-labelledby="form-title">

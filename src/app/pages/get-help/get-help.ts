@@ -19,9 +19,11 @@ export class GetHelp {
   protected readonly contact = computed(() => this.locale.content().site.contact);
   protected readonly placeholderNote = computed(() => this.locale.content().site.placeholder.note);
 
+  protected readonly conditionItems = computed(() => this.locale.content().home.conditions.items);
+
   protected readonly sections = computed<JumpTarget[]>(() => {
     const page = this.page();
-    return [page.who, page.cost, page.ready, page.privacy, page.questions].map(({ id, title }) => ({
+    return [page.who, page.conditions, page.cost, page.ready, page.privacy, page.questions].map(({ id, title }) => ({
       id,
       title,
     }));

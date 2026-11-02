@@ -159,6 +159,9 @@
           }
         </li>
       }
+      @if (legal().ein) {
+        <li>{{ legal().einLabel }}: {{ legal().ein }}</li>
+      }
     </ul>
     <a class="split__link text-link" [routerLink]="locale.link(p.trust.link.path)">{{
       p.trust.link.label

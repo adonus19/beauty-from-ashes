@@ -36,14 +36,19 @@
   margin: 0;
 }
 
-.tale__sample {
-  display: inline-block;
-  padding: 0.3em 0.8em;
-  border: 1px dashed var(--iron-soft);
-  border-radius: 3px;
+// Empty state: no story is published until a patient consents in writing.
+.stories-empty {
+  max-width: 34em;
+  margin-inline: var(--gutter);
+  padding-block: clamp(3rem, 6vw, 6rem);
+  border-block-start: 1px solid rgb(58 31 14 / 0.5);
+}
+
+.stories-empty__text {
   color: var(--iron);
-  font-size: 0.875rem;
-  font-weight: 650;
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 1rem + 0.6vw, 1.5rem);
+  line-height: 1.4;
 }
 
 .tale__quote {

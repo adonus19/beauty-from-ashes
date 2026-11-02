@@ -47,11 +47,16 @@
       }
     },
     "contact": {
-      "phone": "(704) 555-0100",
-      "phoneHref": "tel:+17045550100",
-      "email": "info@example.org",
-      "area": "Serving the Charlotte, NC and Fort Mill, SC area",
-      "placeholderNote": "Phone and email shown are placeholders until the ministry's details are ready."
+      "phone": "980-237-6958",
+      "phoneHref": "tel:+19802376958",
+      "email": "",
+      "address": "Beauty From Ashes Surgical Ministry, c/o WDF Aesthetic Plastic Surgery, 1366 Broadcloth Street, Suite 101, Fort Mill, SC 29715",
+      "area": "Serving the Charlotte, NC and Fort Mill, SC area"
+    },
+    "legal": {
+      "name": "Beauty From Ashes Surgical Ministry",
+      "ein": "",
+      "einLabel": "EIN"
     },
     "footer": {
       "about": "A Christian surgical ministry offering reconstructive plastic surgery, free or at reduced cost, to children and adults whose need exceeds their means.",
@@ -232,28 +237,52 @@
     },
     "conditions": {
       "title": "Who we help",
-      "intro": "Children and adults in the Charlotte and Fort Mill area who need reconstructive surgery they cannot afford. Care is free or offered at reduced cost.",
+      "intro": "Children and adults in the Charlotte and Fort Mill area who need reconstructive plastic surgery they cannot afford. Care is free or offered at reduced cost.",
       "faith": "You do not need to share our faith to receive care. The ministry is open to everyone.",
       "items": [
         {
-          "name": "Injuries from accidents",
+          "name": "Scar repair and scar revision",
+          "text": "Scars from injury, surgery or burns that limit movement or change how you look."
+        },
+        {
+          "name": "Facial differences and reconstruction",
+          "text": "Facial deformity from injury, illness or birth, and surgery to restore form and function."
+        },
+        {
+          "name": "Birth defects and congenital differences",
+          "text": "Conditions a person was born with, which doctors call congenital. Surgery can improve function and quality of life."
+        },
+        {
+          "name": "Cleft lip and cleft-related surgery",
+          "text": "Care for cleft lip and the needs that come with it, including a revision as a child grows."
+        },
+        {
+          "name": "Injury and trauma reconstruction",
           "text": "Reconstruction after an accident or injury, to restore function and appearance."
         },
         {
-          "name": "Conditions present from birth",
-          "text": "Surgery for differences a person was born with, to improve function and quality of life."
-        },
-        {
-          "name": "Scars and burns",
+          "name": "Burn scars",
           "text": "Treatment for scarring or burn injuries that limit movement or change how you look."
         },
         {
-          "name": "Reconstruction after cancer",
-          "text": "Restoring form after cancer surgery or related treatment."
+          "name": "Skin lesions or growths that affect appearance or function",
+          "text": "Lesions or growths on the skin that change how you look or limit how part of your body works."
         },
         {
-          "name": "Restorative care",
-          "text": "Correcting physical differences that make daily life harder."
+          "name": "Breast reconstruction or deformity",
+          "text": "Restoring form after cancer surgery or related treatment, and care for breast differences from birth or injury."
+        },
+        {
+          "name": "Abdominal wall and body changes",
+          "text": "Changes to the abdominal wall and body after major weight loss, trauma or surgery."
+        },
+        {
+          "name": "Revision after previous surgery",
+          "text": "Another operation to improve the result of an earlier one that still limits you."
+        },
+        {
+          "name": "Children with congenital or acquired differences",
+          "text": "Children born with a difference, or who have one from injury or illness. A parent or guardian asks on their behalf."
         },
         {
           "name": "Something else",
@@ -267,10 +296,7 @@
     },
     "story": {
       "title": "Stories",
-      "sampleLabel": "Sample story, not a real patient",
-      "quote": "I hadn't worn short sleeves in eleven years. The summer after my last appointment, I wore them to church.",
-      "attribution": "Sample patient, Rock Hill",
-      "note": "Real stories will appear here, each one shared with the patient's written permission.",
+      "note":"Real stories will appear here, each one shared with the patient's written permission.",
       "action": {
         "label": "Read stories",
         "path": "stories"
@@ -326,7 +352,7 @@
   },
   "getHelp": {
     "title": "Help with surgery you can’t afford.",
-    "lede": "Free or reduced-cost reconstructive surgery for children and adults in the Charlotte and Fort Mill area. Open to everyone.",
+    "lede": "Free or reduced-cost reconstructive plastic surgery for children and adults in the Charlotte and Fort Mill area. If you cannot afford plastic surgery, you can ask us. Open to everyone.",
     "jumpLabel": "On this page",
     "action": {
       "label": "Ask for help",
@@ -350,6 +376,12 @@
           "placeholder": false
         }
       ]
+    },
+    "conditions": {
+      "id": "conditions",
+      "title": "Conditions we help with",
+      "intro": "We look at each need on its own. Here are the conditions people ask about, in everyday words and in the terms doctors use. If yours is not here, ask anyway.",
+      "footnote": "Our care is reconstructive and restorative, aimed at function, form and healing. We do not offer cosmetic procedures."
     },
     "cost": {
       "id": "what-it-costs",
@@ -403,13 +435,23 @@
       "items": [
         {
           "q": "What conditions do you treat?",
-          "a": "Injuries from accidents, conditions present from birth, scars and burns, reconstruction after cancer, and other restorative needs. The ministry’s care is reconstructive and restorative, so we don’t offer cosmetic procedures. If you aren’t sure your need fits, ask anyway.",
+          "a": "Scars and burn scars, facial differences, birth defects and other congenital differences, cleft lip, injuries, skin lesions or growths that affect appearance or function, breast reconstruction, changes after major weight loss, and revision after previous surgery. Children are included. The ministry’s care is reconstructive and restorative, so we don’t offer cosmetic procedures. If you aren’t sure your need fits, ask anyway.",
+          "placeholder": false
+        },
+        {
+          "q": "Do you offer charitable plastic surgery or pro bono reconstructive surgery?",
+          "a": "The ministry provides reconstructive plastic surgery free or at reduced cost for people whose need exceeds their means. We talk through any cost with you before anything is decided.",
+          "placeholder": true
+        },
+        {
+          "q": "Is there a reconstructive plastic surgeon in Fort Mill or Charlotte who can help?",
+          "a": "The ministry serves people in the Fort Mill, SC and Charlotte, NC area. Ask for help and we will talk with you about whether we are the right fit.",
           "placeholder": false
         },
         {
           "q": "Do I need insurance, a referral or medical records?",
-          "a": "No. If you have insurance, tell us, because it may help us plan your care. Records are optional, and the names of doctors you’ve seen help too.",
-          "placeholder": true
+          "a": "No. Your insurance may be considered, so tell us if you have any. Each person is evaluated individually, based on medical need, financial circumstances, available resources, and our ability to safely provide care. Records are optional, and the names of doctors you’ve seen help too.",
+          "placeholder": false
         },
         {
           "q": "Will you pray with me?",
@@ -423,7 +465,7 @@
         },
         {
           "q": "How long until I hear back?",
-          "a": "We let you know we’ve received your request, and we aim to reply within 10 business days.",
+          "a": "We let you know we’ve received your request. We generally respond to initial requests within 5–7 business days.",
           "placeholder": true
         },
         {
@@ -700,7 +742,7 @@
       "guardianFirst": "Enter your first name.",
       "guardianLast": "Enter your last name.",
       "guardianRelation": "Choose your relationship to the child.",
-      "phone": "Enter a phone number with area code, like (704) 555-0100.",
+      "phone": "Enter a phone number with area code, like 123-456-7890.",
       "email": "Enter an email address like name@example.com, or leave it blank.",
       "emailNeeded": "Enter an email address, or choose another way to reach you.",
       "contactMethod": "Choose the best way to reach you.",
@@ -729,7 +771,7 @@
     "sent": {
       "title": "Thank you. Your request is ready.",
       "demo": "This is a demo, so nothing was sent or saved. When the site launches, your request will go securely to the ministry’s care team.",
-      "next": "After a real request, we let you know we’ve received it and aim to reply within 10 business days.",
+      "next": "After a real request, we let you know we’ve received it. We generally respond to initial requests within 5–7 business days.",
       "home": {
         "label": "Back to the home page",
         "path": ""
@@ -749,7 +791,7 @@
       "title": "When to refer",
       "items": [
         {
-          "text": "They live with a condition that affects their daily life, such as an injury, a condition present from birth, a scar or burn, or changes after cancer.",
+          "text": "They live with a condition that affects their daily life, such as an injury, a difference present from birth, a scar or burn, or changes after cancer.",
           "placeholder": false
         },
         {
@@ -785,7 +827,7 @@
       "title": "What happens next",
       "items": [
         {
-          "text": "We contact the person you referred, usually within 10 business days.",
+          "text": "We contact the person you referred. We generally respond to initial requests within 5–7 business days.",
           "placeholder": true
         },
         {
@@ -979,7 +1021,7 @@
       "personLast": "Enter their last name.",
       "age": "Choose whether they’re a child or an adult.",
       "guardianName": "Enter the parent or guardian’s name.",
-      "personPhone": "Enter a phone number with area code, like (704) 555-0100.",
+      "personPhone": "Enter a phone number with area code, like 123-456-7890.",
       "personEmail": "Enter an email address like name@example.com, or leave it blank.",
       "city": "Enter their city.",
       "state": "Choose their state.",
@@ -1045,12 +1087,6 @@
         }
       ],
       "placeholder": "The roles listed here are our best guess at what the ministry needs."
-    },
-    "letter": {
-      "sampleLabel": "Sample letter, not a real volunteer",
-      "text": "To my colleagues, most of us trained for years to do one thing well. Here, that skill goes to a child born with a cleft lip whose family has no insurance, or to a woman who has hidden a burn scar for ten years. We pray with the patients who want it, and we stay with them long after the stitches come out. Come serve with us.",
-      "signature": "A volunteer surgeon",
-      "note": "A real volunteer’s letter will replace this sample, shared with their permission."
     },
     "other": {
       "id": "other-ways",
@@ -1465,40 +1501,9 @@
   },
   "stories": {
     "title": "Stories",
-    "lede": "Real stories will appear here, each one shared with the patient’s written permission. Until then, these samples show how a story will look.",
-    "sampleLabel": "Sample story, not a real patient",
-    "items": [
-      {
-        "id": "short-sleeves",
-        "quote": "I hadn’t worn short sleeves in eleven years. The summer after my last appointment, I wore them to church.",
-        "attribution": "Sample patient, Rock Hill",
-        "condition": "Scars and burns",
-        "body": [
-          "A kitchen fire left scars across her forearm and the inside of her elbow. Over the years the skin tightened until she couldn’t fully straighten her arm.",
-          "A friend from her Bible study sent us her name. After two surgeries to release the scar tissue, she has her full reach back. She still has scars, and she says she doesn’t mind them now."
-        ]
-      },
-      {
-        "id": "photos",
-        "quote": "She used to cover her mouth in every photo. Now she’s the one asking to take them.",
-        "attribution": "Sample parent, Fort Mill",
-        "condition": "Conditions present from birth",
-        "body": [
-          "Their daughter was born with a cleft lip. It was repaired when she was a baby, but the repair left a scar that pulled at her lip as she grew, and the family’s insurance called a revision cosmetic.",
-          "The ministry’s surgeon revised the repair the summer before she started middle school, and the team checked in with the family all through her recovery."
-        ]
-      },
-      {
-        "id": "hammer",
-        "quote": "I thought I’d never hold a hammer again. Last month I helped frame a wall at my church.",
-        "attribution": "Sample patient, Charlotte",
-        "condition": "Injuries from accidents",
-        "body": [
-          "A saw accident at work damaged two fingers and left his hand stiff and painful. He lost his job, and his insurance with it.",
-          "A social worker referred him to the ministry. Reconstructive surgery and months of hand therapy brought back most of his grip."
-        ]
-      }
-    ],
+    "lede": "Patients’ own words, shared only with their written permission.",
+    "empty": "No stories are published yet. A story appears here only after its patient gives written permission, and we publish no photos or identifiable details without written authorization.",
+    "items": [],
     "share": {
       "title": "Share your story",
       "text": "If the ministry has cared for you and you’d like to share your story, we’d be glad to hear it. We publish a story only with your written permission, and you decide what it includes.",
@@ -1526,29 +1531,14 @@
       "text": "The ministry’s statement of faith will appear here.",
       "placeholder": true
     },
-    "leaders": {
-      "title": "Leadership",
-      "intro": "The people who lead the ministry will be introduced here, with photos and short biographies.",
-      "people": [
-        {
-          "role": "Executive director",
-          "name": "Name to come"
-        },
-        {
-          "role": "Medical director",
-          "name": "Name to come"
-        },
-        {
-          "role": "Patient care coordinator",
-          "name": "Name to come"
-        }
-      ],
-      "placeholder": "These roles are our best guess at how the ministry is led."
-    },
     "board": {
       "title": "Board of directors",
-      "text": "The members of the board will be listed here.",
-      "placeholder": true
+      "intro": "The ministry is overseen by its board of directors.",
+      "members": ["Dr. W. Dale Franks, Jr.", "Jessica Kennedy", "Jay Kennedy"]
+    },
+    "volunteers": {
+      "title": "Volunteers",
+      "text": "Volunteers give their time to the ministry alongside the board, in medical and non-medical roles."
     },
     "accountability": {
       "title": "Accountability",
@@ -1556,10 +1546,6 @@
         {
           "text": "Beauty From Ashes Surgical Ministry is a 501(c)(3) nonprofit organization.",
           "placeholder": false
-        },
-        {
-          "text": "EIN: to come.",
-          "placeholder": true
         },
         {
           "text": "Gifts pay for patient care and the ministry’s operations.",
@@ -1599,15 +1585,7 @@
       },
       {
         "label": "Mail",
-        "kind": "text",
-        "text": "Mailing address to come",
-        "placeholder": true
-      },
-      {
-        "label": "Office hours",
-        "kind": "text",
-        "text": "Monday to Friday, 9 a.m. to 5 p.m.",
-        "placeholder": true
+        "kind": "address"
       },
       {
         "label": "Area served",
@@ -1834,10 +1812,6 @@
           {
             "text": "The Spanish translation is in progress, so some pages show English until it’s complete.",
             "placeholder": false
-          },
-          {
-            "text": "Sample stories and placeholder details on this demo will be replaced before launch.",
-            "placeholder": false
           }
         ],
         "items": []
@@ -1968,10 +1942,6 @@
         {
           "text": "Beauty From Ashes Surgical Ministry is a 501(c)(3) nonprofit organization. Gifts are tax-deductible as allowed by law.",
           "placeholder": false
-        },
-        {
-          "text": "EIN: to come.",
-          "placeholder": true
         },
         {
           "text": "North Carolina and South Carolina may require a charitable solicitation disclosure on this page. The wording will be confirmed with the ministry’s counsel.",

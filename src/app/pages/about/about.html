@@ -75,34 +75,26 @@
   </p>
 </section>
 
-<section class="split" aria-labelledby="leaders-title">
-  <div class="split__intro">
-    <h2 id="leaders-title" class="section-title">{{ p.leaders.title }}</h2>
-    <p class="split__lede">{{ p.leaders.intro }}</p>
-  </div>
-  <div>
-    <ul class="roles__list" role="list">
-      @for (person of p.leaders.people; track person.role) {
-        <li class="role">
-          <h3 class="role__name">{{ person.name }}</h3>
-          <p class="role__text">{{ person.role }}</p>
-        </li>
-      }
-    </ul>
-    <p class="split__note">{{ p.leaders.placeholder }} <bfa-placeholder-tag /></p>
-  </div>
-</section>
 
 <section class="split" aria-labelledby="board-title">
   <div class="split__intro">
     <h2 id="board-title" class="section-title">{{ p.board.title }}</h2>
+    <p class="split__lede">{{ p.board.intro }}</p>
   </div>
-  <p class="split__lede split__lede--wide">
-    {{ p.board.text }}
-    @if (p.board.placeholder) {
-      <bfa-placeholder-tag />
+  <ul class="roles__list" role="list">
+    @for (member of p.board.members; track member) {
+      <li class="role">
+        <h3 class="role__name board__name">{{ member }}</h3>
+      </li>
     }
-  </p>
+  </ul>
+</section>
+
+<section class="split" aria-labelledby="volunteers-title">
+  <div class="split__intro">
+    <h2 id="volunteers-title" class="section-title">{{ p.volunteers.title }}</h2>
+  </div>
+  <p class="split__lede split__lede--wide">{{ p.volunteers.text }}</p>
 </section>
 
 <section class="split" aria-labelledby="accountability-title">
@@ -118,6 +110,9 @@
             <bfa-placeholder-tag />
           }
         </li>
+      }
+      @if (s.legal.ein) {
+        <li>{{ s.legal.einLabel }}: {{ s.legal.ein }}</li>
       }
     </ul>
     <a class="split__link text-link" [routerLink]="locale.link(p.accountability.link.path)">{{

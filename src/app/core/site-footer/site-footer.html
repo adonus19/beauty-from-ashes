@@ -32,12 +32,16 @@
         <li>
           <a [href]="contact.phoneHref">{{ contact.phone }}</a>
         </li>
+        @if (contact.email) {
+          <li>
+            <a [href]="'mailto:' + contact.email">{{ contact.email }}</a>
+          </li>
+        }
         <li>
-          <a [href]="'mailto:' + contact.email">{{ contact.email }}</a>
+          <address class="site-footer__address">{{ contact.address }}</address>
         </li>
         <li>{{ contact.area }}</li>
       </ul>
-      <p class="site-footer__note">{{ contact.placeholderNote }}</p>
     </div>
   </div>
 

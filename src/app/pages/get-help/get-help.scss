@@ -1,3 +1,34 @@
 :host {
   display: block;
 }
+
+// Longer list of conditions. One column on a phone, with a hairline between
+// rows; two columns once there is room.
+.conditions {
+  display: grid;
+  max-width: 54rem;
+  margin: 1.25rem 0 1.5rem;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: 48em) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 clamp(2rem, 4vw, 3.5rem);
+  }
+}
+
+.conditions__item {
+  padding-block: 0.9rem 1rem;
+  border-block-start: 1px solid rgb(58 31 14 / 0.22);
+}
+
+.conditions__name {
+  font-size: clamp(1.1875rem, 1.05rem + 0.5vw, 1.4375rem);
+  line-height: 1.25;
+}
+
+.conditions__text {
+  margin-block-start: 0.35rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}

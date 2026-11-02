@@ -14,9 +14,11 @@
     <aside class="reference__aside">
       <bfa-jump-nav [label]="d.jumpLabel" [targets]="targets()" />
       <p class="reference__call reference__call--contact">
-        <a [href]="c.phoneHref">{{ c.phone }}</a
-        ><br />
-        <a [href]="'mailto:' + c.email">{{ c.email }}</a>
+        <a [href]="c.phoneHref">{{ c.phone }}</a>
+        @if (c.email) {
+          <br />
+          <a [href]="'mailto:' + c.email">{{ c.email }}</a>
+        }
       </p>
     </aside>
 

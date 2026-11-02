@@ -118,15 +118,8 @@
 
 <section class="story" aria-labelledby="story-title">
   <h2 id="story-title" class="story__title section-title">{{ story.title }}</h2>
-  <figure class="story__figure">
-    <p class="story__sample">{{ story.sampleLabel }}</p>
-    <blockquote class="story__quote">
-      <p>“{{ story.quote }}”</p>
-    </blockquote>
-    <figcaption class="story__attribution">{{ story.attribution }}</figcaption>
-  </figure>
   <div class="story__aside">
-    <p>{{ story.note }}</p>
+    <p class="story__note">{{ story.note }}</p>
     <a class="text-link" [routerLink]="locale.link(story.action.path)">{{ story.action.label }}</a>
   </div>
 </section>

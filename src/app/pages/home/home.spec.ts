@@ -57,7 +57,8 @@ describe('Home', () => {
     expect(page.querySelector('.process__draft')).toBeTruthy();
   });
 
-  it('labels the sample story as not a real patient', () => {
-    expect(page.querySelector('.story__sample')?.textContent).toContain('not a real patient');
+  it('shows no sample quote in the story section, only the permission note', () => {
+    expect(page.querySelector('.story blockquote')).toBeNull();
+    expect(page.querySelector('.story__note')?.textContent).toContain('written permission');
   });
 });

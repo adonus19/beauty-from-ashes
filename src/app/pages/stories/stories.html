@@ -5,22 +5,27 @@
   <p class="page-head__lede">{{ p.lede }}</p>
 </header>
 
-@for (story of p.items; track story.id) {
-  <article class="tale" [id]="story.id" [attr.aria-label]="story.attribution">
-    <figure class="tale__figure">
-      <p class="tale__sample">{{ p.sampleLabel }}</p>
-      <blockquote class="tale__quote">
-        <p>“{{ story.quote }}”</p>
-      </blockquote>
-      <figcaption class="tale__attribution">{{ story.attribution }}</figcaption>
-    </figure>
-    <div class="tale__body">
-      <p class="tale__condition">{{ story.condition }}</p>
-      @for (paragraph of story.body; track $index) {
-        <p>{{ paragraph }}</p>
-      }
-    </div>
-  </article>
+@if (items().length) {
+  @for (story of items(); track story.id) {
+    <article class="tale" [id]="story.id" [attr.aria-label]="story.attribution">
+      <figure class="tale__figure">
+        <blockquote class="tale__quote">
+          <p>“{{ story.quote }}”</p>
+        </blockquote>
+        <figcaption class="tale__attribution">{{ story.attribution }}</figcaption>
+      </figure>
+      <div class="tale__body">
+        <p class="tale__condition">{{ story.condition }}</p>
+        @for (paragraph of story.body; track $index) {
+          <p>{{ paragraph }}</p>
+        }
+      </div>
+    </article>
+  }
+} @else {
+  <section class="stories-empty">
+    <p class="stories-empty__text">{{ p.empty }}</p>
+  </section>
 }
 
 <section class="closing" aria-labelledby="share-title">

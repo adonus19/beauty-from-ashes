@@ -21,6 +21,7 @@ import { PlaceholderTag } from '../../core/placeholder-tag/placeholder-tag';
 export class Give {
   protected readonly locale = inject(Locale);
   protected readonly page = computed(() => this.locale.content().give);
+  protected readonly legal = computed(() => this.locale.content().site.legal);
   protected readonly placeholderNote = computed(() => this.locale.content().site.placeholder.note);
 
   protected readonly model = signal({ frequency: 'once', amount: '100', other: '' });

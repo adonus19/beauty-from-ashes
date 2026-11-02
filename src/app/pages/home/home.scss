@@ -329,7 +329,12 @@
 }
 
 .condition {
-  padding-block: 1.5rem 1.75rem;
+  padding-block: 1rem 1.15rem;
+
+  @media (min-width: 40em) {
+    padding-block: 1.5rem 1.75rem;
+  }
+
   border-block-start: 1px solid rgb(58 31 14 / 0.22);
 }
 
@@ -342,7 +347,7 @@
   margin-block-start: 0.5rem;
 }
 
-// A patient story. Samples are labelled until real, consented stories exist.
+// Stories: no patient story ships until one is consented, so the section states the permission rule.
 .story {
   display: grid;
   gap: 2rem clamp(2.5rem, 6vw, 7rem);
@@ -359,37 +364,12 @@
   grid-column: 1 / -1;
 }
 
-.story__figure {
-  margin: 0;
-}
-
-.story__sample {
-  display: inline-block;
-  padding: 0.3em 0.8em;
-  border: 1px dashed var(--iron-soft);
-  border-radius: 3px;
-  color: var(--iron);
-  font-size: 0.875rem;
-  font-weight: 650;
-}
-
-.story__quote {
-  margin: 1.5rem 0 0;
+.story__note {
   color: var(--iron);
   font-family: var(--font-serif);
-  font-size: clamp(1.875rem, 1.4rem + 2vw, 3.25rem);
-  font-style: italic;
-  line-height: 1.25;
+  font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
+  line-height: 1.3;
   text-wrap: balance;
-}
-
-.story__attribution {
-  margin-block-start: 1.25rem;
-  color: var(--iron-soft);
-  font-size: var(--fs-label);
-  font-weight: 650;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
 }
 
 .story__aside {

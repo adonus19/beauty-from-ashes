@@ -33,6 +33,24 @@
         </ul>
       </section>
 
+      <section
+        class="reference__section"
+        [id]="p.conditions.id"
+        aria-labelledby="conditions-title"
+      >
+        <h2 id="conditions-title" class="reference__heading">{{ p.conditions.title }}</h2>
+        <p class="reference__text">{{ p.conditions.intro }}</p>
+        <ul class="conditions" role="list">
+          @for (item of conditionItems(); track item.name) {
+            <li class="conditions__item">
+              <h3 class="conditions__name">{{ item.name }}</h3>
+              <p class="conditions__text">{{ item.text }}</p>
+            </li>
+          }
+        </ul>
+        <p class="reference__text reference__text--aside">{{ p.conditions.footnote }}</p>
+      </section>
+
       <section class="reference__section" [id]="p.cost.id" aria-labelledby="cost-title">
         <h2 id="cost-title" class="reference__heading">{{ p.cost.title }}</h2>
         @for (paragraph of p.cost.paragraphs; track paragraph.text) {

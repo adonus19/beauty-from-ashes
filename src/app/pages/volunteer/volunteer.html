@@ -44,17 +44,8 @@
   </div>
 </section>
 
-<section class="letter" aria-labelledby="letter-sample">
-  <figure class="letter__figure">
-    <p id="letter-sample" class="letter__sample">{{ p.letter.sampleLabel }}</p>
-    <blockquote class="letter__text">
-      <p>“{{ p.letter.text }}”</p>
-    </blockquote>
-    <span class="letter__dash" aria-hidden="true"></span>
-    <figcaption class="letter__signature">{{ p.letter.signature }}</figcaption>
-  </figure>
+<section class="letter" aria-label="{{ p.primary.label }}">
   <div class="letter__aside">
-    <p>{{ p.letter.note }}</p>
     <a class="btn-brush" [routerLink]="[]" [fragment]="p.primary.fragment">{{ p.primary.label }}</a>
   </div>
 </section>
